@@ -17,4 +17,22 @@ class BdController extends AbstractController
             'controller_name' => 'BdController',
         ]);
     }
+
+    /**
+     * @Route("/", name="home")
+     */
+    public function home(): Response
+    {
+        return $this->render('bd/home.html.twig', [
+        'title' => "Bienvenue !",
+        'age' =>30
+        ]);
+
+
+    }
+
+    
+
+
+
 }
