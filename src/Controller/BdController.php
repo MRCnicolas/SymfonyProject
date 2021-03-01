@@ -8,27 +8,56 @@ use Symfony\Component\Routing\Annotation\Route;
 
 class BdController extends AbstractController
 {
+    
     /**
-     * @Route("/bd", name="bd")
+     * @Route("/home", name="app_home")
      */
-    public function index(): Response
+    public function home(): Response
     {
-        return $this->render('bd/index.html.twig', [
-            'controller_name' => 'BdController',
+        return $this->render('pages/home.html.twig', [
+        'title' => " '' Le DoDo Y Guide A Ou '' ",
+        ]);
+
+    }
+
+    /**
+     * @Route("/randonnée", name="app_randonnée")
+     */
+    public function randonnée(): Response
+    {
+        return $this->render('pages/randonnée.html.twig', [
+            'title' => 'randonnée',
         ]);
     }
 
     /**
-     * @Route("/", name="home")
+     * @Route("/activitésportive", name="app_activitésportive")
      */
-    public function home(): Response
+    public function activitésportive(): Response
     {
-        return $this->render('bd/home.html.twig', [
-        'title' => "Bienvenue !",
-        'age' =>30
+        return $this->render('pages/activitésportive.html.twig', [
+            'title' => 'activitésportive',
         ]);
+    }
 
+    /**
+     * @Route("/contact", name="app_contact")
+     */
+    public function contact(): Response
+    {
+        return $this->render('pages/contact.html.twig', [
+            'title' => 'contact',
+        ]);
+    }
 
+    /**
+     * @Route("/about", name="app_about")
+     */
+    public function about(): Response
+    {
+        return $this->render('pages/about.html.twig', [
+            'title' => 'about',
+        ]);
     }
 
     
