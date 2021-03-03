@@ -16,11 +16,6 @@ class BdController extends AbstractController
     {
         return $this->render('pages/home.html.twig', [
         'title' => " '' Le DoDo Y Guide A Ou '' ",
-        'intro' => "Avec DODO LE GUIDE Vous Serez Votre Propre
-        Guide.",
-        'intro2' => "Voici Nos Conseils Et Notre Selections De
-        Lieux Et D'activités Incontournables à Decouvrir Lors De Votre
-        Séjour.",
         ]);
 
     }
