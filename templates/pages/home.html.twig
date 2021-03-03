@@ -10,6 +10,39 @@
         allowfullscreen></iframe>
 </article>
 
+<div class="example-wrapper">
+    <h4>{{intro}}</h4>
+    </br>
+    <h4>{{intro2}}</h4>
+</div>
+
+<div class="d-flex justify-content-center">
+    <img src="images/icones/vanille.svg" id="vanille" />
+</div>
+
+<section>
+    <p class="espace"></p>
+</section>
+
+<div class="d-flex justify-content-around">
+
+    <section id="détail">
+        <div class="d-flex justify-content-around" cols="12" md="4">
+            <img src="images/featurette/plage.png" alt="featurette" class="img-thumbnail shadow">
+            <img src="images/featurette/rando.png" alt="featurette" class="img-thumbnail shadow">
+            <img src="images/featurette/sport.png" alt="featurette" class="img-thumbnail shadow">
+        </div>
+
+        <div class="d-flex justify-content-around" cols="12" md="4">
+            <img src="images/featurette/rando.png" alt="featurette" class="img-thumbnail shadow">
+            <img src="images/featurette/plage.png" alt="featurette" class="img-thumbnail shadow">
+            <img src="images/featurette/sport.png" alt="featurette" class="img-thumbnail shadow">
+        </div>
+        <section>
+            <p class="espace"></p>
+        </section>
+    </section>
+</div>
 
 <footer>
 
@@ -32,6 +65,29 @@
         display: flex;
         flex-direction: row;
         justify-content: center;
+    }
+    
+    #vanille {
+        width: 150px;
+        height: 75px;
+    }
+    
+    .img-thumbnail {
+        width: 200px;
+        height: 200px;
+    }
+    
+    .example-wrapper {
+        text-align: center;
+        margin: 160px auto;
+        max-width: 800px;
+        width: 95%;
+        font: 18px/1.5 sans-serif;
+    }
+    
+    .example-wrapper code {
+        background: #F5F5F5;
+        padding: 2px 6px;
     }
 </style>
 {% endblock %}
