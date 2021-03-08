@@ -3,49 +3,109 @@
 
 <div class="example-wrapper">
     <h1>{{title}}</h1>
-</div>
-
-<article id="video">
-    <iframe width="560" height="200" src="https://www.youtube.com/embed/UoTYNd3luOA?autoplay=1&mute=1&enablejsapi=1controls=0loop=1&amp;start=56" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-        allowfullscreen></iframe>
-</article>
-
-<div class="example-wrapper">
+    <section>
+        <p class="espace"></p>
+    </section>
+    <article id="video">
+        <iframe width="100%" height="200" src="{{video}}" frameborder="0" allow="accelerometer; autoplay; loop; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+    </article>
+    <section>
+        <p class="espace1"></p>
+    </section>
     <h4>{{intro}}</h4>
     </br>
     <h4>{{intro2}}</h4>
+    <section>
+        <p class="espace2"></p>
+    </section>
+    <div class="d-flex justify-content-center">
+        <img src="{{icones}}" id="vanille" />
+    </div>
 </div>
 
-<div class="d-flex justify-content-center">
-    <img src="images/icones/vanille.svg" id="vanille" />
-</div>
+<section id="détail">
 
-<section>
-    <p class="espace"></p>
+    <container class="example-wrapper">
+
+        <div class="row">
+            <div class="col-md-4 col-12">
+                <img src="{{featurette1}}" class="img-thumbnail shadow" alt="..." style="height: 200px; width: 200px">
+                <h2 id="h2rando">Randonnées</h2>
+                <p id="para1">
+                    De nombreuses Randonnées pour tous les niveaux.
+                </p>
+                <p>
+                    <div class="btn btn-secondary" to="/randonnée">Notre Sélection &raquo;</div>
+                </p>
+            </div>
+            <div class="col-md-4 col-12">
+                <img src="{{featurette2}}" class="img-thumbnail shadow" alt="..." style="height: 200px; width: 200px">
+                <h2 id="h2activité">Activités Sportives</h2>
+                <p id="para3">
+                    Profitez de toutes les activités sportives disponibles sur l'île.
+                </p>
+                <p>
+                    <div class="btn btn-secondary" to="/plage">Notre Sélection &raquo;</div>
+                </p>
+            </div>
+            <div class="col-md-4 col-12">
+                <img src="{{featurette3}}" class="img-thumbnail shadow" alt="..." style="height: 200px; width: 200px">
+                <h2 id="h2visite">Les Plages</h2>
+                <p id="para2">
+                    Des plages magnifique pour pratiqué le farniente...
+                </p>
+                <p>
+                    <div class="btn btn-secondary" to="/plage">Notre Sélection &raquo;</div>
+                </p>
+            </div>
+        </div>
+    </container>
 </section>
 
+<section>
+    <p class="espace3"></p>
+</section>
 
-<div class="text-center">
-    <img src="images/featurette/rando.png" class="img-fluid" alt="..." style="height: 200px; width: 200px">
-    <h2 id="h2rando">Visites Locale</h2>
-    <p id="para1">
-        Visitez certains lieux historiques de l'île, les marchés, les rhumeries...
-    </p>
-    <p>
-        <router-link class="btn btn-secondary" to="/rando">Notre Sélection &raquo;</router-link>
-    </p>
+<section id="détail">
 
-    <img src="images/featurette/plage.png" class="img-fluid" alt="..." style="height: 200px; width: 200px">
-    <h2 id="h2rando">Visites Locale</h2>
-    <p id="para1">
-        Visitez certains lieux historiques de l'île, les marchés, les rhumeries...
-    </p>
-    <p>
-        <router-link class="btn btn-secondary" to="/rando">Notre Sélection &raquo;</router-link>
-    </p>
+    <container class="example-wrapper">
+
+        <div class="row">
+
+            <div class="col-md-4 col-12">
+                <img src="{{featurette4}}" class="img-thumbnail shadow" alt="..." style="height: 200px; width: 200px">
+                <h2 id="h2rando">Visites Locale</h2>
+                <p id="para1">
+                    Visitez certains lieux historiques de l'île, les marchés, les rhumeries...
+                </p>
+                <p>
+                    <div class="btn btn-secondary" to="/randonnée">Notre Sélection &raquo;</div>
+                </p>
+            </div>
+            <div class="col-md-4 col-12">
+                <img src="{{featurette5}}" class="img-thumbnail shadow" alt="..." style="height: 200px; width: 200px">
+                <h2 id="h2activité">Les Plats</h2>
+                <p id="para3">
+                    Sur l'île on retrouve une multitude de plats : carry, rougails, sauté...
+                </p>
+                <p>
+                    <div class="btn btn-secondary" to="/plage">Notre Sélection &raquo;</div>
+                </p>
+            </div>
+            <div class="col-md-4 col-12">
+                <img src="{{featurette6}}" class="img-thumbnail shadow" alt="..." style="height: 200px; width: 200px">
+                <h2 id="h2visite">La Nature</h2>
+                <p id="para2">
+                    L'île regorge de nombreuses variétés de plantes de fleurs et d'arbres.
+                </p>
+                <p>
+                    <div class="btn btn-secondary" to="/plage">Notre Sélection &raquo;</div>
+                </p>
+            </div>
+        </div>
+    </container>
+</section>
 </div>
-
-
 
 <footer>
 
@@ -64,10 +124,22 @@
         padding: 2px 6px;
     }
     
+    .example-wrapper h1 {
+        margin-top: 260px;
+    }
+    
+    .espace {
+        height: 20px;
+    }
+    
     #video {
         display: flex;
         flex-direction: row;
         justify-content: center;
+    }
+    
+    .espace1 {
+        height: 35px;
     }
     
     #vanille {
@@ -75,22 +147,17 @@
         height: 75px;
     }
     
+    .espace2 {
+        height: 60px;
+    }
+    
     .img-thumbnail {
         width: 200px;
         height: 200px;
     }
     
-    .example-wrapper {
-        text-align: center;
-        margin: 160px auto;
-        max-width: 800px;
-        width: 95%;
-        font: 18px/1.5 sans-serif;
-    }
-    
-    .example-wrapper code {
-        background: #F5F5F5;
-        padding: 2px 6px;
+    .espace3 {
+        height: 60px;
     }
 </style>
 {% endblock %}

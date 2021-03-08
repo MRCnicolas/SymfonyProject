@@ -21,6 +21,15 @@ class BdController extends AbstractController
         'intro2' => "Voici Nos Conseils Et Notre Selections De
         Lieux Et D'activités Incontournables à Decouvrir Lors De Votre
         Séjour.",
+        'video' => "https://www.youtube.com/embed/UoTYNd3luOA?autoplay=1&mute=1&enablejsapi=1controls=0loop=1&amp;start=56",
+        'icones' => "images/icones/vanille.svg",
+        'featurette1' => "images/featurette/rando.png",
+        'featurette2' => "images/featurette/sport.png",
+        'featurette3' => "images/featurette/plage.png",
+        'featurette4' => "images/featurette/eglise.png",
+        'featurette5' => "images/featurette/zourit.png",
+        'featurette6' => "images/featurette/plantes.JPG",
+
         ]);
 
     }
