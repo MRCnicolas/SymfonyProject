@@ -29,6 +29,7 @@ class BdController extends AbstractController
         'featurette4' => "images/featurette/eglise.png",
         'featurette5' => "images/featurette/zourit.png",
         'featurette6' => "images/featurette/plantes.JPG",
+        'icones1' => "images/icones/panneau.png",
 
         ]);
 
@@ -51,16 +52,6 @@ class BdController extends AbstractController
     {
         return $this->render('pages/activitésportive.html.twig', [
             'title' => 'activitésportive',
-        ]);
-    }
-
-    /**
-     * @Route("/contact", name="app_contact")
-     */
-    public function contact(): Response
-    {
-        return $this->render('pages/contact.html.twig', [
-            'title' => 'contact',
         ]);
     }
 

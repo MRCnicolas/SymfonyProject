@@ -42,14 +42,12 @@
                             <a class="nav-link" href="{{ path('app_activitésportive') }}">Activité Sportive</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="{{ path('app_contact') }}">Contact</a>
-                        </li>
-                        <li class="nav-item">
                             <a class="nav-link" href="{{ path('security_registration') }}">Inscription</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="{{ path('app_about') }}">A propos</a>
+                            <a class="nav-link" href="{{ path('contact') }}">Contact</a>
                         </li>
+
 
                     </ul>
                     <a class="navbar-brand" href="#"><img src="/images/header/gouillat1.png" id="logonav"></a>
@@ -83,10 +81,10 @@
     </header>
 </body>
 
-<div main>
-    {% block body %} {% endblock %}
+<div class="container">
+    {% include 'flash_messages.html.twig' %} {% block body %} {% endblock %}
 </div>
-<footer id="footer">
+<footer>
     <p id="para-footer">
         &copy; Copyright {{ 'now'|date("Y", "Europe/Paris") }} &middot; <a href="{{ path('app_about') }}">A Propos</a> <a href="{{ path('app_home') }}">Retour à la page d'accueil</a> {{ 'now'|date("d/m/Y H:i A", "Europe/Paris") }}.
     </p>
@@ -107,7 +105,7 @@
         flex-direction: column;
         width: 100%;
         height: 200px;
-        background: url("/images/header/REUNION.png");
+        background-image: url("/images/header/REUNION.png");
         background-position: center;
         background-size: cover;
         position: fixed;
@@ -135,10 +133,9 @@
         height: 32px;
     }
     
-    #footer {
+    footer {
         display: flex;
         flex-direction: column;
-        align-items: stretch;
         background-size: cover;
         background-position: center;
         margin-top: 10%;
@@ -149,6 +146,7 @@
     
     #para-footer {
         margin-top: 20px;
+        margin-left: 10px;
     }
     
     .example-wrapper {
