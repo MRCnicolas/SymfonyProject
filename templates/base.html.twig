@@ -44,22 +44,39 @@
                         <li class="nav-item">
                             <a class="nav-link" href="{{ path('app_contact') }}">Contact</a>
                         </li>
-                        <li class="nav-item dropdown">
-                            <a class="nav-link dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">Menu</a>
-                            <div class="dropdown-menu">
-                                <a class="dropdown-item" href="{{ path('security_registration') }}">Inscription</a>
-                                <a class="dropdown-item" href="{{ path('app_login') }}">Connexion</a>
-                                <a class="dropdown-item" href="#">Something else here</a>
-                                <div class="dropdown-divider"></div>
-                                <a class="dropdown-item" href="{{ path('app_about') }}">A Propos</a>
-                            </div>
+                        <li class="nav-item">
+                            <a class="nav-link" href="{{ path('security_registration') }}">Inscription</a>
                         </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="{{ path('app_about') }}">A propos</a>
+                        </li>
+
                     </ul>
                     <a class="navbar-brand" href="#"><img src="/images/header/gouillat1.png" id="logonav"></a>
                     <form class="form-inline my-2 my-lg-0">
                         <input class="form-control mr-sm-2" type="text" placeholder="rechercher">
                         <button class="btn btn-secondary my-2 my-sm-0" type="submit">Recherche</button>
                     </form>
+
+                    <ul class="nav navbar-nav float-md-right">
+                        {% if app.user %}
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">{{ app.user.name }}</a>
+
+                            <div class="dropdown-menu" style="left: -90px;">
+                                {% if 'ROLE_ADMIN' in app.user.roles %}
+                                <a class="dropdown-item" href="/admin">Tableau de bord</a>
+                                <div class="dropdown-divider"></div>
+                                <a class="dropdown-item" href="{{ path('app_logout')}}">Se déconnecter</a> {% endif %}
+                            </div>
+                        </li>
+                        {% else %}
+                        <li class="nav-item">
+                            <a class="nav-link" href="{{ path('app_login')}}">Connexion</a>
+                        </li>
+                        {% endif %}
+                    </ul>
+
                 </div>
             </nav>
         </div>
@@ -69,8 +86,8 @@
 <div main>
     {% block body %} {% endblock %}
 </div>
-<footer>
-    <p>
+<footer id="footer">
+    <p id="para-footer">
         &copy; Copyright {{ 'now'|date("Y", "Europe/Paris") }} &middot; <a href="{{ path('app_about') }}">A Propos</a> <a href="{{ path('app_home') }}">Retour à la page d'accueil</a> {{ 'now'|date("d/m/Y H:i A", "Europe/Paris") }}.
     </p>
 </footer>
@@ -118,9 +135,25 @@
         height: 32px;
     }
     
+    #footer {
+        display: flex;
+        flex-direction: column;
+        align-items: stretch;
+        background-size: cover;
+        background-position: center;
+        margin-top: 10%;
+        height: 150px;
+        width: 100%;
+        background-image: url("/images/footer/Route-du-volcan1920.200.png");
+    }
+    
+    #para-footer {
+        margin-top: 20px;
+    }
+    
     .example-wrapper {
         text-align: center;
-        margin: 160px auto;
+        margin: 180px auto;
         max-width: 800px;
         width: 95%;
         font: 18px/1.5 sans-serif;
