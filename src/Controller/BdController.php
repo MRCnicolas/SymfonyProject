@@ -22,14 +22,14 @@ class BdController extends AbstractController
         Lieux Et D'activités Incontournables à Decouvrir Lors De Votre
         Séjour.",
         'video' => "https://www.youtube.com/embed/UoTYNd3luOA?autoplay=1&mute=1&enablejsapi=1controls=0loop=1&amp;start=56",
-        'icones' => "images/icones/vanille.svg",
-        'featurette1' => "images/featurette/rando.png",
-        'featurette2' => "images/featurette/sport.png",
-        'featurette3' => "images/featurette/plage.png",
-        'featurette4' => "images/featurette/eglise.png",
-        'featurette5' => "images/featurette/zourit.png",
-        'featurette6' => "images/featurette/plantes.JPG",
-        'icones1' => "images/icones/panneau.png",
+        'icones' => "images/pagehome/icones/vanille.svg",
+        'featurette1' => "images/pagehome/featurette/rando.png",
+        'featurette2' => "images/pagehome/featurette/sport.png",
+        'featurette3' => "images/pagehome/featurette/plage.png",
+        'featurette4' => "images/pagehome/featurette/eglise.png",
+        'featurette5' => "images/pagehome/featurette/zourit.png",
+        'featurette6' => "images/pagehome/featurette/plantes.JPG",
+        'icones1' => "images/pagehome/icones/panneau.png",
 
         ]);
 
@@ -41,7 +41,15 @@ class BdController extends AbstractController
     public function randonnée(): Response
     {
         return $this->render('pages/randonnée.html.twig', [
-            'title' => 'randonnée',
+            'title' => 'Les Randonnées',
+            'featurettes1' => "images/pagerandonnées/featurettes/pitondelafournaise/piton.jpg",
+            'featurettes2' => "images/pagerandonnées/featurettes/plagedelhermitage/hermitage.png",
+            'featurettes3' => "images/pagerandonnées/featurettes/cirquecilaos/cilaospano.jpg",
+            'featurettes4' => "images/pagerandonnées/featurettes/puitdesanglais/puit.jpg",
+            'featurettes5' => "images/pagerandonnées/featurettes/troudefer/trou-de-fer.jpg",
+            'featurettes6' => "images/pagerandonnées/featurettes/mafate/mafate.jpg",
+            'featurettes7' => "images/pagerandonnées/featurettes/salazie/salazie.jpg",
+            'featurettes8' => "images/pagerandonnées/featurettes/marreapouledeau/marre.jpg",
         ]);
     }
 

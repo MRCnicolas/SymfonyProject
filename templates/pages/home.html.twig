@@ -27,33 +27,33 @@
     <container class="example-wrapper">
         <div class="row">
             <div class="col-md-4 col-12">
-                <img src="{{featurette1}}" class="img-thumbnail shadow" alt="..." style="height: 200px; width: 200px">
+                <img src="{{featurette1}}" class="img-thumbnail shadow" alt="..." style="height: 250px; width: 250px">
                 <h2 id="h2rando">Randonnées</h2>
                 <p id="para1">
                     De nombreuses Randonnées pour tous les niveaux.
                 </p>
                 <p>
-                    <div class="btn btn-secondary" to="/randonnée">Notre Sélection &raquo;</div>
+                    <a href="{{ path('app_randonnée') }}" class="btn btn-outline">Notre Sélection &raquo;</a>
                 </p>
             </div>
             <div class="col-md-4 col-12">
-                <img src="{{featurette2}}" class="img-thumbnail shadow" alt="..." style="height: 200px; width: 200px">
+                <img src="{{featurette2}}" class="img-thumbnail shadow" alt="..." style="height: 250px; width: 250px">
                 <h2 id="h2activité">Activités Sportives</h2>
                 <p id="para3">
                     Profitez de toutes les activités sportives disponibles sur l'île.
                 </p>
                 <p>
-                    <div class="btn btn-secondary" to="/plage">Notre Sélection &raquo;</div>
+                    <a class="btn btn-outline" href="{{ path('app_activitésportive') }}">Notre Sélection &raquo;</a>
                 </p>
             </div>
             <div class="col-md-4 col-12">
-                <img src="{{featurette3}}" class="img-thumbnail shadow" alt="..." style="height: 200px; width: 200px">
+                <img src="{{featurette3}}" class="img-thumbnail shadow" alt="..." style="height: 250px; width: 250px">
                 <h2 id="h2visite">Les Plages</h2>
                 <p id="para2">
                     Des plages magnifique pour pratiqué le farniente...
                 </p>
                 <p>
-                    <div class="btn btn-secondary" to="/plage">Notre Sélection &raquo;</div>
+                    <a class="btn btn-outline" href="/plage">Notre Sélection &raquo;</a>
                 </p>
             </div>
         </div>
@@ -71,33 +71,33 @@
         <div class="row">
 
             <div class="col-md-4 col-12">
-                <img src="{{featurette4}}" class="img-thumbnail shadow" alt="..." style="height: 200px; width: 200px">
+                <img src="{{featurette4}}" class="img-thumbnail shadow" alt="..." style="height: 250px; width: 250px">
                 <h2 id="h2rando">Visites Locale</h2>
                 <p id="para1">
                     Visitez certains lieux historiques de l'île, les marchés, les rhumeries...
                 </p>
                 <p>
-                    <div class="btn btn-secondary" to="/randonnée">Notre Sélection &raquo;</div>
+                    <a class="btn btn-outline" to="/randonnée">Notre Sélection &raquo;</a>
                 </p>
             </div>
             <div class="col-md-4 col-12">
-                <img src="{{featurette5}}" class="img-thumbnail shadow" alt="..." style="height: 200px; width: 200px">
+                <img src="{{featurette5}}" class="img-thumbnail shadow" alt="..." style="height: 250px; width: 250px">
                 <h2 id="h2activité">Les Plats</h2>
                 <p id="para3">
                     Sur l'île on retrouve une multitude de plats : carry, rougails, sauté...
                 </p>
                 <p>
-                    <div class="btn btn-secondary" to="/plage">Notre Sélection &raquo;</div>
+                    <a class="btn btn-outline" to="/plage">Notre Sélection &raquo;</a>
                 </p>
             </div>
             <div class="col-md-4 col-12">
-                <img src="{{featurette6}}" class="img-thumbnail shadow" alt="..." style="height: 200px; width: 200px">
+                <img src="{{featurette6}}" class="img-thumbnail shadow" alt="..." style="height: 250px; width: 250px">
                 <h2 id="h2visite">La Nature</h2>
                 <p id="para2">
                     L'île regorge de nombreuses variétés de plantes de fleurs et d'arbres.
                 </p>
                 <p>
-                    <div class="btn btn-secondary" to="/plage">Notre Sélection &raquo;</div>
+                    <a class="btn btn-outline" to="/plage">Notre Sélection &raquo;</a>
                 </p>
             </div>
         </div>
@@ -129,6 +129,14 @@
         margin-top: 260px;
     }
     
+    a.btn-outline {
+        color: #ffffff;
+        background-color: #569A24;
+        border-color: #569A24;
+        box-shadow: 0 .5rem 1rem rgba(0, 0, 0, .15);
+        font-family: Neucha, -apple-system, system-ui, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+    }
+    
     .espace {
         height: 20px;
     }
@@ -155,6 +163,22 @@
     .img-thumbnail {
         width: 200px;
         height: 200px;
+    }
+    
+    .img-thumbnail:hover {
+        -webkit-transform: scale(1.5);
+        -moz-transform: scale(1.5);
+        -ms-transform: scale(1.5);
+        -o-transform: scale(1.5);
+        transform: scale(1.5);
+    }
+    
+    .img-thumbnail {
+        -webkit-transition: all .5s cubic-bezier( .6, 2, .4, 1);
+        -moz-transition: all .5s cubic-bezier( .6, 2, .4, 1);
+        -ms-transition: all .5s cubic-bezier( .6, 2, .4, 1);
+        -o-transition: all .5s cubic-bezier( .6, 2, .4, 1);
+        transition: all .5s cubic-bezier( .6, 2, .4, 1);
     }
     
     .espace3 {

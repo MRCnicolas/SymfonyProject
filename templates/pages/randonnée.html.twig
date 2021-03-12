@@ -1,7 +1,67 @@
 {% extends 'base.html.twig' %} {% block title 'Randonnée | ' ~ parent() %} {% block body %}
 
+<div class="example-wrapper">
+    <h1>{{title}}</h1>
+</div>
+
+
+<section id="détail">
+    <container class="example-wrapper">
+        <div class="row">
+            <div class="col-md-6 col-12">
+                <img src="{{featurettes1}}" class="img-thumbnail shadow">
+                <p></p>
+            </div>
+
+            <div class="col-md-6 col-12">
+                <img src="{{featurettes2}}" class="img-thumbnail shadow">
+            </div>
+        </div>
+    </container>
+</section>
+<container class="d-flex justify-content-center">
+    <img src="{{featurettes3}}" class="img-thumbnail shadow">
+</container>
+<section id="détail">
+    <container class="example-wrapper">
+        <div class="row">
+            <div class="col-md-6 col-12">
+                <img src="{{featurettes4}}" class="img-thumbnail shadow">
+                <p></p>
+            </div>
+
+            <div class="col-md-6 col-12">
+                <img src="{{featurettes5}}" class="img-thumbnail shadow">
+            </div>
+        </div>
+    </container>
+</section>
+<container class="d-flex justify-content-center">
+    <img src="{{featurettes6}}" class="img-thumbnail shadow">
+</container>
+<section id="détail">
+    <container class="example-wrapper">
+        <div class="row">
+            <div class="col-md-6 col-12">
+                <img src="{{featurettes7}}" class="img-thumbnail shadow">
+                <p></p>
+            </div>
+
+            <div class="col-md-6 col-12">
+                <img src="{{featurettes8}}" class="img-thumbnail shadow">
+            </div>
+        </div>
+    </container>
+</section>
+
+
+
 
 <style>
+    .example-wrapper h1 {
+        margin-top: 260px;
+    }
+    
     .example-wrapper {
         margin: 1em auto;
         max-width: 800px;
