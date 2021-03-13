@@ -42,14 +42,24 @@ class BdController extends AbstractController
     {
         return $this->render('pages/randonnée.html.twig', [
             'title' => 'Les Randonnées',
+            'titlef1' => 'Piton de la fournaise',
             'featurettes1' => "images/pagerandonnées/featurettes/pitondelafournaise/piton.jpg",
+            'titlef2' => "Plage de l'hermitage",
             'featurettes2' => "images/pagerandonnées/featurettes/plagedelhermitage/hermitage.png",
+            'titlef3' => 'Cirque de cilaos',
             'featurettes3' => "images/pagerandonnées/featurettes/cirquecilaos/cilaospano.jpg",
+            'titlef4' => 'Puit des anglais',
             'featurettes4' => "images/pagerandonnées/featurettes/puitdesanglais/puit.jpg",
+            'titlef5' => 'Trou de fer',
             'featurettes5' => "images/pagerandonnées/featurettes/troudefer/trou-de-fer.jpg",
+            'titlef6' => 'Cirque de mafate',
             'featurettes6' => "images/pagerandonnées/featurettes/mafate/mafate.jpg",
-            'featurettes7' => "images/pagerandonnées/featurettes/salazie/salazie.jpg",
+            'titlef7' => 'Bois court grand bassin',
+            'featurettes7' => "images/pagerandonnées/featurettes/boiscourt/grandbassinboiscourt.jpg",
+            'titlef8' => "Marre à poule d'eau",
             'featurettes8' => "images/pagerandonnées/featurettes/marreapouledeau/marre.jpg",
+            'titlef9' => 'Cirque de salazie',
+            'featurettes9' => "images/pagerandonnées/featurettes/salazie/salazie1.jpg",
         ]);
     }
 
