@@ -6,21 +6,22 @@
     <section>
         <p class="espace"></p>
     </section>
+    <h4>{{intro}}</h4>
+    </br>
     <article id="video">
-        <iframe width="100%" height="200" src="{{video}}" frameborder="0" allow="accelerometer; autoplay; loop; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+        <iframe class="rounded" width="100%" height="300" src="{{video}}" frameborder="0" allow="accelerometer; autoplay; loop; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
     </article>
     <section>
         <p class="espace1"></p>
     </section>
-    <h4>{{intro}}</h4>
-    </br>
-    <h4>{{intro2}}</h4>
-    <section>
-        <p class="espace2"></p>
-    </section>
+
     <div class="d-flex justify-content-center">
         <img src="{{icones}}" id="vanille" />
     </div>
+    <section>
+        <p class="espace2"></p>
+    </section>
+    <h4>{{intro2}}</h4>
 </div>
 
 <section id="détail">
@@ -50,7 +51,7 @@
                 <img src="{{featurette3}}" class="img-thumbnail shadow" alt="..." style="height: 250px; width: 250px">
                 <h2 id="h2visite">Les Plages</h2>
                 <p id="para2">
-                    Des plages magnifique pour pratiqué le farniente...
+                    Des plages magnifique pour pratiquer le farniente...
                 </p>
                 <p>
                     <a class="btn btn-outline" href="/plage">Notre Sélection &raquo;</a>
@@ -116,6 +117,7 @@
     .example-wrapper {
         margin: 1em auto;
         max-width: 800px;
+        height: 700px;
         width: 95%;
         font: 18px/1.5 sans-serif;
     }
@@ -126,7 +128,7 @@
     }
     
     .example-wrapper h1 {
-        margin-top: 260px;
+        margin-top: 320px;
     }
     
     a.btn-outline {
@@ -138,7 +140,7 @@
     }
     
     .espace {
-        height: 20px;
+        height: 60px;
     }
     
     #video {
@@ -147,8 +149,15 @@
         justify-content: center;
     }
     
+    .rounded {
+        padding: .25rem!important;
+        border: 2px solid #dee2e6!important;
+        border-radius: 255px 25px 225px 25px/25px 225px 25px 255px!important;
+        box-shadow: 0 .5rem 1rem rgba(0, 0, 0, .15)!important;
+    }
+    
     .espace1 {
-        height: 35px;
+        height: 60px;
     }
     
     #vanille {
