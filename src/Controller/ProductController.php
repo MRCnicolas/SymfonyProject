@@ -6,6 +6,7 @@ use App\Classe\Search;
 use App\Entity\Product;
 use App\Form\SearchType;
 use Doctrine\ORM\EntityManagerInterface;
+use Symfony\Component\HttpFoundation\Request;
 use Symfony\Component\Routing\Annotation\Route;
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 
@@ -20,12 +21,18 @@ class ProductController extends AbstractController
     /**
      * @Route("/nos-produits", name="products")
      */
-    public function index()
+    public function index(Request $request)
     {
         $products = $this->entityManager->getRepository(product::class)->findall();
 
         $search = new Search();
         $form = $this->createForm(SearchType::class, $search);
+
+        $form->handleRequest($request);
+
+        if ($form->isSubmitted() && $form->isValid()) {
+            $products = $this->entityManager->getRepository(product::class)->findWithSearch($search);
+        }
 
         return $this->render('product/index.html.twig', [
             'title' => 'Les Produits',
