@@ -3,7 +3,6 @@
 namespace App\Controller;
 
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
-use Symfony\Component\HttpFoundation\Response;
 use Symfony\Component\Routing\Annotation\Route;
 
 class BdController extends AbstractController
@@ -12,7 +11,7 @@ class BdController extends AbstractController
     /**
      * @Route("/home", name="app_home")
      */
-    public function home(): Response
+    public function home()
     {
         return $this->render('pages/home.html.twig', [
         'title' => " '' Le DoDo Y Guide A Ou '' ",
@@ -40,7 +39,7 @@ class BdController extends AbstractController
     /**
      * @Route("/randonnée", name="app_randonnée")
      */
-    public function randonnée(): Response
+    public function randonnée()
     {
         return $this->render('pages/randonnée.html.twig', [
             'title' => 'Les Randonnées',
@@ -68,7 +67,7 @@ class BdController extends AbstractController
     /**
      * @Route("/activitésportive", name="app_activitésportive")
      */
-    public function activitésportive(): Response
+    public function activitésportive()
     {
         return $this->render('pages/activitésportive.html.twig', [
             'title' => 'activitésportive',
@@ -78,7 +77,7 @@ class BdController extends AbstractController
     /**
      * @Route("/about", name="app_about")
      */
-    public function about(): Response
+    public function about()
     {
         return $this->render('pages/about.html.twig', [
             'title' => 'about',

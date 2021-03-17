@@ -47,9 +47,6 @@
                             <a class="nav-link" href="{{ path('products') }}">Nos Produits</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="{{ path('security_registration') }}">Inscription</a>
-                        </li>
-                        <li class="nav-item">
                             <a class="nav-link" href="{{ path('contact') }}">Contact</a>
                         </li>
 
@@ -60,7 +57,9 @@
                         <input class="form-control mr-sm-2" type="text" placeholder="rechercher">
                         <button class="btn btn-secondary my-2 my-sm-0" type="submit">Recherche</button>
                     </form>
-
+                    <div class="nav-item">
+                        <a class="nav-link" href="{{ path('security_registration') }}">Inscription</a>
+                    </div>
                     <ul class="nav navbar-nav float-md-right">
                         {% if app.user %}
                         <li class="nav-item dropdown">
@@ -79,7 +78,9 @@
                         </li>
                         {% endif %}
                     </ul>
-
+                    <a href="{{ path('cart')}}" alt="">
+                        <img src="{{ asset('images/pagebase/header/shopping-cart.png')}}" class="cart-icon" alt="Mon panier">
+                    </a>
                 </div>
             </nav>
         </div>
@@ -146,6 +147,10 @@
     #logonav {
         width: 100px;
         height: 32px;
+    }
+    
+    .cart-icon {
+        height: 25px;
     }
     
     footer {
