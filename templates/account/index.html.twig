@@ -1,0 +1,14 @@
+{% extends 'base.html.twig' %} {% block title 'Mon Compte | ' ~ parent() %} {% block body %}
+
+
+<div class="example-wrapper">
+    <h1>{{ title }}</h1>
+    <p>Bienvenue {{app.user.name}} dans votre compte.</p>
+
+</div>
+<style>
+    h1 {
+        margin-top: 300px;
+    }
+</style>
+{% endblock %}
