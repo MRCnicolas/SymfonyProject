@@ -1,0 +1,25 @@
+{% extends 'base.html.twig' %} {% block title 'Valider ma commande | ' ~ parent() %} {% block body %}
+
+
+<div class="example-wrapper">
+    <h1>{{ title }}</h1>
+    <hr>
+
+    <div class="row">
+
+        <div class="col-md-6">
+            {% set formHtml %} {{ form(form) }} {% endset %} {{ formHtml|replace({'[br]' : '<br/>'})|raw }}
+        </div>
+
+        <div class="col-md-6">
+            <b>Récapitulatif de ma commande</b><br/>
+            <b>Bouton paiement</b>
+        </div>
+    </div>
+</div>
+<style>
+    .example-wrapper h1 {
+        margin-top: 260px;
+    }
+</style>
+{% endblock %}
