@@ -28,8 +28,7 @@
             <td>
                 <a href="{{ path('decrease_to_cart', {'id' : product.product.id }) }}" alt="">
                     <img src="{{ asset('images/pagepanier/minus.png')}}" height="10px" alt="Enlever un produit">
-                </a>
-                {{ product.quantity}}
+                </a>x {{ product.quantity }}
                 <a href="{{ path('add_to_cart', {'id' : product.product.id }) }}" alt="">
                     <img src="{{ asset('images/pagepanier/plus.png')}}" height="10px" alt="Ajouter un produit">
                 </a>

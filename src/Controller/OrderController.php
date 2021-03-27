@@ -2,17 +2,18 @@
 
 namespace App\Controller;
 
+use App\Classe\Cart;
 use App\Form\OrderType;
-use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
-
+use Symfony\Component\HttpFoundation\Request;
 use Symfony\Component\Routing\Annotation\Route;
+use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 
 class OrderController extends AbstractController
 {
     /**
      * @Route("/commande", name="order")
      */
-    public function index()
+    public function index(Cart $cart, Request $request)
     {
         if (!$this->getUser()->getAddresses()->getValues())
         {
@@ -23,9 +24,16 @@ class OrderController extends AbstractController
             'user' => $this->getUser()
         ]);
 
+        $form->handleRequest($request);
+
+        if ($form->isSubmitted() && $form->isValid()) {
+
+        }
+
         return $this->render('order/index.html.twig', [
             'title' => 'Passer une commande',
-            'form' => $form->createView()
+            'form' => $form->createView(),
+            'cart' => $cart->getFull()
         ]);
     }
 }
