@@ -62,6 +62,11 @@ class Address
      * @ORM\Column(type="string", length=255)
      */
     private $phone;
+
+    /**
+     * @ORM\Column(type="string", length=255, nullable=true)
+     */
+    private $company;
     public function __toString()
     {
         return $this->getName().'[br]'.$this->getAddress().'[br]'.$this->getCity().' - '.$this->getCountry();
@@ -175,6 +180,18 @@ class Address
     public function setPhone(string $phone): self
     {
         $this->phone = $phone;
+
+        return $this;
+    }
+
+    public function getCompany(): ?string
+    {
+        return $this->company;
+    }
+
+    public function setCompany(?string $company): self
+    {
+        $this->company = $company;
 
         return $this;
     }
