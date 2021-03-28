@@ -67,6 +67,8 @@ class Address
      * @ORM\Column(type="string", length=255, nullable=true)
      */
     private $company;
+
+    
     public function __toString()
     {
         return $this->getName().'[br]'.$this->getAddress().'[br]'.$this->getCity().' - '.$this->getCountry();
