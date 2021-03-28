@@ -41,7 +41,7 @@ class Address
     /**
      * @ORM\Column(type="string", length=255, nullable=true)
      */
-    private $compagny;
+    private $company;
 
     /**
      * @ORM\Column(type="string", length=255)
@@ -124,14 +124,14 @@ class Address
         return $this;
     }
 
-    public function getCompagny(): ?string
+    public function getCompany(): ?string
     {
-        return $this->compagny;
+        return $this->company;
     }
 
-    public function setCompagny(?string $compagny): self
+    public function setCompany(?string $company): self
     {
-        $this->compagny = $compagny;
+        $this->company = $company;
 
         return $this;
     }
