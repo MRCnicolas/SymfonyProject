@@ -1,0 +1,67 @@
+{% extends 'base.html.twig' %} {% block title 'Valider ma commande | ' ~ parent() %} {% block body %}
+
+
+
+<h1>{{ title }}</h1>
+<p>{{ paragraphe }}</p>
+<hr>
+
+<div class="row">
+
+    <div class="col-md-6">
+        {% set formHtml %} {{ form_start(form, {action:path('order_recapitulatif')}) }} {{ form_label(form.addresses, 'Choisissez votre adresse de livraison') }}
+
+        <a href="{{ path('account_address_add') }}">Ajouter une nouvelle adresse</a> {{ form_end(form) }} {% endset %} {{ formHtml|replace({'[br]' : '<br/>'})|raw }}
+    </div>
+
+    <div class="col-md-6">
+        <div class="text-center">
+            <b>Récapitulatif de ma commande</b><br/>
+        </div>
+
+
+        <div class="order-summary">
+            {% for key,product in cart %}
+
+            <div class="row {% if key > 0 %}mt-2{% endif %}">
+
+                <div class="col-2"><img src="/uploads/{{ product.product.illustration }}" alt="{{ product.product.name }}" height="80px"></div>
+
+                <div class="col-8 my-auto">
+                    {{ product.product.name}}</br>
+                    <small>{{ product.product.subtitle }}</small>
+                </div>
+
+                <div class="col-2 my-auto">
+                    x {{ product.quantity }}
+
+                </div>
+            </div>
+            {% endfor %}
+
+        </div>
+
+    </div>
+</div>
+<style>
+    h1 {
+        margin-top: 260px;
+    }
+    
+    .form-check {
+        background-color: rgba(207, 247, 207, 0.377);
+        padding: 20px 65px;
+        margin-top: 6px;
+    }
+    
+    .col-form-label {
+        font-weight: bold;
+    }
+    
+    .order-summary {
+        background-color: rgba(207, 247, 207, 0.377);
+        padding: 20px;
+        margin-top: 22px;
+    }
+</style>
+{% endblock %}
