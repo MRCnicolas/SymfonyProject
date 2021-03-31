@@ -34,4 +34,31 @@ class AccountOrderController extends AbstractController
             
         ]);
     }
+
+
+    /**
+     * @Route("/compte/mes-commandes/{reference}", name="account_order_show")
+     */
+    public function show($reference)
+    {
+
+        $order = $this->entityManager->getRepository(Order::class)->findOneByReference($reference);
+
+        if (!$order || $order->getUser() != $this->getUser()) {
+            return $this->redirectToRoute('account_order');
+        }
+
+        return $this->render('account/order_show.html.twig', [
+            'title' => 'Ma commande',
+            'paragraphe' => 'Commande passée le :',
+            'paragraphe1' => 'Référence de ma commande :',
+            'paragraphe2' => 'Transporteur choisi :',
+            'paragraphe3' => 'Détails:',
+            'paragraphe4' => 'Sous-total : ',
+            'paragraphe5' => 'Livraison : ',
+            'paragraphe6' => 'Total : ',
+            'order' => $order
+            
+        ]);
+    }
 }
