@@ -1,0 +1,20 @@
+{% extends 'base.html.twig' %} {% block title 'Confirmation de commande | ' ~ parent() %} {% block body %}
+
+
+
+
+<h1>{{title}}</h1>
+<p>
+    {{paragraphe}} {{ order.user.firstname }} {{ order.user.lastname }},<br/><br/> {{paragraphe1}}{{ order.reference }}.<br/> {{paragraphe2}} {{ order.user.email }}.
+    <hr> {{paragraphe3}} {{ order.carrierName }}{{paragraphe4}}<br/> {{ order.delivery|raw}}
+    <hr> {{paragraphe5}}<a href="{{ path('account')}}">Compte</a>.
+</p>
+
+
+
+<style>
+    h1 {
+        margin-top: 300px;
+    }
+</style>
+{% endblock %}
