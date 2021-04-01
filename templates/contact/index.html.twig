@@ -1,12 +1,20 @@
-{% extends 'base.html.twig' %} {% block title 'Contact | ' ~ parent() %} {% block body %}
+{% extends 'base.html.twig' %} 
+
+{% block title 'Contact | ' ~ parent() %} 
+
+{% block body %}
 
 <div class="example-wrapper">
     <h1>{{ title }}</h1>
 
-    {{ form_start(contact_form) }} {{ form_row(contact_form.name, {'label': 'Nom d\'utilisateur', 'attr': {'class': 'input-group', 'placeholder': 'Votre nom d\'utilisateur...' }}) }} {{ form_row(contact_form.from, {'label': 'Adresse email', 'attr': {'class':
-    'input-group', 'placeholder': 'Adresse email...' }}) }} {{ form_row(contact_form.message, {'label': 'Message', 'attr': {'class': 'input-group', 'placeholder': 'Votre message...' }}) }}
+    {{ form_start(contact_form) }}
+    {{ form_row(contact_form.name, {'label': 'Nom d\'utilisateur', 'attr': {'class': 'input-group', 'placeholder': 'Votre nom d\'utilisateur...' }}) }} 
+    {{ form_row(contact_form.from, {'label': 'Adresse email', 'attr': {'class': 'input-group', 'placeholder': 'Adresse email...' }}) }}
+    {{ form_row(contact_form.message, {'label': 'Message', 'attr': {'class': 'input-group', 'placeholder': 'Votre message...' }}) }}
 
-    <input type="submit" value="envoyer" class="btn btn-success" /> {{ form_end(contact_form) }}
+    <input type="submit" value="envoyer" class="btn btn-success" /> 
+    
+    {{ form_end(contact_form) }}
 
 </div>
 

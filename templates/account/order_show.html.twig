@@ -1,12 +1,16 @@
-{% extends 'base.html.twig' %} {% block title 'Ma commande | ' ~ parent() %} {% block body %}
+{% extends 'base.html.twig' %} 
 
+{% block title 'Ma commande | ' ~ parent() %} 
+
+{% block body %}
 
 
 <h1>{{ title }} {{ order.reference }}</h1>
 <a href="{{ path('account_order') }}">Retour</a>
-<hr> {{paragraphe}} {{ order.createdAt|date("d/m/Y H:i ", "Europe/Paris") }}<br/> {{paragraphe1}} <small>{{ order.reference }}</small><br/> {{paragraphe2}} {{ order.carriername }}
+<hr> {{paragraphe}} {{ order.createdAt|date("d/m/Y H:i ", "Europe/Paris") }}<br /> {{paragraphe1}}
+<small>{{ order.reference }}</small><br /> {{paragraphe2}} {{ order.carriername }}
 
-<hr> {{paragraphe3}}<br/>
+<hr> {{paragraphe3}}<br />
 
 <table class="table mt-2">
     <thead>
@@ -30,7 +34,8 @@
 </table>
 
 <div class="text-right">
-    {{paragraphe4}}{{(order.getTotal / 100)|number_format(2, ',', '.') }} €<br/> {{paragraphe5}}{{(order.carrierprice / 100)|number_format(2, ',', '.') }} €<br/> {{paragraphe6}}{{ ((order.carrierPrice + order.getTotal) / 100)|number_format(2, ',', '.')
+    {{paragraphe4}}{{(order.getTotal / 100)|number_format(2, ',', '.') }} €<br />
+    {{paragraphe5}}{{(order.carrierprice / 100)|number_format(2, ',', '.') }} €<br /> {{paragraphe6}}{{ ((order.carrierPrice + order.getTotal) / 100)|number_format(2, ',', '.')
     }} €
 
 </div>

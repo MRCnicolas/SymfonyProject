@@ -21,7 +21,11 @@ class ChangePasswordType extends AbstractType
                 'disabled' => true,
                 'label' => 'Adresse email'
             ])
-            ->add('name', TextType::class, [
+            ->add('lastname', TextType::class, [
+                'disabled' => true,
+                'label' => 'Nom'
+            ])
+            ->add('firstname', TextType::class, [
                 'disabled' => true,
                 'label' => 'Prénom'
             ])

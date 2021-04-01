@@ -1,11 +1,15 @@
-{% extends 'base.html.twig' %} {% block title 'Erreur de paiement | ' ~ parent() %} {% block body %}
+{% extends 'base.html.twig' %} 
 
+{% block title 'Erreur de paiement | ' ~ parent() %} 
 
+{% block body %}
 
 
 <h1>{{title}}</h1>
 <p>
-    {{paragraphe}} {{ order.user.firstname }} {{ order.user.lastname }},<br/><br/> {{paragraphe1}}{{ order.reference }}.<br/> {{paragraphe2}} {{ order.user.email }}.
+    {{paragraphe}} {{ order.user.firstname }} {{ order.user.lastname }},<br /><br />
+    {{paragraphe1}}{{ order.reference }}.<br /> 
+    {{paragraphe2}} {{ order.user.email }}.
 
 </p>
 <a href="{{ path('order') }}" class="btn btn-success">Réessayer le paiement</a>

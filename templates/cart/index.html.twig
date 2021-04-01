@@ -1,4 +1,8 @@
-{% extends 'base.html.twig' %} {% block title 'Mon panier | ' ~ parent() %} {% block body %}
+{% extends 'base.html.twig' %} 
+
+{% block title 'Mon panier | ' ~ parent() %} 
+
+{% block body %}
 
 <div class="example-wrapper"></div>
 <h1>{{title}}</h1>
@@ -16,10 +20,13 @@
         </tr>
     </thead>
     <tbody>
-        {% set total = null %} {% for product in cart %}
+        {% set total = null %} 
+        
+        {% for product in cart %}
         <tr>
             <th>
-                <img src="/uploads/{{ product.product.illustration }}" alt="{{ product.product.name }}" height="80px"></br>
+                <img src="/uploads/{{ product.product.illustration }}" alt="{{ product.product.name }}"
+                    height="80px"></br>
             </th>
             <td>
                 {{ product.product.name}}</br>
@@ -41,7 +48,9 @@
                 </a>
             </td>
         </tr>
-        {% set total = total + (product.product.price * product.quantity) %} {% endfor %}
+        {% set total = total + (product.product.price * product.quantity) %} 
+        
+        {% endfor %}
     </tbody>
 </table>
 <div class=" text-right mb-5 ">
