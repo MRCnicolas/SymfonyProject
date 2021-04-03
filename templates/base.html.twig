@@ -14,7 +14,7 @@
         crossorigin="anonymous" />
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.2/css/all.css"
         integrity="sha384-vSIIfh2YWi9wW0r9iZe7RJPrKwp6bG+s9QZMoITbCckVJqGCCRhc+ccxNcdpHuYu" crossorigin="anonymous" />
-    {% endblock %} 
+    {% endblock %}
     {% block javascripts %}
     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
         integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous">
@@ -42,51 +42,119 @@
                 <div class="collapse navbar-collapse" id="navbarColor03">
                     <ul class="navbar-nav mr-auto">
                         <li class="nav-item active">
-                            <a class="nav-link" href="{{ path('app_home') }}">Accueil
-                                <span class="sr-only">(current)</span>
-                            </a>
+                            <div class="svg-wrapper">
+                                <svg height="30" width="100">
+                                    <rect id="shape" height="30" width="100" />
+                                    <div id="text">
+                                        <a href="{{ path('app_home') }}">Accueil</a>
+                                    </div>
+                                </svg>
+                            </div>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="{{ path('app_randonnée') }}">Randonnée</a>
+                            <div class="svg-wrapper">
+                                <svg height="30" width="100">
+                                    <rect id="shape" height="30" width="100" />
+                                    <div id="text">
+                                        <a href="{{ path('app_randonnée') }}">Randonnée</a>
+                                    </div>
+                                </svg>
+                            </div>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="{{ path('app_activitésportive') }}">Activité Sportive</a>
+                            <div class="svg-wrapper">
+                                <svg height="30" width="100">
+                                    <rect id="shape" height="30" width="100" />
+                                    <div id="text">
+                                        <a href="{{ path('app_activitésportive') }}">Activité</a>
+                                    </div>
+                                </svg>
+                            </div>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="{{ path('products') }}">Nos Produits</a>
+                            <div class="svg-wrapper">
+                                <svg height="30" width="100">
+                                    <rect id="shape" height="30" width="100" />
+                                    <div id="text">
+                                        <a href="{{ path('products') }}">Boutique</a>
+                                    </div>
+                                </svg>
+                            </div>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="{{ path('contact') }}">Contact</a>
+                            <div class="svg-wrapper">
+                                <svg height="30" width="100">
+                                    <rect id="shape" height="30" width="100" />
+                                    <div id="text">
+                                        <a href="{{ path('contact') }}">Contact</a>
+                                    </div>
+                                </svg>
+                            </div>
+                        </li>
+
+                        <li class="nav-item dropdown">
+                            <div class="svg-wrapper">
+                                <svg height="30" width="100">
+                                    <rect id="shape" height="30" width="100" />
+                                    <div id="textmenu">
+                                        <a class="nav-link dropdown-toggle" data-toggle="dropdown" href="#"
+                                            role="button" aria-haspopup="true" aria-expanded="false">Rechercher</a>
+                                        <div class="dropdown-menu" style="right: -131px">
+                                            <div class="container-fluid">
+                                                <form class="d-flex">
+                                                    <input class="form-control me-2" type="search"
+                                                        placeholder="Rechercher">
+                                                    <button class="btn btn-outline-success" type="submit"><i
+                                                            class="fas fa-search"></i></button>
+                                                </form>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </svg>
+                            </div>
                         </li>
                     </ul>
+
                     <a class="navbar-brand" href="#"><img src="/images/pagebase/header/gouillat1.png"
                             id="logonav" /></a>
-                    <form class="form-inline my-2 my-lg-0">
-                        <input class="form-control mr-sm-2" type="text" placeholder="rechercher" />
-                        <button class="btn btn-secondary my-2 my-sm-0" type="submit">
-                            Recherche
-                        </button>
-                    </form>
+
                     <div class="nav-item">
-                        <a class="nav-link" href="{{ path('security_registration') }}">Inscription</a>
+                        <div class="svg-wrapper">
+                            <svg height="30" width="100">
+                                <rect id="shape" height="30" width="100" />
+                                <div id="text">
+                                    <a href="{{ path('security_registration') }}">Inscription</a>
+                                </div>
+                            </svg>
+                        </div>
                     </div>
 
-                    <ul class="nav navbar-nav float-md-right">
+                    <ul class="nav navbar-nav float-md-right mr-2">
                         {% if app.user %}
                         <li class="nav-item dropdown">
-                            <a class="nav-link dropdown-toggle" data-toggle="dropdown" href="#" role="button"
-                                aria-haspopup="true" aria-expanded="false">{{ app.user.firstname }}</a>
+                            <div class="svg-wrapper">
+                                <svg height="30" width="100">
+                                    <rect id="shape" height="30" width="100" />
+                                    <div id="textmenu">
+                                        <a class="nav-link dropdown-toggle" data-toggle="dropdown" href="#"
+                                            role="button" aria-haspopup="true"
+                                            aria-expanded="false">{{ app.user.firstname }}</a>
 
-                            <div class="dropdown-menu" style="left: -90px">
-                                {% if 'ROLE_ADMIN' in app.user.roles %}
-                                <a class="dropdown-item" href="{{ path('account') }}">Mon Compte</a>
-                                <div class="dropdown-divider"></div>
-                                <a class="dropdown-item" href="/admin">Tableau de bord</a>
-                                <div class="dropdown-divider"></div>
-                                <a class="dropdown-item" href="{{ path('app_logout') }}">Se déconnecter</a> {% else %}
-                                <a class="dropdown-item" href="{{ path('account') }}">Mon Compte</a>
-                                <div class="dropdown-divider"></div>
-                                <a class="dropdown-item" href="{{ path('app_logout') }}">Se déconnecter</a> {% endif %}
+                                        <div class="dropdown-menu" style="left: -60px">
+                                            {% if 'ROLE_ADMIN' in app.user.roles %}
+                                            <a class="dropdown-item" href="{{ path('account') }}">Mon Compte</a>
+                                            <div class="dropdown-divider"></div>
+                                            <a class="dropdown-item" href="/admin">Tableau de bord</a>
+                                            <div class="dropdown-divider"></div>
+                                            <a class="dropdown-item" href="{{ path('app_logout') }}">Se déconnecter</a>
+                                            {% else %}
+                                            <a class="dropdown-item" href="{{ path('account') }}">Mon Compte</a>
+                                            <div class="dropdown-divider"></div>
+                                            <a class="dropdown-item" href="{{ path('app_logout') }}">Se déconnecter</a>
+                                            {% endif %}
+                                        </div>
+                                    </div>
+                                </svg>
                             </div>
                         </li>
                         {% else %}
@@ -95,7 +163,8 @@
                         </li>
                         {% endif %}
                     </ul>
-                    <a href="{{ path('cart') }}" alt="">
+
+                    <a class="navbar-brand" href="{{ path('cart') }}" alt="">
                         <img src="{{ asset('images/pagebase/header/shopping-cart.png') }}" class="cart-icon"
                             alt="Mon panier" />
                     </a>
@@ -106,15 +175,16 @@
 </body>
 
 <div class="container">
-    {% include 'flash_messages.html.twig' %} 
+    {% include 'flash_messages.html.twig' %}
     {% block body %}{% endblock %}
 </div>
 
+
 <footer>
-    <p id="para-footer">
-        &copy; Copyright {{ 'now'|date("Y", "Europe/Paris") }} &middot;
+    <p id="para-footer" class="text-center">
+        &copy; 2020/{{ 'now'|date("Y", "Europe/Paris") }} &middot;
         <a href="{{ path('app_about') }}">A Propos</a>
-        <a href="{{ path('app_home') }}">Retour à la page d'accueil</a> {{ 'now'|date("d/m/Y H:i ", "Europe/Paris") }}.
+        <a href="{{ path('app_home') }}">Retour à la page d'accueil</a>.
     </p>
 </footer>
 
@@ -153,13 +223,35 @@
         color: #0b93e1 !important;
     }
 
-    .dropdown-item {
-        color: #0b93e1 !important;
+    .btn-success {
+        color: #fff;
+        background-color: #569A24;
+        border-color: #569A24;
     }
 
-    .btn-secondary {
-        background-color: #569a24 !important;
-        border-color: white !important;
+    .btn-outline-success:hover {
+        background-color: #569A24;
+        border-color: #569A24;
+    }
+
+    .dropdown-item {
+        color: #0b93e1 !important;
+        text-align: center;
+    }
+
+    .dropdown-item:hover {
+        background-color: #fff;
+        border-top: 2px solid #569A24;
+        border-bottom: 2px solid #569A24;
+    }
+
+    .dropdown-menu {
+        border-color: #0b93e1;
+        box-shadow: 0 0.1rem 1rem rgb(0 0 0 / 25%);
+    }
+
+    .dropdown-divider {
+        border-top: 1px solid #0b93e1;
     }
 
     .form-control {
@@ -202,6 +294,55 @@
     .example-wrapper code {
         background: #f5f5f5;
         padding: 2px 6px;
+    }
+
+
+    /* 
+    Bouton navbar
+    */
+
+    .svg-wrapper {
+        margin-top: 0;
+        position: relative;
+        width: 100px;
+        height: 30px;
+        display: inline-block;
+        border-radius: 3px;
+        margin-left: 5px;
+        margin-right: 5px
+    }
+
+    #shape {
+        stroke-width: 6px;
+        fill: none;
+        stroke: #0b93e1;
+        stroke-dasharray: 85 400;
+        stroke-dashoffset: -140;
+        transition: 1s all ease;
+    }
+
+    #text {
+        margin-top: -27px;
+        text-align: center;
+    }
+
+    #text a {
+        color: #0b93e1;
+        text-decoration: none;
+        font-weight: 100;
+        font-size: 1.1em;
+    }
+
+    #textmenu {
+        margin-top: -33px;
+        text-align: center;
+    }
+
+    .svg-wrapper:hover #shape {
+        stroke-dasharray: 50 0;
+        stroke-width: 3px;
+        stroke-dashoffset: 0;
+        stroke: #569A24;
     }
 </style>
 
