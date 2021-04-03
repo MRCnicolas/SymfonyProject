@@ -7,7 +7,15 @@
 <div class="example-wrapper">
     <h1>{{ title }}</h1>
 
+    <section>
+        <p class="espace1"></p>
+    </section>
+
     <a href="{{ path('account_address') }}">Retour</a>
+
+    <section>
+        <p class="espace2"></p>
+    </section>
 
     <hr> {{ form_start(form) }}
 
@@ -23,6 +31,10 @@
         <div class="col-md-6">{{ form_row(form.phone) }}</div>
     </div>
 
+    <section>
+        <p class="espace3"></p>
+    </section>
+
     {{ form_end(form) }}
 
 </div>
@@ -30,6 +42,31 @@
 <style>
     h1 {
         margin-top: 300px;
+    }
+
+    a:hover {
+        color: #569A24;
+    }
+    .btn-primary {
+        color: #569A24;
+        background-color: #fff;
+        border-color: #569A24;
+    }
+
+    .btn-primary:hover {
+        color: #fff;
+        background-color: #569A24;
+        border-color: #569A24;
+    }
+
+    .espace1 {
+        height: 15px;
+    }
+    .espace2 {
+        height: 30px;
+    }
+    .espace3 {
+        height: 20px;
     }
 </style>
 {% endblock %}

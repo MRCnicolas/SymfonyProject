@@ -5,6 +5,7 @@
 {% block body %}
 
 <div class="example-wrapper">
+    
     <h1>{{title}}</h1>
     <form method="post">
 
@@ -18,27 +19,24 @@
         </div>
         {% endif %}
 
-        <h1 class="h3 mb-3 font-weight-normal">Connectez-vous</h1>
         <label for="inputEmail">Adresse email</label>
         <input type="email" value="{{ last_username }}" name="email" id="inputEmail" class="form-control" required
             autofocus>
         <label for="inputPassword">Mot de passe</label>
         <input type="password" name="password" id="inputPassword" class="form-control" required>
 
-        <input type="hidden" name="_csrf_token" value="{{ csrf_token('authenticate') }}"> {# Uncomment this section and add a remember_me option below your firewall to activate remember me functionality. See https://symfony.com/doc/current/security/remember_me.html
+        <input type="hidden" name="_csrf_token" value="{{ csrf_token('authenticate') }}">
 
-        <div class="checkbox mb-3">
-            <label>
-                <input type="checkbox" name="_remember_me"> Remember me
-            </label>
-        </div>
-        #}
-
-        <button class="btn btn-success" type="submit">
+        <button class="btn btn-outline-success mt-3" type="submit">
             Se connecter
         </button>
 
-        <p class="text-center">Ou souhaitez-vous <a href="{{ path('security_registration') }}">Créer un compte</a> ?</p>
+        <p class="text-center mt-3">Voulez-vous <a href="{{ path('security_registration') }}">Créer un compte</a> ?</p>
     </form>
 </div>
+<style>
+    a:hover {
+        color: #569A24;
+    }
+</style>
 {% endblock %}
