@@ -1,6 +1,6 @@
-{% extends 'base.html.twig' %} 
+{% extends 'base.html.twig' %}
 
-{% block title 'Paiement de ma commande | ' ~ parent() %} 
+{% block title 'Paiement de ma commande | ' ~ parent() %}
 
 {% block body %}
 
@@ -15,13 +15,14 @@
 <div class="row">
     <div class="col-md-6">
         <strong>Mon adresse de livraison</strong><br />
-        <div class="form-check mt-4">
+        <hr>
+        <div class="form-check mt-3">
             {{ delivery|raw }}
         </div>
         <hr>
         <strong>Mon transporteur</strong><br />
-
-        <div class="form-check">
+        <hr>
+        <div class="form-check mt-3">
             {{ carrier.name }}<br /> {{ carrier.description }}<br />
             {{ (carrier.price / 100)|number_format(2, ',', '.') }} €
         </div>
@@ -33,19 +34,19 @@
         <div class="text-center">
             <b>Ma commande</b><br />
         </div>
-
-
+        <hr>
         <div class="order-summary">
-            {% set total = null %} 
-            
+            {% set total = null %}
+
             {% for key,product in cart %}
 
             <div class="row {% if key > 0 %}mt-2{% endif %}">
 
-                <div class="col-2"><img src="/uploads/{{ product.product.illustration }}"
-                        alt="{{ product.product.name }}" height="80px"></div>
+                <div class="col-2 mr-5">
+                    <img src="/uploads/{{ product.product.illustration }}" alt="{{ product.product.name }}"
+                        height="80px"></div>
 
-                <div class="col-8 my-auto">
+                <div class="col-4 my-auto ml-5">
                     {{ product.product.name}}
                     <br />
                     <small>
@@ -55,12 +56,12 @@
                     </small>
                 </div>
 
-                <div class="col-2 my-auto">
+                <div class="col-2 my-auto ml-5">
                     {{ ((product.product.price * product.quantity ) / 100 )|number_format(2, ',', '.') }} €
                 </div>
             </div>
-            {% set total = total + (product.product.price * product.quantity) %} 
-            
+            {% set total = total + (product.product.price * product.quantity) %}
+
             {% endfor %}
         </div>
         <hr>
@@ -71,13 +72,13 @@
 
 
         <br />
-        <a class="btn btn-success mt-3" id="checkout-button">Payer |
+        <a class="btn btn-outline-success mt-3" id="checkout-button">Payer |
             {{ ((total / 100) + (carrier.price / 100))|number_format(2, ',', '.') }} €</a>
     </div>
 </div>
 <style>
     h1 {
-        margin-top: 260px;
+        margin-top: 300px;
     }
 
     .form-check {
@@ -92,17 +93,17 @@
 
     .order-summary {
         background-color: rgba(207, 247, 207, 0.377);
-        padding: 20px;
-        margin-top: 22px;
+        padding: 25px;
+        margin-top: 16px;
     }
 </style>
-{% endblock %} 
+{% endblock %}
 
 {% block script %}
 <script type="text/javascript">
     var stripe = Stripe(
         "pk_test_51IaNAgA8V7lNXFT0FYcWLkIjnYfuLKZrb98FmEsofxvMX0RvNhmaV5zh6MR9da8FEWJJF3tIFFpXFoppcxqAlfxr00RSBs1gwp"
-        );
+    );
     var checkoutButton = document.getElementById("checkout-button");
     checkoutButton.addEventListener("click", function () {
         fetch("/commande/create-session/{{ reference }}", {

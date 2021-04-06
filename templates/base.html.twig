@@ -181,10 +181,10 @@
 
 
 <footer>
-    <p id="para-footer" class="text-center">
+    <p id="p-footer" class="text-center">
         &copy; 2020/{{ 'now'|date("Y", "Europe/Paris") }} &middot;
-        <a href="{{ path('app_about') }}">A Propos</a>
-        <a href="{{ path('app_home') }}">Retour à la page d'accueil</a>.
+        <a href="{{ path('app_about') }}" id="a-footer">A Propos</a>
+        - <a href="{{ path('app_home') }}" id="a-footer">Retour à la page d'accueil</a>
     </p>
 </footer>
 
@@ -294,9 +294,18 @@
         background-image: url("/images/pagebase/footer/Route-du-volcan1920.200.png");
     }
 
-    #para-footer {
+    #p-footer {
         margin-top: 20px;
         margin-left: 10px;
+        color: #fff;
+    }
+
+    #a-footer {
+        color: #fff;
+        text-decoration: none;
+    }
+    #a-footer:hover {
+        color: #569A24;
     }
 
     /* 

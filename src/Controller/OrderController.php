@@ -40,7 +40,6 @@ class OrderController extends AbstractController
 
         return $this->render('order/index.html.twig', [
             'title' => 'Passer une commande',
-            'paragraphe' => 'Choisissez vos préférences avant de valider votre commande',
             'form' => $form->createView(),
             'cart' => $cart->getFull()
         ]);

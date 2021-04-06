@@ -20,8 +20,10 @@
 
             <div class="col-md-4">
                 <div class="product-item text-center">
-                    <a href="{{ path('product', { 'slug' : product.slug }) }}"><img
-                            src="/uploads/{{ product.illustration }}" alt="{{ product.name }}" class="img-fluid"></a>
+                    <a href="{{ path('product', { 'slug' : product.slug }) }}"><img src="/uploads/{{ product.illustration }}" alt="{{ product.name }}" class="img-fluid"></a>
+                    <section>
+                        <p class="espace"></p>
+                    </section>
                     <h5>{{ product.name }}</h5>
                     <span class="product-subtitle">{{ product.subtitle }}</span>
                     <span class="product-price">{{ (product.price / 100 )|number_format(2, ',', '.') }} €</span>
@@ -37,6 +39,9 @@
 <style>
     h1 {
         margin-top: 300px;
+    }
+    .espace {
+        height: 10px;
     }
 
     .product-item h5 {
