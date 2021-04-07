@@ -35,7 +35,7 @@ class ProductController extends AbstractController
         }
 
         return $this->render('product/index.html.twig', [
-            'title' => 'Les Produits',
+            'title' => 'Nos Produits Made in Réunion',
             'products' => $products,
             'form' => $form->createview()
         ]);
