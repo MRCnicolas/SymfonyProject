@@ -36,7 +36,7 @@
             </td>
             <td>
                 <a href="{{ path('decrease_to_cart', {'id' : product.product.id }) }}">
-                    <img src="{{ asset('images/pagepanier/minus.png')}}" height="10px">
+                    <img src="{{ asset('images/pagepanier/minus1.png')}}" height="10px">
                 </a>
                 x {{ product.quantity }}
                 <a href="{{ path('add_to_cart', {'id' : product.product.id }) }}">
@@ -77,6 +77,9 @@
         height: 30px;
     }
     a {
+        color: #fff;
+    }
+    a:hover {
         color: #fff;
     }
     .btn-outline-success {

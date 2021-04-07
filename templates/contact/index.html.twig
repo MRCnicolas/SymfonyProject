@@ -6,26 +6,21 @@
 
 <div class="example-wrapper">
 
-    <h1>{{ title }}</h1>
-    <section>
-        <p class="espace"></p>
-    </section>
+    <h1 class="text-left mb-5">{{ title }}</h1>
+    
     <div class="text-left">
         {{ form_start(contact_form) }}
         {{ form_row(contact_form.name, {'label': 'Nom d\'utilisateur', 'attr': {'class': 'input-group', 'placeholder': 'Votre nom d\'utilisateur' }}) }}
         {{ form_row(contact_form.from, {'label': 'Adresse email', 'attr': {'class': 'input-group', 'placeholder': 'Adresse email' }}) }}
         {{ form_row(contact_form.message, {'label': 'Message', 'attr': {'class': 'input-group', 'placeholder': 'Votre message' }}) }}
     </div>
-    <input type="submit" value="envoyer" class="btn btn-outline-success" />
+    <input type="submit" value="envoyer" class="btn btn-outline-success mt-4" />
 
     {{ form_end(contact_form) }}
 
 </div>
 
 <style>
-    .espace {
-        height: 30px;
-    }
     .btn-outline-success {
         width: 150px;
     }

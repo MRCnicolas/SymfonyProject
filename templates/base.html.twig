@@ -54,7 +54,7 @@
                         <li class="nav-item">
                             <div class="svg-wrapper">
                                 <svg height="30" width="100">
-                                    <rect id="shape" height="30" width="100" />
+                                    <rect id="shape" height="30" width="100" class="sh1" />
                                     <div id="text">
                                         <a href="{{ path('app_randonnée') }}">Randonnée</a>
                                     </div>
@@ -64,7 +64,7 @@
                         <li class="nav-item">
                             <div class="svg-wrapper">
                                 <svg height="30" width="100">
-                                    <rect id="shape" height="30" width="100" />
+                                    <rect id="shape" height="30" width="100" class="sh2" />
                                     <div id="text">
                                         <a href="{{ path('app_activitésportive') }}">Activité</a>
                                     </div>
@@ -74,7 +74,7 @@
                         <li class="nav-item">
                             <div class="svg-wrapper">
                                 <svg height="30" width="100">
-                                    <rect id="shape" height="30" width="100" />
+                                    <rect id="shape" height="30" width="100" class="sh3" />
                                     <div id="text">
                                         <a href="{{ path('products') }}">Boutique</a>
                                     </div>
@@ -84,7 +84,7 @@
                         <li class="nav-item">
                             <div class="svg-wrapper">
                                 <svg height="30" width="100">
-                                    <rect id="shape" height="30" width="100" />
+                                    <rect id="shape" height="30" width="100" class="sh4" />
                                     <div id="text">
                                         <a href="{{ path('contact') }}">Contact</a>
                                     </div>
@@ -95,7 +95,7 @@
                         <li class="nav-item dropdown">
                             <div class="svg-wrapper">
                                 <svg height="30" width="100">
-                                    <rect id="shape" height="30" width="100" />
+                                    <rect id="shape" height="30" width="100" class="sh5" />
                                     <div id="textmenu">
                                         <a class="nav-link dropdown-toggle" data-toggle="dropdown" href="#"
                                             role="button" aria-haspopup="true" aria-expanded="false">Rechercher</a>
@@ -121,7 +121,7 @@
                     <div class="nav-item">
                         <div class="svg-wrapper">
                             <svg height="30" width="100">
-                                <rect id="shape" height="30" width="100" />
+                                <rect id="shape" height="30" width="100" class="sh6" />
                                 <div id="text">
                                     <a href="{{ path('security_registration') }}">Inscription</a>
                                 </div>
@@ -134,7 +134,7 @@
                         <li class="nav-item dropdown">
                             <div class="svg-wrapper">
                                 <svg height="30" width="100">
-                                    <rect id="shape" height="30" width="100" />
+                                    <rect id="shape" height="30" width="100" class="sh7" />
                                     <div id="textmenu">
                                         <a class="nav-link dropdown-toggle" data-toggle="dropdown" href="#"
                                             role="button" aria-haspopup="true"
@@ -320,18 +320,46 @@
         display: inline-block;
         border-radius: 3px;
         margin-left: 5px;
-        margin-right: 5px
+        margin-right: 5px;
     }
 
     #shape {
-        stroke-width: 6px;
+        stroke-width: 3px;
         fill: none;
         stroke: #0b93e1;
-        stroke-dasharray: 85 400;
-        stroke-dashoffset: -140;
+        stroke-dasharray: 48 400;
+        stroke-dashoffset: -156;
         transition: 1s all ease;
     }
-
+    #shape.sh1 {
+        stroke-dasharray: 70 400;
+        stroke-dashoffset: -145;
+    }
+    #shape.sh2 {
+        stroke-dasharray: 51 400;
+        stroke-dashoffset: -154;
+    }
+    #shape.sh3 {
+        stroke-dasharray: 59 400;
+        stroke-dashoffset: -150;
+    }
+    #shape.sh4 {
+        stroke-dasharray: 51 400;
+        stroke-dashoffset: -154;
+    }
+    #shape.sh5 {
+        stroke-dasharray: 80 400;
+        stroke-dashoffset: -140;
+    }
+    #shape.sh6 {
+        stroke-dasharray: 70 400;
+        stroke-dashoffset: -145;
+    }
+    #shape.sh7 {
+        stroke-dasharray: 55 400;
+        stroke-dashoffset: -153;
+    }
+    
     #text {
         margin-top: -27px;
         text-align: center;

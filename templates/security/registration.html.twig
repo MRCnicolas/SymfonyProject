@@ -1,25 +1,29 @@
-{% extends 'base.html.twig' %} 
+{% extends 'base.html.twig' %}
 
-{% block title 'Inscription | ' ~ parent() %} 
+{% block title 'Inscription | ' ~ parent() %}
 
 {% block body %}
 
 <div class="example-wrapper">
 
-    <h1>{{title}}</h1>
+    <h1 class="text-left mb-5">{{title}}</h1>
 
-    {{ form_start (form) }}
-    {{ form_row (form.lastname, {'label':'Nom', 'attr': {'class': 'input-group', 'placeholder': 'Nom'}}) }}
-    {{ form_row (form.firstname, {'label':'Prénom', 'attr': {'class': 'input-group', 'placeholder': 'Prénom'}}) }} {{ form_row
-    (form.email, {'label':'Adresse email', 'attr': {'class': 'input-group', 'placeholder': 'Adresse email'}}) }}
-    {{ form_row (form.password, {'label':'Mot de passe', 'attr': {'class': 'input-group', 'placeholder': 'Mot de passe...'}}) }}
-    {{ form_row (form.confirm_password, {'label':'Confirmation du mot de passe', 'attr': {'class': 'input-group','placeholder': 'Confirmation du mot de passe...'}}) }}
+    <div class="text-left">
+        {{ form_start (form) }}
+        {{ form_row (form.lastname, {'label':'Nom', 'attr': {'class': 'input-group', 'placeholder': 'Nom'}}) }}
+        {{ form_row (form.firstname, {'label':'Prénom', 'attr': {'class': 'input-group', 'placeholder': 'Prénom'}}) }} 
+        {{ form_row (form.email, {'label':'Adresse email', 'attr': {'class': 'input-group', 'placeholder': 'Adresse email'}}) }}
+        {{ form_row (form.password, {'label':'Mot de passe', 'attr': {'class': 'input-group', 'placeholder': 'Mot de passe...'}}) }}
+        {{ form_row (form.confirm_password, {'label':'Confirmation du mot de passe', 'attr': {'class': 'input-group','placeholder': 'Confirmation du mot de passe...'}}) }}
+    </div>
 
-    <button type="submit" class="btn btn-outline-success">Inscription !</button> 
+    <button type="submit" class="btn btn-outline-success mt-4">Inscription !</button>
     {{ form_end(form) }}
 
 </div>
 <style>
-    
+    .btn-outline-success {
+        width: 150px;
+    }
 </style>
 {% endblock %}
