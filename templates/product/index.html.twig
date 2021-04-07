@@ -5,15 +5,21 @@
 {% block body %}
 
 <div class="row">
-    <div class="col-md-3">
-        <h1>Filtrer</h1>
+
+    <div class="col-md-2">
+        <h4>Filtrer</h4>
+        <section>
+            <p class="espace"></p>
+        </section>
         {{ form(form) }}
     </div>
 
     <div class="col-md-9">
 
-        <h1>{{ title }}</h1>
-
+        <h1 class="text-center">{{ title }}</h1>
+        <section>
+            <p class="espace1 mt-5"></p>
+        </section>
         <div class="row">
 
             {% for product in products %}
@@ -22,7 +28,7 @@
                 <div class="product-item text-center">
                     <a href="{{ path('product', { 'slug' : product.slug }) }}"><img src="/uploads/{{ product.illustration }}" alt="{{ product.name }}" class="img-fluid"></a>
                     <section>
-                        <p class="espace"></p>
+                        <p class="espace2"></p>
                     </section>
                     <h5>{{ product.name }}</h5>
                     <span class="product-subtitle">{{ product.subtitle }}</span>
@@ -40,8 +46,30 @@
     h1 {
         margin-top: 300px;
     }
-    .espace {
+
+    h4 {
+        margin-top: 386px;
+    }
+
+    .espace1 {
         height: 10px;
+    }
+
+    .espace1 {
+        height: 10px;
+    }
+
+    .col-md-2 {
+        margin-top: 42px;
+        margin-right: 50px;
+    }
+
+    .form-check-label {
+        padding-left: 0rem;
+        
+    }
+    .form-check {
+        margin-left: 20px;
     }
 
     .product-item h5 {

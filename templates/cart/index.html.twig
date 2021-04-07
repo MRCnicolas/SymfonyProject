@@ -5,13 +5,16 @@
 {% block body %}
 
 <h1>{{title}}</h1>
+<section>
+    <p class="espace"></p>
+</section>
 <p>Voici l'ensemble de vos produits qui se trouve dans votre panier</p>
 {% if cart|length > 0 %}
 <table class="table mt-3">
     <thead>
         <tr>
             <th scope="col">Produit</th>
-            <th scope="col"></th>
+            <th scope="col">Description</th>
             <th scope="col">Quantité</th>
             <th scope="col">Prix</th>
             <th scope="col">Total</th>
@@ -53,10 +56,13 @@
         {% endfor %}
     </tbody>
 </table>
-<div class=" text-right mb-5 ">
+
+<div class="text-right mb-5">
     <b>Nombre de produit :</b> {{ cart|length }}</br>
     <b>Totale de mon panier :</b> {{ (total / 100)|number_format(2, ',', '.') }} €
-    <a href="{{ path('order') }} " class="btn btn-outline-success btn-block mt-3">Valider Mon Panier</a>
+</div>
+<div class="text-center">
+    <a href="{{ path('order') }} " class="btn btn-outline-success mt-3">Valider Mon Panier</a>
 </div>
 {% else %}
 <hr>
@@ -67,8 +73,14 @@
     h1 {
         margin-top: 300px;
     }
+    .espace {
+        height: 30px;
+    }
     a {
         color: #fff;
+    }
+    .btn-outline-success {
+        width: 200px;
     }
 </style>
 {% endblock %}

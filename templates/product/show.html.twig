@@ -11,7 +11,11 @@
         </div>
         <div class="col-md-7 my-auto">
             <h3>{{ product.name }}</h3>
-            <p>{{ product.subtitle }}</p>
+            <small>{{ product.subtitle }}</small>
+            <br/>
+            <section>
+                <p class="espace"></p>
+            </section>
             <span class="product-page-price">{{ (product.price / 100 )|number_format(2, ',', '.') }} €</span>
             <hr>
             <p>

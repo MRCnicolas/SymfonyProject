@@ -5,6 +5,9 @@
 {% block body %}
 
 <h1>{{ title }}</h1>
+<section>
+    <p class="espace"></p>
+</section>
 <a href="{{ path('account_address_add') }}">Ajouter une nouvelle adresse</a>
 <hr>
 
@@ -21,6 +24,7 @@
         <div class="text-center">
             <b>Récapitulatif de ma commande</b>
         </div>
+        <hr>
         <section>
             <p class="espace1"></p>
         </section>
@@ -54,6 +58,10 @@
 <style>
     h1 {
         margin-top: 300px;
+    }
+
+    .espace {
+        height: 30px;
     }
 
     .text-center {

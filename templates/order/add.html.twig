@@ -9,6 +9,9 @@
 {% endblock %}
 
 <h1>{{ title }}</h1>
+<section>
+    <p class="espace"></p>
+</section>
 <p>{{ paragraphe }}</p>
 <hr>
 
@@ -46,17 +49,18 @@
                     <img src="/uploads/{{ product.product.illustration }}" alt="{{ product.product.name }}"
                         height="80px"></div>
 
-                <div class="col-4 my-auto ml-5">
+                <div class="col-4 my-auto ml-4">
                     {{ product.product.name}}
                     <br />
                     <small>
                         {{ product.product.subtitle }}
-                        <br />
-                        x {{ product.quantity }}
                     </small>
                 </div>
+                <div class="col-2 my-auto">
+                    x {{ product.quantity }}
+                </div>
 
-                <div class="col-2 my-auto ml-5">
+                <div class="col-2 my-auto">
                     {{ ((product.product.price * product.quantity ) / 100 )|number_format(2, ',', '.') }} €
                 </div>
             </div>
@@ -79,6 +83,10 @@
 <style>
     h1 {
         margin-top: 300px;
+    }
+
+    .espace {
+        height: 30px;
     }
 
     .form-check {
