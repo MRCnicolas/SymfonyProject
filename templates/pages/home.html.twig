@@ -1,142 +1,139 @@
-{% extends 'base.html.twig' %} 
+{% extends 'base.html.twig' %}
 
-{% block title 'Accueil | ' ~ parent() %} 
+{% block title 'Accueil | ' ~ parent() %}
 
 {% block body %}
 
 
 <div class="example-wrapper">
-    <h1>{{title}}</h1>
+
+    <h1 class="titre">{{title}}</h1>
+
     <section>
         <p class="espace"></p>
     </section>
-    <h5>{{intro1}}<span id="span1">DODO LE GUIDE</span>{{intro2}}</h5>
-    </br>
+    
     <article id="video">
         <iframe class="rounded" width="100%" height="300" src="{{video}}" frameborder="0"
             allow="accelerometer; autoplay; loop; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
             allowfullscreen></iframe>
     </article>
+
     <section>
         <p class="espace1"></p>
     </section>
+    
 
+    <h5>{{intro1}}<span id="span1">DODO LE GUIDE</span>{{intro2}}</h5>
     <div class="d-flex justify-content-center">
         <img src="{{icones}}" id="vanille" />
     </div>
     <section>
         <p class="espace2"></p>
     </section>
-    <h4>{{intro3}}<span id="span2">{{intro4}}</span>{{intro5}}<span id="span3">{{intro6}}</span>{{intro7}}</h4>
+    <h5>{{intro3}}<span id="span2">{{intro4}}</span>{{intro5}}<span id="span3">{{intro6}}</span>{{intro7}}</h5>
 </div>
-<section id="détail">
-    <container class="example-wrapper">
-        <div class="row">
-            <div class="col-md-4 col-12">
-                <img src="{{featurette1}}" class="img-thumbnail shadow" alt="..." style="height: 250px; width: 250px">
-                <section>
-                    <p class="espace5"></p>
-                </section>
-                <h2 id="h2rando">Randonnées</h2>
-                <p id="para1">
-                    De nombreuses Randonnées pour tous les niveaux.
-                </p>
-                <p>
-                    <a href="{{ path('app_randonnée') }}" class="btn btn-outline-success">Notre Sélection</a>
-                </p>
-            </div>
-            <div class="col-md-4 col-12">
-                <img src="{{featurette2}}" class="img-thumbnail shadow" alt="..." style="height: 250px; width: 250px">
-                <section>
-                    <p class="espace5"></p>
-                </section>
-                <h2 id="h2activité">Activités Sportives</h2>
-                <p id="para3">
-                    Profitez de toutes les activités sportives disponibles sur l'île.
-                </p>
-                <p>
-                    <a class="btn btn-outline-success" href="{{ path('app_activitésportive') }}">Notre Sélection</a>
-                </p>
-            </div>
-            <div class="col-md-4 col-12">
-                <img src="{{featurette3}}" class="img-thumbnail shadow" alt="..." style="height: 250px; width: 250px">
-                <section>
-                    <p class="espace5"></p>
-                </section>
-                <h2 id="h2visite">Les Plages</h2>
-                <p id="para2">
-                    Des plages magnifique pour pratiquer le farniente...
-                </p>
-                <p>
-                    <a class="btn btn-outline-success" href="/plage">Notre Sélection</a>
-                </p>
-            </div>
-        </div>
-    </container>
-</section>
 
+<container class="example-wrapper">
+    <div class="row">
+        <div class="col-md-4 col-12">
+            <img src="{{featurette1}}" class="img-thumbnail shadow" alt="..." style="height: 250px; width: 250px">
+            <section>
+                <p class="espace5"></p>
+            </section>
+            <h2 id="h2rando">Randonnées</h2>
+            <p id="para1">
+                De nombreuses Randonnées pour tous les niveaux.
+            </p>
+            <p>
+                <a href="{{ path('app_randonnée') }}" class="btn btn-outline-success">Notre Sélection</a>
+            </p>
+        </div>
+        <div class="col-md-4 col-12">
+            <img src="{{featurette2}}" class="img-thumbnail shadow" alt="..." style="height: 250px; width: 250px">
+            <section>
+                <p class="espace5"></p>
+            </section>
+            <h2 id="h2activité">Activités Sportives</h2>
+            <p id="para3">
+                Profitez de toutes les activités sportives disponibles sur l'île.
+            </p>
+            <p>
+                <a class="btn btn-outline-success" href="{{ path('app_activitésportive') }}">Notre Sélection</a>
+            </p>
+        </div>
+        <div class="col-md-4 col-12">
+            <img src="{{featurette3}}" class="img-thumbnail shadow" alt="..." style="height: 250px; width: 250px">
+            <section>
+                <p class="espace5"></p>
+            </section>
+            <h2 id="h2visite">Les Plages</h2>
+            <p id="para2">
+                Des plages magnifique pour pratiquer le farniente...
+            </p>
+            <p>
+                <a class="btn btn-outline-success" href="/plage">Notre Sélection</a>
+            </p>
+        </div>
+    </div>
+</container>
 <section>
     <p class="espace3"></p>
 </section>
-
-<section id="détail">
-
-    <container class="example-wrapper">
-
-        <div class="row">
-
-            <div class="col-md-4 col-12">
-                <img src="{{featurette4}}" class="img-thumbnail shadow" alt="..." style="height: 250px; width: 250px">
-                <section>
-                    <p class="espace5"></p>
-                </section>
-                <h2 id="h2rando">Visites Locale</h2>
-                <p id="para1">
-                    Visitez certains lieux historiques de l'île, les marchés, les rhumeries...
-                </p>
-                <p>
-                    <a class="btn btn-outline-success" to="/randonnée">Notre Sélection</a>
-                </p>
-            </div>
-            <div class="col-md-4 col-12">
-                <img src="{{featurette5}}" class="img-thumbnail shadow" alt="..." style="height: 250px; width: 250px">
-                <section>
-                    <p class="espace5"></p>
-                </section>
-                <h2 id="h2activité">Les Plats</h2>
-                <p id="para3">
-                    Sur l'île on retrouve une multitude de plats : carry, rougails, sauté...
-                </p>
-                <p>
-                    <a class="btn btn-outline-success" to="/plage">Notre Sélection</a>
-                </p>
-            </div>
-            <div class="col-md-4 col-12">
-                <img src="{{featurette6}}" class="img-thumbnail shadow" alt="..." style="height: 250px; width: 250px">
-                <section>
-                    <p class="espace5"></p>
-                </section>
-                <h2 id="h2visite">La Nature</h2>
-                <p id="para2">
-                    L'île regorge de nombreuses variétés de plantes de fleurs et d'arbres.
-                </p>
-                <p>
-                    <a class="btn btn-outline-success" to="/plage">Notre Sélection</a>
-                </p>
-            </div>
+<container class="example-wrapper">
+    <div class="row">
+        <div class="col-md-4 col-12">
+            <img src="{{featurette4}}" class="img-thumbnail shadow" alt="..." style="height: 250px; width: 250px">
+            <section>
+                <p class="espace5"></p>
+            </section>
+            <h2 id="h2rando">Visites Locale</h2>
+            <p id="para1">
+                Visitez certains lieux historiques de l'île, les marchés, les rhumeries...
+            </p>
+            <p>
+                <a class="btn btn-outline-success" to="/randonnée">Notre Sélection</a>
+            </p>
         </div>
-    </container>
-</section>
-
+        <div class="col-md-4 col-12">
+            <img src="{{featurette5}}" class="img-thumbnail shadow" alt="..." style="height: 250px; width: 250px">
+            <section>
+                <p class="espace5"></p>
+            </section>
+            <h2 id="h2activité">Les Plats</h2>
+            <p id="para3">
+                Sur l'île on retrouve une multitude de plats : carry, rougails, sauté...
+            </p>
+            <p>
+                <a class="btn btn-outline-success" to="/plage">Notre Sélection</a>
+            </p>
+        </div>
+        <div class="col-md-4 col-12">
+            <img src="{{featurette6}}" class="img-thumbnail shadow" alt="..." style="height: 250px; width: 250px">
+            <section>
+                <p class="espace5"></p>
+            </section>
+            <h2 id="h2visite">La Nature</h2>
+            <p id="para2">
+                L'île regorge de nombreuses variétés de plantes de fleurs et d'arbres.
+            </p>
+            <p>
+                <a class="btn btn-outline-success" to="/plage">Notre Sélection</a>
+            </p>
+        </div>
+    </div>
+</container>
 <section>
     <p class="espace4"></p>
 </section>
-
 <div class="d-flex justify-content-center">
-    <img src="{{icones1}}" id="panneau"/>
+    <img src="{{icones1}}" id="panneau" />
 </div>
 
 <style>
+    .titre {
+        font-size: 45px;
+    }
     .espace {
         height: 60px;
     }
@@ -171,12 +168,12 @@
     }
 
     #vanille {
-        width: 150px;
+        width: 80px;
         height: 75px;
     }
 
     .espace2 {
-        height: 60px;
+        height: 5px;
     }
 
     .img-thumbnail {

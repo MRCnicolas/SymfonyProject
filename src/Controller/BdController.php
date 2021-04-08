@@ -30,7 +30,7 @@ class BdController extends AbstractController
         'featurette4' => "images/pagehome/featurette/eglise.png",
         'featurette5' => "images/pagehome/featurette/zourit.png",
         'featurette6' => "images/pagehome/featurette/plantes.JPG",
-        'icones1' => "images/pagehome/icones/panneau.png",
+        'icones1' => "images/pagehome/icones/panneau1.png",
 
         ]);
 

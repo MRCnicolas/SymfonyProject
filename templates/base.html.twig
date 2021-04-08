@@ -129,6 +129,8 @@
                         </div>
                     </div>
 
+
+
                     <ul class="nav navbar-nav float-md-right mr-2">
                         {% if app.user %}
                         <li class="nav-item dropdown">
@@ -159,7 +161,14 @@
                         </li>
                         {% else %}
                         <li class="nav-item">
-                            <a class="nav-link" href="{{ path('app_login') }}">Connexion</a>
+                            <div class="svg-wrapper">
+                                <svg height="30" width="100">
+                                    <rect id="shape" height="30" width="100" class="sh8" />
+                                    <div id="textmenu">
+                                        <a class="nav-link" href="{{ path('app_login') }}">Connexion</a>
+                                    </div>
+                                </svg>
+                            </div>
                         </li>
                         {% endif %}
                     </ul>
@@ -190,12 +199,13 @@
 
 <style>
     .example-wrapper h1 {
-        margin-top: 320px;
+        margin-top: 350px;
     }
-    
+
     .example-wrapper {
         text-align: center;
         margin: 180px auto;
+        margin-bottom: 70px;
         max-width: 800px;
         width: 95%;
         font: 18px/1.5 sans-serif;
@@ -205,6 +215,7 @@
         background: #f5f5f5;
         padding: 2px 6px;
     }
+
     #logo {
         top: 50%;
         left: 20%;
@@ -228,7 +239,7 @@
 
     .navbar.bg-light {
         border-color: white !important;
-        box-shadow: 0 0.1rem 1rem rgba(0, 0, 0, 0.25) !important;
+        box-shadow: 0 0.1rem 0.5rem rgba(0, 0, 0, 0.25) !important;
     }
 
     .navbar {
@@ -304,6 +315,7 @@
         color: #fff;
         text-decoration: none;
     }
+
     #a-footer:hover {
         color: #569A24;
     }
@@ -331,35 +343,47 @@
         stroke-dashoffset: -156;
         transition: 1s all ease;
     }
+
     #shape.sh1 {
         stroke-dasharray: 70 400;
         stroke-dashoffset: -145;
     }
+
     #shape.sh2 {
         stroke-dasharray: 51 400;
         stroke-dashoffset: -154;
     }
+
     #shape.sh3 {
         stroke-dasharray: 59 400;
         stroke-dashoffset: -150;
     }
+
     #shape.sh4 {
         stroke-dasharray: 51 400;
         stroke-dashoffset: -154;
     }
+
     #shape.sh5 {
         stroke-dasharray: 80 400;
         stroke-dashoffset: -140;
     }
+
     #shape.sh6 {
         stroke-dasharray: 70 400;
         stroke-dashoffset: -145;
     }
+
     #shape.sh7 {
         stroke-dasharray: 55 400;
         stroke-dashoffset: -153;
     }
-    
+
+    #shape.sh8 {
+        stroke-dasharray: 58 400;
+        stroke-dashoffset: -150;
+    }
+
     #text {
         margin-top: -27px;
         text-align: center;
