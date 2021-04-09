@@ -53,7 +53,7 @@ class AccountOrderController extends AbstractController
             'paragraphe' => 'Commande passée le :',
             'paragraphe1' => 'Référence de ma commande :',
             'paragraphe2' => 'Transporteur choisi :',
-            'paragraphe3' => 'Détails:',
+            'paragraphe3' => 'Détails de ma commande:',
             'paragraphe4' => 'Sous-total : ',
             'paragraphe5' => 'Livraison : ',
             'paragraphe6' => 'Total : ',

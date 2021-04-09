@@ -9,7 +9,7 @@
 
     <h1>{{ title }}</h1>
 
-    <p>Bienvenue {{app.user.firstname}} dans votre compte.</p>
+    <p class="mt-4">Bienvenue<span> {{app.user.firstname}} </span>dans votre compte.</p>
     <hr> 
     - <a href="{{ path('account_password') }}">Modification du mot de passe</a><br /> 
     - <a href="{{ path('account_address') }}">Gérer mes adresses</a><br /> - <a href="{{ path('account_order') }}">Mes commandes</a>
@@ -20,6 +20,12 @@
 <style>
     a:hover {
         color: #569A24;
+    }
+    hr {
+        width: 400px;
+    }
+    span {
+        color: #0b93e1;
     }
 </style>
 {% endblock %}

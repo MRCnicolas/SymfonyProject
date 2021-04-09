@@ -4,9 +4,11 @@
 
 {% block body %}
 
-<h1>{{ title }}</h1>
-<p>{{ paragraphe }}</p>
-<a href="{{ path('account') }}">Retour</a>
+<h1 class="mb-5">{{ title }}</h1>
+
+- <a href="{{ path('account') }}">Retour sur mon compte</a>
+
+<p class="mt-3">{{ paragraphe }}</p>
 
 {% if orders|length == 0 %}
 
@@ -15,7 +17,7 @@
 <p class="text-center">{{ paragraphe1 }}</p>
 
 {% else %}
-<table class="table mt-4">
+<table class="table">
     <thead>
         <tr>
             <th scope="col">Référence</th>
@@ -28,7 +30,7 @@
     <tbody>
         {% for order in orders %}
         <tr>
-            <td><span class="badge badge-secondary">{{ order.reference }}</span></td>
+            <td><span class="badge badge-success">{{ order.reference }}</span></td>
             <td>{{ order.createdAt|date('d/m/Y') }}</td>
             <td>{{ order.orderDetails|length }}</td>
             <td>{{ ((order.carrierPrice + order.getTotal) / 100)|number_format(2, ',', '.') }} €</td>
@@ -41,7 +43,13 @@
 
 <style>
     h1 {
-        margin-top: 300px;
+        margin-top: 320px;
+    }
+    a:hover {
+        color: #569A24;
+    }
+    .badge-success {
+        background-color: #569A24;
     }
 </style>
 {% endblock %}

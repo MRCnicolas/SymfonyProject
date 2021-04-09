@@ -5,13 +5,13 @@
 {% block body %}
 
 
-<a href="{{ path('account_address_add') }}" class="btn btn-primary btn-sm float-right">Ajouter une adresse</a>
-<h1>{{ title }}</h1>
-<a href="{{ path('account') }}">Retour</a>
-<hr> {% if app.user.addresses|length == 0 %}
+<h1 class="mb-5">{{ title }}</h1>
+- <a href="{{ path('account') }}">Retour sur mon compte</a>
+<hr> 
+{% if app.user.addresses|length == 0 %}
 
 <p class="text-center">Vous n'avez pas encore ajouté d'adresse dans votre compte client. Pour en ajouter une veuillez <a
-        href="{{ path('account_address_add') }}">cliquer ici</a> </p>
+href="{{ path('account_address_add') }}">cliquer ici</a> </p>
 {% else %}
 <div class="row">
     {% for address in app.user.addresses %}
@@ -31,9 +31,14 @@
     {% endfor %}
 </div>
 {% endif %}
+<hr>
+<a href="{{ path('account_address_add') }}" class="btn btn-outline-success mt-4">Ajouter une adresse</a>
 <style>
     h1 {
-        margin-top: 300px;
+        margin-top: 320px;
+    }
+    a:hover {
+        color: #569A24;
     }
 </style>
 {% endblock %}

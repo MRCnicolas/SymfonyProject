@@ -12,7 +12,7 @@
     <section>
         <p class="espace"></p>
     </section>
-    
+
     <article id="video">
         <iframe class="rounded" width="100%" height="300" src="{{video}}" frameborder="0"
             allow="accelerometer; autoplay; loop; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
@@ -22,7 +22,7 @@
     <section>
         <p class="espace1"></p>
     </section>
-    
+
 
     <h5>{{intro1}}<span id="span1">DODO LE GUIDE</span>{{intro2}}</h5>
     <div class="d-flex justify-content-center">
@@ -37,43 +37,40 @@
 <container class="example-wrapper">
     <div class="row">
         <div class="col-md-4 col-12">
-            <img src="{{featurette1}}" class="img-thumbnail shadow" alt="..." style="height: 250px; width: 250px">
+            <a href="{{ path('app_randonnée') }}">
+                <img src="{{featurette1}}" class="img-thumbnail shadow" alt="..." style="height: 250px; width: 250px">
+            </a>
             <section>
                 <p class="espace5"></p>
             </section>
             <h2 id="h2rando">Randonnées</h2>
-            <p id="para1">
+            <small id="para1">
                 De nombreuses Randonnées pour tous les niveaux.
-            </p>
-            <p>
-                <a href="{{ path('app_randonnée') }}" class="btn btn-outline-success">Notre Sélection</a>
-            </p>
+            </small>
         </div>
         <div class="col-md-4 col-12">
-            <img src="{{featurette2}}" class="img-thumbnail shadow" alt="..." style="height: 250px; width: 250px">
+            <a href="{{ path('app_activitésportive') }}">
+                <img src="{{featurette2}}" class="img-thumbnail shadow" alt="..." style="height: 250px; width: 250px">
+            </a>
             <section>
                 <p class="espace5"></p>
             </section>
             <h2 id="h2activité">Activités Sportives</h2>
-            <p id="para3">
+            <small id="para3">
                 Profitez de toutes les activités sportives disponibles sur l'île.
-            </p>
-            <p>
-                <a class="btn btn-outline-success" href="{{ path('app_activitésportive') }}">Notre Sélection</a>
-            </p>
+            </small>
         </div>
         <div class="col-md-4 col-12">
-            <img src="{{featurette3}}" class="img-thumbnail shadow" alt="..." style="height: 250px; width: 250px">
+            <a href="/plage">
+                <img src="{{featurette3}}" class="img-thumbnail shadow" alt="..." style="height: 250px; width: 250px">
+            </a>
             <section>
                 <p class="espace5"></p>
             </section>
             <h2 id="h2visite">Les Plages</h2>
-            <p id="para2">
+            <small id="para2">
                 Des plages magnifique pour pratiquer le farniente...
-            </p>
-            <p>
-                <a class="btn btn-outline-success" href="/plage">Notre Sélection</a>
-            </p>
+            </small>
         </div>
     </div>
 </container>
@@ -83,43 +80,43 @@
 <container class="example-wrapper">
     <div class="row">
         <div class="col-md-4 col-12">
-            <img src="{{featurette4}}" class="img-thumbnail shadow" alt="..." style="height: 250px; width: 250px">
+            <a href="/randonnée">
+                <img src="{{featurette4}}" class="img-thumbnail shadow" alt="..." style="height: 250px; width: 250px">
+            </a>
             <section>
                 <p class="espace5"></p>
             </section>
             <h2 id="h2rando">Visites Locale</h2>
-            <p id="para1">
+            <small id="para1">
                 Visitez certains lieux historiques de l'île, les marchés, les rhumeries...
-            </p>
+            </small>
             <p>
-                <a class="btn btn-outline-success" to="/randonnée">Notre Sélection</a>
+
             </p>
         </div>
         <div class="col-md-4 col-12">
-            <img src="{{featurette5}}" class="img-thumbnail shadow" alt="..." style="height: 250px; width: 250px">
+            <a href="/plage">
+                <img src="{{featurette5}}" class="img-thumbnail shadow" alt="..." style="height: 250px; width: 250px">
+            </a>
             <section>
                 <p class="espace5"></p>
             </section>
             <h2 id="h2activité">Les Plats</h2>
-            <p id="para3">
+            <small id="para3">
                 Sur l'île on retrouve une multitude de plats : carry, rougails, sauté...
-            </p>
-            <p>
-                <a class="btn btn-outline-success" to="/plage">Notre Sélection</a>
-            </p>
+            </small>
         </div>
         <div class="col-md-4 col-12">
-            <img src="{{featurette6}}" class="img-thumbnail shadow" alt="..." style="height: 250px; width: 250px">
+            <a href="/plage">
+                <img src="{{featurette6}}" class="img-thumbnail shadow" alt="..." style="height: 250px; width: 250px">
+            </a>
             <section>
                 <p class="espace5"></p>
             </section>
             <h2 id="h2visite">La Nature</h2>
-            <p id="para2">
+            <small id="para2">
                 L'île regorge de nombreuses variétés de plantes de fleurs et d'arbres.
-            </p>
-            <p>
-                <a class="btn btn-outline-success" to="/plage">Notre Sélection</a>
-            </p>
+            </small>
         </div>
     </div>
 </container>
@@ -134,6 +131,7 @@
     .titre {
         font-size: 45px;
     }
+
     .espace {
         height: 60px;
     }

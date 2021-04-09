@@ -1,42 +1,48 @@
-{% extends 'base.html.twig' %} 
+{% extends 'base.html.twig' %}
 
-{% block title %}Connectez-vous{% endblock %} 
+{% block title %}Connectez-vous{% endblock %}
 
 {% block body %}
 
-<div class="example-wrapper">
-    
-    <h1>{{title}}</h1>
+<div class="example-wrapper text-left">
+
+    <h1 class="mb-5">{{title}}</h1>
+
     <form method="post">
 
         {% if error %}
         <div class="alert alert-danger">{{ error.messageKey|trans(error.messageData, 'security') }}</div>
-        {% endif %} 
-        
+        {% endif %}
+
         {% if app.user %}
         <div class="mb-3">
             You are logged in as {{ app.user.username }}, <a href="{{ path('app_logout') }}">Logout</a>
         </div>
         {% endif %}
-
         <label for="inputEmail">Adresse email</label>
         <input type="email" value="{{ last_username }}" name="email" id="inputEmail" class="form-control" required
             autofocus>
-        <label for="inputPassword">Mot de passe</label>
+        <label for="inputPassword" class="mt-4">Mot de passe</label>
         <input type="password" name="password" id="inputPassword" class="form-control" required>
 
         <input type="hidden" name="_csrf_token" value="{{ csrf_token('authenticate') }}">
 
-        <button class="btn btn-outline-success mt-3" type="submit">
-            Se connecter
-        </button>
-
+        <div class="text-center">
+            <button class="btn btn-outline-success" type="submit">
+                Se connecter
+            </button>
+        </div>
         <p class="text-center mt-3">Voulez-vous <a href="{{ path('security_registration') }}">Créer un compte</a> ?</p>
     </form>
 </div>
 <style>
     a:hover {
         color: #569A24;
+    }
+
+    .btn-outline-success {
+        width: 150px;
+        margin-top: 40px;
     }
 </style>
 {% endblock %}

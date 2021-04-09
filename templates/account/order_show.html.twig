@@ -1,17 +1,18 @@
 {% extends 'base.html.twig' %} 
 
-{% block title %} Ma commande : {{ order.reference }} | DoDo Le Guide{% endblock %} 
+{% block title %} Ma commande: {{ order.reference }} | DoDo Le Guide{% endblock %} 
 
 {% block body %}
 
 
-<h1>{{ title }} : {{ order.reference }}</h1>
-<a href="{{ path('account_order') }}">Retour</a>
+<h1 class="mb-5">{{ title }}: {{ order.reference }}</h1>
+
+- <a href="{{ path('account_order') }}">Retour à mes commandes</a>
 <hr> 
 {{paragraphe}} {{ order.createdAt|date("d/m/Y H:i ", "Europe/Paris") }}<br /> 
 {{paragraphe1}}<small>{{ order.reference }}</small><br /> 
 {{paragraphe2}} {{ order.carriername }}
-<hr> 
+<hr class="mb-4"> 
 {{paragraphe3}}<br />
 
 <table class="table mt-2">
@@ -43,7 +44,10 @@
 
 <style>
     h1 {
-        margin-top: 300px;
+        margin-top: 320px;
+    }
+    a:hover {
+        color: #569A24;
     }
 </style>
 {% endblock %}

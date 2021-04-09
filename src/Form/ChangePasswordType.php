@@ -43,7 +43,7 @@ class ChangePasswordType extends AbstractType
                 'label' => 'Mon nouveau mot de passe',
                 'required' => true,
                 'first_options' => [
-                    'label' => 'Mon nouveau Mot de passe',
+                    'label' => 'Mon nouveau mot de passe',
                     'attr' => [
                         'placeholder' => 'Merci de saisir votre nouveau mot de passe.'
                     ]
@@ -56,7 +56,10 @@ class ChangePasswordType extends AbstractType
                 ]
             ])
             ->add('submit', SubmitType::class, [
-                'label' => "Changer mot de passe"
+                'label' => 'Changer mot de passe',
+                'attr' => [
+                    'class' => 'btn btn-outline-success mt-4'
+                ]
             ])
         ;
     }
