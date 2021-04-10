@@ -30,6 +30,15 @@ class OrderRepository extends ServiceEntityRepository
         ->getResult();
     }
 
+
+    public function countAllOrder()
+    {
+        $queryBuilder = $this->createQueryBuilder('a');
+        $queryBuilder->select('COUNT(a.id) as value');
+
+        return $queryBuilder->getQuery()->getOneOrNullResult();
+    }
+
     // /**
     //  * @return Order[] Returns an array of Order objects
     //  */
