@@ -13,6 +13,13 @@
     {{ form_row (contact_form.from, {'label': 'Adresse email', 'attr': {'class': 'input-group', 'placeholder': 'Adresse email' }}) }}
     {{ form_row (contact_form.message, {'label': 'Message', 'attr': {'class': 'input-group', 'placeholder': 'Votre message' }}) }}
 </div>
+
+<div class="form-group">
+    <label for="exampleInputFile"></label>
+    <input type="file" class="form-control-file" id="exampleInputFile" aria-describedby="fileHelp">
+    <small id="fileHelp" class="form-text text-muted"></small>
+  </div>
+  
 <div class="text-center">
 <input type="submit" value="envoyer" class="btn btn-outline-success mt-4" />
 </div>
