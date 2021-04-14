@@ -29,7 +29,7 @@ class AccountOrderController extends AbstractController
 
         return $this->render('account/order.html.twig', [
             'title' => 'Mes commandes',
-            'paragraphe' => "Dans cet espace vous allez pouvoir gérer toutes vos commandes:",
+            'paragraphe' => "Dans cet espace vous allez pouvoir gérer toutes vos commandes :",
             'paragraphe1' => "Vous n'avez pas encore passé de commande sur DoDo Le Guide.",
             'headers' => $headers,
             'orders' => $orders
@@ -51,14 +51,14 @@ class AccountOrderController extends AbstractController
         }
 
         return $this->render('account/order_show.html.twig', [
-            'title' => 'Ma commande: n°',
-            'paragraphe' => 'Commande passé le:',
-            'paragraphe1' => 'Référence de ma commande: n° ',
-            'paragraphe2' => 'Transporteur choisi:',
-            'paragraphe3' => 'Détails de ma commande:',
-            'paragraphe4' => 'Sous-total: ',
-            'paragraphe5' => 'Livraison: ',
-            'paragraphe6' => 'Total: ',
+            'title' => 'Ma commande : n°',
+            'paragraphe' => 'Commande passé le :',
+            'paragraphe1' => 'Référence de ma commande : n° ',
+            'paragraphe2' => 'Transporteur choisi :',
+            'paragraphe3' => 'Détails de ma commande :',
+            'paragraphe4' => 'Sous-total : ',
+            'paragraphe5' => 'Livraison : ',
+            'paragraphe6' => 'Total : ',
             'headers' => $headers,
             'order' => $order
             

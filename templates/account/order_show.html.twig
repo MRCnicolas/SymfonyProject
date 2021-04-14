@@ -11,7 +11,7 @@
 
 - <a href="{{ path('account_order') }}">Retour à mes commandes</a><br/>
 <hr>
-<strong>Statut de la commande: </strong>
+<strong>Statut de la commande : </strong>
 {% if order.state == 1 %}
 Paiment accepté
 {% elseif order.state == 2 %}
@@ -20,7 +20,7 @@ Préparation en cours
 Livraison en cours
 {% endif %}
 <hr>
-{{paragraphe}} {{ order.createdAt|date("d/m/Y H:i ", "Europe/Paris") }}<br />
+{{paragraphe}} {{ order.createdAt|date("d/m/Y à H:i ", "Europe/Paris") }}<br />
 {{paragraphe1}}<small>{{ order.reference }}</small><br />
 {{paragraphe2}} {{ order.carriername }}
 <hr class="mb-4">
