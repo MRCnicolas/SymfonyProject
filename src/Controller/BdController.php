@@ -57,7 +57,11 @@ class BdController extends AbstractController
      */
     public function randonnée()
     {
+
+        $headers = $this->entityManager->getRepository(Header::class)->findAll();
+
         return $this->render('pages/randonnée.html.twig', [
+            'headers' => $headers,
             'title' => 'Les Randonnées',
             'titlef1' => 'Piton de la fournaise',
             'featurettes1' => "images/pagerandonnées/featurettes/pitondelafournaise/piton.jpg",
@@ -85,8 +89,10 @@ class BdController extends AbstractController
      */
     public function activitésportive()
     {
+        $headers = $this->entityManager->getRepository(Header::class)->findAll();
         return $this->render('pages/activitésportive.html.twig', [
-            'title' => 'activitésportive',
+            'headers' => $headers,
+            'title' => 'Activité Sportive',
         ]);
     }
 
@@ -95,7 +101,9 @@ class BdController extends AbstractController
      */
     public function about()
     {
+        $headers = $this->entityManager->getRepository(Header::class)->findAll();
         return $this->render('pages/about.html.twig', [
+            'headers' => $headers,
             'title' => 'about',
         ]);
     }

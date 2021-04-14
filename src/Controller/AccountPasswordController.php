@@ -2,6 +2,7 @@
 
 namespace App\Controller;
 
+use App\Entity\Header;
 use App\Form\ChangePasswordType;
 use Doctrine\ORM\EntityManagerInterface;
 use Symfony\Component\HttpFoundation\Request;
@@ -24,6 +25,7 @@ class AccountPasswordController extends AbstractController
      */
     public function index(Request $request, UserPasswordEncoderInterface $encoder)
     {
+        $headers = $this->entityManager->getRepository(Header::class)->findAll();
         $notification = null;
 
         $user = $this->getUser();
@@ -47,6 +49,7 @@ class AccountPasswordController extends AbstractController
         }
 
         return $this->render('account/password.html.twig', [
+            'headers' => $headers,
             'title' => 'Modifier mon mot de passe',
             'form' => $form->createView(),
             'notification' => $notification

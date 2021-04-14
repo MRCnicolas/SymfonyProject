@@ -2,6 +2,8 @@
 
 {% block title 'Mes adresses | ' ~ parent() %}
 
+{% block carousel %}<header></header>{% endblock %}
+
 {% block body %}
 
 
@@ -21,7 +23,6 @@ href="{{ path('account_address_add') }}">cliquer ici</a> </p>
                 <h5 class="card-title">{{ address.name }}</h5>
                 <p class="card-text">
                     {{ address.address }},<br /> {{ address.postal }} - {{ address.city }} - {{ address.country }}
-
                 </p>
                 <a href="{{ path('account_address_edit', { 'id' : address.id }) }}">Modifier</a> | <a
                     href="{{ path('account_address_delete', { 'id' : address.id }) }}">Supprimer</a>
@@ -33,9 +34,14 @@ href="{{ path('account_address_add') }}">cliquer ici</a> </p>
 {% endif %}
 <hr>
 <a href="{{ path('account_address_add') }}" class="btn btn-outline-success mt-4">Ajouter une adresse</a>
+
 <style>
     h1 {
-        margin-top: 320px;
+        margin-top: 450px;
+        font-size: 45px;
+    }
+    a {
+        color: #0b93e1;
     }
     a:hover {
         color: #569A24;

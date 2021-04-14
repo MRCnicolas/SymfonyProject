@@ -3,6 +3,7 @@
 namespace App\Controller;
 
 use App\Classe\Cart;
+use App\Entity\Header;
 use App\Entity\Product;
 use Doctrine\ORM\EntityManagerInterface;
 use Symfony\Component\Routing\Annotation\Route;
@@ -22,8 +23,10 @@ class CartController extends AbstractController
      */
     public function index(Cart $cart)
     {
+        $headers = $this->entityManager->getRepository(Header::class)->findAll();
 
         return $this->render('cart/index.html.twig', [
+            'headers' => $headers,
             'cart' => $cart->getFull(),
             'title' => 'Mon panier'
         ]);

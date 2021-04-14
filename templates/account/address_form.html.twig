@@ -2,6 +2,8 @@
 
 {% block title 'Ajouter une adresse | ' ~ parent() %} 
 
+{% block carousel %}<header></header>{% endblock %}
+
 {% block body %}
 
 <div class="example-wrapper">
@@ -44,9 +46,13 @@
         margin-top: 300px;
     }
 
+    a {
+        color: #0b93e1;
+    }
     a:hover {
         color: #569A24;
     }
+    
     .btn-primary {
         color: #569A24;
         background-color: #fff;

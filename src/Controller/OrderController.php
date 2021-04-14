@@ -5,6 +5,7 @@ namespace App\Controller;
 use DateTime;
 use App\Classe\Cart;
 use App\Entity\Order;
+use App\Entity\Header;
 use App\Form\OrderType;
 use App\Entity\OrderDetails;
 use Doctrine\ORM\EntityManagerInterface;
@@ -27,7 +28,7 @@ class OrderController extends AbstractController
      */
     public function index(Cart $cart, Request $request)
     {
-        
+        $headers = $this->entityManager->getRepository(Header::class)->findAll();
         if (!$this->getUser()->getAddresses()->getValues())
         {
             return $this->redirectToRoute('account_address_add');
@@ -39,6 +40,7 @@ class OrderController extends AbstractController
 
 
         return $this->render('order/index.html.twig', [
+            'headers' => $headers,
             'title' => 'Passer une commande',
             'form' => $form->createView(),
             'cart' => $cart->getFull()
@@ -52,6 +54,7 @@ class OrderController extends AbstractController
     public function add(Cart $cart, Request $request)
     {
         
+        $headers = $this->entityManager->getRepository(Header::class)->findAll();
 
         $form = $this->createForm(OrderType::class, null, [
             'user' => $this->getUser()
@@ -105,6 +108,7 @@ class OrderController extends AbstractController
             $this->entityManager->flush();
 
             return $this->render('order/add.html.twig', [
+                'headers' => $headers,
                 'title' => 'Mon récapitulatif',
                 'paragraphe' => 'Vérifiez vos informations avant de passer au paiement de votre commande',
                 'cart' => $cart->getFull(),

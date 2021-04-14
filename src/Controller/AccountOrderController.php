@@ -3,6 +3,7 @@
 namespace App\Controller;
 
 use App\Entity\Order;
+use App\Entity\Header;
 use Doctrine\ORM\EntityManagerInterface;
 use Symfony\Component\Routing\Annotation\Route;
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
@@ -22,14 +23,15 @@ class AccountOrderController extends AbstractController
      */
     public function index()
     {
-
+        $headers = $this->entityManager->getRepository(Header::class)->findAll();
         $orders = $this->entityManager->getRepository(Order::class)->findSuccessOrders($this->getUser());
 
 
         return $this->render('account/order.html.twig', [
             'title' => 'Mes commandes',
-            'paragraphe' => "C'est dans cet espace que vous allez pouvoir gérer toutes vos commandes.",
-            'paragraphe1' => "Vous n'avez pas encore passé de commande sur Dodo le guide.",
+            'paragraphe' => "Dans cet espace vous allez pouvoir gérer toutes vos commandes:",
+            'paragraphe1' => "Vous n'avez pas encore passé de commande sur DoDo Le Guide.",
+            'headers' => $headers,
             'orders' => $orders
             
         ]);
@@ -41,7 +43,7 @@ class AccountOrderController extends AbstractController
      */
     public function show($reference)
     {
-
+        $headers = $this->entityManager->getRepository(Header::class)->findAll();
         $order = $this->entityManager->getRepository(Order::class)->findOneByReference($reference);
 
         if (!$order || $order->getUser() != $this->getUser()) {
@@ -49,14 +51,15 @@ class AccountOrderController extends AbstractController
         }
 
         return $this->render('account/order_show.html.twig', [
-            'title' => 'Ma commande',
-            'paragraphe' => 'Commande passée le :',
-            'paragraphe1' => 'Référence de ma commande :',
-            'paragraphe2' => 'Transporteur choisi :',
+            'title' => 'Ma commande: n°',
+            'paragraphe' => 'Commande passé le:',
+            'paragraphe1' => 'Référence de ma commande: n° ',
+            'paragraphe2' => 'Transporteur choisi:',
             'paragraphe3' => 'Détails de ma commande:',
-            'paragraphe4' => 'Sous-total : ',
-            'paragraphe5' => 'Livraison : ',
-            'paragraphe6' => 'Total : ',
+            'paragraphe4' => 'Sous-total: ',
+            'paragraphe5' => 'Livraison: ',
+            'paragraphe6' => 'Total: ',
+            'headers' => $headers,
             'order' => $order
             
         ]);

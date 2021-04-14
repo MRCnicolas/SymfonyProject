@@ -3,6 +3,7 @@
 namespace App\Controller;
 
 use App\Classe\Cart;
+use App\Entity\Header;
 use App\Entity\Address;
 use App\Form\AddressType;
 use Doctrine\ORM\EntityManagerInterface;
@@ -22,7 +23,10 @@ class AccountAddressController extends AbstractController
      */
     public function index()
     {
+        $headers = $this->entityManager->getRepository(Header::class)->findAll();
+            
         return $this->render('account/address.html.twig', [
+            'headers' => $headers,
             'title' => 'Mes adresses'
         ]);
     }
@@ -32,6 +36,7 @@ class AccountAddressController extends AbstractController
      */
     public function add(Cart $cart, Request $request)
     {
+        $headers = $this->entityManager->getRepository(Header::class)->findAll();
         $address = new Address();
 
         $form = $this->createForm( AddressType::class, $address);
@@ -51,6 +56,7 @@ class AccountAddressController extends AbstractController
         }
 
         return $this->render('account/address_form.html.twig', [
+            'headers' => $headers,
             'title' => 'Ajouter une adresse',
             'form' => $form->createView()
         ]);
@@ -61,6 +67,7 @@ class AccountAddressController extends AbstractController
      */
     public function edit(Request $request, $id)
     {
+        $headers = $this->entityManager->getRepository(Header::class)->findAll();
         $address = $this->entityManager->getRepository( Address::class)->findOneById($id);
 
 
@@ -78,6 +85,7 @@ class AccountAddressController extends AbstractController
         }
 
         return $this->render('account/address_form.html.twig', [
+            'headers' => $headers,
             'title' => 'Gérer mes adresses',
             'form' => $form->createView()
         ]);

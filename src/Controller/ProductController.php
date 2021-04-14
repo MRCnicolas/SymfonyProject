@@ -3,6 +3,7 @@
 namespace App\Controller;
 
 use App\Classe\Search;
+use App\Entity\Header;
 use App\Entity\Product;
 use App\Form\SearchType;
 use Doctrine\ORM\EntityManagerInterface;
@@ -23,6 +24,8 @@ class ProductController extends AbstractController
      */
     public function index(Request $request)
     {
+        $headers = $this->entityManager->getRepository(Header::class)->findAll();
+
         $products = $this->entityManager->getRepository(product::class)->findall();
 
         $search = new Search();
@@ -35,6 +38,7 @@ class ProductController extends AbstractController
         }
 
         return $this->render('product/index.html.twig', [
+            'headers' => $headers,
             'title' => 'Nos Produits Made in Réunion',
             'products' => $products,
             'form' => $form->createview()
@@ -49,6 +53,8 @@ class ProductController extends AbstractController
      */
     public function show($slug)
     {
+        $headers = $this->entityManager->getRepository(Header::class)->findAll();
+
         $product = $this->entityManager->getRepository(product::class)->findOneBySlug($slug);
         $products = $this->entityManager->getRepository(Product::class)->findByIsBest(1);
 
@@ -57,6 +63,7 @@ class ProductController extends AbstractController
         }
 
         return $this->render('product/show.html.twig', [
+            'headers' => $headers,
             'title' => 'Les Produits',
             'product' => $product,
             'products' => $products
