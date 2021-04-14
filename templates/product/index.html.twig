@@ -1,11 +1,10 @@
-{% extends 'base.html.twig' %} 
+{% extends 'base.html.twig' %}
 
-{% block title 'Nos produits | ' ~ parent() %} 
+{% block title 'Nos produits | ' ~ parent() %}
 
 {% block body %}
 
 <div class="row">
-
     <div class="col-md-2">
         <h4>Filtrer</h4>
         <section>
@@ -13,34 +12,19 @@
         </section>
         {{ form(form) }}
     </div>
-
     <div class="col-md-9">
-
         <h1 class="text-center">{{ title }}</h1>
         <section>
             <p class="espace1 mt-5"></p>
         </section>
         <div class="row">
-
             {% for product in products %}
-
             <div class="col-md-4 my-auto">
-                <div class="product-item text-center">
-                    <a href="{{ path('product', { 'slug' : product.slug }) }}"><img src="/uploads/{{ product.illustration }}" alt="{{ product.name }}" class="img-fluid"></a>
-                    <section>
-                        <p class="espace2"></p>
-                    </section>
-                    <h5>{{ product.name }}</h5>
-                    <hr>
-                    <span class="product-subtitle">{{ product.subtitle }}</span>
-                    <hr class="hr1">
-                    <span class="product-price">{{ (product.price / 100 )|number_format(2, ',', '.') }} €</span>
-                </div>
+                {% include 'product/single_product.html.twig' %}
             </div>
             {% endfor %}
         </div>
     </div>
-
 </div>
 
 
@@ -76,8 +60,9 @@
 
     .form-check-label {
         padding-left: 0rem;
-        
+
     }
+
     .form-check {
         margin-left: 20px;
     }

@@ -2,35 +2,51 @@
 
 namespace App\Controller;
 
-use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
+use App\Entity\Header;
+use App\Entity\Product;
+use Doctrine\ORM\EntityManagerInterface;
 use Symfony\Component\Routing\Annotation\Route;
+use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 
 class BdController extends AbstractController
 {
+
+    private $entityManager;
+
+    public function __construct(EntityManagerInterface $entityManager)
+    {
+        $this->entityManager = $entityManager;
+    }
     
     /**
      * @Route("/home", name="app_home")
      */
     public function home()
     {
+
+        $products = $this->entityManager->getRepository(Product::class)->findByIsBest(1);
+        $headers = $this->entityManager->getRepository(Header::class)->findAll();
+
         return $this->render('pages/home.html.twig', [
-        'title' => " '' Le DoDo Y Guide A Ou '' ",
-        'intro1' => "Avec  ",
-        'intro2' => " Vous Serez Votre Propre Guide.",
-        'intro3' => "Voici Nos ",
-        'intro4' => "Conseils ",
-        'intro5' => " Et Notre ",
-        'intro6' => " Séléctions ",
-        'intro7' => " De Lieux Et D'activités Incontournables à Decouvrir Lors De Votre Séjour.",
-        'video' => "https://www.youtube.com/embed/UoTYNd3luOA?autoplay=1&mute=1&enablejsapi=1controls=0loop=1&amp;start=56",
-        'icones' => "images/pagehome/icones/vanille.svg",
-        'featurette1' => "images/pagehome/featurette/rando.png",
-        'featurette2' => "images/pagehome/featurette/sport.png",
-        'featurette3' => "images/pagehome/featurette/plage.png",
-        'featurette4' => "images/pagehome/featurette/eglise.png",
-        'featurette5' => "images/pagehome/featurette/zourit.png",
-        'featurette6' => "images/pagehome/featurette/plantes.JPG",
-        'icones1' => "images/pagehome/icones/panneau1.png",
+            'products' => $products,
+            'headers' => $headers,
+            'title' => " '' Le DoDo Y Guide A Ou '' ",
+            'intro1' => "Avec  ",
+            'intro2' => " Vous Serez Votre Propre Guide.",
+            'intro3' => "Voici Nos ",
+            'intro4' => "Conseils ",
+            'intro5' => " Et Notre ",
+            'intro6' => " Séléctions ",
+            'intro7' => " De Lieux Et D'activités Incontournables à Decouvrir Lors De Votre Séjour.",
+            'video' => "https://www.youtube.com/embed/UoTYNd3luOA?autoplay=1&mute=1&enablejsapi=1controls=0loop=1&amp;start=56",
+            'icones' => "images/pagehome/icones/vanille.svg",
+            'featurette1' => "images/pagehome/featurette/rando.png",
+            'featurette2' => "images/pagehome/featurette/sport.png",
+            'featurette3' => "images/pagehome/featurette/plage.png",
+            'featurette4' => "images/pagehome/featurette/eglise.png",
+            'featurette5' => "images/pagehome/featurette/zourit.png",
+            'featurette6' => "images/pagehome/featurette/plantes.JPG",
+            'icones1' => "images/pagehome/icones/panneau1.png",
 
         ]);
 

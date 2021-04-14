@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+<!doctype html>
 
 <html lang="{{ app.request.locale }}">
 
@@ -14,6 +14,7 @@
         crossorigin="anonymous" />
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.2/css/all.css"
         integrity="sha384-vSIIfh2YWi9wW0r9iZe7RJPrKwp6bG+s9QZMoITbCckVJqGCCRhc+ccxNcdpHuYu" crossorigin="anonymous" />
+    <link rel="stylesheets" href="carousel.css">
     {% endblock %}
     {% block javascripts %}
     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
@@ -26,160 +27,174 @@
         integrity="sha384-+YQ4JLhjyBLPDQt//I+STsc9iw4uQqACwlvpslubQzn4u2UU2UFM80nGisd026JF" crossorigin="anonymous">
     </script>
     {% endblock %}
+
 </head>
 
 <body>
     <header>
-        <div class="header">
-            <img src="/images/pagebase/header/DODO.png" id="logo" />
 
-            <nav class="navbar navbar-expand-lg navbar-light bg-light">
-                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarColor03"
-                    aria-controls="navbarColor03" aria-expanded="false" aria-label="Toggle navigation">
-                    <span class="navbar-toggler-icon"></span>
-                </button>
+        {% if block('carousel') is defined %}
+        <div id="myCarousel" class="carousel slide carousel-fade" data-ride="carousel">
+            <ol class="carousel-indicators">
+                {% for key,header in headers %}
+                <li data-target="#myCarousel" data-slide-to="{{ key }}" {% if key == 0 %}class="active" {% endif %}></li>
+                {% endfor %}
+            </ol>
+            <div class="carousel-inner">
+                {% for key,header in headers %}
+                <div class="carousel-item {% if key == 0 %}active{% endif %}"
+                    style="background: url('/uploads/{{ header.illustration }}');background-size:cover;background-position:center;">
+                    <div class="container">
+                        <div class="carousel-caption text-left">
+                            <h1>{{ header.title }}</h1>
+                            <p>{{ header.content }}</p>
+                            <p><a class="btn btn-outline-success" href="{{ header.btnUrl }}"
+                                    role="button">{{ header.btnTitle }}</a></p>
+                        </div>
+                    </div>
+                </div>
+                {% endfor %}
+            </div>
+        </div>
+        {% endif %}
 
-                <div class="collapse navbar-collapse" id="navbarColor03">
-                    <ul class="navbar-nav mr-auto">
-                        <li class="nav-item active">
-                            <div class="svg-wrapper">
-                                <svg height="30" width="100">
-                                    <rect id="shape" height="30" width="100" />
-                                    <div id="text">
-                                        <a href="{{ path('app_home') }}">Accueil</a>
-                                    </div>
-                                </svg>
-                            </div>
-                        </li>
-                        <li class="nav-item">
-                            <div class="svg-wrapper">
-                                <svg height="30" width="100">
-                                    <rect id="shape" height="30" width="100" class="sh1" />
-                                    <div id="text">
-                                        <a href="{{ path('app_randonnée') }}">Randonnée</a>
-                                    </div>
-                                </svg>
-                            </div>
-                        </li>
-                        <li class="nav-item">
-                            <div class="svg-wrapper">
-                                <svg height="30" width="100">
-                                    <rect id="shape" height="30" width="100" class="sh2" />
-                                    <div id="text">
-                                        <a href="{{ path('app_activitésportive') }}">Activité</a>
-                                    </div>
-                                </svg>
-                            </div>
-                        </li>
-                        <li class="nav-item">
-                            <div class="svg-wrapper">
-                                <svg height="30" width="100">
-                                    <rect id="shape" height="30" width="100" class="sh3" />
-                                    <div id="text">
-                                        <a href="{{ path('products') }}">Boutique</a>
-                                    </div>
-                                </svg>
-                            </div>
-                        </li>
-                        <li class="nav-item">
-                            <div class="svg-wrapper">
-                                <svg height="30" width="100">
-                                    <rect id="shape" height="30" width="100" class="sh4" />
-                                    <div id="text">
-                                        <a href="{{ path('contact') }}">Contact</a>
-                                    </div>
-                                </svg>
-                            </div>
-                        </li>
+        <img src="/images/pagebase/header/DODO.png" id="logo" />
 
-                        <li class="nav-item dropdown">
-                            <div class="svg-wrapper">
-                                <svg height="30" width="100">
-                                    <rect id="shape" height="30" width="100" class="sh5" />
-                                    <div id="textmenu">
-                                        <a class="nav-link dropdown-toggle" data-toggle="dropdown" href="#"
-                                            role="button" aria-haspopup="true" aria-expanded="false">Rechercher</a>
-                                        <div class="dropdown-menu" style="right: -131px">
-                                            <div class="container-fluid">
-                                                <form class="d-flex">
-                                                    <input class="form-control me-2" type="search"
-                                                        placeholder="Rechercher">
-                                                    <button class="btn btn-outline-success" type="submit"><i
-                                                            class="fas fa-search"></i></button>
-                                                </form>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </svg>
-                            </div>
-                        </li>
-                    </ul>
-
-                    <a class="navbar-brand" href="#"><img src="/images/pagebase/header/gouillat1.png"
-                            id="logonav" /></a>
-
-                    <div class="nav-item">
+        <nav class="navbar navbar-expand-lg navbar-light bg-light">
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarColor03"
+                aria-controls="navbarColor03" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarColor03">
+                <ul class="navbar-nav mr-auto">
+                    <li class="nav-item active">
                         <div class="svg-wrapper">
                             <svg height="30" width="100">
-                                <rect id="shape" height="30" width="100" class="sh6" />
+                                <rect id="shape" height="30" width="100" />
                                 <div id="text">
-                                    <a href="{{ path('security_registration') }}">Inscription</a>
+                                    <a href="{{ path('app_home') }}">Accueil</a>
                                 </div>
                             </svg>
                         </div>
-                    </div>
-
-
-
-                    <ul class="nav navbar-nav float-md-right mr-2">
-                        {% if app.user %}
-                        <li class="nav-item dropdown">
-                            <div class="svg-wrapper">
-                                <svg height="30" width="100">
-                                    <rect id="shape" height="30" width="100" class="sh7" />
-                                    <div id="textmenu">
-                                        <a class="nav-link dropdown-toggle" data-toggle="dropdown" href="#"
-                                            role="button" aria-haspopup="true"
-                                            aria-expanded="false">{{ app.user.firstname }}</a>
-
-                                        <div class="dropdown-menu" style="left: -60px">
-                                            {% if 'ROLE_ADMIN' in app.user.roles %}
-                                            <a class="dropdown-item" href="{{ path('account') }}">Mon Compte</a>
-                                            <div class="dropdown-divider"></div>
-                                            <a class="dropdown-item" href="/admin">Tableau de bord</a>
-                                            <div class="dropdown-divider"></div>
-                                            <a class="dropdown-item" href="{{ path('app_logout') }}">Se déconnecter</a>
-                                            {% else %}
-                                            <a class="dropdown-item" href="{{ path('account') }}">Mon Compte</a>
-                                            <div class="dropdown-divider"></div>
-                                            <a class="dropdown-item" href="{{ path('app_logout') }}">Se déconnecter</a>
-                                            {% endif %}
+                    </li>
+                    <li class="nav-item">
+                        <div class="svg-wrapper">
+                            <svg height="30" width="100">
+                                <rect id="shape" height="30" width="100" class="sh1" />
+                                <div id="text">
+                                    <a href="{{ path('app_randonnée') }}">Randonnée</a>
+                                </div>
+                            </svg>
+                        </div>
+                    </li>
+                    <li class="nav-item">
+                        <div class="svg-wrapper">
+                            <svg height="30" width="100">
+                                <rect id="shape" height="30" width="100" class="sh2" />
+                                <div id="text">
+                                    <a href="{{ path('app_activitésportive') }}">Activité</a>
+                                </div>
+                            </svg>
+                        </div>
+                    </li>
+                    <li class="nav-item">
+                        <div class="svg-wrapper">
+                            <svg height="30" width="100">
+                                <rect id="shape" height="30" width="100" class="sh3" />
+                                <div id="text">
+                                    <a href="{{ path('products') }}">Boutique</a>
+                                </div>
+                            </svg>
+                        </div>
+                    </li>
+                    <li class="nav-item">
+                        <div class="svg-wrapper">
+                            <svg height="30" width="100">
+                                <rect id="shape" height="30" width="100" class="sh4" />
+                                <div id="text">
+                                    <a href="{{ path('contact') }}">Contact</a>
+                                </div>
+                            </svg>
+                        </div>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <div class="svg-wrapper">
+                            <svg height="30" width="100">
+                                <rect id="shape" height="30" width="100" class="sh5" />
+                                <div id="textmenu">
+                                    <a class="nav-link dropdown-toggle" data-toggle="dropdown" href="#" role="button"
+                                        aria-haspopup="true" aria-expanded="false">Rechercher</a>
+                                    <div class="dropdown-menu" style="right: -131px">
+                                        <div class="container-fluid">
+                                            <form class="d-flex">
+                                                <input class="form-control me-2" type="search" placeholder="Rechercher">
+                                                <button class="btn btn-outline-success" type="submit"><i
+                                                        class="fas fa-search"></i></button>
+                                            </form>
                                         </div>
                                     </div>
-                                </svg>
+                                </div>
+                            </svg>
+                        </div>
+                    </li>
+                </ul>
+                <a class="navbar-brand" href="#"><img src="/images/pagebase/header/gouillat1.png" id="logonav" /></a>
+                <div class="nav-item">
+                    <div class="svg-wrapper">
+                        <svg height="30" width="100">
+                            <rect id="shape" height="30" width="100" class="sh6" />
+                            <div id="text">
+                                <a href="{{ path('security_registration') }}">Inscription</a>
                             </div>
-                        </li>
-                        {% else %}
-                        <li class="nav-item">
-                            <div class="svg-wrapper">
-                                <svg height="30" width="100">
-                                    <rect id="shape" height="30" width="100" class="sh8" />
-                                    <div id="textmenu">
-                                        <a class="nav-link" href="{{ path('app_login') }}">Connexion</a>
-                                    </div>
-                                </svg>
-                            </div>
-                        </li>
-                        {% endif %}
-                    </ul>
-
-                    <a class="navbar-brand" href="{{ path('cart') }}" alt="">
-                        <img src="{{ asset('images/pagebase/header/shopping-cart.png') }}" class="cart-icon"
-                            alt="Mon panier" />
-                    </a>
+                        </svg>
+                    </div>
                 </div>
-            </nav>
-        </div>
+                <ul class="nav navbar-nav float-md-right mr-2">
+                    {% if app.user %}
+                    <li class="nav-item dropdown">
+                        <div class="svg-wrapper">
+                            <svg height="30" width="100">
+                                <rect id="shape" height="30" width="100" class="sh7" />
+                                <div id="textmenu">
+                                    <a class="nav-link dropdown-toggle" data-toggle="dropdown" href="#" role="button"
+                                        aria-haspopup="true" aria-expanded="false">{{ app.user.firstname }}</a>
+
+                                    <div class="dropdown-menu" style="left: -60px">
+                                        {% if 'ROLE_ADMIN' in app.user.roles %}
+                                        <a class="dropdown-item" href="{{ path('account') }}">Mon Compte</a>
+                                        <div class="dropdown-divider"></div>
+                                        <a class="dropdown-item" href="/admin">Tableau de bord</a>
+                                        <div class="dropdown-divider"></div>
+                                        <a class="dropdown-item" href="{{ path('app_logout') }}">Se déconnecter</a>
+                                        {% else %}
+                                        <a class="dropdown-item" href="{{ path('account') }}">Mon Compte</a>
+                                        <div class="dropdown-divider"></div>
+                                        <a class="dropdown-item" href="{{ path('app_logout') }}">Se déconnecter</a>
+                                        {% endif %}
+                                    </div>
+                                </div>
+                            </svg>
+                        </div>
+                    </li>
+                    {% else %}
+                    <li class="nav-item">
+                        <div class="svg-wrapper">
+                            <svg height="30" width="100">
+                                <rect id="shape" height="30" width="100" class="sh8" />
+                                <div id="textmenu">
+                                    <a class="nav-link" href="{{ path('app_login') }}">Connexion</a>
+                                </div>
+                            </svg>
+                        </div>
+                    </li>
+                    {% endif %}
+                </ul>
+                <a class="navbar-brand" href="{{ path('cart') }}" alt="">
+                    <img src="{{ asset('images/pagebase/header/shopping-cart.png') }}" class="cart-icon"
+                        alt="Mon panier" />
+                </a>
+            </div>
+        </nav>
     </header>
 </body>
 
@@ -198,17 +213,20 @@
 </footer>
 
 <style>
+    .container {
+        margin-top: 300px;
+    }
     .example-wrapper h1 {
-        margin-top: 350px;
+        margin-top: 500px;
     }
 
     .example-wrapper {
         text-align: center;
         margin: 180px auto;
         margin-bottom: 70px;
-        max-width: 800px;
+        max-width: 850px;
         width: 95%;
-        font: 18px/1.5 sans-serif;
+        font: 18px/1.5;
     }
 
     .example-wrapper code {
@@ -217,10 +235,13 @@
     }
 
     #logo {
-        top: 50%;
-        left: 20%;
-        width: 100px;
-        height: 160px;
+        display: flex;
+        position: absolute;
+        z-index: 2;
+        top: 5%;
+        left: 1%;
+        width: 130px;
+        height: 210px;
         padding-left: 1%;
         padding-top: 1%;
     }
@@ -230,7 +251,6 @@
         flex-direction: column;
         width: 100%;
         height: 200px;
-        background-image: url("/images/pagebase/header/REUNION.png");
         background-position: center;
         background-size: cover;
         position: fixed;
@@ -240,10 +260,6 @@
     .navbar.bg-light {
         border-color: white !important;
         box-shadow: 0 0.1rem 0.5rem rgba(0, 0, 0, 0.25) !important;
-    }
-
-    .navbar {
-        margin-top: 38px;
     }
 
     .nav-link {

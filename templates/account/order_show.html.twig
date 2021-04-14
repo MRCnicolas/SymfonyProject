@@ -1,18 +1,27 @@
-{% extends 'base.html.twig' %} 
+{% extends 'base.html.twig' %}
 
-{% block title %} Ma commande: {{ order.reference }} | DoDo Le Guide{% endblock %} 
+{% block title %} Ma commande: {{ order.reference }} | DoDo Le Guide{% endblock %}
 
 {% block body %}
 
 
 <h1 class="mb-5">{{ title }}: {{ order.reference }}</h1>
 
-- <a href="{{ path('account_order') }}">Retour à mes commandes</a>
-<hr> 
-{{paragraphe}} {{ order.createdAt|date("d/m/Y H:i ", "Europe/Paris") }}<br /> 
-{{paragraphe1}}<small>{{ order.reference }}</small><br /> 
+- <a href="{{ path('account_order') }}">Retour à mes commandes</a><br/>
+<hr>
+<strong>Statut de la commande : </strong>
+{% if order.state == 1 %}
+Paiment accepté
+{% elseif order.state == 2 %}
+Préparation en cours
+{% elseif order.state == 3 %}
+Livraison en cours
+{% endif %}
+<hr>
+{{paragraphe}} {{ order.createdAt|date("d/m/Y H:i ", "Europe/Paris") }}<br />
+{{paragraphe1}}<small>{{ order.reference }}</small><br />
 {{paragraphe2}} {{ order.carriername }}
-<hr class="mb-4"> 
+<hr class="mb-4">
 {{paragraphe3}}<br />
 
 <table class="table mt-2">
@@ -38,7 +47,7 @@
 
 <div class="text-right">
     {{paragraphe4}}{{(order.getTotal / 100)|number_format(2, ',', '.') }} €<br />
-    {{paragraphe5}}{{(order.carrierprice / 100)|number_format(2, ',', '.') }} €<br /> 
+    {{paragraphe5}}{{(order.carrierprice / 100)|number_format(2, ',', '.') }} €<br />
     {{paragraphe6}}{{ ((order.carrierPrice + order.getTotal) / 100)|number_format(2, ',', '.') }} €
 </div>
 
@@ -46,6 +55,7 @@
     h1 {
         margin-top: 320px;
     }
+
     a:hover {
         color: #569A24;
     }

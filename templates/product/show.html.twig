@@ -1,18 +1,18 @@
-{% extends 'base.html.twig' %} 
+{% extends 'base.html.twig' %}
 
-{% block title %}{{ product.name }} | DoDo Le Guide{% endblock %} 
+{% block title %}{{ product.name }} | DoDo Le Guide{% endblock %}
 
 {% block body %}
 
 <div class="example-wrapper" id="haut">
-    <div class="row">
+    <div class="row" id="haut">
         <div class="col-md-5">
             <img src="/uploads/{{ product.illustration }}" alt="{{ product.name }}" class="img-fluid">
         </div>
         <div class="col-md-7 my-auto">
-            <h3>{{ product.name }}</h3>
+            <h3 id="titrehaut">{{ product.name }}</h3>
             <small>{{ product.subtitle }}</small>
-            <br/>
+            <br />
             <section>
                 <p class="espace"></p>
             </section>
@@ -21,24 +21,40 @@
                 {{ product.description }}
             </p>
             <hr>
-            <span class="product-page-price">{{ (product.price / 100 )|number_format(2, ',', '.') }} €</span><br/>
-            
-            <a href="{{ path('add_to_cart', { id : product.id } ) }}" class="btn btn-outline-success mt-4">Ajouter au panier</a>
+            <span class="product-page-price">{{ (product.price / 100 )|number_format(2, ',', '.') }} €</span><br />
+
+            <a href="{{ path('add_to_cart', { id : product.id } ) }}" class="btn btn-outline-success mt-4">Ajouter au
+                panier</a>
         </div>
     </div>
+    <section>
+        <p class="espace"></p>
+    </section>
+    <hr id="hr1">
+    <h3 class="mt-4 mb-4">Découvrez les articles les plus vendus</h3>
+    <hr>
+    <div class="row">
+        {% for product in products %}
+        <div class="col-md-3 my-auto">
+            {% include 'product/single_product.html.twig' %}
+        </div>
+        {% endfor %}
+    </div>
 </div>
+
 <style>
     #haut {
-        margin-top: 300px;
-    }
-
-    .btn-primary {
-        background-color: #569A24;
-        border-color: #569A24;
+        margin-top: 350px;
     }
 
     .product-page-price {
         font-size: 19px;
+    }
+    #titrehaut {
+        margin-top: 100px;
+    }
+    #hr1 {
+        margin-top: 170px;
     }
 </style>
 {% endblock %}

@@ -2,6 +2,11 @@
 
 {% block title 'Accueil | ' ~ parent() %}
 
+
+{% block carousel %}
+<header></header>
+{% endblock %}
+
 {% block body %}
 
 
@@ -120,14 +125,36 @@
         </div>
     </div>
 </container>
+
 <section>
     <p class="espace4"></p>
 </section>
+
 <div class="d-flex justify-content-center">
     <img src="{{icones1}}" id="panneau" />
 </div>
 
+<div class="articles my-auto">
+    <hr id="hr1">
+    <h3 class="mt-4 mb-4 text-center">Découvrez les articles les plus vendus</h3>
+    <hr>
+    <div class="row">
+        {% for product in products %}
+        <div class="col-md-3">
+            {% include 'product/single_product.html.twig' %}
+        </div>
+        {% endfor %}
+    </div>
+</div>
+
 <style>
+    .articles {
+        margin: 180px auto;
+        margin-bottom: 70px;
+        max-width: 850px;
+        width: 95%;
+        font: 18px/1.5;
+    }
     .titre {
         font-size: 45px;
     }
@@ -210,6 +237,14 @@
     #panneau {
         width: 250px;
         height: 75px;
+    }
+
+    #hr1 {
+        margin-top: 100px;
+    }
+
+    small {
+        font-size: 16px;
     }
 </style>
 {% endblock %}
