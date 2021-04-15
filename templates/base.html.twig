@@ -8,6 +8,7 @@
 
     <title>{% block title %}DoDo Le Guide{% endblock %}</title>
 
+
     {% block stylesheets %}
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootswatch/4.6.0/sketchy/bootstrap.min.css"
         integrity="sha512-AF3OQszBqW7CeiKglwNTnTwPCbJvAo6DVXLbU37Qcw7nPxVPywkPbDCZyGpLu0xqzPeQL2GKAQ5k69hMBTI7LA=="
@@ -35,21 +36,23 @@
 
         {% if block('carousel') is defined %}
         <div id="myCarousel" class="carousel slide carousel-fade" data-ride="carousel">
-            <ol class="carousel-indicators">
+            <!-- <ol class="carousel-indicators">
                 {% for key,header in headers %}
                 <li data-target="#myCarousel" data-slide-to="{{ key }}" {% if key == 0 %}class="active" {% endif %}></li>
                 {% endfor %}
-            </ol>
+            </ol>-->
             <div class="carousel-inner">
                 {% for key,header in headers %}
                 <div class="carousel-item {% if key == 0 %}active{% endif %}"
                     style="background: url('/uploads/{{ header.illustration }}');background-size:cover;background-position:center;">
-                    <div class="container">
-                        <div class="carousel-caption text-left">
-                            <h1>{{ header.title }}</h1>
+                    <div class="container1">
+                        <div class="carousel-caption">
+                            <h2 id="titreheader">{{ header.title }}</h2>
                             <p>{{ header.content }}</p>
-                            <p><a class="btn btn-outline-success" href="{{ header.btnUrl }}"
-                                    role="button">{{ header.btnTitle }}</a></p>
+                            <p>
+                                <a class="btn btn-outline-success" href="{{ header.btnUrl }}" role="button"
+                                    id="btnheader"><small>{{ header.btnTitle }}</small></a>
+                            </p>
                         </div>
                     </div>
                 </div>
@@ -77,26 +80,44 @@
                             </svg>
                         </div>
                     </li>
-                    <li class="nav-item">
-                        <div class="svg-wrapper">
-                            <svg height="30" width="100">
-                                <rect id="shape" height="30" width="100" class="sh1" />
-                                <div id="text">
-                                    <a href="{{ path('app_randonnée') }}">Randonnée</a>
-                                </div>
-                            </svg>
-                        </div>
-                    </li>
-                    <li class="nav-item">
-                        <div class="svg-wrapper">
-                            <svg height="30" width="100">
-                                <rect id="shape" height="30" width="100" class="sh2" />
-                                <div id="text">
-                                    <a href="{{ path('app_activitésportive') }}">Activité</a>
-                                </div>
-                            </svg>
-                        </div>
-                    </li>
+                        <li class="nav-item dropdown">
+                            <div class="svg-wrapper">
+                                <svg height="30" width="100">
+                                    <rect id="shape" height="30" width="100" class="sh1" />
+                                    <div id="textmenu">
+                                        <a class="nav-link dropdown-toggle" data-toggle="dropdown" href="#"
+                                            role="button" aria-haspopup="true"
+                                            aria-expanded="false">Activités</a>
+                                        <div class="dropdown-menu" style="left: -60px">
+                                            <a class="dropdown-item" href="">Randonnée</a>
+                                            <div class="dropdown-divider"></div>
+                                            <a class="dropdown-item" href="">Activité Sportive</a>
+                                            <div class="dropdown-divider"></div>
+                                            <a class="dropdown-item" href="">Plage</a>
+                                            <div class="dropdown-divider"></div>
+                                            <a class="dropdown-item" href="">Visite</a>
+                                        </div>
+                                    </div>
+                                </svg>
+                            </div>
+                        </li>
+                        <li class="nav-item dropdown">
+                            <div class="svg-wrapper">
+                                <svg height="30" width="100">
+                                    <rect id="shape" height="30" width="100" class="sh2" />
+                                    <div id="textmenu">
+                                        <a class="nav-link dropdown-toggle" data-toggle="dropdown" href="#"
+                                            role="button" aria-haspopup="true"
+                                            aria-expanded="false">Culture</a>
+                                        <div class="dropdown-menu" style="left: -60px">
+                                            <a class="dropdown-item" href="">Plat</a>
+                                            <div class="dropdown-divider"></div>
+                                            <a class="dropdown-item" href="">Biodiversité</a>
+                                        </div>
+                                    </div>
+                                </svg>
+                            </div>
+                        </li>
                     <li class="nav-item">
                         <div class="svg-wrapper">
                             <svg height="30" width="100">
@@ -203,7 +224,6 @@
     {% block body %}{% endblock %}
 </div>
 
-
 <footer>
     <p id="p-footer" class="text-center">
         &copy; 2020/{{ 'now'|date("Y", "Europe/Paris") }} &middot;
@@ -213,9 +233,13 @@
 </footer>
 
 <style>
-    .container {
-        margin-top: 280px;
+    .container1 {
+        padding-right: 0px;
+        padding-left: 0px;
+        margin: none;
+        height: 270px;
     }
+
     .example-wrapper h1 {
         margin-top: 450px;
         margin-bottom: 30px;
@@ -237,14 +261,12 @@
 
     #logo {
         display: flex;
-        position: absolute;
+        position: fixed;
         z-index: 2;
-        top: 5%;
-        left: 1%;
         width: 130px;
-        height: 210px;
-        padding-left: 1%;
-        padding-top: 1%;
+        height: 180px;
+        padding-left: 35px;
+        padding-top: 15px;
     }
 
     header {
@@ -258,6 +280,24 @@
         z-index: 1;
     }
 
+    #titreheader {
+        font-size: 60px;
+    }
+
+    #btnheader {
+        position: fixed;
+        display: flex;
+        flex-direction: row;
+        justify-content: flex-start;
+        margin-top: 55px;
+        margin-left: 10px;
+    }
+
+    .carousel-caption {
+        position: sticky;
+        height: 270px;
+    }
+
     .navbar.bg-light {
         border-color: white !important;
         box-shadow: 0 0.1rem 0.5rem rgba(0, 0, 0, 0.25) !important;
@@ -267,9 +307,8 @@
         color: #0b93e1 !important;
     }
 
-    .btn-success {
-        color: #fff;
-        background-color: #569A24;
+    .btn-outline-success {
+        color: #569A24;
         border-color: #569A24;
     }
 
@@ -316,7 +355,7 @@
         flex-direction: column;
         background-size: cover;
         background-position: center;
-        margin-top: 10%;
+        margin-top: 100px;
         height: 150px;
         width: 100%;
         background-image: url("/images/pagebase/footer/Route-du-volcan1920.200.png");
@@ -362,13 +401,13 @@
     }
 
     #shape.sh1 {
-        stroke-dasharray: 70 400;
-        stroke-dashoffset: -145;
+        stroke-dasharray: 65 400;
+        stroke-dashoffset: -148;
     }
 
     #shape.sh2 {
-        stroke-dasharray: 51 400;
-        stroke-dashoffset: -154;
+        stroke-dasharray: 55 400;
+        stroke-dashoffset: -153;
     }
 
     #shape.sh3 {

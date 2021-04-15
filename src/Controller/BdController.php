@@ -30,7 +30,8 @@ class BdController extends AbstractController
         return $this->render('pages/home.html.twig', [
             'products' => $products,
             'headers' => $headers,
-            'title' => " '' Le DoDo Y Guide A Ou '' ",
+            'title' => " '' Le DoDo Y Guide A Ou ! '' ",
+            'titletraduction' => 'Le DoDo Vous Guide',
             'intro1' => "Avec  ",
             'intro2' => " Vous Serez Votre Propre Guide.",
             'intro3' => "Voici Nos ",

@@ -9,7 +9,8 @@
 
 <div class="example-wrapper">
 
-    <h1 class="titre">{{title}}</h1>
+    <h1 class="titre">{{title}}<br/><small id="titretraduction">{{titletraduction}}</small></h1>
+    
 
     <section>
         <p class="espace"></p>
@@ -46,7 +47,7 @@
                 <p class="espace5"></p>
             </section>
             <h2 id="h2rando">Randonnées</h2>
-            <small id="para1">
+            <small class="para">
                 De nombreuses Randonnées pour tous les niveaux.
             </small>
         </div>
@@ -58,7 +59,7 @@
                 <p class="espace5"></p>
             </section>
             <h2 id="h2activité">Activités Sportives</h2>
-            <small id="para3">
+            <small class="para">
                 Profitez de toutes les activités sportives disponibles sur l'île.
             </small>
         </div>
@@ -70,7 +71,7 @@
                 <p class="espace5"></p>
             </section>
             <h2 id="h2visite">Les Plages</h2>
-            <small id="para2">
+            <small class="para">
                 Des plages magnifique pour pratiquer le farniente...
             </small>
         </div>
@@ -89,7 +90,7 @@
                 <p class="espace5"></p>
             </section>
             <h2 id="h2rando">Visites Locale</h2>
-            <small id="para1">
+            <small class="para">
                 Visitez certains lieux historiques de l'île, les marchés, les rhumeries...
             </small>
             <p>
@@ -104,7 +105,7 @@
                 <p class="espace5"></p>
             </section>
             <h2 id="h2activité">Les Plats</h2>
-            <small id="para3">
+            <small class="para">
                 Sur l'île on retrouve une multitude de plats : carry, rougails, sauté...
             </small>
         </div>
@@ -116,7 +117,7 @@
                 <p class="espace5"></p>
             </section>
             <h2 id="h2visite">La Nature</h2>
-            <small id="para2">
+            <small class="para">
                 L'île regorge de nombreuses variétés de plantes de fleurs et d'arbres.
             </small>
         </div>
@@ -133,8 +134,8 @@
 
 <div class="articles my-auto">
     <hr id="hr1">
-    <h3 class="mt-4 mb-4 text-center">Découvrez les articles les plus vendus</h3>
-    <hr>
+    <h3 class="mt-3 mb-3 text-center">Découvrez les articles les plus vendus</h3>
+    <hr id="hr2">
     <div class="row">
         {% for product in products %}
         <div class="col-md-3">
@@ -145,15 +146,13 @@
 </div>
 
 <style>
-    .articles {
-        margin: 180px auto;
-        margin-bottom: 70px;
-        max-width: 850px;
-        width: 95%;
-        font: 18px/1.5;
-    }
+    
     .titre {
         font-size: 45px;
+    }
+
+    #titretraduction {
+        font-size: 25px;
     }
 
     .espace {
@@ -186,7 +185,7 @@
     }
 
     .espace1 {
-        height: 60px;
+        height: 80px;
     }
 
     #vanille {
@@ -196,6 +195,10 @@
 
     .espace2 {
         height: 5px;
+    }
+
+    .container {
+        max-width: 1400px;
     }
 
     .img-thumbnail {
@@ -219,12 +222,16 @@
         transition: all .5s cubic-bezier(.6, 2, .4, 1);
     }
 
+    .para {
+        font-size: 16px;
+    }
+
     .espace3 {
         height: 60px;
     }
 
     .espace4 {
-        height: 80px;
+        height: 100px;
     }
 
     .espace5 {
@@ -240,8 +247,12 @@
         margin-top: 100px;
     }
 
-    small {
-        font-size: 16px;
+    .articles {
+        margin: 180px auto;
+        max-width: 1000px;
+        width: 100%;
+        font: 18px/1.5;
+        padding: 30px;
     }
 </style>
 {% endblock %}
