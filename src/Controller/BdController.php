@@ -23,7 +23,7 @@ class BdController extends AbstractController
      */
     public function home()
     {
-
+        
         $products = $this->entityManager->getRepository(Product::class)->findByIsBest(1);
         $headers = $this->entityManager->getRepository(Header::class)->findAll();
 
@@ -94,6 +94,42 @@ class BdController extends AbstractController
         return $this->render('pages/activitésportive.html.twig', [
             'headers' => $headers,
             'title' => 'Activité Sportive',
+        ]);
+    }
+
+    /**
+     * @Route("/plage", name="app_plage")
+     */
+    public function plage()
+    {
+        $headers = $this->entityManager->getRepository(Header::class)->findAll();
+        return $this->render('pages/plage.html.twig', [
+            'headers' => $headers,
+            'title' => 'Plage',
+        ]);
+    }
+
+    /**
+     * @Route("/visite", name="app_visite")
+     */
+    public function visite()
+    {
+        $headers = $this->entityManager->getRepository(Header::class)->findAll();
+        return $this->render('pages/visite.html.twig', [
+            'headers' => $headers,
+            'title' => 'Visite',
+        ]);
+    }
+
+    /**
+     * @Route("/plats", name="app_plats")
+     */
+    public function plats()
+    {
+        $headers = $this->entityManager->getRepository(Header::class)->findAll();
+        return $this->render('pages/visite.html.twig', [
+            'headers' => $headers,
+            'title' => 'Plats',
         ]);
     }
 
