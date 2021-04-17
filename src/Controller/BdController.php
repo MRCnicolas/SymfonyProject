@@ -134,6 +134,30 @@ class BdController extends AbstractController
     }
 
     /**
+     * @Route("/biodiversité", name="app_biodiversité")
+     */
+    public function biodiversité()
+    {
+        $headers = $this->entityManager->getRepository(Header::class)->findAll();
+        return $this->render('pages/biodiversité.html.twig', [
+            'headers' => $headers,
+            'title' => 'Biodiversité',
+        ]);
+    }
+
+    /**
+     * @Route("/histoire", name="app_histoire")
+     */
+    public function histoire()
+    {
+        $headers = $this->entityManager->getRepository(Header::class)->findAll();
+        return $this->render('pages/histoire.html.twig', [
+            'headers' => $headers,
+            'title' => 'Histoire',
+        ]);
+    }
+
+    /**
      * @Route("/about", name="app_about")
      */
     public function about()
