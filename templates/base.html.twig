@@ -225,11 +225,20 @@
 </div>
 
 <footer>
+
+    <div class="d-flex justify-content-center mt-5">
+        <a href="#"><img src="{{ asset('images/pagebase/footer/iconesréseaux/facebook.svg') }}" class="iconesréseaux"/></a>
+        <a href="#"><img src="{{ asset('images/pagebase/footer/iconesréseaux/twiter.svg') }}" class="iconesréseaux"/></a>
+        <a href="#"><img src="{{ asset('images/pagebase/footer/iconesréseaux/insta.svg') }}" class="iconesréseaux"/></a>
+        <a href="#"><img src="{{ asset('images/pagebase/footer/iconesréseaux/youtube.svg') }}" class="iconesréseaux"/></a>
+    </div>
+
     <p id="p-footer" class="text-center">
         &copy; 2020/{{ 'now'|date("Y", "Europe/Paris") }} &middot;
         <a href="{{ path('app_about') }}" id="a-footer">A Propos</a>
         - <a href="{{ path('app_home') }}" id="a-footer">Retour à la page d'accueil</a>
     </p>
+    
 </footer>
 
 <style>
@@ -376,6 +385,15 @@
 
     #a-footer:hover {
         color: #569A24;
+    }
+
+    .iconesréseaux {
+        width: 50px;
+        height: 50px;
+        margin-left: 10px;
+        margin-right: 10px;
+        border-radius: 255px 25px 225px 25px/25px 225px 25px 255px;
+        box-shadow: 0 .5rem 1rem rgba(0,0,0,.15)!important
     }
 
     /* 

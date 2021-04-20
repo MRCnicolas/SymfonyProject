@@ -48,7 +48,6 @@ class BdController extends AbstractController
             'featurette5' => "images/pagehome/featurette/zourit.png",
             'featurette6' => "images/pagehome/featurette/plantes.JPG",
             'icones1' => "images/pagehome/icones/panneau1.png",
-
         ]);
 
     }
@@ -168,9 +167,4 @@ class BdController extends AbstractController
             'title' => 'about',
         ]);
     }
-
-    
-
-
-
 }
