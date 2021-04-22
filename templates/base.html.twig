@@ -16,6 +16,8 @@
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.2/css/all.css"
         integrity="sha384-vSIIfh2YWi9wW0r9iZe7RJPrKwp6bG+s9QZMoITbCckVJqGCCRhc+ccxNcdpHuYu" crossorigin="anonymous" />
     <link rel="stylesheets" href="carousel.css">
+    <link rel="stylesheet"
+        href="https://cdn.jsdelivr.net/npm/font-awesome-animation@1.1.1/css/font-awesome-animation.css">
     {% endblock %}
     {% block javascripts %}
     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
@@ -46,13 +48,13 @@
                 <div class="carousel-item {% if key == 0 %}active{% endif %}"
                     style="background: url('/uploads/{{ header.illustration }}');background-size:cover;background-position:center;">
                     <div class="container1">
-                        <div class="carousel-caption">
+                        <div class="carousel-caption faa-float animated faa-slow">
                             <h2 id="titreheader">{{ header.title }}</h2>
-                            <p>{{ header.content }}</p>
+                            {# <p>{{ header.content }}</p>
                             <p>
                                 <a class="btn btn-outline-success" href="{{ header.btnUrl }}" role="button"
                                     id="btnheader"><small>{{ header.btnTitle }}</small></a>
-                            </p>
+                            </p> #}
                         </div>
                     </div>
                 </div>
@@ -90,7 +92,8 @@
                                     <div class="dropdown-menu" style="left: -60px">
                                         <a class="dropdown-item" href="{{ path('app_randonnée') }}">Randonnée</a>
                                         <div class="dropdown-divider"></div>
-                                        <a class="dropdown-item" href="{{ path('app_activitésportive') }}">Activité Sportive</a>
+                                        <a class="dropdown-item" href="{{ path('app_activitésportive') }}">Activité
+                                            Sportive</a>
                                         <div class="dropdown-divider"></div>
                                         <a class="dropdown-item" href="{{ path('app_plage') }}">Plage</a>
                                         <div class="dropdown-divider"></div>
@@ -159,7 +162,11 @@
                         </div>
                     </li>
                 </ul>
-                <a class="navbar-brand" href="#"><img src="/images/pagebase/header/gouillat1.png" id="logonav" /></a>
+
+                <a href="#" class="navbar-brand faa-tada animated-hover faa-slow">
+                    <img src="/images/pagebase/header/gouillat1.png" id="logonav" />
+                </a>
+
                 <div class="nav-item">
                     <div class="svg-wrapper">
                         <svg height="30" width="100">
@@ -210,9 +217,9 @@
                     </li>
                     {% endif %}
                 </ul>
-                <a class="navbar-brand" href="{{ path('cart') }}" alt="">
-                    <img src="{{ asset('images/pagebase/header/shopping-cart.png') }}" class="cart-icon"
-                        alt="Mon panier" />
+                <a class="navbar-brand" href="{{ path('cart') }}">
+                    <img src="{{ asset('images/pagebase/header/shopping-cart.png') }}"
+                        class="cart-icon faa-bounce animated-hover faa-fast" alt="Mon panier" />
                 </a>
             </div>
         </nav>
@@ -224,21 +231,36 @@
     {% block body %}{% endblock %}
 </div>
 
+<div class="float-right mr-5 mb-5 faa-bounce animated" style="width: 100px;">
+    <a href="#"><img src="{{ asset('images/pagebase/body/chevron-back.svg') }}" id="chevron"/></a>
+</div>
+
 <footer>
 
     <div class="d-flex justify-content-center mt-5">
-        <a href="#"><img src="{{ asset('images/pagebase/footer/iconesréseaux/facebook.svg') }}" class="iconesréseaux"/></a>
-        <a href="#"><img src="{{ asset('images/pagebase/footer/iconesréseaux/twiter.svg') }}" class="iconesréseaux"/></a>
-        <a href="#"><img src="{{ asset('images/pagebase/footer/iconesréseaux/insta.svg') }}" class="iconesréseaux"/></a>
-        <a href="#"><img src="{{ asset('images/pagebase/footer/iconesréseaux/youtube.svg') }}" class="iconesréseaux"/></a>
+
+        <p id="p-footer">
+            &copy; 2020/{{ 'now'|date("Y", "Europe/Paris") }} &middot; DoDoLeGuide
+            - <a href="{{ path('app_about') }}" id="a-footer">À propos</a>
+            - <a href="" id="a-footer">Mentions légales</a>
+            | <a href="" id="a-footer">Politique de confidentialité</a>
+            - <a href="{{ path('app_home') }}" id="a-footer">Retour à la page d'accueil</a>
+            -
+
+            <div class="mt-2">
+                <a href="#"><img src="{{ asset('images/pagebase/footer/iconesréseaux/facebook.svg') }}"
+                        class="iconesréseaux faa-spin animated-hover" /></a>
+                <a href="#"><img src="{{ asset('images/pagebase/footer/iconesréseaux/twiter.svg') }}"
+                        class="iconesréseaux faa-spin faa-reverse animated-hover" /></a>
+                <a href="#"><img src="{{ asset('images/pagebase/footer/iconesréseaux/insta.svg') }}"
+                        class="iconesréseaux faa-spin animated-hover" /></a>
+                <a href="#"><img src="{{ asset('images/pagebase/footer/iconesréseaux/youtube.svg') }}"
+                        class="iconesréseaux faa-spin faa-reverse animated-hover" /></a>
+            </div>
+        </p>
+
     </div>
 
-    <p id="p-footer" class="text-center">
-        &copy; 2020/{{ 'now'|date("Y", "Europe/Paris") }} &middot;
-        <a href="{{ path('app_about') }}" id="a-footer">A Propos</a>
-        - <a href="{{ path('app_home') }}" id="a-footer">Retour à la page d'accueil</a>
-    </p>
-    
 </footer>
 
 <style>
@@ -292,6 +314,7 @@
     #titreheader {
         font-size: 60px;
         color: #FFFFFF;
+        margin-top: 40px;
         text-shadow: 0 1px 0 #CCCCCC, 0 2px 0 #c9c9c9, 0 3px 0 #bbb, 0 4px 0 #b9b9b9, 0 5px 0 #aaa, 0 6px 1px rgba(0, 0, 0, .1), 0 0 5px rgba(0, 0, 0, .1), 0 1px 3px rgba(0, 0, 0, .3), 0 3px 5px rgba(0, 0, 0, .2), 0 5px 10px rgba(0, 0, 0, .25), 0 10px 10px rgba(0, 0, 0, .2), 0 20px 20px rgba(0, 0, 0, .15);
     }
 
@@ -358,7 +381,7 @@
     }
 
     .cart-icon {
-        height: 25px;
+        height: 30px;
     }
 
     footer {
@@ -366,7 +389,7 @@
         flex-direction: column;
         background-size: cover;
         background-position: center;
-        margin-top: 100px;
+        margin-top: 50px;
         height: 150px;
         width: 100%;
         background-image: url("/images/pagebase/footer/Route-du-volcan1920.200.png");
@@ -388,12 +411,12 @@
     }
 
     .iconesréseaux {
-        width: 50px;
-        height: 50px;
-        margin-left: 10px;
-        margin-right: 10px;
+        width: 30px;
+        height: 30px;
+        margin-left: 5px;
+        margin-right: 5px;
         border-radius: 255px 25px 225px 25px/25px 225px 25px 255px;
-        box-shadow: 0 .5rem 1rem rgba(0,0,0,.15)!important
+        box-shadow: 0 .5rem 1rem rgba(0, 0, 0, .15) !important
     }
 
     /* 
@@ -407,8 +430,8 @@
         height: 30px;
         display: inline-block;
         border-radius: 3px;
-        margin-left: 5px;
-        margin-right: 5px;
+        margin-left: 4px;
+        margin-right: 4px;
     }
 
     #shape {

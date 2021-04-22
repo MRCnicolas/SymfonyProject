@@ -31,7 +31,7 @@ class BdController extends AbstractController
             'products' => $products,
             'headers' => $headers,
             'title' => " '' Le DoDo Y Guide A Ou ! '' ",
-            'titletraduction' => 'Le DoDo Vous Guide',
+            'titletraduction' => " '' Le DoDo Vous Guide ! ''",
             'intro1' => "Avec  ",
             'intro2' => " Vous Serez Votre Propre Guide.",
             'intro3' => "Voici Nos ",
