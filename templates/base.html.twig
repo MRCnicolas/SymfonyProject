@@ -48,6 +48,7 @@
                 <div class="carousel-item {% if key == 0 %}active{% endif %}"
                     style="background: url('/uploads/{{ header.illustration }}');background-size:cover;background-position:center;">
                     <div class="container1">
+                        <img src="/images/pagebase/header/DODO.png" id="logo" />
                         <div class="carousel-caption faa-float animated faa-slow">
                             <h2 id="titreheader">{{ header.title }}</h2>
                             {# <p>{{ header.content }}</p>
@@ -63,12 +64,12 @@
         </div>
         {% endif %}
 
-        <img src="/images/pagebase/header/DODO.png" id="logo" />
+
 
         <nav class="navbar navbar-expand-lg navbar-light bg-light">
             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarColor03"
                 aria-controls="navbarColor03" aria-expanded="false" aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
+                <span class="navbar-toggler-icon" id="menuburger"></span>
             </button>
             <div class="collapse navbar-collapse" id="navbarColor03">
                 <ul class="navbar-nav mr-auto">
@@ -77,7 +78,7 @@
                             <svg height="30" width="100">
                                 <rect id="shape" height="30" width="100" />
                                 <div id="text">
-                                    <a href="{{ path('app_home') }}">Accueil</a>
+                                    <a href="{{ path('app_home') }}" id="textaccueil">Accueil</a>
                                 </div>
                             </svg>
                         </div>
@@ -89,11 +90,10 @@
                                 <div id="textmenu">
                                     <a class="nav-link dropdown-toggle" data-toggle="dropdown" href="#" role="button"
                                         aria-haspopup="true" aria-expanded="false">Activités</a>
-                                    <div class="dropdown-menu" style="left: -60px">
+                                    <div class="dropdown-menu" style="left: -60px" id="dropmenu">
                                         <a class="dropdown-item" href="{{ path('app_randonnée') }}">Randonnée</a>
                                         <div class="dropdown-divider"></div>
-                                        <a class="dropdown-item" href="{{ path('app_activitésportive') }}">Activité
-                                            Sportive</a>
+                                        <a class="dropdown-item" href="{{ path('app_activitésportive') }}">Sportive</a>
                                         <div class="dropdown-divider"></div>
                                         <a class="dropdown-item" href="{{ path('app_plage') }}">Plage</a>
                                         <div class="dropdown-divider"></div>
@@ -110,7 +110,7 @@
                                 <div id="textmenu">
                                     <a class="nav-link dropdown-toggle" data-toggle="dropdown" href="#" role="button"
                                         aria-haspopup="true" aria-expanded="false">Culture</a>
-                                    <div class="dropdown-menu" style="left: -60px">
+                                    <div class="dropdown-menu" style="left: -60px" id="dropmenu">
                                         <a class="dropdown-item" href="{{ path('app_plats') }}">Plats</a>
                                         <div class="dropdown-divider"></div>
                                         <a class="dropdown-item" href="{{ path('app_biodiversité') }}">Biodiversité</a>
@@ -126,7 +126,7 @@
                             <svg height="30" width="100">
                                 <rect id="shape" height="30" width="100" class="sh3" />
                                 <div id="text">
-                                    <a href="{{ path('products') }}">Boutique</a>
+                                    <a href="{{ path('products') }}" id="textboutique">Boutique</a>
                                 </div>
                             </svg>
                         </div>
@@ -136,23 +136,23 @@
                             <svg height="30" width="100">
                                 <rect id="shape" height="30" width="100" class="sh4" />
                                 <div id="text">
-                                    <a href="{{ path('contact') }}">Contact</a>
+                                    <a href="{{ path('contact') }}" id="textcontact">Contact</a>
                                 </div>
                             </svg>
                         </div>
                     </li>
                     <li class="nav-item dropdown">
                         <div class="svg-wrapper">
-                            <svg height="30" width="100">
+                            <svg height="30" width="100" id="svg-nav-rechercher">
                                 <rect id="shape" height="30" width="100" class="sh5" />
                                 <div id="textmenu">
                                     <a class="nav-link dropdown-toggle" data-toggle="dropdown" href="#" role="button"
                                         aria-haspopup="true" aria-expanded="false">Rechercher</a>
-                                    <div class="dropdown-menu" style="right: -131px">
+                                    <div class="dropdown-menu" style="right: -131px" id="dropmenusearch">
                                         <div class="container-fluid">
                                             <form class="d-flex">
-                                                <input class="form-control me-2" type="search" placeholder="Rechercher">
-                                                <button class="btn btn-outline-success" type="submit"><i
+                                                <input class="form-control me-2" type="search" placeholder="Rechercher" id="inputmenusearch">
+                                                <button class="btn btn-outline-success" type="submit" id="buttonmenusearch"><i
                                                         class="fas fa-search"></i></button>
                                             </form>
                                         </div>
@@ -187,7 +187,7 @@
                                     <a class="nav-link dropdown-toggle" data-toggle="dropdown" href="#" role="button"
                                         aria-haspopup="true" aria-expanded="false">{{ app.user.firstname }}</a>
 
-                                    <div class="dropdown-menu" style="left: -60px">
+                                    <div class="dropdown-menu" style="left: -60px" id="dropmenucompte">
                                         {% if 'ROLE_ADMIN' in app.user.roles %}
                                         <a class="dropdown-item" href="{{ path('account') }}">Mon Compte</a>
                                         <div class="dropdown-divider"></div>
@@ -231,13 +231,23 @@
     {% block body %}{% endblock %}
 </div>
 
-<div class="float-right mr-5 mb-5 faa-bounce animated" style="width: 100px;">
-    <a href="#"><img src="{{ asset('images/pagebase/body/chevron-back.svg') }}" id="chevron"/></a>
+<div class="float-right mr-5 mb-5 faa-bounce animated" style="width: 80px;">
+    <a href="#"><img src="{{ asset('images/pagebase/body/chevron-back.svg') }}" id="chevron" /></a>
 </div>
 
 <footer>
 
-    <div class="d-flex justify-content-center mt-5">
+    <div class="d-flex justify-content-center" id="réseaux">
+        <a href="#"><img src="{{ asset('images/pagebase/footer/iconesréseaux/facebook.svg') }}"
+                class="iconesréseaux faa-spin animated-hover" /></a>
+        <a href="#"><img src="{{ asset('images/pagebase/footer/iconesréseaux/twiter.svg') }}"
+                class="iconesréseaux faa-spin faa-reverse animated-hover" /></a>
+        <a href="#"><img src="{{ asset('images/pagebase/footer/iconesréseaux/insta.svg') }}"
+                class="iconesréseaux faa-spin animated-hover" /></a>
+        <a href="#"><img src="{{ asset('images/pagebase/footer/iconesréseaux/youtube.svg') }}"
+                class="iconesréseaux faa-spin faa-reverse animated-hover" /></a>
+    </div>
+    <div class="d-flex justify-content-center">
 
         <p id="p-footer">
             &copy; 2020/{{ 'now'|date("Y", "Europe/Paris") }} &middot; DoDoLeGuide
@@ -246,17 +256,6 @@
             | <a href="" id="a-footer">Politique de confidentialité</a>
             - <a href="{{ path('app_home') }}" id="a-footer">Retour à la page d'accueil</a>
             -
-
-            <div class="mt-2">
-                <a href="#"><img src="{{ asset('images/pagebase/footer/iconesréseaux/facebook.svg') }}"
-                        class="iconesréseaux faa-spin animated-hover" /></a>
-                <a href="#"><img src="{{ asset('images/pagebase/footer/iconesréseaux/twiter.svg') }}"
-                        class="iconesréseaux faa-spin faa-reverse animated-hover" /></a>
-                <a href="#"><img src="{{ asset('images/pagebase/footer/iconesréseaux/insta.svg') }}"
-                        class="iconesréseaux faa-spin animated-hover" /></a>
-                <a href="#"><img src="{{ asset('images/pagebase/footer/iconesréseaux/youtube.svg') }}"
-                        class="iconesréseaux faa-spin faa-reverse animated-hover" /></a>
-            </div>
         </p>
 
     </div>
@@ -292,11 +291,11 @@
 
     #logo {
         display: flex;
-        position: fixed;
+        position: relative;
         z-index: 2;
-        width: 130px;
-        height: 180px;
-        padding-left: 35px;
+        width: 100px;
+        height: 160px;
+        padding-left: 10px;
         padding-top: 15px;
     }
 
@@ -314,6 +313,8 @@
     #titreheader {
         font-size: 60px;
         color: #FFFFFF;
+        margin-left: 100px;
+        margin-right: 100px;
         margin-top: 40px;
         text-shadow: 0 1px 0 #CCCCCC, 0 2px 0 #c9c9c9, 0 3px 0 #bbb, 0 4px 0 #b9b9b9, 0 5px 0 #aaa, 0 6px 1px rgba(0, 0, 0, .1), 0 0 5px rgba(0, 0, 0, .1), 0 1px 3px rgba(0, 0, 0, .3), 0 3px 5px rgba(0, 0, 0, .2), 0 5px 10px rgba(0, 0, 0, .25), 0 10px 10px rgba(0, 0, 0, .2), 0 20px 20px rgba(0, 0, 0, .15);
     }
@@ -334,7 +335,7 @@
 
     .navbar.bg-light {
         border-color: white !important;
-        box-shadow: 0 0.1rem 0.5rem rgba(0, 0, 0, 0.25) !important;
+        box-shadow: 0 0.1rem 0.5rem rgba(99, 97, 97, 0.25) !important;
     }
 
     .nav-link {
@@ -365,6 +366,7 @@
     .dropdown-menu {
         border-color: #0b93e1;
         box-shadow: 0 0.1rem 1rem rgb(0 0 0 / 25%);
+        border-radius: 255px 25px 225px 25px/25px 225px 25px 255px!important;
     }
 
     .dropdown-divider {
@@ -378,6 +380,13 @@
     #logonav {
         width: 100px;
         height: 32px;
+    }
+
+    .navbar-light .navbar-toggler {
+        color: #0b93e1;
+        border-color: #0b93e1;
+        box-shadow: 0 0.1rem 0.5rem rgba(99, 97, 97, 0.25) !important;
+        border-radius: 255px 25px 225px 25px/25px 225px 25px 255px!important;
     }
 
     .cart-icon {
@@ -408,6 +417,10 @@
 
     #a-footer:hover {
         color: #569A24;
+    }
+
+    #réseaux {
+        margin-top: 50px;
     }
 
     .iconesréseaux {
@@ -506,6 +519,239 @@
         stroke-dashoffset: 0;
         stroke: #569A24;
     }
+
+
+
+
+    /*Média Queries*/
+
+    @media screen and (max-width: 425px) {
+        .container1 {
+            height: 200px;
+        }
+
+        #logo {
+            width: 80px;
+            height: 130px;
+            padding-left: 10px;
+            padding-top: 15px;
+        }
+
+        #logonav {
+            width: 50px;
+            height: 20px;
+        }
+
+        #titreheader {
+            margin-top: 5px;
+            font-size: 33px;
+            margin-right: 8px;
+        }
+
+        .example-wrapper h1 {
+            margin-top: 300px;
+            margin-bottom: 10px;
+        }
+
+        .navbar {
+            height: 40px;
+        }
+
+        .navbar-brand {
+            padding: 0px;
+            margin: 0px;
+            height: 32px;
+        }
+
+        .nav-item {
+            width: 70px;
+            height: 30px;
+        }
+
+        .navbar-light .navbar-toggler {
+            color: #0b93e1;
+            border-color: #0b93e1;
+            box-shadow: 0 0.1rem 0.5rem rgba(99, 97, 97, 0.25) !important;
+            border-radius: 255px 25px 225px 25px/25px 225px 25px 255px!important;
+            height: 30px;
+            width: 50px;
+        }
+
+        .navbar-light .navbar-toggler-icon {
+            width: 50px;
+            height: 20px;
+            margin-left: -14px;
+        }
+
+        .navbar.bg-light {
+            border-color: white !important;
+            box-shadow: 0 0.1rem 0.5rem rgba(99, 97, 97, 0.25) !important;
+            height: auto;
+        }
+
+        .navbar-collapse {
+            display: flex;
+            flex-direction: row;
+            justify-content: flex-start;
+            align-items: stretch;
+        }
+
+        .nav-link {
+            font-size: 13px;
+            font-weight: 100;
+        }
+
+        .navbar-nav .nav-link {
+            height: 30px;
+            padding-left: 16px;
+            padding-right: 16px;
+            margin-top: 3px;
+        }
+
+        svg {
+            width: 70px;
+        }
+
+        #svg-nav-rechercher {
+            width: 85px;
+        }
+
+        .svg-wrapper {
+            height: 24px;
+            width: 70px;
+        }
+
+        rect {
+            width: 70px;
+        }
+
+        #shape {
+            stroke: #0b93e1;
+            stroke-dasharray: 33 400;
+            stroke-dashoffset: -121;
+        }
+
+        #shape.sh1 {
+            stroke-dasharray: 52 400;
+            stroke-dashoffset: -102;
+        }
+    
+        #shape.sh2 {
+            stroke-dasharray: 45 400;
+            stroke-dashoffset: -109;
+        }
+    
+        #shape.sh3 {
+            stroke-dasharray: 42 400;
+            stroke-dashoffset: -112;
+        }
+    
+        #shape.sh4 {
+            stroke-dasharray: 37 400;
+            stroke-dashoffset: -117;
+        }
+    
+        #shape.sh5 {
+            width: 85px;
+            stroke-dasharray: 64 400;
+            stroke-dashoffset: -120;
+        }
+
+        #shape.sh6 {
+            height: 30px;
+            stroke-dasharray: 51 400;
+            stroke-dashoffset: -109;
+        }
+
+        #shape.sh7 {
+            height: 30px;
+            stroke-dasharray: 45 400;
+            stroke-dashoffset: -110;
+        }
+
+        .navbar-nav .dropdown-menu {
+            position: relative;
+        }
+
+        .cart-icon {
+            width: 25px;
+            height: 25px;
+        }
+
+        #text {
+            margin-top: -25px;
+        }
+
+        #text a {
+            font-size: 13px;
+        }
+
+        #textaccueil {
+            margin-left: -4px;
+        }
+
+        #textboutique {
+            margin-left: 4px;
+        }
+
+        #textcontact {
+            margin-left: -1px;
+        }
+
+        #dropmenu {
+            left: 0px!important;
+            min-width: 115px!important;
+        }
+
+        a.dropdown-item {
+            font-size: 15px;
+        }
+
+        #dropmenusearch {
+            width: 200px;
+            border-radius: 255px 25px 225px 25px/25px 225px 25px 255px!important;
+        }
+
+        #inputmenusearch {
+            height: 30px;
+        }
+
+        #buttonmenusearch {
+            height: 30px;
+        }
+
+        #dropmenucompte {
+            left: -70px!important;
+            min-width: 140px!important;
+        }
+
+        .mb-5 {
+            margin-bottom: 0px !important;
+            margin-right: 0px !important;
+        }
+
+        #chevron {
+            width: 60px;
+        }
+
+        p#p-footer {
+            font-size: 15px;
+        }
+
+        a#a-footer {
+            font-size: 14px;
+        }
+
+        #réseaux {
+            margin-top: 45px;
+        }
+    }
+
+    @media screen and (max-width: 767px) {}
+
+    @media screen and (min-width: 1024px) {}
+
+    @media screen and (min-width: 2056px) {}
 </style>
 
 {% block script %}{% endblock %}
