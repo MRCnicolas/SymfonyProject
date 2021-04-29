@@ -50,7 +50,7 @@
                 De nombreuses Randonnées pour tous les niveaux.
             </small>
         </div>
-        <div class="col-md-4 col-12">
+        <div class="col-md-4 col-12" id="activitésport">
             <a href="{{ path('app_activitésportive') }}">
                 <img src="{{featurette2}}" class="img-thumbnail shadow" alt="..." style="height: 250px; width: 250px">
             </a>
@@ -93,7 +93,7 @@
                 Visitez certains lieux historiques de l'île, les marchés, les rhumeries...
             </small>
         </div>
-        <div class="col-md-4 col-12">
+        <div class="col-md-4 col-12" id="plats">
             <a href="{{ path('app_plats') }}">
                 <img src="{{featurette5}}" class="img-thumbnail shadow" alt="..." style="height: 250px; width: 250px">
             </a>
@@ -130,11 +130,11 @@
 
 <div class="articles my-auto">
     <hr id="hr1">
-    <h3 class="mt-3 mb-3 text-center">Découvrez les articles les plus vendus</h3>
+    <h3 class="mt-3 mb-3 text-center">Les articles les plus vendus</h3>
     <hr id="hr2">
     <div class="row">
         {% for product in products %}
-        <div class="col-6 col-sm-3">
+        <div class="col-3 col-sm-3">
             {% include 'product/single_product.html.twig' %}
         </div>
         {% endfor %}
@@ -254,6 +254,18 @@
 
 
     @media screen and (max-width: 425px) {
+        .titre {
+            font-size: 24px;
+        }
+    
+        #titretraduction {
+            font-size: 15px;
+        }
+
+        .espace {
+            height: 15px;
+        }
+
         .rounded {
             height: 100%;
         }
@@ -295,39 +307,157 @@
         }
 
         h3 {
-            font-size: 23px;
+            font-size: 20px;
         }
 
         .articles {
-            max-width: 420px;
+            max-width: 420px; 
+            padding-left: 10px;
+            padding-right: 10px;
         }
 
+        .col-3 {
+            padding-left: 2px;
+            padding-right: 2px;
+        }
+
+        h5 {
+            font-size: 13px;
+        }
+
+        hr {
+            margin: 8px;
+        }
         .product-subtitle {
+            font-size: 10px;
+        }
+
+        .product-price {
             font-size: 13px;
         }
 
     }
 
-    @media screen and (max-width: 767px) {
+    @media screen and (min-width: 426px) and (max-width: 767px) {
 
         .titre {
-            font-size: 23px;
+            font-size: 30px;
         }
     
         #titretraduction {
-            font-size: 13px;
+            font-size: 16px;
         }
 
         .espace {
             height: 20px;
         }
 
-      }
-    @media screen and (min-width: 1024px) {
-        
-      }
-    @media screen and (min-width: 2056px) {
+        .espace3 {
+            height: 0px;
+        }
 
+        .espace4 {
+            height: 35px;
+        }
+
+        #hr1 {
+            margin-top: 60px;
+        }
+        #panneau {
+            width: 140px;
+            height: 38px;
+        }
+
+        h3 {
+            font-size: 20px;
+        }
+
+        .articles {
+            max-width: 550px; 
+            padding-left: 10px;
+            padding-right: 10px;
+            padding-bottom: 40px;
+        }
+
+        .col-3 {
+            padding-left: 2px;
+            padding-right: 2px;
+        }
+
+        h5 {
+            font-size: 13px;
+        }
+
+        hr {
+            margin: 8px;
+        }
+        .product-subtitle {
+            font-size: 10px;
+        }
+
+        .product-price {
+            font-size: 13px;
+        }
+      }
+      @media screen and (min-width: 768px) and (max-width: 1023px) {
+        .col-12 {
+            padding-left: 5px;
+            padding-right: 5px;
+        }
+
+        #activitésport {
+            padding-left: 0px;
+            padding-right: 0px;
+        }
+
+        #plats {
+            padding-left: 0px;
+            padding-right: 0px;
+        }
+
+        #panneau {
+            width: 150px;
+            height: 40px;
+        }
+
+        #hr1 {
+            margin-top: 60px;
+        }
+
+        .articles {
+            max-width: 600px; 
+            padding-left: 10px;
+            padding-right: 10px;
+            padding-bottom: 40px;
+        }
+
+        .col-3 {
+            padding-left: 2px;
+            padding-right: 2px;
+        }
+
+        h5 {
+            font-size: 13px;
+        }
+
+        hr {
+            margin: 8px;
+        }
+        .product-subtitle {
+            font-size: 10px;
+        }
+
+        .product-price {
+            font-size: 13px;
+        }
+      }
+    @media screen and (min-width: 1024px) and (max-width: 2056px) {
+        .articles {
+            max-width: 750px; 
+            padding-left: 10px;
+            padding-right: 10px;
+            padding-bottom: 40px;
+        }
       }
 </style>
 {% endblock %}

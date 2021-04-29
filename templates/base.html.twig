@@ -167,7 +167,7 @@
                     <img src="/images/pagebase/header/gouillat1.png" id="logonav" />
                 </a>
 
-                <div class="nav-item">
+                <div class="nav-item" id="navinscription">
                     <div class="svg-wrapper">
                         <svg height="30" width="100">
                             <rect id="shape" height="30" width="100" class="sh6" />
@@ -523,7 +523,7 @@
 
 
 
-    /*Média Queries*/
+    /*MEDIA QUERIES*/
 
     @media screen and (max-width: 425px) {
         .container1 {
@@ -538,8 +538,9 @@
         }
 
         #logonav {
-            width: 50px;
-            height: 20px;
+            margin-top: 29px;
+            width: 35px;
+            height: 15px;
         }
 
         #titreheader {
@@ -549,7 +550,7 @@
         }
 
         .example-wrapper h1 {
-            margin-top: 300px;
+            margin-top: 280px;
             margin-bottom: 10px;
         }
 
@@ -594,6 +595,260 @@
             flex-direction: row;
             justify-content: flex-start;
             align-items: stretch;
+            border: 3px solid #0b93e1;
+            box-shadow: inset 0 0.1rem 0.5rem rgba(99, 97, 97, 0.25) !important;
+            border-radius: 255px 25px 225px 25px/25px 225px 25px 255px!important;
+            background-color: #ffffffa1;
+        }
+
+        .nav-link {
+            font-size: 13px;
+            font-weight: 100;
+        }
+
+        .navbar-nav {
+            margin-top: 20px;
+            margin-bottom: 20px;
+        }
+
+        .navbar-nav .nav-link {
+            height: 30px;
+            padding-left: 16px;
+            padding-right: 16px;
+            margin-top: 3px;
+        }
+
+        svg {
+            width: 70px;
+        }
+
+        #svg-nav-rechercher {
+            width: 85px;
+        }
+
+        .svg-wrapper {
+            height: 24px;
+            width: 70px;
+        }
+
+        rect {
+            width: 70px;
+        }
+
+        #shape {
+            stroke: #0b93e1;
+            stroke-dasharray: 33 400;
+            stroke-dashoffset: -121;
+        }
+
+        #shape.sh1 {
+            stroke-dasharray: 52 400;
+            stroke-dashoffset: -102;
+        }
+    
+        #shape.sh2 {
+            stroke-dasharray: 45 400;
+            stroke-dashoffset: -109;
+        }
+    
+        #shape.sh3 {
+            stroke-dasharray: 42 400;
+            stroke-dashoffset: -112;
+        }
+    
+        #shape.sh4 {
+            stroke-dasharray: 37 400;
+            stroke-dashoffset: -117;
+        }
+    
+        #shape.sh5 {
+            width: 85px;
+            stroke-dasharray: 64 400;
+            stroke-dashoffset: -120;
+        }
+
+        #shape.sh6 {
+            height: 30px;
+            stroke-dasharray: 51 400;
+            stroke-dashoffset: -109;
+        }
+
+        #shape.sh7 {
+            height: 30px;
+            stroke-dasharray: 45 400;
+            stroke-dashoffset: -110;
+        }
+
+        #shape.sh8 {
+            height: 30px;
+            stroke-dasharray: 46 400;
+            stroke-dashoffset: -108;
+        }
+
+        .navbar-nav .dropdown-menu {
+            position: relative;
+        }
+
+        #navinscription {
+            margin-top: 20px;
+        }
+
+        .cart-icon {
+            margin-top: 28px;
+            margin-right: 15px;
+            width: 25px;
+            height: 25px;
+        }
+
+        #text {
+            margin-top: -25px;
+        }
+
+        #text a {
+            font-size: 13px;
+        }
+
+        #textaccueil {
+            margin-left: -4px;
+        }
+
+        #textboutique {
+            margin-left: 4px;
+        }
+
+        #textcontact {
+            margin-left: -1px;
+        }
+
+        #dropmenu {
+            left: 0px!important;
+            min-width: 115px!important;
+        }
+
+        a.dropdown-item {
+            font-size: 15px;
+        }
+
+        #dropmenusearch {
+            width: 200px;
+            border-radius: 255px 25px 225px 25px/25px 225px 25px 255px!important;
+        }
+
+        #inputmenusearch {
+            height: 30px;
+        }
+
+        #buttonmenusearch {
+            height: 30px;
+        }
+
+        #dropmenucompte {
+            left: -70px!important;
+            min-width: 140px!important;
+        }
+
+        .mb-5 {
+            margin-bottom: 0px !important;
+            margin-right: 0px !important;
+        }
+
+        #chevron {
+            width: 60px;
+        }
+
+        p#p-footer {
+            font-size: 15px;
+            margin-bottom: 0px;
+        }
+
+        a#a-footer {
+            font-size: 14px;
+        }
+
+        #réseaux {
+            margin-top: 30px;
+        }
+    }
+
+    @media screen and (min-width: 426px) and (max-width: 767px) {
+        .container1 {
+            height: 200px;
+        }
+
+        #logo {
+            width: 90px;
+            height: 150px;
+            padding-left: 10px;
+            padding-top: 15px;
+        }
+
+        #logonav {
+            margin-top: 30px;
+            width: 50px;
+            height: 20px;
+        }
+
+        #titreheader {
+            margin-top: 5px;
+            font-size: 35px;
+            margin-right: 8px;
+        }
+
+        .example-wrapper h1 {
+            margin-top: 300px;
+            margin-bottom: 10px;
+        }
+
+        .navbar {
+            height: 40px;
+        }
+
+        .navbar-nav {
+            margin-top: 20px;
+            margin-bottom: 20px;
+        }
+
+        .navbar-brand {
+            padding: 0px;
+            margin: 0px;
+            height: 32px;
+        }
+
+        .nav-item {
+            width: 70px;
+            height: 30px;
+        }
+
+        .navbar-light .navbar-toggler {
+            color: #0b93e1;
+            border-color: #0b93e1;
+            box-shadow: 0 0.1rem 0.5rem rgba(99, 97, 97, 0.25) !important;
+            border-radius: 255px 25px 225px 25px/25px 225px 25px 255px!important;
+            height: 30px;
+            width: 50px;
+        }
+
+        .navbar-light .navbar-toggler-icon {
+            width: 50px;
+            height: 20px;
+            margin-left: -14px;
+        }
+
+        .navbar.bg-light {
+            border-color: white !important;
+            box-shadow: 0 0.1rem 0.5rem rgba(99, 97, 97, 0.25) !important;
+            height: auto;
+        }
+
+        .navbar-collapse {
+            display: flex;
+            flex-direction: row;
+            justify-content: flex-start;
+            align-items: stretch;
+            border: 3px solid #0b93e1;
+            box-shadow: inset 0 0.1rem 0.5rem rgba(99, 97, 97, 0.25) !important;
+            border-radius: 255px 25px 225px 25px/25px 225px 25px 255px!important;
+            background-color: #ffffffa1;
         }
 
         .nav-link {
@@ -669,11 +924,23 @@
             stroke-dashoffset: -110;
         }
 
+        #shape.sh8 {
+            height: 30px;
+            stroke-dasharray: 46 400;
+            stroke-dashoffset: -108;
+        }
+
         .navbar-nav .dropdown-menu {
             position: relative;
         }
 
+        #navinscription {
+            margin-top: 20px;
+        }
+
         .cart-icon {
+            margin-top: 28px;
+            margin-right: 20px;
             width: 25px;
             height: 25px;
         }
@@ -736,6 +1003,7 @@
 
         p#p-footer {
             font-size: 15px;
+            margin-bottom: 0px;
         }
 
         a#a-footer {
@@ -747,11 +1015,266 @@
         }
     }
 
-    @media screen and (max-width: 767px) {}
+    @media screen and (min-width: 768px) and (max-width: 991px) {
+        
+        .container1 {
+            height: 250px;
+        }
 
-    @media screen and (min-width: 1024px) {}
+        #logo {
+            width: 90px;
+            height: 150px;
+            padding-left: 10px;
+            padding-top: 15px;
+        }
 
-    @media screen and (min-width: 2056px) {}
+        #logonav {
+            margin-top: 25px;
+            width: 70px;
+            height: 30px;
+        }
+
+        #titreheader {
+            margin-top: 5px;
+            font-size: 45px;
+            margin-right: 8px;
+        }
+
+        .example-wrapper h1 {
+            margin-top: 350px;
+        }
+
+        .navbar {
+            height: 40px;
+        }
+
+        .navbar-nav {
+            margin-top: 20px;
+            margin-bottom: 20px;
+        }
+
+        .navbar-brand {
+            margin-right:0px!important;
+        }
+
+        .nav-item {
+            width: 70px;
+            height: 30px;
+        }
+
+        .navbar-light .navbar-toggler {
+            color: #0b93e1;
+            border-color: #0b93e1;
+            box-shadow: 0 0.1rem 0.5rem rgba(99, 97, 97, 0.25) !important;
+            border-radius: 255px 25px 225px 25px/25px 225px 25px 255px!important;
+            height: 30px;
+            width: 50px;
+        }
+
+        .navbar-light .navbar-toggler-icon {
+            width: 50px;
+            height: 20px;
+            margin-left: -14px;
+        }
+
+        .navbar.bg-light {
+            border-color: white !important;
+            box-shadow: 0 0.1rem 0.5rem rgba(99, 97, 97, 0.25) !important;
+            height: auto;
+        }
+
+        .navbar-collapse {
+            display: flex;
+            flex-direction: row;
+            justify-content: flex-start;
+            align-items: stretch;
+            border: 3px solid #0b93e1;
+            box-shadow: inset 0 0.1rem 0.5rem rgba(99, 97, 97, 0.25) !important;
+            border-radius: 255px 25px 225px 25px/25px 225px 25px 255px!important;
+            background-color: #ffffffa1;
+        }
+
+        .nav-link {
+            font-size: 13px;
+            font-weight: 100;
+        }
+
+        .navbar-nav .nav-link {
+            height: 30px;
+            padding-left: 16px;
+            padding-right: 16px;
+            margin-top: 3px;
+        }
+
+        svg {
+            width: 70px;
+        }
+
+        #svg-nav-rechercher {
+            width: 85px;
+        }
+
+        .svg-wrapper {
+            height: 24px;
+            width: 70px;
+        }
+
+        rect {
+            width: 70px;
+        }
+
+        #shape {
+            stroke: #0b93e1;
+            stroke-dasharray: 33 400;
+            stroke-dashoffset: -121;
+        }
+
+        #shape.sh1 {
+            stroke-dasharray: 52 400;
+            stroke-dashoffset: -102;
+        }
+    
+        #shape.sh2 {
+            stroke-dasharray: 45 400;
+            stroke-dashoffset: -109;
+        }
+    
+        #shape.sh3 {
+            stroke-dasharray: 42 400;
+            stroke-dashoffset: -112;
+        }
+    
+        #shape.sh4 {
+            stroke-dasharray: 37 400;
+            stroke-dashoffset: -117;
+        }
+    
+        #shape.sh5 {
+            width: 85px;
+            stroke-dasharray: 64 400;
+            stroke-dashoffset: -120;
+        }
+
+        #shape.sh6 {
+            height: 30px;
+            stroke-dasharray: 51 400;
+            stroke-dashoffset: -109;
+        }
+
+        #shape.sh7 {
+            height: 30px;
+            stroke-dasharray: 45 400;
+            stroke-dashoffset: -110;
+        }
+
+        #shape.sh8 {
+            height: 30px;
+            stroke-dasharray: 46 400;
+            stroke-dashoffset: -108;
+        }
+
+        .navbar-nav .dropdown-menu {
+            position: relative;
+        }
+
+        #navinscription {
+            margin-top: 20px;
+        }
+
+        .cart-icon {
+            margin-top: 23px;
+            margin-right: 20px;
+            width: 25px;
+            height: 25px;
+        }
+
+        #text {
+            margin-top: -25px;
+        }
+
+        #text a {
+            font-size: 13px;
+        }
+
+        #textaccueil {
+            margin-left: -4px;
+        }
+
+        #textboutique {
+            margin-left: 4px;
+        }
+
+        #textcontact {
+            margin-left: -1px;
+        }
+
+        #dropmenu {
+            left: 0px!important;
+            min-width: 115px!important;
+        }
+
+        a.dropdown-item {
+            font-size: 15px;
+        }
+
+        #dropmenusearch {
+            width: 200px;
+            border-radius: 255px 25px 225px 25px/25px 225px 25px 255px!important;
+        }
+
+        #inputmenusearch {
+            height: 30px;
+        }
+
+        #buttonmenusearch {
+            height: 30px;
+        }
+
+        #dropmenucompte {
+            left: -70px!important;
+            min-width: 140px!important;
+        }
+
+        .mb-5 {
+            margin-bottom: 0px !important;
+            margin-right: 0px !important;
+        }
+
+        #chevron {
+            width: 60px;
+        }
+
+        p#p-footer {
+            font-size: 15px;
+            margin-bottom: 0px;
+        }
+
+        a#a-footer {
+            font-size: 14px;
+        }
+
+        #réseaux {
+            margin-top: 45px;
+        }
+    }
+
+    @media screen and (min-width: 992px) and (max-width: 1024px) {
+        .navbar-brand {
+            margin-right:0px!important;
+        }
+
+        #logonav {
+            margin-top: 10px;
+            width: 60px;
+            height: 25px;
+        }
+    }
+
+    @media screen and (min-width: 1025px) and (max-width: 2056px) {
+        .navbar-brand {
+            margin-right:0px!important;
+        }
+    }
 </style>
 
 {% block script %}{% endblock %}

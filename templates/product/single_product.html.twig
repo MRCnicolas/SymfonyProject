@@ -3,9 +3,10 @@
     <section>
         <p class="espace2"></p>
     </section>
-    <h5>{{ product.name }}</h5>
     <hr>
-    <span class="product-subtitle">{{ product.subtitle }}</span>
+    <h5>{{ product.name }}</h5>
+    {# <hr>
+    <span class="product-subtitle">{{ product.subtitle }}</span> #}
     <hr>
     <span class="product-price">{{ (product.price / 100 )|number_format(2, ',', '.') }} €</span>
 </div>
