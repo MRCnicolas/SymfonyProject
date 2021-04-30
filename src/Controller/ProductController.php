@@ -39,9 +39,9 @@ class ProductController extends AbstractController
 
         return $this->render('product/index.html.twig', [
             'headers' => $headers,
-            'title' => 'Nos Produits Made in Réunion',
-            'descriptif' => "Venez Découvrir Notre Boutique Avec Des Produits Décoratif, Vestimentaire Et Alimentaire Ou Tout Autre Souvenirs Qui Vous Plairont...",
-            'descriptif2' => "Tout Les Produits Viennent De Nos Partenaires Se Trouvant Exclusivement Sur L'Ile De La Réunion.",
+            'title1' => 'Boutique',
+            'title2' => 'Nos Produits Made in Réunion',
+            'descriptif' => "Tout Les Produits Viennent De Nos Partenaires Se Trouvant Exclusivement Sur L'Ile De La Réunion.",
             'products' => $products,
             'form' => $form->createview()
         ]);
