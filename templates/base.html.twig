@@ -262,290 +262,23 @@
 </footer>
 
 <style>
-    .container1 {
-        padding-right: 0px;
-        padding-left: 0px;
-        margin: none;
-        height: 300px;
-    }
-
-    .example-wrapper h1 {
-        margin-top: 450px;
-        margin-bottom: 30px;
-    }
-
-    .example-wrapper {
-        text-align: center;
-        margin: 180px auto;
-        margin-bottom: 70px;
-        max-width: 850px;
-        width: 95%;
-        font: 18px/1.5;
-    }
-
-    .example-wrapper code {
-        background: #f5f5f5;
-        padding: 2px 6px;
-    }
-
-    #logo {
-        display: flex;
-        position: relative;
-        z-index: 2;
-        width: 100px;
-        height: 160px;
-        padding-left: 10px;
-        padding-top: 15px;
-    }
-
-    header {
-        display: flex;
-        flex-direction: column;
-        width: 100%;
-        height: 200px;
-        background-position: center;
-        background-size: cover;
-        position: fixed;
-        z-index: 1;
-    }
-
-    #titreheader {
-        font-size: 60px;
-        color: #FFFFFF;
-        margin-left: 100px;
-        margin-right: 100px;
-        margin-top: 40px;
-        text-shadow: 0 1px 0 #CCCCCC, 0 2px 0 #c9c9c9, 0 3px 0 #bbb, 0 4px 0 #b9b9b9, 0 5px 0 #aaa, 0 6px 1px rgba(0, 0, 0, .1), 0 0 5px rgba(0, 0, 0, .1), 0 1px 3px rgba(0, 0, 0, .3), 0 3px 5px rgba(0, 0, 0, .2), 0 5px 10px rgba(0, 0, 0, .25), 0 10px 10px rgba(0, 0, 0, .2), 0 20px 20px rgba(0, 0, 0, .15);
-    }
-
-    #btnheader {
-        position: fixed;
-        display: flex;
-        flex-direction: row;
-        justify-content: flex-start;
-        margin-top: 55px;
-        margin-left: 10px;
-    }
-
-    .carousel-caption {
-        position: sticky;
-        height: 270px;
-    }
-
-    .navbar.bg-light {
-        border-color: white !important;
-        box-shadow: 0 0.1rem 0.5rem rgba(99, 97, 97, 0.25) !important;
-    }
-
-    .nav-link {
-        color: #0b93e1 !important;
-    }
-
-    .btn-outline-success {
-        color: #569A24;
-        border-color: #569A24;
-    }
-
-    .btn-outline-success:hover {
-        background-color: #569A24;
-        border-color: #569A24;
-    }
-
-    .dropdown-item {
-        color: #0b93e1 !important;
-        text-align: center;
-    }
-
-    .dropdown-item:hover {
-        background-color: #fff;
-        border-top: 2px solid #569A24;
-        border-bottom: 2px solid #569A24;
-    }
-
-    .dropdown-menu {
-        border-color: #0b93e1;
-        box-shadow: 0 0.1rem 1rem rgb(0 0 0 / 25%);
-        border-radius: 255px 25px 225px 25px/25px 225px 25px 255px!important;
-    }
-
-    .dropdown-divider {
-        border-top: 1px solid #0b93e1;
-    }
-
-    .form-control {
-        border: 2px solid rgb(207, 207, 207) !important;
-    }
-
-    #logonav {
-        width: 100px;
-        height: 32px;
-    }
-
-    .navbar-light .navbar-toggler {
-        color: #0b93e1;
-        border-color: #0b93e1;
-        box-shadow: 0 0.1rem 0.5rem rgba(99, 97, 97, 0.25) !important;
-        border-radius: 255px 25px 225px 25px/25px 225px 25px 255px!important;
-    }
-
-    .cart-icon {
-        height: 30px;
-    }
-
-    footer {
-        display: flex;
-        flex-direction: column;
-        background-size: cover;
-        background-position: center;
-        margin-top: 50px;
-        height: 150px;
-        width: 100%;
-        background-image: url("/images/pagebase/footer/Route-du-volcan1920.200.png");
-    }
-
-    #p-footer {
-        margin-top: 20px;
-        margin-left: 10px;
-        color: #fff;
-    }
-
-    #a-footer {
-        color: #fff;
-        text-decoration: none;
-    }
-
-    #a-footer:hover {
-        color: #569A24;
-    }
-
-    #réseaux {
-        margin-top: 50px;
-    }
-
-    .iconesréseaux {
-        width: 30px;
-        height: 30px;
-        margin-left: 5px;
-        margin-right: 5px;
-        border-radius: 255px 25px 225px 25px/25px 225px 25px 255px;
-        box-shadow: 0 .5rem 1rem rgba(0, 0, 0, .15) !important
-    }
-
-    /* 
-    Bouton navbar
-    */
-
-    .svg-wrapper {
-        margin-top: 0;
-        position: relative;
-        width: 100px;
-        height: 30px;
-        display: inline-block;
-        border-radius: 3px;
-        margin-left: 4px;
-        margin-right: 4px;
-    }
-
-    #shape {
-        stroke-width: 3px;
-        fill: none;
-        stroke: #0b93e1;
-        stroke-dasharray: 48 400;
-        stroke-dashoffset: -156;
-        transition: 1s all ease;
-    }
-
-    #shape.sh1 {
-        stroke-dasharray: 65 400;
-        stroke-dashoffset: -148;
-    }
-
-    #shape.sh2 {
-        stroke-dasharray: 55 400;
-        stroke-dashoffset: -153;
-    }
-
-    #shape.sh3 {
-        stroke-dasharray: 59 400;
-        stroke-dashoffset: -150;
-    }
-
-    #shape.sh4 {
-        stroke-dasharray: 51 400;
-        stroke-dashoffset: -154;
-    }
-
-    #shape.sh5 {
-        stroke-dasharray: 80 400;
-        stroke-dashoffset: -140;
-    }
-
-    #shape.sh6 {
-        stroke-dasharray: 70 400;
-        stroke-dashoffset: -145;
-    }
-
-    #shape.sh7 {
-        stroke-dasharray: 55 400;
-        stroke-dashoffset: -153;
-    }
-
-    #shape.sh8 {
-        stroke-dasharray: 58 400;
-        stroke-dashoffset: -150;
-    }
-
-    #text {
-        margin-top: -27px;
-        text-align: center;
-    }
-
-    #text a {
-        color: #0b93e1;
-        text-decoration: none;
-        font-weight: 100;
-        font-size: 1.1em;
-    }
-
-    #textmenu {
-        margin-top: -33px;
-        text-align: center;
-    }
-
-    .svg-wrapper:hover #shape {
-        stroke-dasharray: 50 0;
-        stroke-width: 3px;
-        stroke-dashoffset: 0;
-        stroke: #569A24;
-    }
-
-
-
-
+    
     /*MEDIA QUERIES*/
 
     @media screen and (max-width: 425px) {
-        .container1 {
-            height: 200px;
-        }
 
-        #logo {
-            width: 80px;
-            height: 130px;
-            padding-left: 10px;
-            padding-top: 15px;
+        .example-wrapper {
+            text-align: center;
+            margin: 180px auto;
+            margin-bottom: 70px;
+            max-width: 850px;
+            width: 95%;
+            font: 18px/1.5;
         }
-
-        #logonav {
-            margin-top: 29px;
-            width: 35px;
-            height: 15px;
-        }
-
-        #titreheader {
-            margin-top: 5px;
-            font-size: 33px;
-            margin-right: 8px;
+    
+        .example-wrapper code {
+            background: #f5f5f5;
+            padding: 2px 6px;
         }
 
         .example-wrapper h1 {
@@ -553,19 +286,72 @@
             margin-bottom: 20px;
         }
 
+
+
+
+        header {
+            display: flex;
+            flex-direction: column;
+            width: 100%;
+            height: 200px;
+            background-position: center;
+            background-size: cover;
+            position: fixed;
+            z-index: 1;
+        }
+
+        .container1 {
+            height: 200px;
+            padding-right: 0px;
+            padding-left: 0px;
+            margin: none;
+        }
+
+        #logo {
+            display: flex;
+            position: relative;
+            z-index: 2;
+            width: 80px;
+            height: 130px;
+            padding-left: 10px;
+            padding-top: 15px;
+        }
+
+        .carousel-caption {
+            position: sticky;
+            height: 270px;
+        }
+
+        #titreheader {
+            margin-top: 5px;
+            font-size: 33px;
+            margin-left: 100px;
+            margin-right: 8px;
+            color: #FFFFFF;
+            text-shadow: 0 1px 0 #CCCCCC, 0 2px 0 #c9c9c9, 0 3px 0 #bbb, 0 4px 0 #b9b9b9, 0 5px 0 #aaa, 0 6px 1px rgba(0, 0, 0, .1), 0 0 5px rgba(0, 0, 0, .1), 0 1px 3px rgba(0, 0, 0, .3), 0 3px 5px rgba(0, 0, 0, .2), 0 5px 10px rgba(0, 0, 0, .25), 0 10px 10px rgba(0, 0, 0, .2), 0 20px 20px rgba(0, 0, 0, .15);
+        }
+
+        #btnheader {
+            position: fixed;
+            display: flex;
+            flex-direction: row;
+            justify-content: flex-start;
+            margin-top: 55px;
+            margin-left: 10px;
+        }
+
+        .btn-outline-success {
+            color: #569A24;
+            border-color: #569A24;
+        }
+    
+        .btn-outline-success:hover {
+            background-color: #569A24;
+            border-color: #569A24;
+        }
+
         .navbar {
             height: 40px;
-        }
-
-        .navbar-brand {
-            padding: 0px;
-            margin: 0px;
-            height: 32px;
-        }
-
-        .nav-item {
-            width: 70px;
-            height: 30px;
         }
 
         .navbar-light .navbar-toggler {
@@ -600,14 +386,26 @@
             background-color: #ffffffa1;
         }
 
-        .nav-link {
-            font-size: 13px;
-            font-weight: 100;
-        }
-
         .navbar-nav {
             margin-top: 20px;
             margin-bottom: 20px;
+        }
+
+        .nav-item {
+            width: 70px;
+            height: 30px;
+        }
+
+        .navbar-brand {
+            padding: 0px;
+            margin: 0px;
+            height: 32px;
+        }
+
+        .nav-link {
+            color: #0b93e1 !important;
+            font-size: 13px;
+            font-weight: 100;
         }
 
         .navbar-nav .nav-link {
@@ -626,8 +424,21 @@
         }
 
         .svg-wrapper {
+            margin-top: 0;
+            position: relative;
             height: 24px;
             width: 70px;
+            display: inline-block;
+            border-radius: 3px;
+            margin-left: 4px;
+            margin-right: 4px;
+        }
+
+        .svg-wrapper:hover #shape {
+            stroke-dasharray: 50 0;
+            stroke-width: 3px;
+            stroke-dashoffset: 0;
+            stroke: #569A24;
         }
 
         rect {
@@ -635,9 +446,12 @@
         }
 
         #shape {
+            stroke-width: 3px;
+            fill: none;
             stroke: #0b93e1;
             stroke-dasharray: 33 400;
             stroke-dashoffset: -121;
+            transition: 1s all ease;
         }
 
         #shape.sh1 {
@@ -684,6 +498,12 @@
             stroke-dashoffset: -108;
         }
 
+        #logonav {
+            margin-top: 29px;
+            width: 35px;
+            height: 15px;
+        }
+
         .navbar-nav .dropdown-menu {
             position: relative;
         }
@@ -699,14 +519,23 @@
             height: 25px;
         }
 
+        #textmenu {
+            margin-top: -33px;
+            text-align: center;
+        }
+    
         #text {
             margin-top: -25px;
+            text-align: center;
         }
 
         #text a {
+            color: #0b93e1;
+            text-decoration: none;
+            font-weight: 100;
             font-size: 13px;
         }
-
+        
         #textaccueil {
             margin-left: -4px;
         }
@@ -728,9 +557,34 @@
             font-size: 15px;
         }
 
+        .dropdown-item {
+            color: #0b93e1 !important;
+            text-align: center;
+        }
+    
+        .dropdown-item:hover {
+            background-color: #fff;
+            border-top: 2px solid #569A24;
+            border-bottom: 2px solid #569A24;
+        }
+
+        .dropdown-menu {
+            border-color: #0b93e1;
+            box-shadow: 0 0.1rem 1rem rgb(0 0 0 / 25%);
+            border-radius: 255px 25px 225px 25px/25px 225px 25px 255px!important;
+        }
+    
+        .dropdown-divider {
+            border-top: 1px solid #0b93e1;
+        }
+
         #dropmenusearch {
             width: 200px;
             border-radius: 255px 25px 225px 25px/25px 225px 25px 255px!important;
+        }
+
+        .form-control {
+            border: 2px solid rgb(207, 207, 207) !important;
         }
 
         #inputmenusearch {
@@ -750,42 +604,69 @@
             width: 60px;
         }
 
+        footer {
+            display: flex;
+            flex-direction: column;
+            background-size: cover;
+            background-position: center;
+            margin-top: 50px;
+            height: 150px;
+            width: 100%;
+            background-image: url("/images/pagebase/footer/Route-du-volcan1920.200.png");
+        }
+
         p#p-footer {
             font-size: 15px;
             margin-bottom: 0px;
+        }
+
+        #p-footer {
+            margin-top: 20px;
+            margin-left: 10px;
+            color: #fff;
         }
 
         a#a-footer {
             font-size: 12.5px;
         }
 
+        #a-footer {
+            color: #fff;
+            text-decoration: none;
+        }
+
+        #a-footer:hover {
+            color: #569A24;
+        }
+
         #réseaux {
             margin-top: 30px;
+        }
+
+        .iconesréseaux {
+            width: 30px;
+            height: 30px;
+            margin-left: 5px;
+            margin-right: 5px;
+            border-radius: 255px 25px 225px 25px/25px 225px 25px 255px;
+            box-shadow: 0 .5rem 1rem rgba(0, 0, 0, .15) !important
         }
     }
 
     @media screen and (min-width: 426px) and (max-width: 767px) {
-        .container1 {
-            height: 200px;
-        }
 
-        #logo {
-            width: 90px;
-            height: 150px;
-            padding-left: 10px;
-            padding-top: 15px;
+        .example-wrapper {
+            text-align: center;
+            margin: 180px auto;
+            margin-bottom: 70px;
+            max-width: 850px;
+            width: 95%;
+            font: 18px/1.5;
         }
-
-        #logonav {
-            margin-top: 30px;
-            width: 50px;
-            height: 20px;
-        }
-
-        #titreheader {
-            margin-top: 5px;
-            font-size: 35px;
-            margin-right: 8px;
+    
+        .example-wrapper code {
+            background: #f5f5f5;
+            padding: 2px 6px;
         }
 
         .example-wrapper h1 {
@@ -793,24 +674,72 @@
             margin-bottom: 10px;
         }
 
+
+
+
+        header {
+            display: flex;
+            flex-direction: column;
+            width: 100%;
+            height: 200px;
+            background-position: center;
+            background-size: cover;
+            position: fixed;
+            z-index: 1;
+        }
+
+        .container1 {
+            height: 200px;
+            padding-right: 0px;
+            padding-left: 0px;
+            margin: none;
+        }
+
+        #logo {
+            display: flex;
+            position: relative;
+            z-index: 2;
+            width: 90px;
+            height: 150px;
+            padding-left: 10px;
+            padding-top: 15px;
+        }
+
+        .carousel-caption {
+            position: sticky;
+            height: 270px;
+        }
+
+        #titreheader {
+            margin-top: 5px;
+            font-size: 35px;
+            margin-left: 100px;
+            margin-right: 8px;
+            color: #FFFFFF;
+            text-shadow: 0 1px 0 #CCCCCC, 0 2px 0 #c9c9c9, 0 3px 0 #bbb, 0 4px 0 #b9b9b9, 0 5px 0 #aaa, 0 6px 1px rgba(0, 0, 0, .1), 0 0 5px rgba(0, 0, 0, .1), 0 1px 3px rgba(0, 0, 0, .3), 0 3px 5px rgba(0, 0, 0, .2), 0 5px 10px rgba(0, 0, 0, .25), 0 10px 10px rgba(0, 0, 0, .2), 0 20px 20px rgba(0, 0, 0, .15);
+        }
+
+        #btnheader {
+            position: fixed;
+            display: flex;
+            flex-direction: row;
+            justify-content: flex-start;
+            margin-top: 55px;
+            margin-left: 10px;
+        }
+
+        .btn-outline-success {
+            color: #569A24;
+            border-color: #569A24;
+        }
+    
+        .btn-outline-success:hover {
+            background-color: #569A24;
+            border-color: #569A24;
+        }
+
         .navbar {
             height: 40px;
-        }
-
-        .navbar-nav {
-            margin-top: 20px;
-            margin-bottom: 20px;
-        }
-
-        .navbar-brand {
-            padding: 0px;
-            margin: 0px;
-            height: 32px;
-        }
-
-        .nav-item {
-            width: 70px;
-            height: 30px;
         }
 
         .navbar-light .navbar-toggler {
@@ -845,7 +774,24 @@
             background-color: #ffffffa1;
         }
 
+        .navbar-nav {
+            margin-top: 20px;
+            margin-bottom: 20px;
+        }
+
+        .nav-item {
+            width: 70px;
+            height: 30px;
+        }
+
+        .navbar-brand {
+            padding: 0px;
+            margin: 0px;
+            height: 32px;
+        }
+
         .nav-link {
+            color: #0b93e1 !important;
             font-size: 13px;
             font-weight: 100;
         }
@@ -866,8 +812,21 @@
         }
 
         .svg-wrapper {
+            margin-top: 0;
+            position: relative;
             height: 24px;
             width: 70px;
+            display: inline-block;
+            border-radius: 3px;
+            margin-left: 4px;
+            margin-right: 4px;
+        }
+
+        .svg-wrapper:hover #shape {
+            stroke-dasharray: 50 0;
+            stroke-width: 3px;
+            stroke-dashoffset: 0;
+            stroke: #569A24;
         }
 
         rect {
@@ -875,9 +834,12 @@
         }
 
         #shape {
+            stroke-width: 3px;
+            fill: none;
             stroke: #0b93e1;
             stroke-dasharray: 33 400;
             stroke-dashoffset: -121;
+            transition: 1s all ease;
         }
 
         #shape.sh1 {
@@ -924,6 +886,12 @@
             stroke-dashoffset: -108;
         }
 
+        #logonav {
+            margin-top: 30px;
+            width: 50px;
+            height: 20px;
+        }
+
         .navbar-nav .dropdown-menu {
             position: relative;
         }
@@ -938,12 +906,21 @@
             width: 25px;
             height: 25px;
         }
-
+        
+        #textmenu {
+            margin-top: -33px;
+            text-align: center;
+        }
+    
         #text {
             margin-top: -25px;
+            text-align: center;
         }
 
         #text a {
+            color: #0b93e1;
+            text-decoration: none;
+            font-weight: 100;
             font-size: 13px;
         }
 
@@ -968,9 +945,34 @@
             font-size: 15px;
         }
 
+        .dropdown-item {
+            color: #0b93e1 !important;
+            text-align: center;
+        }
+    
+        .dropdown-item:hover {
+            background-color: #fff;
+            border-top: 2px solid #569A24;
+            border-bottom: 2px solid #569A24;
+        }
+
+        .dropdown-menu {
+            border-color: #0b93e1;
+            box-shadow: 0 0.1rem 1rem rgb(0 0 0 / 25%);
+            border-radius: 255px 25px 225px 25px/25px 225px 25px 255px!important;
+        }
+    
+        .dropdown-divider {
+            border-top: 1px solid #0b93e1;
+        }
+
         #dropmenusearch {
             width: 200px;
             border-radius: 255px 25px 225px 25px/25px 225px 25px 255px!important;
+        }
+
+        .form-control {
+            border: 2px solid rgb(207, 207, 207) !important;
         }
 
         #inputmenusearch {
@@ -995,6 +997,17 @@
             width: 60px;
         }
 
+        footer {
+            display: flex;
+            flex-direction: column;
+            background-size: cover;
+            background-position: center;
+            margin-top: 50px;
+            height: 150px;
+            width: 100%;
+            background-image: url("/images/pagebase/footer/Route-du-volcan1920.200.png");
+        }
+
         p#p-footer {
             font-size: 15px;
             margin-bottom: 0px;
@@ -1007,53 +1020,101 @@
         #réseaux {
             margin-top: 45px;
         }
+
+        #p-footer {
+            margin-top: 20px;
+            margin-left: 10px;
+            color: #fff;
+        }
+
+        #a-footer {
+            color: #fff;
+            text-decoration: none;
+        }
+
+        #a-footer:hover {
+            color: #569A24;
+        }
+
+        .iconesréseaux {
+            width: 30px;
+            height: 30px;
+            margin-left: 5px;
+            margin-right: 5px;
+            border-radius: 255px 25px 225px 25px/25px 225px 25px 255px;
+            box-shadow: 0 .5rem 1rem rgba(0, 0, 0, .15) !important
+        }
     }
 
     @media screen and (min-width: 768px) and (max-width: 991px) {
-        
-        .container1 {
-            height: 250px;
-        }
 
-        #logo {
-            width: 90px;
-            height: 150px;
-            padding-left: 10px;
-            padding-top: 15px;
-        }
 
-        #logonav {
-            margin-top: 25px;
-            width: 70px;
-            height: 30px;
+        .example-wrapper {
+            text-align: center;
+            margin: 180px auto;
+            margin-bottom: 70px;
+            max-width: 850px;
+            width: 95%;
+            font: 18px/1.5;
         }
-
-        #titreheader {
-            margin-top: 5px;
-            font-size: 45px;
-            margin-right: 8px;
+    
+        .example-wrapper code {
+            background: #f5f5f5;
+            padding: 2px 6px;
         }
 
         .example-wrapper h1 {
             margin-top: 350px;
         }
 
+
+
+
+
+        header {
+            display: flex;
+            flex-direction: column;
+            width: 100%;
+            height: 200px;
+            background-position: center;
+            background-size: cover;
+            position: fixed;
+            z-index: 1;
+        }
+
+        .container1 {
+            height: 250px;
+            padding-right: 0px;
+            padding-left: 0px;
+            margin: none;
+        }
+
+        #logo {
+            display: flex;
+            position: relative;
+            z-index: 2;
+            width: 90px;
+            height: 150px;
+            padding-left: 10px;
+            padding-top: 15px;
+        }
+
+        .carousel-caption {
+            position: sticky;
+            height: 270px;
+        }
+
+        #titreheader {
+            margin-top: 5px;
+            font-size: 45px;
+            margin-left: 100px;
+            margin-right: 8px;
+            color: #FFFFFF;
+            text-shadow: 0 1px 0 #CCCCCC, 0 2px 0 #c9c9c9, 0 3px 0 #bbb, 0 4px 0 #b9b9b9, 0 5px 0 #aaa, 0 6px 1px rgba(0, 0, 0, .1), 0 0 5px rgba(0, 0, 0, .1), 0 1px 3px rgba(0, 0, 0, .3), 0 3px 5px rgba(0, 0, 0, .2), 0 5px 10px rgba(0, 0, 0, .25), 0 10px 10px rgba(0, 0, 0, .2), 0 20px 20px rgba(0, 0, 0, .15);
+        }
+
         .navbar {
             height: 40px;
-        }
-
-        .navbar-nav {
-            margin-top: 20px;
-            margin-bottom: 20px;
-        }
-
-        .navbar-brand {
-            margin-right:0px!important;
-        }
-
-        .nav-item {
-            width: 70px;
-            height: 30px;
         }
 
         .navbar-light .navbar-toggler {
@@ -1088,7 +1149,25 @@
             background-color: #ffffffa1;
         }
 
+        .navbar-nav {
+            margin-top: 20px;
+            margin-bottom: 20px;
+        }
+
+        .nav-item {
+            width: 70px;
+            height: 30px;
+        }
+
+        .navbar-brand {
+            margin-right:0px!important;
+            padding: 0px;
+            margin: 0px;
+            height: 32px;
+        }
+
         .nav-link {
+            color: #0b93e1 !important;
             font-size: 13px;
             font-weight: 100;
         }
@@ -1109,8 +1188,21 @@
         }
 
         .svg-wrapper {
+            margin-top: 0;
+            position: relative;
             height: 24px;
             width: 70px;
+            display: inline-block;
+            border-radius: 3px;
+            margin-left: 4px;
+            margin-right: 4px;
+        }
+
+        .svg-wrapper:hover #shape {
+            stroke-dasharray: 50 0;
+            stroke-width: 3px;
+            stroke-dashoffset: 0;
+            stroke: #569A24;
         }
 
         rect {
@@ -1118,9 +1210,12 @@
         }
 
         #shape {
+            stroke-width: 3px;
+            fill: none;
             stroke: #0b93e1;
             stroke-dasharray: 33 400;
             stroke-dashoffset: -121;
+            transition: 1s all ease;
         }
 
         #shape.sh1 {
@@ -1167,6 +1262,12 @@
             stroke-dashoffset: -108;
         }
 
+        #logonav {
+            margin-top: 25px;
+            width: 70px;
+            height: 30px;
+        }
+
         .navbar-nav .dropdown-menu {
             position: relative;
         }
@@ -1182,11 +1283,20 @@
             height: 25px;
         }
 
+        #textmenu {
+            margin-top: -33px;
+            text-align: center;
+        }
+    
         #text {
             margin-top: -25px;
+            text-align: center;
         }
 
         #text a {
+            color: #0b93e1;
+            text-decoration: none;
+            font-weight: 100;
             font-size: 13px;
         }
 
@@ -1211,9 +1321,34 @@
             font-size: 15px;
         }
 
+        .dropdown-item {
+            color: #0b93e1 !important;
+            text-align: center;
+        }
+    
+        .dropdown-item:hover {
+            background-color: #fff;
+            border-top: 2px solid #569A24;
+            border-bottom: 2px solid #569A24;
+        }
+
+        .dropdown-menu {
+            border-color: #0b93e1;
+            box-shadow: 0 0.1rem 1rem rgb(0 0 0 / 25%);
+            border-radius: 255px 25px 225px 25px/25px 225px 25px 255px!important;
+        }
+    
+        .dropdown-divider {
+            border-top: 1px solid #0b93e1;
+        }
+
         #dropmenusearch {
             width: 200px;
             border-radius: 255px 25px 225px 25px/25px 225px 25px 255px!important;
+        }
+
+        .form-control {
+            border: 2px solid rgb(207, 207, 207) !important;
         }
 
         #inputmenusearch {
@@ -1233,6 +1368,17 @@
             width: 60px;
         }
 
+        footer {
+            display: flex;
+            flex-direction: column;
+            background-size: cover;
+            background-position: center;
+            margin-top: 50px;
+            height: 150px;
+            width: 100%;
+            background-image: url("/images/pagebase/footer/Route-du-volcan1920.200.png");
+        }
+
         p#p-footer {
             font-size: 15px;
             margin-bottom: 0px;
@@ -1242,26 +1388,562 @@
             font-size: 14px;
         }
 
+        #p-footer {
+            margin-top: 20px;
+            margin-left: 10px;
+            color: #fff;
+        }
+
+        #a-footer {
+            color: #fff;
+            text-decoration: none;
+        }
+
+        #a-footer:hover {
+            color: #569A24;
+        }
+
         #réseaux {
             margin-top: 45px;
         }
+
+        .iconesréseaux {
+            width: 30px;
+            height: 30px;
+            margin-left: 5px;
+            margin-right: 5px;
+            border-radius: 255px 25px 225px 25px/25px 225px 25px 255px;
+            box-shadow: 0 .5rem 1rem rgba(0, 0, 0, .15) !important
+        }
     }
 
-    @media screen and (min-width: 992px) and (max-width: 1024px) {
+    @media screen and (min-width: 992px) and (max-width: 1023px) {
+        
         .navbar-brand {
             margin-right:0px!important;
         }
 
+
+        .container1 {
+            padding-right: 0px;
+            padding-left: 0px;
+            margin: none;
+            height: 300px;
+        }
+    
+        .example-wrapper h1 {
+            margin-top: 450px;
+            margin-bottom: 30px;
+        }
+    
+        .example-wrapper {
+            text-align: center;
+            margin: 180px auto;
+            margin-bottom: 70px;
+            max-width: 850px;
+            width: 95%;
+            font: 18px/1.5;
+        }
+    
+        .example-wrapper code {
+            background: #f5f5f5;
+            padding: 2px 6px;
+        }
+    
+        #logo {
+            display: flex;
+            position: relative;
+            z-index: 2;
+            width: 100px;
+            height: 160px;
+            padding-left: 10px;
+            padding-top: 15px;
+        }
+    
+        header {
+            display: flex;
+            flex-direction: column;
+            width: 100%;
+            height: 200px;
+            background-position: center;
+            background-size: cover;
+            position: fixed;
+            z-index: 1;
+        }
+    
+        #titreheader {
+            font-size: 60px;
+            color: #FFFFFF;
+            margin-left: 100px;
+            margin-right: 100px;
+            margin-top: 40px;
+            text-shadow: 0 1px 0 #CCCCCC, 0 2px 0 #c9c9c9, 0 3px 0 #bbb, 0 4px 0 #b9b9b9, 0 5px 0 #aaa, 0 6px 1px rgba(0, 0, 0, .1), 0 0 5px rgba(0, 0, 0, .1), 0 1px 3px rgba(0, 0, 0, .3), 0 3px 5px rgba(0, 0, 0, .2), 0 5px 10px rgba(0, 0, 0, .25), 0 10px 10px rgba(0, 0, 0, .2), 0 20px 20px rgba(0, 0, 0, .15);
+        }
+    
+        #btnheader {
+            position: fixed;
+            display: flex;
+            flex-direction: row;
+            justify-content: flex-start;
+            margin-top: 55px;
+            margin-left: 10px;
+        }
+    
+        .carousel-caption {
+            position: sticky;
+            height: 270px;
+        }
+    
+        .navbar.bg-light {
+            border-color: white !important;
+            box-shadow: 0 0.1rem 0.5rem rgba(99, 97, 97, 0.25) !important;
+        }
+    
+        .nav-link {
+            color: #0b93e1 !important;
+        }
+    
+        .btn-outline-success {
+            color: #569A24;
+            border-color: #569A24;
+        }
+    
+        .btn-outline-success:hover {
+            background-color: #569A24;
+            border-color: #569A24;
+        }
+    
+        .dropdown-item {
+            color: #0b93e1 !important;
+            text-align: center;
+        }
+    
+        .dropdown-item:hover {
+            background-color: #fff;
+            border-top: 2px solid #569A24;
+            border-bottom: 2px solid #569A24;
+        }
+    
+        .dropdown-menu {
+            border-color: #0b93e1;
+            box-shadow: 0 0.1rem 1rem rgb(0 0 0 / 25%);
+            border-radius: 255px 25px 225px 25px/25px 225px 25px 255px!important;
+        }
+    
+        .dropdown-divider {
+            border-top: 1px solid #0b93e1;
+        }
+    
+        .form-control {
+            border: 2px solid rgb(207, 207, 207) !important;
+        }
+    
         #logonav {
-            margin-top: 10px;
-            width: 60px;
-            height: 25px;
+            width: 70px;
+            height: 30px;
+        }
+    
+        .navbar-light .navbar-toggler {
+            color: #0b93e1;
+            border-color: #0b93e1;
+            box-shadow: 0 0.1rem 0.5rem rgba(99, 97, 97, 0.25) !important;
+            border-radius: 255px 25px 225px 25px/25px 225px 25px 255px!important;
+        }
+    
+        .cart-icon {
+            height: 30px;
+        }
+    
+        footer {
+            display: flex;
+            flex-direction: column;
+            background-size: cover;
+            background-position: center;
+            margin-top: 50px;
+            height: 150px;
+            width: 100%;
+            background-image: url("/images/pagebase/footer/Route-du-volcan1920.200.png");
+        }
+    
+        #p-footer {
+            margin-top: 20px;
+            margin-left: 10px;
+            color: #fff;
+        }
+    
+        #a-footer {
+            color: #fff;
+            text-decoration: none;
+        }
+    
+        #a-footer:hover {
+            color: #569A24;
+        }
+    
+        #réseaux {
+            margin-top: 50px;
+        }
+    
+        .iconesréseaux {
+            width: 30px;
+            height: 30px;
+            margin-left: 5px;
+            margin-right: 5px;
+            border-radius: 255px 25px 225px 25px/25px 225px 25px 255px;
+            box-shadow: 0 .5rem 1rem rgba(0, 0, 0, .15) !important
+        }
+    
+        /* 
+        Bouton navbar
+        */
+    
+        .svg-wrapper {
+            margin-top: 0;
+            position: relative;
+            width: 100px;
+            height: 30px;
+            display: inline-block;
+            border-radius: 3px;
+            margin-left: 4px;
+            margin-right: 4px;
+        }
+    
+        #shape {
+            stroke-width: 3px;
+            fill: none;
+            stroke: #0b93e1;
+            stroke-dasharray: 48 400;
+            stroke-dashoffset: -156;
+            transition: 1s all ease;
+        }
+    
+        #shape.sh1 {
+            stroke-dasharray: 65 400;
+            stroke-dashoffset: -148;
+        }
+    
+        #shape.sh2 {
+            stroke-dasharray: 55 400;
+            stroke-dashoffset: -153;
+        }
+    
+        #shape.sh3 {
+            stroke-dasharray: 59 400;
+            stroke-dashoffset: -150;
+        }
+    
+        #shape.sh4 {
+            stroke-dasharray: 51 400;
+            stroke-dashoffset: -154;
+        }
+    
+        #shape.sh5 {
+            stroke-dasharray: 80 400;
+            stroke-dashoffset: -140;
+        }
+    
+        #shape.sh6 {
+            stroke-dasharray: 70 400;
+            stroke-dashoffset: -145;
+        }
+    
+        #shape.sh7 {
+            stroke-dasharray: 55 400;
+            stroke-dashoffset: -153;
+        }
+    
+        #shape.sh8 {
+            stroke-dasharray: 58 400;
+            stroke-dashoffset: -150;
+        }
+    
+        #text {
+            margin-top: -27px;
+            text-align: center;
+        }
+    
+        #text a {
+            color: #0b93e1;
+            text-decoration: none;
+            font-weight: 100;
+            font-size: 1.1em;
+        }
+    
+        #textmenu {
+            margin-top: -33px;
+            text-align: center;
+        }
+    
+        .svg-wrapper:hover #shape {
+            stroke-dasharray: 50 0;
+            stroke-width: 3px;
+            stroke-dashoffset: 0;
+            stroke: #569A24;
         }
     }
 
-    @media screen and (min-width: 1025px) and (max-width: 2056px) {
+    @media screen and (min-width: 1024px) {
+
         .navbar-brand {
             margin-right:0px!important;
+        }
+
+
+        .container1 {
+            padding-right: 0px;
+            padding-left: 0px;
+            margin: none;
+            height: 300px;
+        }
+    
+        .example-wrapper h1 {
+            margin-top: 450px;
+            margin-bottom: 30px;
+        }
+    
+        .example-wrapper {
+            text-align: center;
+            margin: 180px auto;
+            margin-bottom: 70px;
+            max-width: 850px;
+            width: 95%;
+            font: 18px/1.5;
+        }
+    
+        .example-wrapper code {
+            background: #f5f5f5;
+            padding: 2px 6px;
+        }
+    
+        #logo {
+            display: flex;
+            position: relative;
+            z-index: 2;
+            width: 100px;
+            height: 160px;
+            padding-left: 10px;
+            padding-top: 15px;
+        }
+    
+        header {
+            display: flex;
+            flex-direction: column;
+            width: 100%;
+            height: 200px;
+            background-position: center;
+            background-size: cover;
+            position: fixed;
+            z-index: 1;
+        }
+    
+        #titreheader {
+            font-size: 60px;
+            color: #FFFFFF;
+            margin-left: 100px;
+            margin-right: 100px;
+            margin-top: 40px;
+            text-shadow: 0 1px 0 #CCCCCC, 0 2px 0 #c9c9c9, 0 3px 0 #bbb, 0 4px 0 #b9b9b9, 0 5px 0 #aaa, 0 6px 1px rgba(0, 0, 0, .1), 0 0 5px rgba(0, 0, 0, .1), 0 1px 3px rgba(0, 0, 0, .3), 0 3px 5px rgba(0, 0, 0, .2), 0 5px 10px rgba(0, 0, 0, .25), 0 10px 10px rgba(0, 0, 0, .2), 0 20px 20px rgba(0, 0, 0, .15);
+        }
+    
+        #btnheader {
+            position: fixed;
+            display: flex;
+            flex-direction: row;
+            justify-content: flex-start;
+            margin-top: 55px;
+            margin-left: 10px;
+        }
+    
+        .carousel-caption {
+            position: sticky;
+            height: 270px;
+        }
+    
+        .navbar.bg-light {
+            border-color: white !important;
+            box-shadow: 0 0.1rem 0.5rem rgba(99, 97, 97, 0.25) !important;
+        }
+    
+        .nav-link {
+            color: #0b93e1 !important;
+        }
+    
+        .btn-outline-success {
+            color: #569A24;
+            border-color: #569A24;
+        }
+    
+        .btn-outline-success:hover {
+            background-color: #569A24;
+            border-color: #569A24;
+        }
+    
+        .dropdown-item {
+            color: #0b93e1 !important;
+            text-align: center;
+        }
+    
+        .dropdown-item:hover {
+            background-color: #fff;
+            border-top: 2px solid #569A24;
+            border-bottom: 2px solid #569A24;
+        }
+    
+        .dropdown-menu {
+            border-color: #0b93e1;
+            box-shadow: 0 0.1rem 1rem rgb(0 0 0 / 25%);
+            border-radius: 255px 25px 225px 25px/25px 225px 25px 255px!important;
+        }
+    
+        .dropdown-divider {
+            border-top: 1px solid #0b93e1;
+        }
+    
+        .form-control {
+            border: 2px solid rgb(207, 207, 207) !important;
+        }
+    
+        #logonav {
+            width: 100px;
+            height: 32px;
+        }
+    
+        .navbar-light .navbar-toggler {
+            color: #0b93e1;
+            border-color: #0b93e1;
+            box-shadow: 0 0.1rem 0.5rem rgba(99, 97, 97, 0.25) !important;
+            border-radius: 255px 25px 225px 25px/25px 225px 25px 255px!important;
+        }
+    
+        .cart-icon {
+            height: 30px;
+        }
+    
+        footer {
+            display: flex;
+            flex-direction: column;
+            background-size: cover;
+            background-position: center;
+            margin-top: 50px;
+            height: 150px;
+            width: 100%;
+            background-image: url("/images/pagebase/footer/Route-du-volcan1920.200.png");
+        }
+    
+        #p-footer {
+            margin-top: 20px;
+            margin-left: 10px;
+            color: #fff;
+        }
+    
+        #a-footer {
+            color: #fff;
+            text-decoration: none;
+        }
+    
+        #a-footer:hover {
+            color: #569A24;
+        }
+    
+        #réseaux {
+            margin-top: 50px;
+        }
+    
+        .iconesréseaux {
+            width: 30px;
+            height: 30px;
+            margin-left: 5px;
+            margin-right: 5px;
+            border-radius: 255px 25px 225px 25px/25px 225px 25px 255px;
+            box-shadow: 0 .5rem 1rem rgba(0, 0, 0, .15) !important
+        }
+    
+        /* 
+        Bouton navbar
+        */
+    
+        .svg-wrapper {
+            margin-top: 0;
+            position: relative;
+            width: 100px;
+            height: 30px;
+            display: inline-block;
+            border-radius: 3px;
+            margin-left: 4px;
+            margin-right: 4px;
+        }
+    
+        #shape {
+            stroke-width: 3px;
+            fill: none;
+            stroke: #0b93e1;
+            stroke-dasharray: 48 400;
+            stroke-dashoffset: -156;
+            transition: 1s all ease;
+        }
+    
+        #shape.sh1 {
+            stroke-dasharray: 65 400;
+            stroke-dashoffset: -148;
+        }
+    
+        #shape.sh2 {
+            stroke-dasharray: 55 400;
+            stroke-dashoffset: -153;
+        }
+    
+        #shape.sh3 {
+            stroke-dasharray: 59 400;
+            stroke-dashoffset: -150;
+        }
+    
+        #shape.sh4 {
+            stroke-dasharray: 51 400;
+            stroke-dashoffset: -154;
+        }
+    
+        #shape.sh5 {
+            stroke-dasharray: 80 400;
+            stroke-dashoffset: -140;
+        }
+    
+        #shape.sh6 {
+            stroke-dasharray: 70 400;
+            stroke-dashoffset: -145;
+        }
+    
+        #shape.sh7 {
+            stroke-dasharray: 55 400;
+            stroke-dashoffset: -153;
+        }
+    
+        #shape.sh8 {
+            stroke-dasharray: 58 400;
+            stroke-dashoffset: -150;
+        }
+    
+        #text {
+            margin-top: -27px;
+            text-align: center;
+        }
+    
+        #text a {
+            color: #0b93e1;
+            text-decoration: none;
+            font-weight: 100;
+            font-size: 1.1em;
+        }
+    
+        #textmenu {
+            margin-top: -33px;
+            text-align: center;
+        }
+    
+        .svg-wrapper:hover #shape {
+            stroke-dasharray: 50 0;
+            stroke-width: 3px;
+            stroke-dashoffset: 0;
+            stroke: #569A24;
         }
     }
 </style>

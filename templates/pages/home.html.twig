@@ -16,7 +16,9 @@
     </section>
 
     <article id="video">
-        <iframe class="rounded" src="{{video}}" frameborder="0" allow="accelerometer; autoplay; loop; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+        <iframe class="rounded" src="{{video}}" frameborder="0"
+            allow="accelerometer; autoplay; loop; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+            allowfullscreen></iframe>
     </article>
 
     <section>
@@ -36,87 +38,88 @@
     <h5>{{intro3}}<span id="span2">{{intro4}}</span>{{intro5}}<span id="span3">{{intro6}}</span>{{intro7}}</h5>
 </div>
 
+
+
 <container class="example-wrapper">
     <div class="row">
-        <div class="col-md-4 col-12">
+        <div class="col-12 col-md-6 col-lg-4">
             <a href="{{ path('app_randonnée') }}">
                 <img src="{{featurette1}}" class="img-thumbnail shadow" alt="..." style="height: 250px; width: 250px">
             </a>
             <section>
-                <p class="espace5"></p>
+                <p class="espace3"></p>
             </section>
             <h2 id="h2rando">Randonnées</h2>
             <small class="para">
                 De nombreuses Randonnées pour tous les niveaux.
             </small>
         </div>
-        <div class="col-md-4 col-12" id="activitésport">
+
+        <div class="col-12 col-md-6 col-lg-4" id="activitésport">
             <a href="{{ path('app_activitésportive') }}">
                 <img src="{{featurette2}}" class="img-thumbnail shadow" alt="..." style="height: 250px; width: 250px">
             </a>
             <section>
-                <p class="espace5"></p>
+                <p class="espace3"></p>
             </section>
             <h2 id="h2activité">Activités Sportives</h2>
             <small class="para">
                 Profitez de toutes les activités sportives disponibles sur l'île.
             </small>
         </div>
-        <div class="col-md-4 col-12">
+
+        <div class="col-12 col-md-6 col-lg-4">
             <a href="{{ path('app_plage') }}">
                 <img src="{{featurette3}}" class="img-thumbnail shadow" alt="..." style="height: 250px; width: 250px">
             </a>
             <section>
-                <p class="espace5"></p>
+                <p class="espace3"></p>
             </section>
             <h2 id="h2visite">Plages</h2>
             <small class="para">
                 Des plages magnifique pour pratiquer le farniente...
             </small>
         </div>
-    </div>
-</container>
-<section>
-    <p class="espace3"></p>
-</section>
-<container class="example-wrapper">
-    <div class="row">
-        <div class="col-md-4 col-12">
+
+        <div class="col-12 col-md-6 col-lg-4">
             <a href="{{ path('app_visite') }}">
                 <img src="{{featurette4}}" class="img-thumbnail shadow" alt="..." style="height: 250px; width: 250px">
             </a>
             <section>
-                <p class="espace5"></p>
+                <p class="espace3"></p>
             </section>
             <h2 id="h2rando">Visites</h2>
             <small class="para">
                 Visitez certains lieux historiques de l'île, les marchés, les rhumeries...
             </small>
         </div>
-        <div class="col-md-4 col-12" id="plats">
+
+        <div class="col-12 col-md-6 col-lg-4" id="plats">
             <a href="{{ path('app_plats') }}">
                 <img src="{{featurette5}}" class="img-thumbnail shadow" alt="..." style="height: 250px; width: 250px">
             </a>
             <section>
-                <p class="espace5"></p>
+                <p class="espace3"></p>
             </section>
             <h2 id="h2activité">Plats</h2>
             <small class="para">
                 Sur l'île on retrouve une multitude de plats les carry, rougails, sauté...
             </small>
         </div>
-        <div class="col-md-4 col-12">
+
+        <div class="col-12 col-md-6 col-lg-4">
             <a href="{{ path('app_biodiversité') }}">
                 <img src="{{featurette6}}" class="img-thumbnail shadow" alt="..." style="height: 250px; width: 250px">
             </a>
             <section>
-                <p class="espace5"></p>
+                <p class="espace3"></p>
             </section>
             <h2 id="h2visite">Biodiversité</h2>
             <small class="para">
                 L'île regorge de nombreuses variétés et d'espèces de faune et de flore...
             </small>
         </div>
+
     </div>
 </container>
 
@@ -142,122 +145,13 @@
 </div>
 
 <style>
-    .titre {
-        font-size: 45px;
-    }
-
-    #titretraduction {
-        font-size: 20px;
-    }
-
-    .espace {
-        height: 50px;
-    }
-
-    #span1 {
-        color: #569A24;
-    }
-
-    #span2 {
-        color: #0b93e1;
-    }
-
-    #span3 {
-        color: #0b93e1;
-    }
-
-    #video {
-        display: flex;
-        flex-direction: row;
-        justify-content: center;
-    }
-
-    .rounded {
-        width: 100%;
-        height: 300px;
-        padding: .25rem !important;
-        border: 2px solid #dee2e6 !important;
-        border-radius: 255px 25px 225px 25px/25px 225px 25px 255px !important;
-        box-shadow: 0 .5rem 1rem rgba(0, 0, 0, .15) !important;
-    }
-
-    .espace1 {
-        height: 80px;
-    }
-
-    #vanille {
-        width: 80px;
-        height: 75px;
-    }
-
-    .espace2 {
-        height: 5px;
-    }
-
-    .container {
-        max-width: 1400px;
-    }
-
-    .img-thumbnail {
-        width: 200px;
-        height: 200px;
-    }
-
-    .img-thumbnail:hover {
-        -webkit-transform: scale(1.5);
-        -moz-transform: scale(1.5);
-        -ms-transform: scale(1.5);
-        -o-transform: scale(1.5);
-        transform: scale(1.5);
-    }
-
-    .img-thumbnail {
-        -webkit-transition: all .5s cubic-bezier(.6, 2, .4, 1);
-        -moz-transition: all .5s cubic-bezier(.6, 2, .4, 1);
-        -ms-transition: all .5s cubic-bezier(.6, 2, .4, 1);
-        -o-transition: all .5s cubic-bezier(.6, 2, .4, 1);
-        transition: all .5s cubic-bezier(.6, 2, .4, 1);
-    }
-
-    .para {
-        font-size: 16px;
-    }
-
-    .espace3 {
-        height: 60px;
-    }
-
-    .espace4 {
-        height: 100px;
-    }
-
-    .espace5 {
-        height: 50px;
-    }
-
-    #panneau {
-        width: 220px;
-        height: 65px;
-    }
-
-    #hr1 {
-        margin-top: 100px;
-    }
-
-    .articles {
-        margin: 180px auto;
-        max-width: 1000px;
-        width: 100%;
-        font: 18px/1.5;
-        padding: 30px;
-    }
-
-
+    
     @media screen and (max-width: 425px) {
+
         .titre {
             font-size: 24px;
         }
-    
+
         #titretraduction {
             font-size: 15px;
         }
@@ -266,8 +160,19 @@
             height: 15px;
         }
 
+        #video {
+            display: flex;
+            flex-direction: row;
+            justify-content: center;
+        }
+    
         .rounded {
+            width: 100%;
             height: 100%;
+            padding: .25rem !important;
+            border: 2px solid #dee2e6 !important;
+            border-radius: 255px 25px 225px 25px/25px 225px 25px 255px !important;
+            box-shadow: 0 .5rem 1rem rgba(0, 0, 0, .15) !important;
         }
 
         .espace1 {
@@ -278,19 +183,66 @@
             font-size: 15px;
         }
 
-        h2 {
-            font-size: 23px;
-        }
-        .para {
-            font-size: 13px;
+        #span1 {
+            color: #569A24;
         }
 
-        .espace5 {
-            height: 20px;
+        #vanille {
+            width: 80px;
+            height: 75px;
+        }
+
+        .espace2 {
+            height: 5px;
+        }
+
+        #span2 {
+            color: #0b93e1;
+        }
+    
+        #span3 {
+            color: #0b93e1;
+        }
+
+        .container {
+            max-width: 1400px;
+        }
+    
+        .col-12 {
+            margin-bottom: 25px;
+        }
+
+        .img-thumbnail {
+            width: 200px;
+            height: 200px;
+        }
+    
+        .img-thumbnail:hover {
+            -webkit-transform: scale(1.5);
+            -moz-transform: scale(1.5);
+            -ms-transform: scale(1.5);
+            -o-transform: scale(1.5);
+            transform: scale(1.5);
+        }
+    
+        .img-thumbnail {
+            -webkit-transition: all .5s cubic-bezier(.6, 2, .4, 1);
+            -moz-transition: all .5s cubic-bezier(.6, 2, .4, 1);
+            -ms-transition: all .5s cubic-bezier(.6, 2, .4, 1);
+            -o-transition: all .5s cubic-bezier(.6, 2, .4, 1);
+            transition: all .5s cubic-bezier(.6, 2, .4, 1);
         }
 
         .espace3 {
-            height: 0px;
+            height: 20px;
+        }
+
+        h2 {
+            font-size: 23px;
+        }
+
+        .para {
+            font-size: 13px;
         }
 
         .espace4 {
@@ -302,6 +254,25 @@
             height: 45px;
         }
 
+
+        /*Tableau Articles*/
+        .articles {
+            margin: 180px auto;
+            width: 100%;
+            font: 18px/1.5;
+            padding: 30px;
+            max-width: 420px;
+            padding-left: 10px;
+            padding-right: 10px;
+        }
+        .product-subtitle {
+            font-size: 10px;
+        }
+
+        .product-price {
+            font-size: 13px;
+        }
+
         #hr1 {
             margin-top: 50px;
         }
@@ -310,135 +281,274 @@
             font-size: 20px;
         }
 
-        .articles {
-            max-width: 420px; 
-            padding-left: 10px;
-            padding-right: 10px;
-        }
-
         .col-3 {
             padding-left: 2px;
             padding-right: 2px;
         }
-
-        h5 {
-            font-size: 13px;
-        }
-
-        .product-subtitle {
-            font-size: 10px;
-        }
-
-        .product-price {
-            font-size: 13px;
-        }
+        /*Fin Tableau Articles*/
 
     }
 
     @media screen and (min-width: 426px) and (max-width: 767px) {
 
         .titre {
-            font-size: 30px;
+            font-size: 24px;
         }
-    
+
         #titretraduction {
-            font-size: 16px;
+            font-size: 15px;
         }
 
         .espace {
-            height: 20px;
+            height: 15px;
+        }
+
+        #video {
+            display: flex;
+            flex-direction: row;
+            justify-content: center;
+        }
+    
+        .rounded {
+            width: 600px;
+            height: 220px;
+            padding: .25rem !important;
+            border: 2px solid #dee2e6 !important;
+            border-radius: 255px 25px 225px 25px/25px 225px 25px 255px !important;
+            box-shadow: 0 .5rem 1rem rgba(0, 0, 0, .15) !important;
+        }
+
+        .espace1 {
+            height: 50px;
+        }
+
+        h5 {
+            font-size: 15px;
+        }
+
+        #span1 {
+            color: #569A24;
+        }
+
+        #vanille {
+            width: 80px;
+            height: 75px;
+        }
+
+        .espace2 {
+            height: 5px;
+        }
+
+        #span2 {
+            color: #0b93e1;
+        }
+    
+        #span3 {
+            color: #0b93e1;
+        }
+
+        .container {
+            max-width: 1400px;
+        }
+    
+        .col-12 {
+            margin-bottom: 25px;
+        }
+
+        .img-thumbnail {
+            width: 200px;
+            height: 200px;
+        }
+    
+        .img-thumbnail:hover {
+            -webkit-transform: scale(1.5);
+            -moz-transform: scale(1.5);
+            -ms-transform: scale(1.5);
+            -o-transform: scale(1.5);
+            transform: scale(1.5);
+        }
+    
+        .img-thumbnail {
+            -webkit-transition: all .5s cubic-bezier(.6, 2, .4, 1);
+            -moz-transition: all .5s cubic-bezier(.6, 2, .4, 1);
+            -ms-transition: all .5s cubic-bezier(.6, 2, .4, 1);
+            -o-transition: all .5s cubic-bezier(.6, 2, .4, 1);
+            transition: all .5s cubic-bezier(.6, 2, .4, 1);
         }
 
         .espace3 {
-            height: 0px;
+            height: 20px;
+        }
+
+        h2 {
+            font-size: 23px;
+        }
+
+        .para {
+            font-size: 13px;
         }
 
         .espace4 {
-            height: 35px;
+            height: 50px;
+        }
+
+        #panneau {
+            width: 150px;
+            height: 45px;
+        }
+
+
+        /*Tableau Articles*/
+        .articles {
+            margin: 180px auto;
+            width: 100%;
+            font: 18px/1.5;
+            padding: 30px;
+            max-width: 420px;
+            padding-left: 10px;
+            padding-right: 10px;
+        }
+        .product-subtitle {
+            font-size: 10px;
+        }
+
+        .product-price {
+            font-size: 13px;
         }
 
         #hr1 {
-            margin-top: 60px;
-        }
-        #panneau {
-            width: 140px;
-            height: 38px;
+            margin-top: 50px;
         }
 
         h3 {
             font-size: 20px;
         }
 
-        .articles {
-            max-width: 550px; 
-            padding-left: 10px;
-            padding-right: 10px;
-            padding-bottom: 40px;
-        }
-
         .col-3 {
             padding-left: 2px;
             padding-right: 2px;
         }
+        /*Fin Tableau Articles*/
+        
+    }
+
+    @media screen and (min-width: 768px) and (max-width: 1023px) {
+        .titre {
+            font-size: 24px;
+        }
+
+        #titretraduction {
+            font-size: 15px;
+        }
+
+        .espace {
+            height: 15px;
+        }
+
+        #video {
+            display: flex;
+            flex-direction: row;
+            justify-content: center;
+        }
+    
+        .rounded {
+            width: 600px;
+            height: 220px;
+            padding: .25rem !important;
+            border: 2px solid #dee2e6 !important;
+            border-radius: 255px 25px 225px 25px/25px 225px 25px 255px !important;
+            box-shadow: 0 .5rem 1rem rgba(0, 0, 0, .15) !important;
+        }
+
+        .espace1 {
+            height: 50px;
+        }
 
         h5 {
-            font-size: 13px;
+            font-size: 15px;
         }
 
-        hr {
-            margin: 8px;
-        }
-        .product-subtitle {
-            font-size: 10px;
+        #span1 {
+            color: #569A24;
         }
 
-        .product-price {
-            font-size: 13px;
+        #vanille {
+            width: 80px;
+            height: 75px;
         }
-      }
-      @media screen and (min-width: 768px) and (max-width: 1023px) {
+
+        .espace2 {
+            height: 5px;
+        }
+
+        #span2 {
+            color: #0b93e1;
+        }
+    
+        #span3 {
+            color: #0b93e1;
+        }
+
+        .container {
+            max-width: 1400px;
+        }
+    
         .col-12 {
-            padding-left: 5px;
-            padding-right: 5px;
+            margin-bottom: 25px;
         }
 
-        #activitésport {
-            padding-left: 0px;
-            padding-right: 0px;
+        .img-thumbnail {
+            width: 200px;
+            height: 200px;
+        }
+    
+        .img-thumbnail:hover {
+            -webkit-transform: scale(1.5);
+            -moz-transform: scale(1.5);
+            -ms-transform: scale(1.5);
+            -o-transform: scale(1.5);
+            transform: scale(1.5);
+        }
+    
+        .img-thumbnail {
+            -webkit-transition: all .5s cubic-bezier(.6, 2, .4, 1);
+            -moz-transition: all .5s cubic-bezier(.6, 2, .4, 1);
+            -ms-transition: all .5s cubic-bezier(.6, 2, .4, 1);
+            -o-transition: all .5s cubic-bezier(.6, 2, .4, 1);
+            transition: all .5s cubic-bezier(.6, 2, .4, 1);
         }
 
-        #plats {
-            padding-left: 0px;
-            padding-right: 0px;
+        .espace3 {
+            height: 20px;
+        }
+
+        h2 {
+            font-size: 23px;
+        }
+
+        .para {
+            font-size: 13px;
+        }
+
+        .espace4 {
+            height: 50px;
         }
 
         #panneau {
             width: 150px;
-            height: 40px;
+            height: 45px;
         }
 
-        #hr1 {
-            margin-top: 60px;
-        }
 
+        /*Tableau Articles*/
         .articles {
-            max-width: 600px; 
+            margin: 180px auto;
+            width: 100%;
+            font: 18px/1.5;
+            padding: 30px;
+            max-width: 600px;
             padding-left: 10px;
             padding-right: 10px;
-            padding-bottom: 40px;
-        }
-
-        .col-3 {
-            padding-left: 2px;
-            padding-right: 2px;
-        }
-
-        h5 {
-            font-size: 13px;
-        }
-
-        hr {
-            margin: 8px;
         }
         .product-subtitle {
             font-size: 10px;
@@ -447,14 +557,161 @@
         .product-price {
             font-size: 13px;
         }
-      }
-    @media screen and (min-width: 1024px) and (max-width: 2056px) {
+
+        #hr1 {
+            margin-top: 50px;
+        }
+
+        h3 {
+            font-size: 20px;
+        }
+
+        .col-3 {
+            padding-left: 2px;
+            padding-right: 2px;
+        }
+        /*Fin Tableau Articles*/
+    }
+
+    @media screen and (min-width: 1024px) {
+        .titre {
+            font-size: 24px;
+        }
+
+        #titretraduction {
+            font-size: 15px;
+        }
+
+        .espace {
+            height: 15px;
+        }
+
+        #video {
+            display: flex;
+            flex-direction: row;
+            justify-content: center;
+        }
+    
+        .rounded {
+            width: 600px;
+            height: 220px;
+            padding: .25rem !important;
+            border: 2px solid #dee2e6 !important;
+            border-radius: 255px 25px 225px 25px/25px 225px 25px 255px !important;
+            box-shadow: 0 .5rem 1rem rgba(0, 0, 0, .15) !important;
+        }
+
+        .espace1 {
+            height: 50px;
+        }
+
+        h5 {
+            font-size: 15px;
+        }
+
+        #span1 {
+            color: #569A24;
+        }
+
+        #vanille {
+            width: 80px;
+            height: 75px;
+        }
+
+        .espace2 {
+            height: 5px;
+        }
+
+        #span2 {
+            color: #0b93e1;
+        }
+    
+        #span3 {
+            color: #0b93e1;
+        }
+
+        .container {
+            max-width: 1400px;
+        }
+    
+        .col-12 {
+            margin-bottom: 25px;
+        }
+
+        .img-thumbnail {
+            width: 200px;
+            height: 200px;
+        }
+    
+        .img-thumbnail:hover {
+            -webkit-transform: scale(1.5);
+            -moz-transform: scale(1.5);
+            -ms-transform: scale(1.5);
+            -o-transform: scale(1.5);
+            transform: scale(1.5);
+        }
+    
+        .img-thumbnail {
+            -webkit-transition: all .5s cubic-bezier(.6, 2, .4, 1);
+            -moz-transition: all .5s cubic-bezier(.6, 2, .4, 1);
+            -ms-transition: all .5s cubic-bezier(.6, 2, .4, 1);
+            -o-transition: all .5s cubic-bezier(.6, 2, .4, 1);
+            transition: all .5s cubic-bezier(.6, 2, .4, 1);
+        }
+
+        .espace3 {
+            height: 20px;
+        }
+
+        h2 {
+            font-size: 23px;
+        }
+
+        .para {
+            font-size: 13px;
+        }
+
+        .espace4 {
+            height: 50px;
+        }
+
+        #panneau {
+            width: 150px;
+            height: 45px;
+        }
+
+
+        /*Tableau Articles*/
         .articles {
-            max-width: 750px; 
+            margin: 180px auto;
+            width: 100%;
+            font: 18px/1.5;
+            padding: 30px;
+            max-width: 750px;
             padding-left: 10px;
             padding-right: 10px;
-            padding-bottom: 40px;
         }
-      }
+        .product-subtitle {
+            font-size: 10px;
+        }
+
+        .product-price {
+            font-size: 13px;
+        }
+
+        #hr1 {
+            margin-top: 50px;
+        }
+
+        h3 {
+            font-size: 20px;
+        }
+
+        .col-3 {
+            padding-left: 2px;
+            padding-right: 2px;
+        }
+        /*Fin Tableau Articles*/
+    }
 </style>
 {% endblock %}
