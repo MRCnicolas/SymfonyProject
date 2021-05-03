@@ -65,7 +65,6 @@
         {% endif %}
 
 
-
         <nav class="navbar navbar-expand-lg navbar-light bg-light">
             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarColor03"
                 aria-controls="navbarColor03" aria-expanded="false" aria-label="Toggle navigation">
@@ -238,13 +237,13 @@
 <footer>
 
     <div class="d-flex justify-content-center" id="réseaux">
-        <a href="#"><img src="{{ asset('images/pagebase/footer/iconesréseaux/facebook.svg') }}"
+        <a href="https://fr-fr.facebook.com/"><img src="{{ asset('images/pagebase/footer/iconesréseaux/facebook.svg') }}"
                 class="iconesréseaux faa-spin animated-hover" /></a>
-        <a href="#"><img src="{{ asset('images/pagebase/footer/iconesréseaux/twiter.svg') }}"
+        <a href="https://twitter.com/"><img src="{{ asset('images/pagebase/footer/iconesréseaux/twiter.svg') }}"
                 class="iconesréseaux faa-spin faa-reverse animated-hover" /></a>
-        <a href="#"><img src="{{ asset('images/pagebase/footer/iconesréseaux/insta.svg') }}"
+        <a href="https://www.instagram.com/"><img src="{{ asset('images/pagebase/footer/iconesréseaux/insta.svg') }}"
                 class="iconesréseaux faa-spin animated-hover" /></a>
-        <a href="#"><img src="{{ asset('images/pagebase/footer/iconesréseaux/youtube.svg') }}"
+        <a href="https://www.youtube.com/"><img src="{{ asset('images/pagebase/footer/iconesréseaux/youtube.svg') }}"
                 class="iconesréseaux faa-spin faa-reverse animated-hover" /></a>
     </div>
     <div class="d-flex justify-content-center">
@@ -265,7 +264,7 @@
     
     /*MEDIA QUERIES*/
 
-    @media screen and (max-width: 425px) {
+    @media screen and (max-width: 424px) {
 
         .example-wrapper {
             text-align: center;
@@ -285,9 +284,6 @@
             margin-top: 280px;
             margin-bottom: 20px;
         }
-
-
-
 
         header {
             display: flex;
@@ -653,7 +649,7 @@
         }
     }
 
-    @media screen and (min-width: 426px) and (max-width: 767px) {
+    @media screen and (min-width: 425px) and (max-width: 767px) {
 
         .example-wrapper {
             text-align: center;
@@ -673,9 +669,6 @@
             margin-top: 300px;
             margin-bottom: 10px;
         }
-
-
-
 
         header {
             display: flex;
@@ -1048,7 +1041,6 @@
 
     @media screen and (min-width: 768px) and (max-width: 991px) {
 
-
         .example-wrapper {
             text-align: center;
             margin: 180px auto;
@@ -1066,10 +1058,6 @@
         .example-wrapper h1 {
             margin-top: 350px;
         }
-
-
-
-
 
         header {
             display: flex;
@@ -1419,23 +1407,6 @@
 
     @media screen and (min-width: 992px) and (max-width: 1023px) {
         
-        .navbar-brand {
-            margin-right:0px!important;
-        }
-
-
-        .container1 {
-            padding-right: 0px;
-            padding-left: 0px;
-            margin: none;
-            height: 300px;
-        }
-    
-        .example-wrapper h1 {
-            margin-top: 450px;
-            margin-bottom: 30px;
-        }
-    
         .example-wrapper {
             text-align: center;
             margin: 180px auto;
@@ -1449,17 +1420,12 @@
             background: #f5f5f5;
             padding: 2px 6px;
         }
-    
-        #logo {
-            display: flex;
-            position: relative;
-            z-index: 2;
-            width: 100px;
-            height: 160px;
-            padding-left: 10px;
-            padding-top: 15px;
+
+        .example-wrapper h1 {
+            margin-top: 450px;
+            margin-bottom: 30px;
         }
-    
+
         header {
             display: flex;
             flex-direction: column;
@@ -1469,6 +1435,23 @@
             background-size: cover;
             position: fixed;
             z-index: 1;
+        }
+
+        .container1 {
+            padding-right: 0px;
+            padding-left: 0px;
+            margin: none;
+            height: 300px;
+        }
+    
+        #logo {
+            display: flex;
+            position: relative;
+            z-index: 2;
+            width: 100px;
+            height: 160px;
+            padding-left: 10px;
+            padding-top: 15px;
         }
     
         #titreheader {
@@ -1488,6 +1471,16 @@
             margin-top: 55px;
             margin-left: 10px;
         }
+
+        .btn-outline-success {
+            color: #569A24;
+            border-color: #569A24;
+        }
+    
+        .btn-outline-success:hover {
+            background-color: #569A24;
+            border-color: #569A24;
+        }
     
         .carousel-caption {
             position: sticky;
@@ -1502,101 +1495,11 @@
         .nav-link {
             color: #0b93e1 !important;
         }
-    
-        .btn-outline-success {
-            color: #569A24;
-            border-color: #569A24;
+
+        .navbar-brand {
+            margin-right:0px!important;
         }
-    
-        .btn-outline-success:hover {
-            background-color: #569A24;
-            border-color: #569A24;
-        }
-    
-        .dropdown-item {
-            color: #0b93e1 !important;
-            text-align: center;
-        }
-    
-        .dropdown-item:hover {
-            background-color: #fff;
-            border-top: 2px solid #569A24;
-            border-bottom: 2px solid #569A24;
-        }
-    
-        .dropdown-menu {
-            border-color: #0b93e1;
-            box-shadow: 0 0.1rem 1rem rgb(0 0 0 / 25%);
-            border-radius: 255px 25px 225px 25px/25px 225px 25px 255px!important;
-        }
-    
-        .dropdown-divider {
-            border-top: 1px solid #0b93e1;
-        }
-    
-        .form-control {
-            border: 2px solid rgb(207, 207, 207) !important;
-        }
-    
-        #logonav {
-            width: 70px;
-            height: 30px;
-        }
-    
-        .navbar-light .navbar-toggler {
-            color: #0b93e1;
-            border-color: #0b93e1;
-            box-shadow: 0 0.1rem 0.5rem rgba(99, 97, 97, 0.25) !important;
-            border-radius: 255px 25px 225px 25px/25px 225px 25px 255px!important;
-        }
-    
-        .cart-icon {
-            height: 30px;
-        }
-    
-        footer {
-            display: flex;
-            flex-direction: column;
-            background-size: cover;
-            background-position: center;
-            margin-top: 50px;
-            height: 150px;
-            width: 100%;
-            background-image: url("/images/pagebase/footer/Route-du-volcan1920.200.png");
-        }
-    
-        #p-footer {
-            margin-top: 20px;
-            margin-left: 10px;
-            color: #fff;
-        }
-    
-        #a-footer {
-            color: #fff;
-            text-decoration: none;
-        }
-    
-        #a-footer:hover {
-            color: #569A24;
-        }
-    
-        #réseaux {
-            margin-top: 50px;
-        }
-    
-        .iconesréseaux {
-            width: 30px;
-            height: 30px;
-            margin-left: 5px;
-            margin-right: 5px;
-            border-radius: 255px 25px 225px 25px/25px 225px 25px 255px;
-            box-shadow: 0 .5rem 1rem rgba(0, 0, 0, .15) !important
-        }
-    
-        /* 
-        Bouton navbar
-        */
-    
+
         .svg-wrapper {
             margin-top: 0;
             position: relative;
@@ -1656,6 +1559,11 @@
             stroke-dasharray: 58 400;
             stroke-dashoffset: -150;
         }
+
+        #logonav {
+            width: 70px;
+            height: 25px;
+        }
     
         #text {
             margin-top: -27px;
@@ -1680,6 +1588,82 @@
             stroke-dashoffset: 0;
             stroke: #569A24;
         }
+    
+        .dropdown-item {
+            color: #0b93e1 !important;
+            text-align: center;
+        }
+    
+        .dropdown-item:hover {
+            background-color: #fff;
+            border-top: 2px solid #569A24;
+            border-bottom: 2px solid #569A24;
+        }
+    
+        .dropdown-menu {
+            border-color: #0b93e1;
+            box-shadow: 0 0.1rem 1rem rgb(0 0 0 / 25%);
+            border-radius: 255px 25px 225px 25px/25px 225px 25px 255px!important;
+        }
+    
+        .dropdown-divider {
+            border-top: 1px solid #0b93e1;
+        }
+    
+        .form-control {
+            border: 2px solid rgb(207, 207, 207) !important;
+        }
+    
+        .navbar-light .navbar-toggler {
+            color: #0b93e1;
+            border-color: #0b93e1;
+            box-shadow: 0 0.1rem 0.5rem rgba(99, 97, 97, 0.25) !important;
+            border-radius: 255px 25px 225px 25px/25px 225px 25px 255px!important;
+        }
+    
+        .cart-icon {
+            height: 25px;
+        }
+    
+        footer {
+            display: flex;
+            flex-direction: column;
+            background-size: cover;
+            background-position: center;
+            margin-top: 50px;
+            height: 150px;
+            width: 100%;
+            background-image: url("/images/pagebase/footer/Route-du-volcan1920.200.png");
+        }
+    
+        #p-footer {
+            margin-top: 20px;
+            margin-left: 10px;
+            color: #fff;
+        }
+    
+        #a-footer {
+            color: #fff;
+            text-decoration: none;
+        }
+    
+        #a-footer:hover {
+            color: #569A24;
+        }
+    
+        #réseaux {
+            margin-top: 50px;
+        }
+    
+        .iconesréseaux {
+            width: 30px;
+            height: 30px;
+            margin-left: 5px;
+            margin-right: 5px;
+            border-radius: 255px 25px 225px 25px/25px 225px 25px 255px;
+            box-shadow: 0 .5rem 1rem rgba(0, 0, 0, .15) !important
+        }
+    
     }
 
     @media screen and (min-width: 1024px) {
@@ -1688,7 +1672,6 @@
             margin-right:0px!important;
         }
 
-
         .container1 {
             padding-right: 0px;
             padding-left: 0px;
@@ -1753,6 +1736,16 @@
             margin-top: 55px;
             margin-left: 10px;
         }
+
+        .btn-outline-success {
+            color: #569A24;
+            border-color: #569A24;
+        }
+    
+        .btn-outline-success:hover {
+            background-color: #569A24;
+            border-color: #569A24;
+        }
     
         .carousel-caption {
             position: sticky;
@@ -1767,101 +1760,7 @@
         .nav-link {
             color: #0b93e1 !important;
         }
-    
-        .btn-outline-success {
-            color: #569A24;
-            border-color: #569A24;
-        }
-    
-        .btn-outline-success:hover {
-            background-color: #569A24;
-            border-color: #569A24;
-        }
-    
-        .dropdown-item {
-            color: #0b93e1 !important;
-            text-align: center;
-        }
-    
-        .dropdown-item:hover {
-            background-color: #fff;
-            border-top: 2px solid #569A24;
-            border-bottom: 2px solid #569A24;
-        }
-    
-        .dropdown-menu {
-            border-color: #0b93e1;
-            box-shadow: 0 0.1rem 1rem rgb(0 0 0 / 25%);
-            border-radius: 255px 25px 225px 25px/25px 225px 25px 255px!important;
-        }
-    
-        .dropdown-divider {
-            border-top: 1px solid #0b93e1;
-        }
-    
-        .form-control {
-            border: 2px solid rgb(207, 207, 207) !important;
-        }
-    
-        #logonav {
-            width: 100px;
-            height: 32px;
-        }
-    
-        .navbar-light .navbar-toggler {
-            color: #0b93e1;
-            border-color: #0b93e1;
-            box-shadow: 0 0.1rem 0.5rem rgba(99, 97, 97, 0.25) !important;
-            border-radius: 255px 25px 225px 25px/25px 225px 25px 255px!important;
-        }
-    
-        .cart-icon {
-            height: 30px;
-        }
-    
-        footer {
-            display: flex;
-            flex-direction: column;
-            background-size: cover;
-            background-position: center;
-            margin-top: 50px;
-            height: 150px;
-            width: 100%;
-            background-image: url("/images/pagebase/footer/Route-du-volcan1920.200.png");
-        }
-    
-        #p-footer {
-            margin-top: 20px;
-            margin-left: 10px;
-            color: #fff;
-        }
-    
-        #a-footer {
-            color: #fff;
-            text-decoration: none;
-        }
-    
-        #a-footer:hover {
-            color: #569A24;
-        }
-    
-        #réseaux {
-            margin-top: 50px;
-        }
-    
-        .iconesréseaux {
-            width: 30px;
-            height: 30px;
-            margin-left: 5px;
-            margin-right: 5px;
-            border-radius: 255px 25px 225px 25px/25px 225px 25px 255px;
-            box-shadow: 0 .5rem 1rem rgba(0, 0, 0, .15) !important
-        }
-    
-        /* 
-        Bouton navbar
-        */
-    
+
         .svg-wrapper {
             margin-top: 0;
             position: relative;
@@ -1921,6 +1820,11 @@
             stroke-dasharray: 58 400;
             stroke-dashoffset: -150;
         }
+
+        #logonav {
+            width: 80px;
+            height: 30px;
+        }
     
         #text {
             margin-top: -27px;
@@ -1938,12 +1842,87 @@
             margin-top: -33px;
             text-align: center;
         }
-    
+
         .svg-wrapper:hover #shape {
             stroke-dasharray: 50 0;
             stroke-width: 3px;
             stroke-dashoffset: 0;
             stroke: #569A24;
+        }
+    
+        .dropdown-item {
+            color: #0b93e1 !important;
+            text-align: center;
+        }
+    
+        .dropdown-item:hover {
+            background-color: #fff;
+            border-top: 2px solid #569A24;
+            border-bottom: 2px solid #569A24;
+        }
+    
+        .dropdown-menu {
+            border-color: #0b93e1;
+            box-shadow: 0 0.1rem 1rem rgb(0 0 0 / 25%);
+            border-radius: 255px 25px 225px 25px/25px 225px 25px 255px!important;
+        }
+    
+        .dropdown-divider {
+            border-top: 1px solid #0b93e1;
+        }
+    
+        .form-control {
+            border: 2px solid rgb(207, 207, 207) !important;
+        }
+    
+        .navbar-light .navbar-toggler {
+            color: #0b93e1;
+            border-color: #0b93e1;
+            box-shadow: 0 0.1rem 0.5rem rgba(99, 97, 97, 0.25) !important;
+            border-radius: 255px 25px 225px 25px/25px 225px 25px 255px!important;
+        }
+    
+        .cart-icon {
+            height: 25px;
+        }
+    
+        footer {
+            display: flex;
+            flex-direction: column;
+            background-size: cover;
+            background-position: center;
+            margin-top: 50px;
+            height: 150px;
+            width: 100%;
+            background-image: url("/images/pagebase/footer/Route-du-volcan1920.200.png");
+        }
+    
+        #p-footer {
+            margin-top: 20px;
+            margin-left: 10px;
+            color: #fff;
+        }
+    
+        #a-footer {
+            color: #fff;
+            text-decoration: none;
+        }
+    
+        #a-footer:hover {
+            color: #569A24;
+        }
+    
+        #réseaux {
+            margin-top: 50px;
+        }
+    
+        .iconesréseaux {
+            width: 30px;
+            height: 30px;
+            margin-left: 5px;
+            margin-right: 5px;
+            border-radius: 255px 25px 225px 25px/25px 225px 25px 255px;
+            box-shadow: 0 .5rem 1rem rgba(0, 0, 0, .15) !important
         }
     }
 </style>
