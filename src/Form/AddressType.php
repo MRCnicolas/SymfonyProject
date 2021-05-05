@@ -18,62 +18,62 @@ class AddressType extends AbstractType
     {
         $builder
             ->add('name', TextType::class, [
-                'label' => 'Quel nom souhaitez-vous donner à votre adresse ?',
+                'label' => 'Quel titre souhaitez-vous donner à votre adresse ?',
                 'attr' => [
-                    'placeholder' => 'Saisir votre adresse'
+                    'placeholder' => 'Saisissez votre adresse'
                 ]
             ])
             ->add('firstname',  TextType::class, [
                 'label' => 'Prénom',
                 'attr' => [
-                    'placeholder' => 'Saisir votre prénom'
+                    'placeholder' => 'Saisissez votre prénom'
                 ]
             ])
             ->add('lastname', TextType::class, [
                 'label' => 'Nom',
                 'attr' => [
-                    'placeholder' => 'Saisir votre nom'
+                    'placeholder' => 'Saisissez votre nom'
                 ]
             ])
             ->add('company',  TextType::class, [
                 'label' => 'Société',
                 'required' => false,
                 'attr' => [
-                    'placeholder' => '(Facultatif) Saisir le nom de votre société'
+                    'placeholder' => '(Facultatif) Saisissez le nom de votre société'
                 ]
             ])
             ->add('address',  TextType::class, [
                 'label' => 'Adresse',
                 'attr' => [
-                    'placeholder' => '24 rue des écoles...'
+                    'placeholder' => 'Exemple : 24 rue des écoles...'
                 ]
             ])
             ->add('postal',  TextType::class, [
                 'label' => 'Code Postal',
                 'attr' => [
-                    'placeholder' => 'Saisir votre code postal'
+                    'placeholder' => 'Saisissez votre code postal'
                 ]
             ])
             ->add('city',  TextType::class, [
                 'label' => 'Ville',
                 'attr' => [
-                    'placeholder' => 'Saisir votre ville'
+                    'placeholder' => 'Saisissez votre ville'
                 ]
             ])
             ->add('country', CountryType::class, [
                 'label' => 'Pays',
                 'attr' => [
-                    'placeholder' => 'Saisir votre pays'
+                    'placeholder' => 'Saisissez votre pays'
                 ]
             ])
             ->add('phone', TelType::class, [
                 'label' => 'Téléphone',
                 'attr' => [
-                    'placeholder' => 'Saisir votre numéro téléphone'
+                    'placeholder' => 'Saisissez votre numéro téléphone'
                 ]
             ])
             ->add('submit', SubmitType::class, [
-                'label' => 'Confirmer'
+                'label' => 'Confirmer vos informations'
             ])
         ;
     }
