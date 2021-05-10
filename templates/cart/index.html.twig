@@ -37,7 +37,7 @@
                     <tr>
                         <th>
                             <img src="/uploads/{{ product.product.illustration }}" alt="{{ product.product.name }}"
-                                height="65px"></br>
+                                height="50px"></br>
                         </th>
                         <td>
                             {{ product.product.name}}</br>
@@ -65,6 +65,7 @@
                     {% endfor %}
                 </tbody>
             </table>
+    
 
         <div class="text-right mb-5">
             <b>Nombre de produit :</b> {{ cart|length }}</br>
@@ -103,9 +104,10 @@
             font-size: 13px;
             text-align: center;
         }
+        
         .table th {
             font-size: 14px;
-            padding: 3px;
+            padding: 2px;
             padding-top: 10px;
             padding-bottom: 10px;
         }

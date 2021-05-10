@@ -53,6 +53,7 @@ class ContactController extends AbstractController
             'headers' => $headers,
             'contact_form' => $form->createView(),
             'title' => 'Contactez-nous',
+            'image1' => "images/pagecontact/maison1.jpg",
         ]);
     }
 }

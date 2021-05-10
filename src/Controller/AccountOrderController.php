@@ -53,7 +53,7 @@ class AccountOrderController extends AbstractController
         return $this->render('account/order_show.html.twig', [
             'title' => 'Ma commande : n°',
             'paragraphe' => 'Commande passé le :',
-            'paragraphe1' => 'Référence de ma commande : n° ',
+            'paragraphe1' => 'Référence de ma commande n° : ',
             'paragraphe2' => 'Transporteur choisi :',
             'paragraphe3' => 'Détails de ma commande :',
             'paragraphe4' => 'Sous-total : ',

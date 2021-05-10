@@ -50,6 +50,7 @@ class SecurityController extends AbstractController
         'headers' => $headers,
         'form' => $form->createView(),
         'title' => 'Inscription sur le site',
+        'image1' => "images/pageinscription/imginscription.JPG",
         ]);
     }
 
