@@ -3,6 +3,7 @@
 <html lang="{{ app.request.locale }}">
 
 <head>
+    
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
 
@@ -10,15 +11,12 @@
 
 
     {% block stylesheets %}
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootswatch/4.6.0/sketchy/bootstrap.min.css"
-        integrity="sha512-AF3OQszBqW7CeiKglwNTnTwPCbJvAo6DVXLbU37Qcw7nPxVPywkPbDCZyGpLu0xqzPeQL2GKAQ5k69hMBTI7LA=="
-        crossorigin="anonymous" />
-    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.2/css/all.css"
-        integrity="sha384-vSIIfh2YWi9wW0r9iZe7RJPrKwp6bG+s9QZMoITbCckVJqGCCRhc+ccxNcdpHuYu" crossorigin="anonymous" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootswatch/4.6.0/sketchy/bootstrap.min.css" integrity="sha512-AF3OQszBqW7CeiKglwNTnTwPCbJvAo6DVXLbU37Qcw7nPxVPywkPbDCZyGpLu0xqzPeQL2GKAQ5k69hMBTI7LA==" crossorigin="anonymous" />
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.2/css/all.css" integrity="sha384-vSIIfh2YWi9wW0r9iZe7RJPrKwp6bG+s9QZMoITbCckVJqGCCRhc+ccxNcdpHuYu" crossorigin="anonymous" />
     <link rel="stylesheets" href="carousel.css">
-    <link rel="stylesheet"
-        href="https://cdn.jsdelivr.net/npm/font-awesome-animation@1.1.1/css/font-awesome-animation.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/font-awesome-animation@1.1.1/css/font-awesome-animation.css">
     {% endblock %}
+
     {% block javascripts %}
     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
         integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous">
@@ -230,7 +228,7 @@
     {% block body %}{% endblock %}
 </div>
 
-<div class="float-right mr-2 mb-4 faa-bounce animated" style="width: 80px;">
+<div class="float-right faa-bounce animated" style="width: 80px;">
     <a href="#"><img src="{{ asset('images/pagebase/body/chevron-back.svg') }}" id="chevron" /></a>
 </div>
 
