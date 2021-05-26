@@ -9,65 +9,82 @@
 
 <h1 class="text-center">{{title}}</h1>
 
-<section id="détail">
     <container class="example-wrapper">
+
         <div class="row">
 
             <div class="col-12 col-md-6">
+
                 <h2>{{titlef1}}</h2>
+                
                 <section>
                     <p class="espace"></p>
                 </section>
-                <img src="{{featurettes1}}" class="img-fluid img-thumbnail shadow">
+
+                 <img src="{{featurettes1}}" class="img-fluid img-thumbnail shadow">
+
+ 
                 <div class="menu1">
                     <input class="button1" type="button"><i class="fas fa-info"></i></input>
-                    <button class="social1 meteo" type="button" onclick="window.location.href='#'"><i class="fas fa-cloud-sun"></i></button>
-                    <button class="social1 equipement" type="button" onclick="window.location.href='#'"><i class="fas fa-hiking"></i></button>
-                    <button class="social1 carte" type="button" onclick="window.location.href='#'"><i class="fas fa-map-marked-alt"></i></button>
-                    <button class="social1 food" type="button" onclick="window.location.href='#'"><i class="fas fa-hamburger"></i></button>
-                    <button class="social1 accès" type="button" onclick="window.location.href='#'"><i class="fas fa-wheelchair"></i></button>
+                    <button class="social1 carte" type="button"><i class="fas fa-map-marked-alt"></i></button>
+                    <button class="social1 meteo" type="button"><i class="fas fa-cloud-sun"></i><div class="meteo1"><div id="wwm_widget" style="width:103px;height:290px;"></div><div id="wwm_link"><a href="https://fr.viewweather.com/w4343400-previsions-meteo-pour-piton_de_la_fournaise-reunion_general_.html" id="wwm_a1">Piton de la Fournaise</a></div></div><script type="text/javascript">var wwm_id = 4343400;var wwm_width = 103;var wwm_height = 290;var wwm_days = 1;var wwm_lang = 'fr';</script><script type="text/javascript" src="https://s2.viewweather.com/js/api.js?v3.1"></script></button>
+                    <button class="social1 equipement" type="button"><i class="fas fa-hiking"></i></button>
+                    <button class="social1 accès" type="button"><i class="fas fa-wheelchair"></i></button>
+                    <button class="social1 food" type="button"><i class="fas fa-hamburger"></i></button>
                 </div>
+
+                
+
             </div>
 
             <div class="col-12 col-md-6">
+
                 <h2>{{titlef2}}</h2>
+
                 <section>
                     <p class="espace"></p>
                 </section>
+
                 <img src="{{featurettes2}}" class="img-fluid img-thumbnail shadow">
+
+
                 <div class="menu2">
                     <input class="button2" type="button"><i class="fas fa-info"></i></input>
-                    <button class="social2 meteo" onclick="window.location.href='#'"><i class="fas fa-cloud-sun"></i></button>
-                    <button class="social2 equipement" onclick="window.location.href='#'"><i class="fas fa-hiking"></i></button>
-                    <button class="social2 carte" onclick="window.location.href='#'"><i class="fas fa-map-marked-alt"></i></button>
-                    <button class="social2 food" onclick="window.location.href='#'"><i class="fas fa-hamburger"></i></button>
-                    <button class="social2 accès" type="button" onclick="window.location.href='#'"><i class="fas fa-wheelchair"></i></button>
+                    <button class="social2 carte" type="button"><i class="fas fa-map-marked-alt"></i></button>
+                    <button class="social2 meteo" type="button"><i class="fas fa-cloud-sun"></i><div class="meteo2"><div id="wwm_widget" style="width:103px;height:290px;"></div><div id="wwm_link"><a href="https://fr.viewweather.com/w4342755-previsions-meteo-pour-saint-gilles-les_bains-reunion.html" id="wwm_a1">Saint-Gilles-les Bains</a></div></div><script type="text/javascript">var wwm_id = 4342755;var wwm_width = 103;var wwm_height = 290;var wwm_days = 1;var wwm_lang = 'fr';</script><script type="text/javascript" src="https://s2.viewweather.com/js/api.js?v3.1"></script></button>
+                    <button class="social2 equipement" type="button"><i class="fas fa-hiking"></i></button>
+                    <button class="social2 accès" type="button"><i class="fas fa-wheelchair"></i></button>
+                    <button class="social2 food" type="button"><i class="fas fa-hamburger"></i></button>
+
                 </div>
+
             </div>
 
         </div>
     </container>
-</section>
 
-<container class="example-wrapper">
-    <h2>{{titlef3}}</h2>
-    <section>
-        <p class="espace"></p>
-    </section>
-    <container class="d-flex justify-content-center">
-        <img src="{{featurettes3}}" class="img-fluid img-thumbnail shadow">
-    </container>
-</container>
-<div class="menu3">
-    <input class="button3" type="button"><i class="fas fa-info"></i></input>
-    <button class="social3 meteo" onclick="window.location.href='#'"><i class="fas fa-cloud-sun"></i></button>
-    <button class="social3 equipement" onclick="window.location.href='#'"><i class="fas fa-hiking"></i></button>
-    <button class="social3 carte" onclick="window.location.href='#'"><i class="fas fa-map-marked-alt"></i></button>
-    <button class="social3 food" onclick="window.location.href='#'"><i class="fas fa-hamburger"></i></button>
-    <button class="social3 accès" type="button" onclick="window.location.href='#'"><i class="fas fa-wheelchair"></i></button>
-</div>
+    <div class="pano">
+        <container class="example-wrapper">
+            <h2>{{titlef3}}</h2>
+            <section>
+                <p class="espace"></p>
+            </section>
+            <container class="d-flex justify-content-center">
+                <img src="{{featurettes3}}" class="img-fluid img-thumbnail shadow">
+            </container>
+        </container>
+        <div class="menu3">
+            <input class="button3" type="button"><i class="fas fa-info"></i></input>
+            <button class="social3 carte" type="button"><i class="fas fa-map-marked-alt"></i></button>
+            <button class="social3 meteo" type="button"><i class="fas fa-cloud-sun"></i><div class="meteo3"><div id="wwm_widget" style="width:103px;height:290px;"></div><div id="wwm_link"><a href="https://fr.viewweather.com/w4343496-previsions-meteo-pour-cirque_de_cilaos-reunion_general_.html" id="wwm_a1">Cirque de Cilaos</a></div></div><script type="text/javascript">var wwm_id = 4343496;var wwm_width = 103;var wwm_height = 290;var wwm_days = 1;var wwm_lang = 'fr';</script><script type="text/javascript" src="https://s2.viewweather.com/js/api.js?v3.1"></script></button>
+            <button class="social3 equipement" type="button"><i class="fas fa-hiking"></i></button>
+            <button class="social3 accès" type="button" ><i class="fas fa-wheelchair"></i></button>
+            <button class="social3 food" type="button"><i class="fas fa-hamburger"></i></button>
+            
+        </div>
+    </div>
 
-<section id="détail">
+
     <container class="example-wrapper">
         <div class="row">
 
@@ -79,11 +96,12 @@
                 <img src="{{featurettes4}}" class="img-fluid img-thumbnail shadow">
                 <div class="menu4">
                     <input class="button4" type="button"><i class="fas fa-info"></i></input>
+                    <button class="social4 carte" onclick="window.location.href='#'"><i class="fas fa-map-marked-alt"></i></button>
                     <button class="social4 meteo" onclick="window.location.href='#'"><i class="fas fa-cloud-sun"></i></button>
                     <button class="social4 equipement" onclick="window.location.href='#'"><i class="fas fa-hiking"></i></button>
-                    <button class="social4 carte" onclick="window.location.href='#'"><i class="fas fa-map-marked-alt"></i></button>
-                    <button class="social4 food" onclick="window.location.href='#'"><i class="fas fa-hamburger"></i></button>
                     <button class="social4 accès" type="button" onclick="window.location.href='#'"><i class="fas fa-wheelchair"></i></button>
+                    <button class="social4 food" onclick="window.location.href='#'"><i class="fas fa-hamburger"></i></button>
+                    
                 </div>
             </div>
 
@@ -95,37 +113,39 @@
                 <img src="{{featurettes5}}" class="img-fluid img-thumbnail shadow">
                 <div class="menu5">
                     <input class="button5" type="button"><i class="fas fa-info"></i></input>
+                    <button class="social5 carte" onclick="window.location.href='#'"><i class="fas fa-map-marked-alt"></i></button>
                     <button class="social5 meteo" onclick="window.location.href='#'"><i class="fas fa-cloud-sun"></i></button>
                     <button class="social5 equipement" onclick="window.location.href='#'"><i class="fas fa-hiking"></i></button>
-                    <button class="social5 carte" onclick="window.location.href='#'"><i class="fas fa-map-marked-alt"></i></button>
-                    <button class="social5 food" onclick="window.location.href='#'"><i class="fas fa-hamburger"></i></button>
                     <button class="social5 accès" type="button" onclick="window.location.href='#'"><i class="fas fa-wheelchair"></i></button>
+                    <button class="social5 food" onclick="window.location.href='#'"><i class="fas fa-hamburger"></i></button>
+                    
                 </div>
             </div>
 
         </div>
     </container>
-</section>
 
-<container class="example-wrapper">
-    <h2>{{titlef6}}</h2>
-    <section>
-        <p class="espace"></p>
-    </section>
-    <container class="d-flex justify-content-center">
-        <img src="{{featurettes6}}" class="img-fluid img-thumbnail shadow">
-    </container>
-</container>
-<div class="menu6">
-    <input class="button6" type="button"><i class="fas fa-info"></i></input>
-    <button class="social6 meteo" onclick="window.location.href='#'"><i class="fas fa-cloud-sun"></i></button>
-    <button class="social6 equipement" onclick="window.location.href='#'"><i class="fas fa-hiking"></i></button>
-    <button class="social6 carte" onclick="window.location.href='#'"><i class="fas fa-map-marked-alt"></i></button>
-    <button class="social6 food" onclick="window.location.href='#'"><i class="fas fa-hamburger"></i></button>
-    <button class="social6 accès" type="button" onclick="window.location.href='#'"><i class="fas fa-wheelchair"></i></button>
-</div>
+    <div class="pano">
+        <container class="example-wrapper">
+            <h2>{{titlef6}}</h2>
+            <section>
+                <p class="espace"></p>
+            </section>
+            <container class="d-flex justify-content-center">
+                <img src="{{featurettes6}}" class="img-fluid img-thumbnail shadow">
+            </container>
+        </container>
+        <div class="menu6">
+            <input class="button6" type="button"><i class="fas fa-info"></i></input>
+            <button class="social6 carte" onclick="window.location.href='#'"><i class="fas fa-map-marked-alt"></i></button>
+            <button class="social6 meteo" onclick="window.location.href='#'"><i class="fas fa-cloud-sun"></i></button>
+            <button class="social6 equipement" onclick="window.location.href='#'"><i class="fas fa-hiking"></i></button>
+            <button class="social6 accès" type="button" onclick="window.location.href='#'"><i class="fas fa-wheelchair"></i></button>
+            <button class="social6 food" onclick="window.location.href='#'"><i class="fas fa-hamburger"></i></button>
+            
+        </div>
+    </div>
 
-<section id="détail">
     <container class="example-wrapper">
         <div class="row">
 
@@ -137,11 +157,12 @@
                 <img src="{{featurettes7}}" class="img-fluid img-thumbnail shadow">
                 <div class="menu7">
                     <input class="button7" type="button"><i class="fas fa-info"></i></input>
+                    <button class="social7 carte" onclick="window.location.href='#'"><i class="fas fa-map-marked-alt"></i></button>
                     <button class="social7 meteo" onclick="window.location.href='#'"><i class="fas fa-cloud-sun"></i></button>
                     <button class="social7 equipement" onclick="window.location.href='#'"><i class="fas fa-hiking"></i></button>
-                    <button class="social7 carte" onclick="window.location.href='#'"><i class="fas fa-map-marked-alt"></i></button>
-                    <button class="social7 food" onclick="window.location.href='#'"><i class="fas fa-hamburger"></i></button>
                     <button class="social7 accès" type="button" onclick="window.location.href='#'"><i class="fas fa-wheelchair"></i></button>
+                    <button class="social7 food" onclick="window.location.href='#'"><i class="fas fa-hamburger"></i></button>
+                    
                 </div>
             </div>
 
@@ -153,38 +174,45 @@
                 <img src="{{featurettes8}}" class="img-fluid img-thumbnail shadow">
                 <div class="menu8">
                     <input class="button8" type="button"><i class="fas fa-info"></i></input>
+                    <button class="social8 carte" onclick="window.location.href='#'"><i class="fas fa-map-marked-alt"></i></button>
                     <button class="social8 meteo" onclick="window.location.href='#'"><i class="fas fa-cloud-sun"></i></button>
                     <button class="social8 equipement" onclick="window.location.href='#'"><i class="fas fa-hiking"></i></button>
-                    <button class="social8 carte" onclick="window.location.href='#'"><i class="fas fa-map-marked-alt"></i></button>
-                    <button class="social8 food" onclick="window.location.href='#'"><i class="fas fa-hamburger"></i></button>
                     <button class="social8 accès" type="button" onclick="window.location.href='#'"><i class="fas fa-wheelchair"></i></button>
+                    <button class="social8 food" onclick="window.location.href='#'"><i class="fas fa-hamburger"></i></button>
+                    
                 </div>
             </div>
 
         </div>
     </container>
-</section>
 
-<container class="example-wrapper">
-    <h2>{{titlef9}}</h2>
-    <section>
-        <p class="espace"></p>
-    </section>
-    <container class="d-flex justify-content-center">
-        <img src="{{featurettes9}}" class="img-fluid img-thumbnail shadow">
-    </container>
-</container>
-<div class="menu9">
-    <input class="button9" type="button"><i class="fas fa-info"></i></input>
-    <button class="social9 meteo" onclick="window.location.href='#'"><i class="fas fa-cloud-sun"></i></button>
-    <button class="social9 equipement" onclick="window.location.href='#'"><i class="fas fa-hiking"></i></button>
-    <button class="social9 carte" onclick="window.location.href='#'"><i class="fas fa-map-marked-alt"></i></button>
-    <button class="social9 food" onclick="window.location.href='#'"><i class="fas fa-hamburger"></i></button>
-    <button class="social9 accès" type="button" onclick="window.location.href='#'"><i class="fas fa-wheelchair"></i></button>
-</div>
+    <div class="pano">
+        <container class="example-wrapper">
+            <h2>{{titlef9}}</h2>
+            <section>
+                <p class="espace"></p>
+            </section>
+            <container class="d-flex justify-content-center">
+                <img src="{{featurettes9}}" class="img-fluid img-thumbnail shadow">
+            </container>
+        </container>
+        <div class="menu9">
+            <input class="button9" type="button"><i class="fas fa-info"></i></input>
+            <button class="social9 carte" onclick="window.location.href='#'"><i class="fas fa-map-marked-alt"></i></button>
+            <button class="social9 meteo" onclick="window.location.href='#'"><i class="fas fa-cloud-sun"></i></button>
+            <button class="social9 equipement" onclick="window.location.href='#'"><i class="fas fa-hiking"></i></button>
+            <button class="social9 accès" type="button" onclick="window.location.href='#'"><i class="fas fa-wheelchair"></i></button>
+            <button class="social9 food" onclick="window.location.href='#'"><i class="fas fa-hamburger"></i></button>
+            
+        </div>
+    </div>
+
+    
 
 
 <script>
+    
+    
     $(".button1").click(function () {
         $(".social1.meteo").toggleClass("clicked");
         $(".social1.equipement").toggleClass("clicked");
@@ -256,21 +284,51 @@
         $(".social9.food").toggleClass("clicked");
         $(".social9.accès").toggleClass("clicked");
     })
+
+    $(".social1.meteo").click(function () {
+        $(".meteo1").toggleClass("clickedmeteo");
+        
+    })
+
+    $(".social2.meteo").click(function () {
+        $(".meteo2").toggleClass("clickedmeteo");
+        
+    })
+
+    $(".social3.meteo").click(function () {
+        $(".meteo3").toggleClass("clickedmeteo");
+        
+    })
+
+
+    
 </script>
 
 
 
 <style>
 
+    .meteo1 {
+        opacity: 0;
+    }
+
+    .meteo2 {
+        opacity: 0;
+    }
+
+    .meteo3 {
+        opacity: 0;
+    }
+
     /*MEDIA QUERIES*/
 
-    @media screen and (max-width: 424px) {
+    @media screen and (min-width: 320px) and (max-width: 374px) {
 
         
         h1 {
             margin-top: 300px;
-            margin-bottom: 80px;
-            font-size: 25px;
+            margin-bottom: 60px;
+            font-size: 30px;
         }
 
         h2 {
@@ -278,9 +336,25 @@
             font-size: 20px;
         }
 
+        .col-12 {
+            margin-bottom: 25px;
+        }
+
+        .pano {
+            margin-bottom: 25px;
+        }
+
         .espace {
             height: 5px;
             margin-bottom: 5px;
+        }
+
+        .button1:hover,.button2:hover,.button3:hover,.button4:hover,.button5:hover,.button6:hover,.button7:hover,.button8:hover,.button9:hover {
+            -webkit-transform: scale(1.2);
+            -moz-transform: scale(1.2);
+            -ms-transform: scale(1.2);
+            -o-transform: scale(1.2);
+            transform: scale(1.2);
         }
 
         .button1,.button2,.button3,.button4,.button5,.button6,.button7,.button8,.button9 {
@@ -288,25 +362,58 @@
             width: 30px;
             height: 20px;
             background: rgba(255, 255, 255, 0.24);
+            border-color: rgba(133, 133, 133, 0.521)!important;
             border-radius: 255px 25px 225px 25px/25px 225px 25px 255px;
             box-shadow: 0 .5rem 1rem rgba(0, 0, 0, .15);
+
+            -webkit-transition: all .5s cubic-bezier(.6, 2, .4, 1);
+            -moz-transition: all .5s cubic-bezier(.6, 2, .4, 1);
+            -ms-transition: all .5s cubic-bezier(.6, 2, .4, 1);
+            -o-transition: all .5s cubic-bezier(.6, 2, .4, 1);
+            transition: all .5s cubic-bezier(.6, 2, .4, 1);
         }
-    
-        .menu1,.menu2,.menu3,.menu4,.menu5,.menu6,.menu7,.menu8,.menu9 {
+
+        .menu1,.menu2,.menu4,.menu5,.menu7,.menu8 {
             margin-top: -45px;
-            margin-left: 30px;
+            margin-left: 20px;
             display: flex;
             justify-content: start;
             align-items: center;
         }
     
-        .social1,.social2,.social3,.social4,.social5,.social6,.social7,.social8,.social9 {
+/*pano*/
+.menu3,.menu6,.menu9 {
+    margin-top: -45px;
+    margin-left: 18px;
+    display: flex;
+    justify-content: start;
+    align-items: center;
+}
+
+.social3,.social6,.social9 {
+    opacity: 0;
+    position: relative;
+    margin: 8px;
+    width: 25px;
+    height: 25px;
+    background: rgba(255, 255, 255, 0.24);
+    border-color: rgba(133, 133, 133, 0.212)!important;
+    box-shadow: 0 .5rem 1rem rgba(0, 0, 0, .15);
+    border-radius: 100%;
+    color: #0b93e1;
+    display: flex;
+    align-items: center;  
+}
+/*pano*/
+
+        .social1,.social2,.social4,.social5,.social7,.social8 {
             opacity: 0;
             position: relative;
             margin: 8px;
             width: 25px;
             height: 25px;
             background: rgba(255, 255, 255, 0.24);
+            border-color: rgba(133, 133, 133, 0.404)!important;
             box-shadow: 0 .5rem 1rem rgba(0, 0, 0, .15);
             border-radius: 100%;
             color: #FFF;
@@ -344,8 +451,191 @@
         .clicked {
             opacity: 1;
             transition: 1.2s all ease;
-            transform: translateX(22px);
+            transform: translateX(9px);
         }
+
+        .clickedmeteo {
+            opacity: 1;
+            transition: 1.2s all ease;
+            transform: translateY(-40px);
+        }
+
+        /*pano*/
+        .social3.clicked {
+            opacity: 1;
+            transition: 1.2s all ease;
+            transform: translateY(35px) translateX(9px);
+        }
+
+        .social6.clicked {
+            opacity: 1;
+            transition: 1.2s all ease;
+            transform: translateY(35px) translateX(9px);
+        }
+
+        .social9.clicked {
+            opacity: 1;
+            transition: 1.2s all ease;
+            transform: translateY(35px) translateX(9px);
+        }
+        /*panofin*/
+
+        #chevron {
+            margin-top: 50px;
+            margin-bottom: 10px;
+        }
+    }
+
+    @media screen and (min-width: 375px) and (max-width: 424px) {
+
+        h1 {
+            margin-top: 300px;
+            margin-bottom: 60px;
+            font-size: 30px;
+        }
+
+        h2 {
+            margin-top: 24px;
+            font-size: 20px;
+        }
+
+        .col-12 {
+            margin-bottom: 25px;
+        }
+
+        .pano {
+            margin-bottom: 25px;
+        }
+
+        .espace {
+            height: 5px;
+            margin-bottom: 5px;
+        }
+
+        .button1:hover,.button2:hover,.button3:hover,.button4:hover,.button5:hover,.button6:hover,.button7:hover,.button8:hover,.button9:hover {
+            -webkit-transform: scale(1.2);
+            -moz-transform: scale(1.2);
+            -ms-transform: scale(1.2);
+            -o-transform: scale(1.2);
+            transform: scale(1.2);
+        }
+
+        .button1,.button2,.button3,.button4,.button5,.button6,.button7,.button8,.button9 {
+            position: absolute;
+            width: 30px;
+            height: 20px;
+            background: rgba(255, 255, 255, 0.24);
+            border-color: rgba(133, 133, 133, 0.521)!important;
+            border-radius: 255px 25px 225px 25px/25px 225px 25px 255px;
+            box-shadow: 0 .5rem 1rem rgba(0, 0, 0, .15);
+
+            -webkit-transition: all .5s cubic-bezier(.6, 2, .4, 1);
+            -moz-transition: all .5s cubic-bezier(.6, 2, .4, 1);
+            -ms-transition: all .5s cubic-bezier(.6, 2, .4, 1);
+            -o-transition: all .5s cubic-bezier(.6, 2, .4, 1);
+            transition: all .5s cubic-bezier(.6, 2, .4, 1);
+        }
+
+        .menu1,.menu2,.menu4,.menu5,.menu7,.menu8 {
+            margin-top: -50px;
+            margin-left: 22px;
+            display: flex;
+            justify-content: start;
+            align-items: center;
+        }
+    
+/*pano*/
+.menu3,.menu6,.menu9 {
+    margin-top: -45px;
+    margin-left: 18px;
+    display: flex;
+    justify-content: start;
+    align-items: center;
+}
+
+.social3,.social6,.social9 {
+    opacity: 0;
+    position: relative;
+    margin: 10px;
+    width: 25px;
+    height: 25px;
+    background: rgba(255, 255, 255, 0.24);
+    border-color: rgba(133, 133, 133, 0.212)!important;
+    box-shadow: 0 .5rem 1rem rgba(0, 0, 0, .15);
+    border-radius: 100%;
+    color: #0b93e1;
+    display: flex;
+    align-items: center;  
+}
+/*pano*/
+
+        .social1,.social2,.social4,.social5,.social7,.social8 {
+            opacity: 0;
+            position: relative;
+            margin: 10px;
+            width: 25px;
+            height: 25px;
+            background: rgba(255, 255, 255, 0.24);
+            border-color: rgba(133, 133, 133, 0.404)!important;
+            box-shadow: 0 .5rem 1rem rgba(0, 0, 0, .15);
+            border-radius: 100%;
+            color: #FFF;
+            display: flex;
+            align-items: center;
+            
+        }
+    
+        .social1 i,.social2 i,.social3 i,.social4 i,.social5 i,.social6 i,.social7 i,.social8 i,.social9 i {
+            font-size: 11px;
+        }
+    
+        .fas.fa-info {
+            font-size: 10px;
+            margin-left: 13px;
+            color: white;
+        }
+
+        .fas.fa-cloud-sun {
+            margin-left: -2px;
+        }
+
+        .fas.fa-hiking {
+            margin-left: 0.5px;
+        }
+
+        .fas.fa-map-marked-alt {
+            margin-left: -1.5px;
+        }
+
+        .fas.fa-hamburger {
+            margin-left: -1px;
+        }
+    
+        .clicked {
+            opacity: 1;
+            transition: 1.2s all ease;
+            transform: translateX(24px);
+        }
+
+        /*pano*/
+        .social3.clicked {
+            opacity: 1;
+            transition: 1.2s all ease;
+            transform: translateY(35px) translateX(25px);
+        }
+
+        .social6.clicked {
+            opacity: 1;
+            transition: 1.2s all ease;
+            transform: translateY(35px) translateX(25px);
+        }
+
+        .social9.clicked {
+            opacity: 1;
+            transition: 1.2s all ease;
+            transform: translateY(35px) translateX(25px);
+        }
+        /*panofin*/
 
         #chevron {
             margin-top: 50px;
@@ -358,13 +648,21 @@
          
         h1 {
             margin-top: 300px;
-            margin-bottom: 80px;
-            font-size: 27px;
+            margin-bottom: 60px;
+            font-size: 30px;
         }
 
         h2 {
             margin-top: 24px;
-            font-size: 22px;
+            font-size: 20px;
+        }
+
+        .col-12 {
+            margin-bottom: 25px;
+        }
+
+        .pano {
+            margin-bottom: 25px;
         }
 
         .espace {
@@ -372,30 +670,71 @@
             margin-bottom: 5px;
         }
 
+        .button1:hover,.button2:hover,.button3:hover,.button4:hover,.button5:hover,.button6:hover,.button7:hover,.button8:hover,.button9:hover {
+            -webkit-transform: scale(1.2);
+            -moz-transform: scale(1.2);
+            -ms-transform: scale(1.2);
+            -o-transform: scale(1.2);
+            transform: scale(1.2);
+        }
+
         .button1,.button2,.button3,.button4,.button5,.button6,.button7,.button8,.button9 {
             position: absolute;
             width: 30px;
             height: 20px;
             background: rgba(255, 255, 255, 0.24);
+            border-color: rgba(133, 133, 133, 0.521)!important;
             border-radius: 255px 25px 225px 25px/25px 225px 25px 255px;
             box-shadow: 0 .5rem 1rem rgba(0, 0, 0, .15);
+
+            -webkit-transition: all .5s cubic-bezier(.6, 2, .4, 1);
+            -moz-transition: all .5s cubic-bezier(.6, 2, .4, 1);
+            -ms-transition: all .5s cubic-bezier(.6, 2, .4, 1);
+            -o-transition: all .5s cubic-bezier(.6, 2, .4, 1);
+            transition: all .5s cubic-bezier(.6, 2, .4, 1);
         }
-    
-        .menu1,.menu2,.menu3,.menu4,.menu5,.menu6,.menu7,.menu8,.menu9 {
-            margin-top: -45px;
-            margin-left: 30px;
+
+        .menu1,.menu2,.menu4,.menu5,.menu7,.menu8 {
+            margin-top: -50px;
+            margin-left: 35px;
             display: flex;
             justify-content: start;
             align-items: center;
         }
     
-        .social1,.social2,.social3,.social4,.social5,.social6,.social7,.social8,.social9 {
+/*pano*/
+.menu3,.menu6,.menu9 {
+    margin-top: -45px;
+    margin-left: 18px;
+    display: flex;
+    justify-content: start;
+    align-items: center;
+}
+
+.social3,.social6,.social9 {
+    opacity: 0;
+    position: relative;
+    margin: 10px;
+    width: 25px;
+    height: 25px;
+    background: rgba(255, 255, 255, 0.24);
+    border-color: rgba(133, 133, 133, 0.212)!important;
+    box-shadow: 0 .5rem 1rem rgba(0, 0, 0, .15);
+    border-radius: 100%;
+    color: #0b93e1;
+    display: flex;
+    align-items: center;  
+}
+/*pano*/
+
+        .social1,.social2,.social4,.social5,.social7,.social8 {
             opacity: 0;
             position: relative;
-            margin: 8px;
+            margin: 13px;
             width: 25px;
             height: 25px;
             background: rgba(255, 255, 255, 0.24);
+            border-color: rgba(133, 133, 133, 0.404)!important;
             box-shadow: 0 .5rem 1rem rgba(0, 0, 0, .15);
             border-radius: 100%;
             color: #FFF;
@@ -433,8 +772,28 @@
         .clicked {
             opacity: 1;
             transition: 1.2s all ease;
-            transform: translateX(22px);
+            transform: translateX(24px);
         }
+
+        /*pano*/
+        .social3.clicked {
+            opacity: 1;
+            transition: 1.2s all ease;
+            transform: translateY(35px) translateX(50px);
+        }
+
+        .social6.clicked {
+            opacity: 1;
+            transition: 1.2s all ease;
+            transform: translateY(35px) translateX(50px);
+        }
+
+        .social9.clicked {
+            opacity: 1;
+            transition: 1.2s all ease;
+            transform: translateY(35px) translateX(50px);
+        }
+        /*panofin*/
 
         #chevron {
             margin-top: 50px;
@@ -455,9 +814,25 @@
             font-size: 24px;
         }
 
+        .col-12 {
+            margin-bottom: 25px;
+        }
+
+        .pano {
+            margin-bottom: 25px;
+        }
+
         .espace {
             height: 5px;
             margin-bottom: 5px;
+        }
+
+        .button1:hover,.button2:hover,.button3:hover,.button4:hover,.button5:hover,.button6:hover,.button7:hover,.button8:hover,.button9:hover {
+            -webkit-transform: scale(1.2);
+            -moz-transform: scale(1.2);
+            -ms-transform: scale(1.2);
+            -o-transform: scale(1.2);
+            transform: scale(1.2);
         }
 
         .button1,.button2,.button3,.button4,.button5,.button6,.button7,.button8,.button9 {
@@ -467,6 +842,12 @@
             background: rgba(255, 255, 255, 0.24);
             border-radius: 255px 25px 225px 25px/25px 225px 25px 255px;
             box-shadow: 0 .5rem 1rem rgba(0, 0, 0, .15);
+
+            -webkit-transition: all .5s cubic-bezier(.6, 2, .4, 1);
+            -moz-transition: all .5s cubic-bezier(.6, 2, .4, 1);
+            -ms-transition: all .5s cubic-bezier(.6, 2, .4, 1);
+            -o-transition: all .5s cubic-bezier(.6, 2, .4, 1);
+            transition: all .5s cubic-bezier(.6, 2, .4, 1);
         }
     
         .menu1,.menu2,.menu3,.menu4,.menu5,.menu6,.menu7,.menu8,.menu9 {
@@ -543,18 +924,40 @@
             font-size: 25px;
         }
 
+        .col-12 {
+            margin-bottom: 25px;
+        }
+
+        .pano {
+            margin-bottom: 25px;
+        }
+
         .espace {
             height: 5px;
             margin-bottom: 5px;
         }
 
+        .button1:hover,.button2:hover,.button3:hover,.button4:hover,.button5:hover,.button6:hover,.button7:hover,.button8:hover,.button9:hover {
+            -webkit-transform: scale(1.2);
+            -moz-transform: scale(1.2);
+            -ms-transform: scale(1.2);
+            -o-transform: scale(1.2);
+            transform: scale(1.2);
+        }
+
         .button1,.button2,.button3,.button4,.button5,.button6,.button7,.button8,.button9 {
             position: absolute;
-            width: 30px;
-            height: 20px;
+            width: 35px;
+            height: 25px;
             background: rgba(255, 255, 255, 0.24);
             border-radius: 255px 25px 225px 25px/25px 225px 25px 255px;
             box-shadow: 0 .5rem 1rem rgba(0, 0, 0, .15);
+
+            -webkit-transition: all .5s cubic-bezier(.6, 2, .4, 1);
+            -moz-transition: all .5s cubic-bezier(.6, 2, .4, 1);
+            -ms-transition: all .5s cubic-bezier(.6, 2, .4, 1);
+            -o-transition: all .5s cubic-bezier(.6, 2, .4, 1);
+            transition: all .5s cubic-bezier(.6, 2, .4, 1);
         }
     
         .menu1,.menu2,.menu3,.menu4,.menu5,.menu6,.menu7,.menu8,.menu9 {
@@ -585,8 +988,8 @@
         }
     
         .fas.fa-info {
-            font-size: 10px;
-            margin-left: 13px;
+            font-size: 12px;
+            margin-left: 15px;
             color: white;
         }
 
@@ -620,8 +1023,45 @@
 
     @media screen and (min-width: 1024px) and (max-width: 1439px) {
 
+        .modal {
+            display: flex;
+            position: absolute;
+            visibility: hidden;
+            opacity: 0;
+            transition: .2s;
+            background: rgba(77, 77, 77, .7);
+            z-index: 1;
+        }
+
+        .modal:target {
+            visibility: visible;
+            opacity: 1;
+        }
+
+        .modal_content {
+            background-color: white;
+            width: 100%;
+            z-index: 1;
+        }
+
+        .modal_close {
+            position: absolute;
+            right: 30px;
+            text-decoration: none;
+            color: grey;
+        }
+
+        .modal_close:hover {
+            text-decoration: none;
+        }
+
+
+
+
+
+
         .container {
-            max-width: 1380px;
+            max-width: 1010px;
         }
 
         h1 {
@@ -631,8 +1071,19 @@
         }
 
         h2 {
+            display: flex;
+            position: relative;
+            justify-content: center;
             margin-top: 24px;
             font-size: 25px;
+        }
+
+        .col-12 {
+            margin-bottom: 22px;
+        }
+
+        .pano {
+            margin-bottom: 25px;
         }
 
         .espace {
@@ -640,45 +1091,64 @@
             margin-bottom: 5px;
         }
 
+        .button1:hover,.button2:hover,.button3:hover,.button4:hover,.button5:hover,.button6:hover,.button7:hover,.button8:hover,.button9:hover {
+            -webkit-transform: scale(1.2);
+            -moz-transform: scale(1.2);
+            -ms-transform: scale(1.2);
+            -o-transform: scale(1.2);
+            transform: scale(1.2);
+        }
+
         .button1,.button2,.button3,.button4,.button5,.button6,.button7,.button8,.button9 {
             position: absolute;
-            width: 30px;
-            height: 20px;
+            width: 40px;
+            height: 30px;
             background: rgba(255, 255, 255, 0.24);
             border-radius: 255px 25px 225px 25px/25px 225px 25px 255px;
             box-shadow: 0 .5rem 1rem rgba(0, 0, 0, .15);
+            
+            -webkit-transition: all .5s cubic-bezier(.6, 2, .4, 1);
+            -moz-transition: all .5s cubic-bezier(.6, 2, .4, 1);
+            -ms-transition: all .5s cubic-bezier(.6, 2, .4, 1);
+            -o-transition: all .5s cubic-bezier(.6, 2, .4, 1);
+            transition: all .5s cubic-bezier(.6, 2, .4, 1);
         }
     
         .menu1,.menu2,.menu3,.menu4,.menu5,.menu6,.menu7,.menu8,.menu9 {
-            margin-top: -45px;
+            margin-top: -50px;
             margin-left: 30px;
             display: flex;
             justify-content: start;
             align-items: center;
         }
     
+        .social1:hover,.social2:hover,.social3:hover,.social4:hover,.social5:hover,.social6:hover,.social7:hover,.social8:hover,.social9:hover {
+            
+        }
+
         .social1,.social2,.social3,.social4,.social5,.social6,.social7,.social8,.social9 {
             opacity: 0;
-            position: relative;
-            margin: 8px;
-            width: 25px;
-            height: 25px;
+            margin: 10px;
+            width: 30px;
+            height: 30px;
             background: rgba(255, 255, 255, 0.24);
             box-shadow: 0 .5rem 1rem rgba(0, 0, 0, .15);
             border-radius: 100%;
             color: #FFF;
             display: flex;
             align-items: center;
+
+            
             
         }
     
         .social1 i,.social2 i,.social3 i,.social4 i,.social5 i,.social6 i,.social7 i,.social8 i,.social9 i {
-            font-size: 11px;
+            font-size: 15px;
         }
     
         .fas.fa-info {
-            font-size: 10px;
-            margin-left: 13px;
+            font-size: 13px;
+            margin-left: 18px;
             color: white;
         }
 
@@ -727,18 +1197,40 @@
             font-size: 25px;
         }
 
+        .col-12 {
+            margin-bottom: 25px;
+        }
+
+        .pano {
+            margin-bottom: 25px;
+        }
+
         .espace {
             height: 5px;
             margin-bottom: 5px;
         }
 
+        .button1:hover,.button2:hover,.button3:hover,.button4:hover,.button5:hover,.button6:hover,.button7:hover,.button8:hover,.button9:hover {
+            -webkit-transform: scale(1.3);
+            -moz-transform: scale(1.3);
+            -ms-transform: scale(1.3);
+            -o-transform: scale(1.3);
+            transform: scale(1.3);
+        }
+
         .button1,.button2,.button3,.button4,.button5,.button6,.button7,.button8,.button9 {
             position: absolute;
-            width: 30px;
-            height: 20px;
+            width: 35px;
+            height: 25px;
             background: rgba(255, 255, 255, 0.24);
             border-radius: 255px 25px 225px 25px/25px 225px 25px 255px;
             box-shadow: 0 .5rem 1rem rgba(0, 0, 0, .15);
+
+            -webkit-transition: all .5s cubic-bezier(.6, 2, .4, 1);
+            -moz-transition: all .5s cubic-bezier(.6, 2, .4, 1);
+            -ms-transition: all .5s cubic-bezier(.6, 2, .4, 1);
+            -o-transition: all .5s cubic-bezier(.6, 2, .4, 1);
+            transition: all .5s cubic-bezier(.6, 2, .4, 1);
         }
     
         .menu1,.menu2,.menu3,.menu4,.menu5,.menu6,.menu7,.menu8,.menu9 {
@@ -769,8 +1261,8 @@
         }
     
         .fas.fa-info {
-            font-size: 10px;
-            margin-left: 13px;
+            font-size: 12px;
+            margin-left: 15px;
             color: white;
         }
 
@@ -819,18 +1311,40 @@
             font-size: 25px;
         }
 
+        .col-12 {
+            margin-bottom: 25px;
+        }
+
+        .pano {
+            margin-bottom: 25px;
+        }
+
         .espace {
             height: 5px;
             margin-bottom: 5px;
         }
 
+        .button1:hover,.button2:hover,.button3:hover,.button4:hover,.button5:hover,.button6:hover,.button7:hover,.button8:hover,.button9:hover {
+            -webkit-transform: scale(1.3);
+            -moz-transform: scale(1.3);
+            -ms-transform: scale(1.3);
+            -o-transform: scale(1.3);
+            transform: scale(1.3);
+        }
+
         .button1,.button2,.button3,.button4,.button5,.button6,.button7,.button8,.button9 {
             position: absolute;
-            width: 30px;
-            height: 20px;
+            width: 35px;
+            height: 25px;
             background: rgba(255, 255, 255, 0.24);
             border-radius: 255px 25px 225px 25px/25px 225px 25px 255px;
             box-shadow: 0 .5rem 1rem rgba(0, 0, 0, .15);
+
+            -webkit-transition: all .5s cubic-bezier(.6, 2, .4, 1);
+            -moz-transition: all .5s cubic-bezier(.6, 2, .4, 1);
+            -ms-transition: all .5s cubic-bezier(.6, 2, .4, 1);
+            -o-transition: all .5s cubic-bezier(.6, 2, .4, 1);
+            transition: all .5s cubic-bezier(.6, 2, .4, 1);
         }
     
         .menu1,.menu2,.menu3,.menu4,.menu5,.menu6,.menu7,.menu8,.menu9 {
@@ -861,8 +1375,8 @@
         }
     
         .fas.fa-info {
-            font-size: 10px;
-            margin-left: 13px;
+            font-size: 12px;
+            margin-left: 15px;
             color: white;
         }
 
@@ -901,14 +1415,22 @@
         }
 
         h1 {
-            margin-top: 430px;
-            margin-bottom: 80px;
-            font-size: 32px;
+            margin-top: 450px;
+            margin-bottom: 100px;
+            font-size: 38px;
         }
 
         h2 {
             margin-top: 24px;
-            font-size: 25px;
+            font-size: 28px;
+        }
+
+        .col-12 {
+            margin-bottom: 25px;
+        }
+
+        .pano {
+            margin-bottom: 25px;
         }
 
         .espace {
@@ -916,13 +1438,27 @@
             margin-bottom: 5px;
         }
 
+        .button1:hover,.button2:hover,.button3:hover,.button4:hover,.button5:hover,.button6:hover,.button7:hover,.button8:hover,.button9:hover {
+            -webkit-transform: scale(1.3);
+            -moz-transform: scale(1.3);
+            -ms-transform: scale(1.3);
+            -o-transform: scale(1.3);
+            transform: scale(1.3);
+        }
+
         .button1,.button2,.button3,.button4,.button5,.button6,.button7,.button8,.button9 {
             position: absolute;
-            width: 30px;
-            height: 20px;
+            width: 35px;
+            height: 25px;
             background: rgba(255, 255, 255, 0.24);
             border-radius: 255px 25px 225px 25px/25px 225px 25px 255px;
             box-shadow: 0 .5rem 1rem rgba(0, 0, 0, .15);
+
+            -webkit-transition: all .5s cubic-bezier(.6, 2, .4, 1);
+            -moz-transition: all .5s cubic-bezier(.6, 2, .4, 1);
+            -ms-transition: all .5s cubic-bezier(.6, 2, .4, 1);
+            -o-transition: all .5s cubic-bezier(.6, 2, .4, 1);
+            transition: all .5s cubic-bezier(.6, 2, .4, 1);
         }
     
         .menu1,.menu2,.menu3,.menu4,.menu5,.menu6,.menu7,.menu8,.menu9 {
@@ -953,8 +1489,8 @@
         }
     
         .fas.fa-info {
-            font-size: 10px;
-            margin-left: 13px;
+            font-size: 12px;
+            margin-left: 15px;
             color: white;
         }
 
