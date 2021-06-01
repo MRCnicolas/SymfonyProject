@@ -2,7 +2,7 @@ import tabJoursEnOrdre from './Utilitaire/gestionTemps.js';
 
 // console.log("DEPUIS MAIN JS:" + tabJoursEnOrdre);
 
-const CLEFAPI = '8e9391f167c17b3253b145b2a036ffd4';
+const CLEFAPI = '6c768a12332784de4954dddb19d855d9';
 let resultatsAPI;
 
 const temps = document.querySelector('.temps');
