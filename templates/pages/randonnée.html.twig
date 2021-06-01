@@ -377,7 +377,7 @@
     })
 
     $(".social3.meteo").click(function () {
-        $(".meteo3").toggleClass("clickedmeteo");
+        $(".meteo3").toggleClass("clickedmeteopano");
         
     })
 
@@ -537,6 +537,7 @@
         display: flex;
         flex-direction: row;
         margin-top: 36px;
+        background-color: rgba(255, 255, 255, 0.24);
     }
 
     .box {
@@ -549,22 +550,23 @@
         font-size: 14px;
         color: white;
         box-shadow: 0 .5rem 1rem rgba(0,0,0,.15)!important;
+        
     }
 
     #city {
-        background-color: rgba(41, 128, 185, 0.75);
+        background-color: rgba(41, 127, 185, 0.205);
     }
 
     #temp {
-        background-color: rgba(43, 78, 101, 0.75);
+        background-color: rgba(43, 78, 101, 0.199);
     }
 
     #humidity {
-        background-color: rgba(52, 152, 219, 0.75);
+        background-color: rgba(52, 152, 219, 0.178);
     }
 
     #wind {
-        background-color: rgba(143, 146, 154, 0.75);
+        background-color: rgba(143, 146, 154, 0.226);
     }
 
 
@@ -722,6 +724,12 @@
             opacity: 1;
             transition: 1.2s all ease;
             transform: scale(1.1) translateY(-47px) translateX(-91px);
+        }
+
+        .clickedmeteopano {
+            opacity: 1;
+            transition: 1.2s all ease;
+            transform: scale(1.1) translateY(-65px) translateX(-80px);
         }
 
         /*pano*/
