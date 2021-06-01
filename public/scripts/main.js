@@ -15,18 +15,15 @@ const tempJoursDiv = document.querySelectorAll('.jour-prevision-temp');
 const imgIcone = document.querySelector('.logo-meteo');
 const chargementContainer = document.querySelector('.overlay-icone-chargement');
 
-if(navigator.geolocation) {
-    navigator.geolocation.getCurrentPosition(position => {
 
-        // console.log(position);
-        let long = position.coords.longitude;
-        let lat = position.coords.latitude;
-        AppelAPI(long,lat);
 
-    }, () => {
-        alert(`Vous avez refusé la géolocalisation, l'application ne peur pas fonctionner, veuillez l'activer.!`)
-    })
-}
+$('#meteo1').on("click", ()=>{ 
+    let long = $(this).data("long"); 
+    let lat= $(this).data("lat");
+    console.log(long,lat);
+    
+    AppelAPI(long,lat);
+})
 
 function AppelAPI(long, lat) {
 
