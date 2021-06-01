@@ -24,7 +24,7 @@
                         
                       <!--Boite meteo-->
 
-                      <div class="boite">
+                      <div class="boitemeteo">
                         <div class="overlay-icone-chargement">
                             <img src="ressources/chargement/circles.svg" alt="logo chargement">
                         </div>
@@ -367,12 +367,12 @@
     })
 
     $(".social1.meteo").click(function () {
-        $(".boite").toggleClass("clickedmeteo");
+        $(".boitemeteo").toggleClass("clickedmeteo");
         
     })
 
     $(".social2.meteo").click(function () {
-        $(".meteo2").toggleClass("clickedmeteo");
+        $(".boitemeteo").toggleClass("clickedmeteo");
         
     })
 
@@ -380,6 +380,8 @@
         $(".meteo3").toggleClass("clickedmeteopano");
         
     })
+
+    /*API javascript boite meteo panoramique*/
 
     const APIKEY = '6c768a12332784de4954dddb19d855d9';
 
@@ -395,14 +397,18 @@
         document.querySelector('#wind').innerHTML = "<i class='fas fa-wind'></i>" + data.wind.speed + 'km/h';
       })
     );
+
+    /*API javascript boite meteo panoramique FIN*/
+    
 </script>
 
 
 
 <style>
 
-    /*boite meteo*/
-    .boite {
+    /*API boite meteo*/
+
+    .boitemeteo {
         width: 264px;
         height: 139px;
         background: linear-gradient(45deg, #1069b659, #36a33262);
@@ -527,9 +533,15 @@
         opacity: 0;
     }
 
-    /*boite meteo fin*/
+    .boitemeteo {
+        opacity: 0;
+    }
 
-    /*API*/
+    /*API boite meteo FIN*/
+
+
+
+    /*API boite meteo panoramique*/
 
     .box-container {
         width: 240px;
@@ -570,21 +582,16 @@
     }
 
 
-    /*API*/
-
-
-
-    .boite {
-        opacity: 0;
-    }
-
-    .meteo2 {
-        opacity: 0;
-    }
-
     .meteo3 {
         opacity: 0;
     }
+    /*API boite meteo panoramique FIN*/
+
+
+
+    
+
+    
 
     /*MEDIA QUERIES*/
 
