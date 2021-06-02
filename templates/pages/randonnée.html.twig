@@ -14,7 +14,6 @@
         <div class="row">
 
             <!-- FEATURETTE 1 -->
-
             <div class="col-12 col-md-6">
 
                 <h2>{{titlef1}}</h2>
@@ -32,7 +31,7 @@
                     <button class="icone1 carte" type="button"><i class="fas fa-map-marked-alt"></i></button>
                     <button class="icone1 meteo" id="meteo1" type="button" long="55.684429" lat="-21.225193"><i class="fas fa-cloud-sun"></i>
 
-                    <!--Boite meteo 1-->
+                    <!-- BOITE METEO 1 -->
                     <div class="boitemeteo1">
 
                         <div class="overlay-icone-chargement">
@@ -117,7 +116,7 @@
                             </div>
                         </div>
                     </div>
-                    <!--Boite meteo 1 fin-->
+                    <!-- BOITE METEO 1 FIN -->
 
                     </button>
                     <button class="icone1 equipement" type="button"><i class="fas fa-hiking"></i></button>
@@ -126,12 +125,10 @@
 
                 </div>
             </div>
-
             <!-- FEATURETTE 1 FIN -->
 
 
             <!-- FEATURETTE 2 -->
-
             <div class="col-12 col-md-6">
 
                 <h2>{{titlef2}}</h2>
@@ -148,7 +145,7 @@
                     <button class="icone2 carte" type="button"><i class="fas fa-map-marked-alt"></i></button>
                     <button class="icone2 meteo" id="meteo2" type="button" long="55.221645" lat="-21.077855"><i class="fas fa-cloud-sun"></i>
 
-                    <!--Boite meteo 2-->
+                    <!-- BOITE METEO 2 -->
                     <div class="boitemeteo2">
 
                         <div class="overlay-icone-chargement">
@@ -233,7 +230,7 @@
                             </div>
                         </div>
                     </div>
-                    <!--Boite meteo 2 fin-->
+                    <!-- BOITE METEO 2 FIN -->
 
                     </button>
                     <button class="icone2 equipement" type="button"><i class="fas fa-hiking"></i></button>
@@ -242,14 +239,12 @@
 
                 </div>
             </div>
-
             <!-- FEATURETTE 2 FIN -->
 
         </div>
     </container>
 
     <!-- FEATURETTE 3 PANORAMIQUE -->
-
     <div class="pano">
 
         <container class="example-wrapper">
@@ -279,7 +274,6 @@
             
         </div>
     </div>
-
     <!-- FEATURETTE 3 PANORAMIQUE FIN -->
 
 
@@ -288,7 +282,6 @@
         <div class="row">
 
             <!-- FEATURETTE 4 -->
-
             <div class="col-12 col-md-6">
 
                 <h2>{{titlef4}}</h2>
@@ -311,12 +304,10 @@
                 </div>
 
             </div>
-
             <!-- FEATURETTE 4 FIN -->
 
 
             <!-- FEATURETTE 5 -->
-
             <div class="col-12 col-md-6">
 
                 <h2>{{titlef5}}</h2>
@@ -338,7 +329,6 @@
                     
                 </div>
             </div>
-
             <!-- FEATURETTE 5 FIN -->
 
         </div>
@@ -346,7 +336,6 @@
     </container>
 
     <!-- FEATURETTE 6 PANORAMIQUE -->
-
     <div class="pano">
 
         <container class="example-wrapper">
@@ -377,7 +366,6 @@
         </div>
 
     </div>
-
     <!-- FEATURETTE 6 PANORAMIQUE FIN -->
 
     <container class="example-wrapper">
@@ -385,7 +373,6 @@
         <div class="row">
 
             <!-- FEATURETTE 7 -->
-
             <div class="col-12 col-md-6">
 
                 <h2>{{titlef7}}</h2>
@@ -408,12 +395,10 @@
                 </div>
 
             </div>
-
             <!-- FEATURETTE 7 FIN -->
 
 
             <!-- FEATURETTE 8 -->
-
             <div class="col-12 col-md-6">
 
                 <h2>{{titlef8}}</h2>
@@ -436,7 +421,6 @@
                 </div>
 
             </div>
-
             <!-- FEATURETTE 8 FIN -->
 
         </div>
@@ -444,7 +428,6 @@
     </container>
 
     <!-- FEATURETTE 9 PANORAMIQUE -->
-
     <div class="pano">
 
         <container class="example-wrapper">
@@ -475,19 +458,14 @@
         </div>
 
     </div>
-
     <!-- FEATURETTE 9 PANORAMIQUE FIN -->
-
-
-
 
 
 
     <!--JAVASCRIPT-->
 <script>
 
-    // BOUTON FEATURETTE
-
+    // BOUTONS FEATURETTES
     $(".button1").click(function () {
         $(".icone1.carte").toggleClass("clicked");
         $(".icone1.meteo").toggleClass("clicked");
@@ -559,23 +537,24 @@
         $(".icone9.food").toggleClass("clicked");
         $(".icone9.accès").toggleClass("clicked");
     })
+    // BOUTONS FEATURETTES FIN
 
+
+    // ICONES FEATURETTES FIN
     $(".icone1.meteo").click(function () {
-        $(".boitemeteo1").toggleClass("clickedmeteo");
-        
+        $(".boitemeteo1").toggleClass("clickedmeteo1");
     })
 
     $(".icone2.meteo").click(function () {
-        $(".boitemeteo2").toggleClass("clickedmeteo");
-        
+        $(".boitemeteo2").toggleClass("clickedmeteo2");
     })
+    // ICONES FEATURETTES FIN
 
-    // BOUTON FEATURETTE FIN
+    
 
 
 
     //API METEO
-
 const CLEFAPI = '6c768a12332784de4954dddb19d855d9';
 let resultatsAPI;
 
@@ -629,7 +608,6 @@ function AppelAPI(long, lat) {
         localisation.innerText = resultatsAPI.timezone;
 
         // les heures, par tranche de trois, avec leur temperature.
-
         let heureActuelle = new Date().getHours();
 
         for(let i = 0; i < heure.length; i++) {
@@ -651,7 +629,6 @@ function AppelAPI(long, lat) {
         }
 
         // trois premieres lettres des jours 
-
         for(let k = 0; k < tabJoursEnOrdre.length; k++) {
             joursDiv[k].innerText = tabJoursEnOrdre[k].slice(0,3);
         }
@@ -691,8 +668,6 @@ let tabJoursEnOrdre = joursSemaine.slice(joursSemaine.indexOf(jourActuel)).conca
 
 
 
-
-
 <style>
 
     /*MEDIA QUERIES*/
@@ -700,9 +675,7 @@ let tabJoursEnOrdre = joursSemaine.slice(joursSemaine.indexOf(jourActuel)).conca
 
 
     /* API BOITE METEO */
-
     .boitemeteo1,.boitemeteo2 {
-        
         border: 1px solid #f1f1f1;
         background: linear-gradient(45deg, #1069b659, #36a33262);
         border-radius: 255px 25px 225px 25px/25px 225px 25px 255px;
@@ -805,7 +778,6 @@ let tabJoursEnOrdre = joursSemaine.slice(joursSemaine.indexOf(jourActuel)).conca
     }
     
     /* ANIMATION CHARGEMENT */
-    
     .overlay-icone-chargement {
         position: absolute;
         width: 40%;
@@ -826,9 +798,9 @@ let tabJoursEnOrdre = joursSemaine.slice(joursSemaine.indexOf(jourActuel)).conca
     .disparition {
         opacity: 0;
     }
+    /* ANIMATION CHARGEMENT FIN */
 
-    /* BOUTON CLOSE */
-
+    /* BOUTON BOITE METEO CLOSE */
     .closemeteo {
         font-size: 15px;
         margin-right: 10px;
@@ -841,6 +813,7 @@ let tabJoursEnOrdre = joursSemaine.slice(joursSemaine.indexOf(jourActuel)).conca
         text-decoration: none;
         color: #f1f1f1;
     }
+    /* BOUTON CLOSE BOITE METEO FIN */
 
     /* API BOITE METEO FIN */
 
@@ -869,6 +842,7 @@ let tabJoursEnOrdre = joursSemaine.slice(joursSemaine.indexOf(jourActuel)).conca
         margin-bottom: 5px;
     }
 
+    /* ALL: BOUTON INFO FEATURETTES */
     .button1:hover,.button2:hover,.button3:hover,.button4:hover,.button5:hover,.button6:hover,.button7:hover,.button8:hover,.button9:hover {
         -webkit-transform: scale(1.2);
         -moz-transform: scale(1.2);
@@ -892,7 +866,9 @@ let tabJoursEnOrdre = joursSemaine.slice(joursSemaine.indexOf(jourActuel)).conca
         -o-transition: all .5s cubic-bezier(.6, 2, .4, 1);
         transition: all .5s cubic-bezier(.6, 2, .4, 1);
     }
+    /* ALL: BOUTON INFO FEATURETTES FIN */
 
+    /* MENU BOUTON INFO FEATURETTES */
     .menu1,.menu2,.menu4,.menu5,.menu7,.menu8 {
         margin-top: -45px;
         margin-left: 20px;
@@ -900,9 +876,9 @@ let tabJoursEnOrdre = joursSemaine.slice(joursSemaine.indexOf(jourActuel)).conca
         justify-content: start;
         align-items: center;
     }
+    /* MENU BOUTON INFO FEATURETTES FIN*/
 
-    /*pano*/
-
+    /* MENU BOUTON INFO FEATURETTES PANORAMIQUE */
     .menu3,.menu6,.menu9 {
         margin-top: -45px;
         margin-left: 18px;
@@ -910,7 +886,9 @@ let tabJoursEnOrdre = joursSemaine.slice(joursSemaine.indexOf(jourActuel)).conca
         justify-content: start;
         align-items: center;
     }
+    /* MENU BOUTON INFO FEATURETTES PANORAMIQUE FIN */
     
+    /* ICONE FEATURETTES PANORAMIQUE */
     .icone3,.icone6,.icone9 {
         opacity: 0;
         position: relative;
@@ -926,8 +904,12 @@ let tabJoursEnOrdre = joursSemaine.slice(joursSemaine.indexOf(jourActuel)).conca
         align-items: center;  
     }
 
-    /*pano*/
+    .icone3 i,.icone6 i,.icone9 i {
+        font-size: 11px;
+    }
+    /* ICONE FEATURETTES PANORAMIQUE FIN */
 
+    /* ICONE FEATURETTES */
     .icone1,.icone2,.icone4,.icone5,.icone7,.icone8 {
         opacity: 0;
         position: relative;
@@ -944,10 +926,12 @@ let tabJoursEnOrdre = joursSemaine.slice(joursSemaine.indexOf(jourActuel)).conca
         
     }
 
-    .icone1 i,.icone2 i,.icone3 i,.icone4 i,.icone5 i,.icone6 i,.icone7 i,.icone8 i,.icone9 i {
+    .icone1 i,.icone2 i,.icone4 i,.icone5 i,.icone7 i,.icone8 i {
         font-size: 11px;
     }
+    /* ICONE FEATURETTES FIN */
 
+    /* FONT ICONES FEATURETTES */
     .fas.fa-info {
         font-size: 10px;
         margin-left: 13px;
@@ -969,26 +953,39 @@ let tabJoursEnOrdre = joursSemaine.slice(joursSemaine.indexOf(jourActuel)).conca
     .fas.fa-hamburger {
         margin-left: -1px;
     }
+    /* FONT ICONES FEATURETTES FIN */
 
+    /* CLICK BOUTONS INFO FEATURETTES */
     .clicked {
         opacity: 1;
         transition: 1.2s all ease;
         transform: translateX(9px);
     }
+    /* CLICK BOUTONS INFO FEATURETTES FIN */
 
-    .clickedmeteo {
+    /* CLICK ICONES BOITE METEO FEATURETTES */
+    .clickedmeteo1 {
         opacity: 1;
         transition: 1.2s all ease;
         transform: scale(1.1) translateY(-47px) translateX(-91px);
     }
 
+    .clickedmeteo2 {
+        opacity: 1;
+        transition: 1.2s all ease;
+        transform: scale(1.1) translateY(-47px) translateX(-91px);
+    }
+    /* CLICK ICONES BOITE METEO FEATURETTES FIN */
+
+    /* CLICK ICONES BOITE METEO FEATURETTES PANORAMIQUE */
     .clickedmeteopano {
         opacity: 1;
         transition: 1.2s all ease;
         transform: scale(1.1) translateY(-65px) translateX(-80px);
     }
-
-    /*pano*/
+    /* CLICK ICONES BOITE METEO FEATURETTES PANORAMIQUE FIN */
+    
+    /* CLICK ICONES FEATURETTES PANORAMIQUE */
     .icone3.clicked {
         opacity: 1;
         transition: 1.2s all ease;
@@ -1006,9 +1003,8 @@ let tabJoursEnOrdre = joursSemaine.slice(joursSemaine.indexOf(jourActuel)).conca
         transition: 1.2s all ease;
         transform: translateY(35px) translateX(9px);
     }
-    /*panofin*/
+    /* CLICK ICONES FEATURETTES PANORAMIQUE FIN */
     
-
     #chevron {
         margin-top: 50px;
         margin-bottom: 10px;
@@ -1016,7 +1012,6 @@ let tabJoursEnOrdre = joursSemaine.slice(joursSemaine.indexOf(jourActuel)).conca
 
 }
   
-
     @media screen and (min-width: 375px) and (max-width: 424px) {
 
         h1 {
