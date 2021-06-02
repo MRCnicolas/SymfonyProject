@@ -8,30 +8,40 @@
 
 
 <h1 class="text-center">{{title}}</h1>
+
     <container class="example-wrapper">
+
         <div class="row">
+
             <div class="col-12 col-md-6">
+
                 <h2>{{titlef1}}</h2>
+
                 <section>
                     <p class="espace"></p>
                 </section>
+
                  <img src="{{featurettes1}}" class="img-fluid img-thumbnail shadow">
 
                 <div class="menu1">
-                    <input class="button1" type="button"><i class="fas fa-info"></i></input>
-                    <button class="social1 carte" type="button"><i class="fas fa-map-marked-alt"></i></button>
-                    <button class="social1 meteo" id="meteo1" type="button" long="55.684429" lat="-21.225193"><i class="fas fa-cloud-sun"></i>
-                        
-                      <!--Boite meteo-->
 
+                    <input class="button1" type="button"><i class="fas fa-info"></i></input>
+
+                    <button class="icone1 carte" type="button"><i class="fas fa-map-marked-alt"></i></button>
+                    <button class="icone1 meteo" id="meteo1" type="button" long="55.684429" lat="-21.225193"><i class="fas fa-cloud-sun"></i>
+
+                      <!--Boite meteo 1-->
                       <div class="boitemeteo1">
+
                         <div class="overlay-icone-chargement">
                             <img src="ressources/chargement/circles.svg" alt="logo chargement">
                         </div>
+
                         <div class="bloc-logo-info">
                             <div class="bloc-logo">
                                 <img src="./ressources/jour/04d.svg" alt="logo du temps qu'il fait" class="logo-meteo">
                             </div>
+
                             <div class="bloc-info">
                                 <p class="temps"></p>
                                 <p class="temperature"></p>
@@ -39,6 +49,7 @@
                             </div>
                             <a href="#menuclose" class="closemeteo">&times;</a>
                         </div>
+
                         <div class="heure-bloc-prevision">
                             <div class="bloc-h">
                                 <p class="heure-nom-prevision"></p>
@@ -69,6 +80,7 @@
                                 <p class="heure-prevision-valeur"></p>
                             </div>
                         </div>
+
                         <div class="jour-prevision-bloc">
                             <div class="bloc-j">
                                 <p class="jour-prevision-nom"></p>
@@ -101,11 +113,13 @@
                         </div>
                     </div>
 
-                      <!--Boite meteo fin-->
+                      <!--Boite meteo 1 fin-->
+
                      </button>
-                    <button class="social1 equipement" type="button"><i class="fas fa-hiking"></i></button>
-                    <button class="social1 accès" type="button"><i class="fas fa-wheelchair"></i></button>
-                    <button class="social1 food" type="button"><i class="fas fa-hamburger"></i></button>
+                    <button class="icone1 equipement" type="button"><i class="fas fa-hiking"></i></button>
+                    <button class="icone1 accès" type="button"><i class="fas fa-wheelchair"></i></button>
+                    <button class="icone1 food" type="button"><i class="fas fa-hamburger"></i></button>
+
                 </div>
             </div>
 
@@ -121,16 +135,18 @@
 
 
                 <div class="menu2">
+
                     <input class="button2" type="button"><i class="fas fa-info"></i></input>
-                    <button class="social2 carte" type="button"><i class="fas fa-map-marked-alt"></i></button>
-                    <button class="social2 meteo" id="meteo2" type="button" long="55.221645" lat="-21.077855"><i class="fas fa-cloud-sun"></i>
+                    <button class="icone2 carte" type="button"><i class="fas fa-map-marked-alt"></i></button>
+                    <button class="icone2 meteo" id="meteo2" type="button" long="55.221645" lat="-21.077855"><i class="fas fa-cloud-sun"></i>
 
-                        <!--Boite meteo-->
-
+                        <!--Boite meteo 2-->
                       <div class="boitemeteo2">
+
                         <div class="overlay-icone-chargement">
                             <img src="ressources/chargement/circles.svg" alt="logo chargement">
                         </div>
+
                         <div class="bloc-logo-info">
                             <div class="bloc-logo">
                                 <img src="./ressources/jour/04d.svg" alt="logo du temps qu'il fait" class="logo-meteo">
@@ -142,6 +158,7 @@
                             </div>
                             <a href="#menuclose" class="closemeteo">&times;</a>
                         </div>
+
                         <div class="heure-bloc-prevision">
                             <div class="bloc-h">
                                 <p class="heure-nom-prevision"></p>
@@ -172,6 +189,7 @@
                                 <p class="heure-prevision-valeur"></p>
                             </div>
                         </div>
+
                         <div class="jour-prevision-bloc">
                             <div class="bloc-j">
                                 <p class="jour-prevision-nom"></p>
@@ -203,246 +221,302 @@
                             </div>
                         </div>
                     </div>
+                      <!--Boite meteo 2 fin-->
 
-                      <!--Boite meteo fin-->
                     </button>
-                    <button class="social2 equipement" type="button"><i class="fas fa-hiking"></i></button>
-                    <button class="social2 accès" type="button"><i class="fas fa-wheelchair"></i></button>
-                    <button class="social2 food" type="button"><i class="fas fa-hamburger"></i></button>
+                    <button class="icone2 equipement" type="button"><i class="fas fa-hiking"></i></button>
+                    <button class="icone2 accès" type="button"><i class="fas fa-wheelchair"></i></button>
+                    <button class="icone2 food" type="button"><i class="fas fa-hamburger"></i></button>
 
                 </div>
 
             </div>
 
         </div>
+
     </container>
 
     <div class="pano">
+
         <container class="example-wrapper">
+
             <h2>{{titlef3}}</h2>
+
             <section>
                 <p class="espace"></p>
             </section>
+
             <container class="d-flex justify-content-center">
                 <img src="{{featurettes3}}" class="img-fluid img-thumbnail shadow">
             </container>
+
         </container>
+
         <div class="menu3">
+
             <input class="button3" type="button"><i class="fas fa-info"></i></input>
-            <button class="social3 carte" type="button"><i class="fas fa-map-marked-alt"></i></button>
-            <button class="social3 meteo" type="button"><i class="fas fa-cloud-sun"></i></button>
-            <button class="social3 equipement" type="button"><i class="fas fa-hiking"></i></button>
-            <button class="social3 accès" type="button" ><i class="fas fa-wheelchair"></i></button>
-            <button class="social3 food" type="button"><i class="fas fa-hamburger"></i></button>
+            <button class="icone3 carte" type="button"><i class="fas fa-map-marked-alt"></i></button>
+            <button class="icone3 meteo" type="button"><i class="fas fa-cloud-sun"></i></button>
+            <button class="icone3 equipement" type="button"><i class="fas fa-hiking"></i></button>
+            <button class="icone3 accès" type="button" ><i class="fas fa-wheelchair"></i></button>
+            <button class="icone3 food" type="button"><i class="fas fa-hamburger"></i></button>
             
         </div>
     </div>
 
 
     <container class="example-wrapper">
+
         <div class="row">
 
             <div class="col-12 col-md-6">
+
                 <h2>{{titlef4}}</h2>
+
                 <section>
                     <p class="espace"></p>
                 </section>
+
                 <img src="{{featurettes4}}" class="img-fluid img-thumbnail shadow">
+
                 <div class="menu4">
+
                     <input class="button4" type="button"><i class="fas fa-info"></i></input>
-                    <button class="social4 carte" type="button"><i class="fas fa-map-marked-alt"></i></button>
-                    <button class="social4 meteo" type="button"><i class="fas fa-cloud-sun"></i></button>
-                    <button class="social4 equipement" type="button"><i class="fas fa-hiking"></i></button>
-                    <button class="social4 accès" type="button"><i class="fas fa-wheelchair"></i></button>
-                    <button class="social4 food" type="button"><i class="fas fa-hamburger"></i></button>
+                    <button class="icone4 carte" type="button"><i class="fas fa-map-marked-alt"></i></button>
+                    <button class="icone4 meteo" type="button"><i class="fas fa-cloud-sun"></i></button>
+                    <button class="icone4 equipement" type="button"><i class="fas fa-hiking"></i></button>
+                    <button class="icone4 accès" type="button"><i class="fas fa-wheelchair"></i></button>
+                    <button class="icone4 food" type="button"><i class="fas fa-hamburger"></i></button>
                     
                 </div>
+
             </div>
 
             <div class="col-12 col-md-6">
+
                 <h2>{{titlef5}}</h2>
+
                 <section>
                     <p class="espace"></p>
                 </section>
+
                 <img src="{{featurettes5}}" class="img-fluid img-thumbnail shadow">
+
                 <div class="menu5">
+
                     <input class="button5" type="button"><i class="fas fa-info"></i></input>
-                    <button class="social5 carte" type="button"><i class="fas fa-map-marked-alt"></i></button>
-                    <button class="social5 meteo" type="button"><i class="fas fa-cloud-sun"></i></button>
-                    <button class="social5 equipement" type="button"><i class="fas fa-hiking"></i></button>
-                    <button class="social5 accès" type="button"><i class="fas fa-wheelchair"></i></button>
-                    <button class="social5 food" type="button"><i class="fas fa-hamburger"></i></button>
+                    <button class="icone5 carte" type="button"><i class="fas fa-map-marked-alt"></i></button>
+                    <button class="icone5 meteo" type="button"><i class="fas fa-cloud-sun"></i></button>
+                    <button class="icone5 equipement" type="button"><i class="fas fa-hiking"></i></button>
+                    <button class="icone5 accès" type="button"><i class="fas fa-wheelchair"></i></button>
+                    <button class="icone5 food" type="button"><i class="fas fa-hamburger"></i></button>
                     
                 </div>
             </div>
 
         </div>
+
     </container>
 
     <div class="pano">
+
         <container class="example-wrapper">
+
             <h2>{{titlef6}}</h2>
+
             <section>
                 <p class="espace"></p>
             </section>
+
             <container class="d-flex justify-content-center">
+
                 <img src="{{featurettes6}}" class="img-fluid img-thumbnail shadow">
+
             </container>
+
         </container>
+
         <div class="menu6">
+
             <input class="button6" type="button"><i class="fas fa-info"></i></input>
-            <button class="social6 carte" type="button"><i class="fas fa-map-marked-alt"></i></button>
-            <button class="social6 meteo" type="button"><i class="fas fa-cloud-sun"></i></button>
-            <button class="social6 equipement" type="button"><i class="fas fa-hiking"></i></button>
-            <button class="social6 accès" type="button" type="button"><i class="fas fa-wheelchair"></i></button>
-            <button class="social6 food" type="button"><i class="fas fa-hamburger"></i></button>
+            <button class="icone6 carte" type="button"><i class="fas fa-map-marked-alt"></i></button>
+            <button class="icone6 meteo" type="button"><i class="fas fa-cloud-sun"></i></button>
+            <button class="icone6 equipement" type="button"><i class="fas fa-hiking"></i></button>
+            <button class="icone6 accès" type="button" type="button"><i class="fas fa-wheelchair"></i></button>
+            <button class="icone6 food" type="button"><i class="fas fa-hamburger"></i></button>
             
         </div>
+
     </div>
 
     <container class="example-wrapper">
+
         <div class="row">
 
             <div class="col-12 col-md-6">
+
                 <h2>{{titlef7}}</h2>
+
                 <section>
                     <p class="espace"></p>
                 </section>
+
                 <img src="{{featurettes7}}" class="img-fluid img-thumbnail shadow">
+
                 <div class="menu7">
+
                     <input class="button7" type="button"><i class="fas fa-info"></i></input>
-                    <button class="social7 carte" type="button"><i class="fas fa-map-marked-alt"></i></button>
-                    <button class="social7 meteo" type="button"><i class="fas fa-cloud-sun"></i></button>
-                    <button class="social7 equipement" type="button"><i class="fas fa-hiking"></i></button>
-                    <button class="social7 accès" type="button"><i class="fas fa-wheelchair"></i></button>
-                    <button class="social7 food" type="button"><i class="fas fa-hamburger"></i></button>
+                    <button class="icone7 carte" type="button"><i class="fas fa-map-marked-alt"></i></button>
+                    <button class="icone7 meteo" type="button"><i class="fas fa-cloud-sun"></i></button>
+                    <button class="icone7 equipement" type="button"><i class="fas fa-hiking"></i></button>
+                    <button class="icone7 accès" type="button"><i class="fas fa-wheelchair"></i></button>
+                    <button class="icone7 food" type="button"><i class="fas fa-hamburger"></i></button>
                     
                 </div>
+
             </div>
 
             <div class="col-12 col-md-6">
+
                 <h2>{{titlef8}}</h2>
+
                 <section>
                     <p class="espace"></p>
                 </section>
+
                 <img src="{{featurettes8}}" class="img-fluid img-thumbnail shadow">
+
                 <div class="menu8">
+
                     <input class="button8" type="button"><i class="fas fa-info"></i></input>
-                    <button class="social8 carte" type="button"><i class="fas fa-map-marked-alt"></i></button>
-                    <button class="social8 meteo" type="button"><i class="fas fa-cloud-sun"></i></button>
-                    <button class="social8 equipement" type="button"><i class="fas fa-hiking"></i></button>
-                    <button class="social8 accès" type="button"><i class="fas fa-wheelchair"></i></button>
-                    <button class="social8 food" type="button"><i class="fas fa-hamburger"></i></button>
+                    <button class="icone8 carte" type="button"><i class="fas fa-map-marked-alt"></i></button>
+                    <button class="icone8 meteo" type="button"><i class="fas fa-cloud-sun"></i></button>
+                    <button class="icone8 equipement" type="button"><i class="fas fa-hiking"></i></button>
+                    <button class="icone8 accès" type="button"><i class="fas fa-wheelchair"></i></button>
+                    <button class="icone8 food" type="button"><i class="fas fa-hamburger"></i></button>
                     
                 </div>
+
             </div>
 
         </div>
+
     </container>
 
     <div class="pano">
+
         <container class="example-wrapper">
+
             <h2>{{titlef9}}</h2>
+
             <section>
                 <p class="espace"></p>
             </section>
+
             <container class="d-flex justify-content-center">
+
                 <img src="{{featurettes9}}" class="img-fluid img-thumbnail shadow">
+
             </container>
+
         </container>
+
         <div class="menu9">
+
             <input class="button9" type="button"><i class="fas fa-info"></i></input>
-            <button class="social9 carte" type="button"><i class="fas fa-map-marked-alt"></i></button>
-            <button class="social9 meteo" type="button"><i class="fas fa-cloud-sun"></i></button>
-            <button class="social9 equipement" type="button"><i class="fas fa-hiking"></i></button>
-            <button class="social9 accès" type="button"><i class="fas fa-wheelchair"></i></button>
-            <button class="social9 food" type="button"><i class="fas fa-hamburger"></i></button>
+            <button class="icone9 carte" type="button"><i class="fas fa-map-marked-alt"></i></button>
+            <button class="icone9 meteo" type="button"><i class="fas fa-cloud-sun"></i></button>
+            <button class="icone9 equipement" type="button"><i class="fas fa-hiking"></i></button>
+            <button class="icone9 accès" type="button"><i class="fas fa-wheelchair"></i></button>
+            <button class="icone9 food" type="button"><i class="fas fa-hamburger"></i></button>
             
         </div>
+
     </div>
 
-    
+
+    <!--JAVASCRIPT-->
 
 <script>
 
     $(".button1").click(function () {
-        $(".social1.carte").toggleClass("clicked");
-        $(".social1.meteo").toggleClass("clicked");
-        $(".social1.equipement").toggleClass("clicked");
-        $(".social1.food").toggleClass("clicked");
-        $(".social1.accès").toggleClass("clicked");
+        $(".icone1.carte").toggleClass("clicked");
+        $(".icone1.meteo").toggleClass("clicked");
+        $(".icone1.equipement").toggleClass("clicked");
+        $(".icone1.food").toggleClass("clicked");
+        $(".icone1.accès").toggleClass("clicked");
     })
 
     $(".button2").click(function () {
-        $(".social2.meteo").toggleClass("clicked");
-        $(".social2.equipement").toggleClass("clicked");
-        $(".social2.carte").toggleClass("clicked");
-        $(".social2.food").toggleClass("clicked");
-        $(".social2.accès").toggleClass("clicked");
+        $(".icone2.meteo").toggleClass("clicked");
+        $(".icone2.equipement").toggleClass("clicked");
+        $(".icone2.carte").toggleClass("clicked");
+        $(".icone2.food").toggleClass("clicked");
+        $(".icone2.accès").toggleClass("clicked");
     })
 
     $(".button3").click(function () {
-        $(".social3.meteo").toggleClass("clicked");
-        $(".social3.equipement").toggleClass("clicked");
-        $(".social3.carte").toggleClass("clicked");
-        $(".social3.food").toggleClass("clicked");
-        $(".social3.accès").toggleClass("clicked");
+        $(".icone3.meteo").toggleClass("clicked");
+        $(".icone3.equipement").toggleClass("clicked");
+        $(".icone3.carte").toggleClass("clicked");
+        $(".icone3.food").toggleClass("clicked");
+        $(".icone3.accès").toggleClass("clicked");
     })
 
     $(".button4").click(function () {
-        $(".social4.meteo").toggleClass("clicked");
-        $(".social4.equipement").toggleClass("clicked");
-        $(".social4.carte").toggleClass("clicked");
-        $(".social4.food").toggleClass("clicked");
-        $(".social4.accès").toggleClass("clicked");
+        $(".icone4.meteo").toggleClass("clicked");
+        $(".icone4.equipement").toggleClass("clicked");
+        $(".icone4.carte").toggleClass("clicked");
+        $(".icone4.food").toggleClass("clicked");
+        $(".icone4.accès").toggleClass("clicked");
     })
 
     $(".button5").click(function () {
-        $(".social5.meteo").toggleClass("clicked");
-        $(".social5.equipement").toggleClass("clicked");
-        $(".social5.carte").toggleClass("clicked");
-        $(".social5.food").toggleClass("clicked");
-        $(".social5.accès").toggleClass("clicked");
+        $(".icone5.meteo").toggleClass("clicked");
+        $(".icone5.equipement").toggleClass("clicked");
+        $(".icone5.carte").toggleClass("clicked");
+        $(".icone5.food").toggleClass("clicked");
+        $(".icone5.accès").toggleClass("clicked");
     })
 
     $(".button6").click(function () {
-        $(".social6.meteo").toggleClass("clicked");
-        $(".social6.equipement").toggleClass("clicked");
-        $(".social6.carte").toggleClass("clicked");
-        $(".social6.food").toggleClass("clicked");
-        $(".social6.accès").toggleClass("clicked");
+        $(".icone6.meteo").toggleClass("clicked");
+        $(".icone6.equipement").toggleClass("clicked");
+        $(".icone6.carte").toggleClass("clicked");
+        $(".icone6.food").toggleClass("clicked");
+        $(".icone6.accès").toggleClass("clicked");
     })
 
     $(".button7").click(function () {
-        $(".social7.meteo").toggleClass("clicked");
-        $(".social7.equipement").toggleClass("clicked");
-        $(".social7.carte").toggleClass("clicked");
-        $(".social7.food").toggleClass("clicked");
-        $(".social7.accès").toggleClass("clicked");
+        $(".icone7.meteo").toggleClass("clicked");
+        $(".icone7.equipement").toggleClass("clicked");
+        $(".icone7.carte").toggleClass("clicked");
+        $(".icone7.food").toggleClass("clicked");
+        $(".icone7.accès").toggleClass("clicked");
     })
 
     $(".button8").click(function () {
-        $(".social8.meteo").toggleClass("clicked");
-        $(".social8.equipement").toggleClass("clicked");
-        $(".social8.carte").toggleClass("clicked");
-        $(".social8.food").toggleClass("clicked");
-        $(".social8.accès").toggleClass("clicked");
+        $(".icone8.meteo").toggleClass("clicked");
+        $(".icone8.equipement").toggleClass("clicked");
+        $(".icone8.carte").toggleClass("clicked");
+        $(".icone8.food").toggleClass("clicked");
+        $(".icone8.accès").toggleClass("clicked");
     })
 
     $(".button9").click(function () {
-        $(".social9.meteo").toggleClass("clicked");
-        $(".social9.equipement").toggleClass("clicked");
-        $(".social9.carte").toggleClass("clicked");
-        $(".social9.food").toggleClass("clicked");
-        $(".social9.accès").toggleClass("clicked");
+        $(".icone9.meteo").toggleClass("clicked");
+        $(".icone9.equipement").toggleClass("clicked");
+        $(".icone9.carte").toggleClass("clicked");
+        $(".icone9.food").toggleClass("clicked");
+        $(".icone9.accès").toggleClass("clicked");
     })
 
-    $(".social1.meteo").click(function () {
+    $(".icone1.meteo").click(function () {
         $(".boitemeteo1").toggleClass("clickedmeteo");
         
     })
 
-    $(".social2.meteo").click(function () {
+    $(".icone2.meteo").click(function () {
         $(".boitemeteo2").toggleClass("clickedmeteo");
         
     })
@@ -450,10 +524,6 @@
 
 
     //API METEO
-
-
-
-// console.log("DEPUIS MAIN JS:" + tabJoursEnOrdre);
 
 
 const CLEFAPI = '6c768a12332784de4954dddb19d855d9';
@@ -471,7 +541,6 @@ const chargementContainer = document.querySelector('.overlay-icone-chargement');
 
 $("#meteo1").on("click",((e) =>{ 
 
-    
     var el = $(e.currentTarget);
     var lat =  el.attr("lat");
     var long=  el.attr("long");
@@ -484,7 +553,6 @@ $("#meteo1").on("click",((e) =>{
 
 $("#meteo2").on("click",((e) =>{ 
 
-    
     var el = $(e.currentTarget);
     var lat =  el.attr("lat");
     var long=  el.attr("long");
@@ -510,7 +578,6 @@ function AppelAPI(long, lat) {
         temperature.innerText = `${Math.trunc(resultatsAPI.current.temp)}°`
         localisation.innerText = resultatsAPI.timezone;
 
-
         // les heures, par tranche de trois, avec leur temperature.
 
         let heureActuelle = new Date().getHours();
@@ -526,7 +593,6 @@ function AppelAPI(long, lat) {
             } else {
                 heure[i].innerText = `${heureIncr} h`;
             }
-
         }
 
         // temp pour 3h
@@ -534,13 +600,11 @@ function AppelAPI(long, lat) {
             tempPourH[j].innerText = `${Math.trunc(resultatsAPI.hourly[j * 3].temp)}°`
         }
 
-
         // trois premieres lettres des jours 
 
         for(let k = 0; k < tabJoursEnOrdre.length; k++) {
             joursDiv[k].innerText = tabJoursEnOrdre[k].slice(0,3);
         }
-
 
         // Temps par jour
         for(let m = 0; m < 7; m++){
@@ -554,15 +618,11 @@ function AppelAPI(long, lat) {
             imgIcone.src = `ressources/nuit/${resultatsAPI.current.weather[0].icon}.svg`
          }
 
-
          chargementContainer.classList.add('disparition');
-
     })
-
 }
 
 const joursSemaine = ['Lundi', 'Mardi', 'Mercredi', 'Jeudi', 'Vendredi', 'Samedi', 'Dimanche'];
-
 
 let ajd = new Date();
 let options = {weekday: 'long'};
@@ -574,53 +634,58 @@ jourActuel = jourActuel.charAt(0).toUpperCase() + jourActuel.slice(1);
 let tabJoursEnOrdre = joursSemaine.slice(joursSemaine.indexOf(jourActuel)).concat(joursSemaine.slice(0, joursSemaine.indexOf(jourActuel)));
 // console.log(tabJoursEnOrdre);
 
+
+//API METEO FIN
+
 </script>
+
+<!--JAVASCRIPT FIN-->
+
+
 
 
 
 <style>
 
+
+    /*MEDIA QUERIES*/
+
+
+    @media screen and (min-width: 320px) and (max-width: 374px) {
+
+
     /*API boite meteo*/
 
     .boitemeteo1,.boitemeteo2 {
-        width: 264px;
-        height: 139px;
+        
+        border: 1px solid #f1f1f1;
         background: linear-gradient(45deg, #1069b659, #36a33262);
         border-radius: 255px 25px 225px 25px/25px 225px 25px 255px;
         box-shadow: 0 .5rem 1rem rgba(0,0,0,.15)!important;
         display: grid;
         grid-template: 70px 30px 30px / repeat(7, 37px);
+        height: 139px;
         margin-top: 800px;
         margin-bottom: 800px;
+        opacity: 0;
         position: relative;
-        border: 1px solid #f1f1f1;
-    }
-
-    .closemeteo {
-        font-size: 15px;
-        margin-right: 10px;
-        text-decoration: none;
-        margin-top: -50px;
-        color: #f1f1f1;
-    }
-
-    a:hover {
-        text-decoration: none;
-        color: #f1f1f1;
+        width: 264px;
+        
     }
     
     .bloc-logo-info {
-        grid-area: 1 / 1 / 2 / -1;
-        display: flex;
-        justify-content: center;
         align-items: center;
+        display: flex;
+        grid-area: 1 / 1 / 2 / -1;
+        justify-content: center;
+        
     }
     .bloc-logo {
+        align-items: center;
         display: flex;
         flex-direction: column;
-        align-items: center;
-        width: 50%;
         height: auto;
+        width: 50%;
     }
     .bloc-logo img {
         margin-top: -10px;
@@ -707,187 +772,199 @@ let tabJoursEnOrdre = joursSemaine.slice(joursSemaine.indexOf(jourActuel)).conca
         opacity: 0;
     }
 
-    .boitemeteo1,.boitemeteo2 {
-        opacity: 0;
+    /* Bouton Close */
+
+    .closemeteo {
+        font-size: 15px;
+        margin-right: 10px;
+        text-decoration: none;
+        margin-top: -50px;
+        color: #f1f1f1;
+    }
+
+    a:hover {
+        text-decoration: none;
+        color: #f1f1f1;
     }
 
     /*API boite meteo FIN*/
 
 
-    /*MEDIA QUERIES*/
 
-    @media screen and (min-width: 320px) and (max-width: 374px) {
 
-        
-        h1 {
-            margin-top: 300px;
-            margin-bottom: 60px;
-            font-size: 30px;
-        }
 
-        h2 {
-            margin-top: 24px;
-            font-size: 20px;
-        }
-
-        .col-12 {
-            margin-bottom: 25px;
-        }
-
-        .pano {
-            margin-bottom: 25px;
-        }
-
-        .espace {
-            height: 5px;
-            margin-bottom: 5px;
-        }
-
-        .button1:hover,.button2:hover,.button3:hover,.button4:hover,.button5:hover,.button6:hover,.button7:hover,.button8:hover,.button9:hover {
-            -webkit-transform: scale(1.2);
-            -moz-transform: scale(1.2);
-            -ms-transform: scale(1.2);
-            -o-transform: scale(1.2);
-            transform: scale(1.2);
-        }
-
-        .button1,.button2,.button3,.button4,.button5,.button6,.button7,.button8,.button9 {
-            position: absolute;
-            width: 30px;
-            height: 20px;
-            background: rgba(255, 255, 255, 0.24);
-            border-color: rgba(133, 133, 133, 0.521)!important;
-            border-radius: 255px 25px 225px 25px/25px 225px 25px 255px;
-            box-shadow: 0 .5rem 1rem rgba(0, 0, 0, .15);
-
-            -webkit-transition: all .5s cubic-bezier(.6, 2, .4, 1);
-            -moz-transition: all .5s cubic-bezier(.6, 2, .4, 1);
-            -ms-transition: all .5s cubic-bezier(.6, 2, .4, 1);
-            -o-transition: all .5s cubic-bezier(.6, 2, .4, 1);
-            transition: all .5s cubic-bezier(.6, 2, .4, 1);
-        }
-
-        .menu1,.menu2,.menu4,.menu5,.menu7,.menu8 {
-            margin-top: -45px;
-            margin-left: 20px;
-            display: flex;
-            justify-content: start;
-            align-items: center;
-        }
     
-        /*pano*/
-
-        .menu3,.menu6,.menu9 {
-            margin-top: -45px;
-            margin-left: 18px;
-            display: flex;
-            justify-content: start;
-            align-items: center;
-        }
-        
-        .social3,.social6,.social9 {
-            opacity: 0;
-            position: relative;
-            margin: 8px;
-            width: 25px;
-            height: 25px;
-            background: rgba(255, 255, 255, 0.24);
-            border-color: rgba(133, 133, 133, 0.212)!important;
-            box-shadow: 0 .5rem 1rem rgba(0, 0, 0, .15);
-            border-radius: 100%;
-            color: #0b93e1;
-            display: flex;
-            align-items: center;  
-        }
-
-        /*pano*/
-
-        .social1,.social2,.social4,.social5,.social7,.social8 {
-            opacity: 0;
-            position: relative;
-            margin: 8px;
-            width: 25px;
-            height: 25px;
-            background: rgba(255, 255, 255, 0.24);
-            border-color: rgba(133, 133, 133, 0.404)!important;
-            box-shadow: 0 .5rem 1rem rgba(0, 0, 0, .15);
-            border-radius: 100%;
-            color: #FFF;
-            display: flex;
-            align-items: center;
-            
-        }
-    
-        .social1 i,.social2 i,.social3 i,.social4 i,.social5 i,.social6 i,.social7 i,.social8 i,.social9 i {
-            font-size: 11px;
-        }
-    
-        .fas.fa-info {
-            font-size: 10px;
-            margin-left: 13px;
-            color: white;
-        }
-
-        .fas.fa-cloud-sun {
-            margin-left: -2px;
-        }
-
-        .fas.fa-hiking {
-            margin-left: 0.5px;
-        }
-
-        .fas.fa-map-marked-alt {
-            margin-left: -1.5px;
-        }
-
-        .fas.fa-hamburger {
-            margin-left: -1px;
-        }
-    
-        .clicked {
-            opacity: 1;
-            transition: 1.2s all ease;
-            transform: translateX(9px);
-        }
-
-        .clickedmeteo {
-            opacity: 1;
-            transition: 1.2s all ease;
-            transform: scale(1.1) translateY(-47px) translateX(-91px);
-        }
-
-        .clickedmeteopano {
-            opacity: 1;
-            transition: 1.2s all ease;
-            transform: scale(1.1) translateY(-65px) translateX(-80px);
-        }
-
-        /*pano*/
-        .social3.clicked {
-            opacity: 1;
-            transition: 1.2s all ease;
-            transform: translateY(35px) translateX(9px);
-        }
-
-        .social6.clicked {
-            opacity: 1;
-            transition: 1.2s all ease;
-            transform: translateY(35px) translateX(9px);
-        }
-
-        .social9.clicked {
-            opacity: 1;
-            transition: 1.2s all ease;
-            transform: translateY(35px) translateX(9px);
-        }
-        /*panofin*/
-
-        #chevron {
-            margin-top: 50px;
-            margin-bottom: 10px;
-        }
-
+    h1 {
+        margin-top: 300px;
+        margin-bottom: 60px;
+        font-size: 30px;
     }
+
+    h2 {
+        margin-top: 24px;
+        font-size: 20px;
+    }
+
+    .col-12 {
+        margin-bottom: 25px;
+    }
+
+    .pano {
+        margin-bottom: 25px;
+    }
+
+    .espace {
+        height: 5px;
+        margin-bottom: 5px;
+    }
+
+    .button1:hover,.button2:hover,.button3:hover,.button4:hover,.button5:hover,.button6:hover,.button7:hover,.button8:hover,.button9:hover {
+        -webkit-transform: scale(1.2);
+        -moz-transform: scale(1.2);
+        -ms-transform: scale(1.2);
+        -o-transform: scale(1.2);
+        transform: scale(1.2);
+    }
+
+    .button1,.button2,.button3,.button4,.button5,.button6,.button7,.button8,.button9 {
+        position: absolute;
+        width: 30px;
+        height: 20px;
+        background: rgba(255, 255, 255, 0.24);
+        border-color: rgba(133, 133, 133, 0.521)!important;
+        border-radius: 255px 25px 225px 25px/25px 225px 25px 255px;
+        box-shadow: 0 .5rem 1rem rgba(0, 0, 0, .15);
+
+        -webkit-transition: all .5s cubic-bezier(.6, 2, .4, 1);
+        -moz-transition: all .5s cubic-bezier(.6, 2, .4, 1);
+        -ms-transition: all .5s cubic-bezier(.6, 2, .4, 1);
+        -o-transition: all .5s cubic-bezier(.6, 2, .4, 1);
+        transition: all .5s cubic-bezier(.6, 2, .4, 1);
+    }
+
+    .menu1,.menu2,.menu4,.menu5,.menu7,.menu8 {
+        margin-top: -45px;
+        margin-left: 20px;
+        display: flex;
+        justify-content: start;
+        align-items: center;
+    }
+
+    /*pano*/
+
+    .menu3,.menu6,.menu9 {
+        margin-top: -45px;
+        margin-left: 18px;
+        display: flex;
+        justify-content: start;
+        align-items: center;
+    }
+    
+    .icone3,.icone6,.icone9 {
+        opacity: 0;
+        position: relative;
+        margin: 8px;
+        width: 25px;
+        height: 25px;
+        background: rgba(255, 255, 255, 0.24);
+        border-color: rgba(133, 133, 133, 0.212)!important;
+        box-shadow: 0 .5rem 1rem rgba(0, 0, 0, .15);
+        border-radius: 100%;
+        color: #0b93e1;
+        display: flex;
+        align-items: center;  
+    }
+
+    /*pano*/
+
+    .icone1,.icone2,.icone4,.icone5,.icone7,.icone8 {
+        opacity: 0;
+        position: relative;
+        margin: 8px;
+        width: 25px;
+        height: 25px;
+        background: rgba(255, 255, 255, 0.24);
+        border-color: rgba(133, 133, 133, 0.404)!important;
+        box-shadow: 0 .5rem 1rem rgba(0, 0, 0, .15);
+        border-radius: 100%;
+        color: #FFF;
+        display: flex;
+        align-items: center;
+        
+    }
+
+    .icone1 i,.icone2 i,.icone3 i,.icone4 i,.icone5 i,.icone6 i,.icone7 i,.icone8 i,.icone9 i {
+        font-size: 11px;
+    }
+
+    .fas.fa-info {
+        font-size: 10px;
+        margin-left: 13px;
+        color: white;
+    }
+
+    .fas.fa-cloud-sun {
+        margin-left: -2px;
+    }
+
+    .fas.fa-hiking {
+        margin-left: 0.5px;
+    }
+
+    .fas.fa-map-marked-alt {
+        margin-left: -1.5px;
+    }
+
+    .fas.fa-hamburger {
+        margin-left: -1px;
+    }
+
+    .clicked {
+        opacity: 1;
+        transition: 1.2s all ease;
+        transform: translateX(9px);
+    }
+
+    .clickedmeteo {
+        opacity: 1;
+        transition: 1.2s all ease;
+        transform: scale(1.1) translateY(-47px) translateX(-91px);
+    }
+
+    .clickedmeteopano {
+        opacity: 1;
+        transition: 1.2s all ease;
+        transform: scale(1.1) translateY(-65px) translateX(-80px);
+    }
+
+    /*pano*/
+    .icone3.clicked {
+        opacity: 1;
+        transition: 1.2s all ease;
+        transform: translateY(35px) translateX(9px);
+    }
+
+    .icone6.clicked {
+        opacity: 1;
+        transition: 1.2s all ease;
+        transform: translateY(35px) translateX(9px);
+    }
+
+    .icone9.clicked {
+        opacity: 1;
+        transition: 1.2s all ease;
+        transform: translateY(35px) translateX(9px);
+    }
+    /*panofin*/
+    
+
+    #chevron {
+        margin-top: 50px;
+        margin-bottom: 10px;
+    }
+
+}
+  
 
     @media screen and (min-width: 375px) and (max-width: 424px) {
 
@@ -947,32 +1024,34 @@ let tabJoursEnOrdre = joursSemaine.slice(joursSemaine.indexOf(jourActuel)).conca
             align-items: center;
         }
     
-/*pano*/
-.menu3,.menu6,.menu9 {
-    margin-top: -45px;
-    margin-left: 18px;
-    display: flex;
-    justify-content: start;
-    align-items: center;
-}
+        /*pano*/
 
-.social3,.social6,.social9 {
-    opacity: 0;
-    position: relative;
-    margin: 10px;
-    width: 25px;
-    height: 25px;
-    background: rgba(255, 255, 255, 0.24);
-    border-color: rgba(133, 133, 133, 0.212)!important;
-    box-shadow: 0 .5rem 1rem rgba(0, 0, 0, .15);
-    border-radius: 100%;
-    color: #0b93e1;
-    display: flex;
-    align-items: center;  
-}
-/*pano*/
+        .menu3,.menu6,.menu9 {
+            margin-top: -45px;
+            margin-left: 18px;
+            display: flex;
+            justify-content: start;
+            align-items: center;
+        }
+        
+        .icone3,.icone6,.icone9 {
+            opacity: 0;
+            position: relative;
+            margin: 10px;
+            width: 25px;
+            height: 25px;
+            background: rgba(255, 255, 255, 0.24);
+            border-color: rgba(133, 133, 133, 0.212)!important;
+            box-shadow: 0 .5rem 1rem rgba(0, 0, 0, .15);
+            border-radius: 100%;
+            color: #0b93e1;
+            display: flex;
+            align-items: center;  
+        }
 
-        .social1,.social2,.social4,.social5,.social7,.social8 {
+        /*pano*/
+
+        .icone1,.icone2,.icone4,.icone5,.icone7,.icone8 {
             opacity: 0;
             position: relative;
             margin: 10px;
@@ -988,7 +1067,7 @@ let tabJoursEnOrdre = joursSemaine.slice(joursSemaine.indexOf(jourActuel)).conca
             
         }
     
-        .social1 i,.social2 i,.social3 i,.social4 i,.social5 i,.social6 i,.social7 i,.social8 i,.social9 i {
+        .icone1 i,.icone2 i,.icone3 i,.icone4 i,.icone5 i,.icone6 i,.icone7 i,.icone8 i,.icone9 i {
             font-size: 11px;
         }
     
@@ -1021,23 +1100,25 @@ let tabJoursEnOrdre = joursSemaine.slice(joursSemaine.indexOf(jourActuel)).conca
         }
 
         /*pano*/
-        .social3.clicked {
+
+        .icone3.clicked {
             opacity: 1;
             transition: 1.2s all ease;
             transform: translateY(35px) translateX(25px);
         }
 
-        .social6.clicked {
+        .icone6.clicked {
             opacity: 1;
             transition: 1.2s all ease;
             transform: translateY(35px) translateX(25px);
         }
 
-        .social9.clicked {
+        .icone9.clicked {
             opacity: 1;
             transition: 1.2s all ease;
             transform: translateY(35px) translateX(25px);
         }
+
         /*panofin*/
 
         #chevron {
@@ -1105,32 +1186,34 @@ let tabJoursEnOrdre = joursSemaine.slice(joursSemaine.indexOf(jourActuel)).conca
             align-items: center;
         }
     
-/*pano*/
-.menu3,.menu6,.menu9 {
-    margin-top: -45px;
-    margin-left: 18px;
-    display: flex;
-    justify-content: start;
-    align-items: center;
-}
+        /*pano*/
 
-.social3,.social6,.social9 {
-    opacity: 0;
-    position: relative;
-    margin: 10px;
-    width: 25px;
-    height: 25px;
-    background: rgba(255, 255, 255, 0.24);
-    border-color: rgba(133, 133, 133, 0.212)!important;
-    box-shadow: 0 .5rem 1rem rgba(0, 0, 0, .15);
-    border-radius: 100%;
-    color: #0b93e1;
-    display: flex;
-    align-items: center;  
-}
-/*pano*/
+        .menu3,.menu6,.menu9 {
+            margin-top: -45px;
+            margin-left: 18px;
+            display: flex;
+            justify-content: start;
+            align-items: center;
+        }
+        
+        .icone3,.icone6,.icone9 {
+            opacity: 0;
+            position: relative;
+            margin: 10px;
+            width: 25px;
+            height: 25px;
+            background: rgba(255, 255, 255, 0.24);
+            border-color: rgba(133, 133, 133, 0.212)!important;
+            box-shadow: 0 .5rem 1rem rgba(0, 0, 0, .15);
+            border-radius: 100%;
+            color: #0b93e1;
+            display: flex;
+            align-items: center;  
+        }
 
-        .social1,.social2,.social4,.social5,.social7,.social8 {
+        /*pano*/
+
+        .icone1,.icone2,.icone4,.icone5,.icone7,.icone8 {
             opacity: 0;
             position: relative;
             margin: 13px;
@@ -1146,7 +1229,7 @@ let tabJoursEnOrdre = joursSemaine.slice(joursSemaine.indexOf(jourActuel)).conca
             
         }
     
-        .social1 i,.social2 i,.social3 i,.social4 i,.social5 i,.social6 i,.social7 i,.social8 i,.social9 i {
+        .icone1 i,.icone2 i,.icone3 i,.icone4 i,.icone5 i,.icone6 i,.icone7 i,.icone8 i,.icone9 i {
             font-size: 11px;
         }
     
@@ -1179,23 +1262,25 @@ let tabJoursEnOrdre = joursSemaine.slice(joursSemaine.indexOf(jourActuel)).conca
         }
 
         /*pano*/
-        .social3.clicked {
+
+        .icone3.clicked {
             opacity: 1;
             transition: 1.2s all ease;
             transform: translateY(35px) translateX(50px);
         }
 
-        .social6.clicked {
+        .icone6.clicked {
             opacity: 1;
             transition: 1.2s all ease;
             transform: translateY(35px) translateX(50px);
         }
 
-        .social9.clicked {
+        .icone9.clicked {
             opacity: 1;
             transition: 1.2s all ease;
             transform: translateY(35px) translateX(50px);
         }
+
         /*panofin*/
 
         #chevron {
@@ -1261,7 +1346,7 @@ let tabJoursEnOrdre = joursSemaine.slice(joursSemaine.indexOf(jourActuel)).conca
             align-items: center;
         }
     
-        .social1,.social2,.social3,.social4,.social5,.social6,.social7,.social8,.social9 {
+        .icone1,.icone2,.icone3,.icone4,.icone5,.icone6,.icone7,.icone8,.icone9 {
             opacity: 0;
             position: relative;
             margin: 8px;
@@ -1276,7 +1361,7 @@ let tabJoursEnOrdre = joursSemaine.slice(joursSemaine.indexOf(jourActuel)).conca
             
         }
     
-        .social1 i,.social2 i,.social3 i,.social4 i,.social5 i,.social6 i,.social7 i,.social8 i,.social9 i {
+        .icone1 i,.icone2 i,.icone3 i,.icone4 i,.icone5 i,.icone6 i,.icone7 i,.icone8 i,.icone9 i {
             font-size: 11px;
         }
     
@@ -1371,7 +1456,7 @@ let tabJoursEnOrdre = joursSemaine.slice(joursSemaine.indexOf(jourActuel)).conca
             align-items: center;
         }
     
-        .social1,.social2,.social3,.social4,.social5,.social6,.social7,.social8,.social9 {
+        .icone1,.icone2,.icone3,.icone4,.icone5,.icone6,.icone7,.icone8,.icone9 {
             opacity: 0;
             position: relative;
             margin: 8px;
@@ -1386,7 +1471,7 @@ let tabJoursEnOrdre = joursSemaine.slice(joursSemaine.indexOf(jourActuel)).conca
             
         }
     
-        .social1 i,.social2 i,.social3 i,.social4 i,.social5 i,.social6 i,.social7 i,.social8 i,.social9 i {
+        .icone1 i,.icone2 i,.icone3 i,.icone4 i,.icone5 i,.icone6 i,.icone7 i,.icone8 i,.icone9 i {
             font-size: 11px;
         }
     
@@ -1425,43 +1510,6 @@ let tabJoursEnOrdre = joursSemaine.slice(joursSemaine.indexOf(jourActuel)).conca
     }
 
     @media screen and (min-width: 1024px) and (max-width: 1439px) {
-
-        .modal {
-            display: flex;
-            position: absolute;
-            visibility: hidden;
-            opacity: 0;
-            transition: .2s;
-            background: rgba(77, 77, 77, .7);
-            z-index: 1;
-        }
-
-        .modal:target {
-            visibility: visible;
-            opacity: 1;
-        }
-
-        .modal_content {
-            background-color: white;
-            width: 100%;
-            z-index: 1;
-        }
-
-        .modal_close {
-            position: absolute;
-            right: 30px;
-            text-decoration: none;
-            color: grey;
-        }
-
-        .modal_close:hover {
-            text-decoration: none;
-        }
-
-
-
-
-
 
         .container {
             max-width: 1010px;
@@ -1524,12 +1572,8 @@ let tabJoursEnOrdre = joursSemaine.slice(joursSemaine.indexOf(jourActuel)).conca
             justify-content: start;
             align-items: center;
         }
-    
-        .social1:hover,.social2:hover,.social3:hover,.social4:hover,.social5:hover,.social6:hover,.social7:hover,.social8:hover,.social9:hover {
-            
-        }
 
-        .social1,.social2,.social3,.social4,.social5,.social6,.social7,.social8,.social9 {
+        .icone1,.icone2,.icone3,.icone4,.icone5,.icone6,.icone7,.icone8,.icone9 {
             opacity: 0;
             margin: 10px;
             width: 30px;
@@ -1540,12 +1584,9 @@ let tabJoursEnOrdre = joursSemaine.slice(joursSemaine.indexOf(jourActuel)).conca
             color: #FFF;
             display: flex;
             align-items: center;
-
-            
-            
         }
     
-        .social1 i,.social2 i,.social3 i,.social4 i,.social5 i,.social6 i,.social7 i,.social8 i,.social9 i {
+        .icone1 i,.icone2 i,.icone3 i,.icone4 i,.icone5 i,.icone6 i,.icone7 i,.icone8 i,.icone9 i {
             font-size: 15px;
         }
     
@@ -1644,7 +1685,7 @@ let tabJoursEnOrdre = joursSemaine.slice(joursSemaine.indexOf(jourActuel)).conca
             align-items: center;
         }
     
-        .social1,.social2,.social3,.social4,.social5,.social6,.social7,.social8,.social9 {
+        .icone1,.icone2,.icone3,.icone4,.icone5,.icone6,.icone7,.icone8,.icone9 {
             opacity: 0;
             position: relative;
             margin: 8px;
@@ -1659,7 +1700,7 @@ let tabJoursEnOrdre = joursSemaine.slice(joursSemaine.indexOf(jourActuel)).conca
             
         }
     
-        .social1 i,.social2 i,.social3 i,.social4 i,.social5 i,.social6 i,.social7 i,.social8 i,.social9 i {
+        .icone1 i,.icone2 i,.icone3 i,.icone4 i,.icone5 i,.icone6 i,.icone7 i,.icone8 i,.icone9 i {
             font-size: 11px;
         }
     
@@ -1758,7 +1799,7 @@ let tabJoursEnOrdre = joursSemaine.slice(joursSemaine.indexOf(jourActuel)).conca
             align-items: center;
         }
     
-        .social1,.social2,.social3,.social4,.social5,.social6,.social7,.social8,.social9 {
+        .icone1,.icone2,.icone3,.icone4,.icone5,.icone6,.icone7,.icone8,.icone9 {
             opacity: 0;
             position: relative;
             margin: 8px;
@@ -1773,7 +1814,7 @@ let tabJoursEnOrdre = joursSemaine.slice(joursSemaine.indexOf(jourActuel)).conca
             
         }
     
-        .social1 i,.social2 i,.social3 i,.social4 i,.social5 i,.social6 i,.social7 i,.social8 i,.social9 i {
+        .icone1 i,.icone2 i,.icone3 i,.icone4 i,.icone5 i,.icone6 i,.icone7 i,.icone8 i,.icone9 i {
             font-size: 11px;
         }
     
@@ -1872,7 +1913,7 @@ let tabJoursEnOrdre = joursSemaine.slice(joursSemaine.indexOf(jourActuel)).conca
             align-items: center;
         }
     
-        .social1,.social2,.social3,.social4,.social5,.social6,.social7,.social8,.social9 {
+        .icone1,.icone2,.icone3,.icone4,.icone5,.icone6,.icone7,.icone8,.icone9 {
             opacity: 0;
             position: relative;
             margin: 8px;
@@ -1887,7 +1928,7 @@ let tabJoursEnOrdre = joursSemaine.slice(joursSemaine.indexOf(jourActuel)).conca
             
         }
     
-        .social1 i,.social2 i,.social3 i,.social4 i,.social5 i,.social6 i,.social7 i,.social8 i,.social9 i {
+        .icone1 i,.icone2 i,.icone3 i,.icone4 i,.icone5 i,.icone6 i,.icone7 i,.icone8 i,.icone9 i {
             font-size: 11px;
         }
     
