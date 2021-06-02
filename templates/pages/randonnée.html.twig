@@ -255,8 +255,6 @@
                 <p class="espace"></p>
             </section>
 
-            
-
             <container class="d-flex justify-content-center">
                 <img src="{{featurettes3}}" class="img-fluid img-thumbnail shadow">
             </container>
@@ -464,7 +462,6 @@
 
     <!--JAVASCRIPT-->
 <script>
-
     // BOUTONS FEATURETTES
     $(".button1").click(function () {
         $(".icone1.carte").toggleClass("clicked");
@@ -550,12 +547,30 @@
     })
     // ICONES FEATURETTES FIN
 
+    $("#meteo1").on("click",((e) =>{ 
+        var el = $(e.currentTarget);
+        var lat =  el.attr("lat");
+        var long=  el.attr("long");
     
+        console.log(long,lat);
+    
+        AppelAPI(long,lat);
+    }));
+    
+    $("#meteo2").on("click",((e) =>{ 
+        var el = $(e.currentTarget);
+        var lat =  el.attr("lat");
+        var long=  el.attr("long");
+    
+        console.log(long,lat);
+        
+        AppelAPI(long,lat);
+    }));
 
-
-
+    
     //API METEO
 const CLEFAPI = '6c768a12332784de4954dddb19d855d9';
+
 let resultatsAPI;
 
 const temps = document.querySelector('.temps');
@@ -568,29 +583,7 @@ const tempJoursDiv = document.querySelectorAll('.jour-prevision-temp');
 const imgIcone = document.querySelector('.logo-meteo');
 const chargementContainer = document.querySelector('.overlay-icone-chargement');
 
-$("#meteo1").on("click",((e) =>{ 
 
-    var el = $(e.currentTarget);
-    var lat =  el.attr("lat");
-    var long=  el.attr("long");
-
-    console.log(long,lat);
-
-    AppelAPI(long,lat);
-    
-}));
-
-$("#meteo2").on("click",((e) =>{ 
-
-    var el = $(e.currentTarget);
-    var lat =  el.attr("lat");
-    var long=  el.attr("long");
-
-    console.log(long,lat);
-
-    AppelAPI(long,lat);
-    
-}));
 
 function AppelAPI(long, lat) {
 
@@ -607,7 +600,9 @@ function AppelAPI(long, lat) {
         temperature.innerText = `${Math.trunc(resultatsAPI.current.temp)}°`
         localisation.innerText = resultatsAPI.timezone;
 
+
         // les heures, par tranche de trois, avec leur temperature.
+
         let heureActuelle = new Date().getHours();
 
         for(let i = 0; i < heure.length; i++) {
@@ -621,6 +616,7 @@ function AppelAPI(long, lat) {
             } else {
                 heure[i].innerText = `${heureIncr} h`;
             }
+
         }
 
         // temp pour 3h
@@ -628,10 +624,13 @@ function AppelAPI(long, lat) {
             tempPourH[j].innerText = `${Math.trunc(resultatsAPI.hourly[j * 3].temp)}°`
         }
 
+
         // trois premieres lettres des jours 
+
         for(let k = 0; k < tabJoursEnOrdre.length; k++) {
             joursDiv[k].innerText = tabJoursEnOrdre[k].slice(0,3);
         }
+
 
         // Temps par jour
         for(let m = 0; m < 7; m++){
@@ -645,8 +644,11 @@ function AppelAPI(long, lat) {
             imgIcone.src = `ressources/nuit/${resultatsAPI.current.weather[0].icon}.svg`
          }
 
+
          chargementContainer.classList.add('disparition');
+
     })
+
 }
 
 const joursSemaine = ['Lundi', 'Mardi', 'Mercredi', 'Jeudi', 'Vendredi', 'Samedi', 'Dimanche'];
@@ -663,13 +665,14 @@ let tabJoursEnOrdre = joursSemaine.slice(joursSemaine.indexOf(jourActuel)).conca
 
 // API METEO FIN
 
+
+
 </script>
 <!-- JAVASCRIPT FIN -->
 
 
 
 <style>
-
     /*MEDIA QUERIES*/
     @media screen and (min-width: 320px) and (max-width: 374px) {
 
@@ -688,7 +691,6 @@ let tabJoursEnOrdre = joursSemaine.slice(joursSemaine.indexOf(jourActuel)).conca
         opacity: 0;
         position: relative;
         width: 264px;
-    
     }
     
     .bloc-logo-info {
