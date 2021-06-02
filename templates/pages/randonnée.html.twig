@@ -13,6 +13,8 @@
 
         <div class="row">
 
+            <!-- FEATURETTE 1 -->
+
             <div class="col-12 col-md-6">
 
                 <h2>{{titlef1}}</h2>
@@ -21,7 +23,7 @@
                     <p class="espace"></p>
                 </section>
 
-                 <img src="{{featurettes1}}" class="img-fluid img-thumbnail shadow">
+                <img src="{{featurettes1}}" class="img-fluid img-thumbnail shadow">
 
                 <div class="menu1">
 
@@ -30,8 +32,8 @@
                     <button class="icone1 carte" type="button"><i class="fas fa-map-marked-alt"></i></button>
                     <button class="icone1 meteo" id="meteo1" type="button" long="55.684429" lat="-21.225193"><i class="fas fa-cloud-sun"></i>
 
-                      <!--Boite meteo 1-->
-                      <div class="boitemeteo1">
+                    <!--Boite meteo 1-->
+                    <div class="boitemeteo1">
 
                         <div class="overlay-icone-chargement">
                             <img src="ressources/chargement/circles.svg" alt="logo chargement">
@@ -115,16 +117,20 @@
                             </div>
                         </div>
                     </div>
+                    <!--Boite meteo 1 fin-->
 
-                      <!--Boite meteo 1 fin-->
-
-                     </button>
+                    </button>
                     <button class="icone1 equipement" type="button"><i class="fas fa-hiking"></i></button>
                     <button class="icone1 accès" type="button"><i class="fas fa-wheelchair"></i></button>
                     <button class="icone1 food" type="button"><i class="fas fa-hamburger"></i></button>
 
                 </div>
             </div>
+
+            <!-- FEATURETTE 1 FIN -->
+
+
+            <!-- FEATURETTE 2 -->
 
             <div class="col-12 col-md-6">
 
@@ -136,15 +142,14 @@
 
                 <img src="{{featurettes2}}" class="img-fluid img-thumbnail shadow">
 
-
                 <div class="menu2">
 
                     <input class="button2" type="button"><i class="fas fa-info"></i></input>
                     <button class="icone2 carte" type="button"><i class="fas fa-map-marked-alt"></i></button>
                     <button class="icone2 meteo" id="meteo2" type="button" long="55.221645" lat="-21.077855"><i class="fas fa-cloud-sun"></i>
 
-                        <!--Boite meteo 2-->
-                      <div class="boitemeteo2">
+                    <!--Boite meteo 2-->
+                    <div class="boitemeteo2">
 
                         <div class="overlay-icone-chargement">
                             <img src="ressources/chargement/circles.svg" alt="logo chargement">
@@ -228,7 +233,7 @@
                             </div>
                         </div>
                     </div>
-                      <!--Boite meteo 2 fin-->
+                    <!--Boite meteo 2 fin-->
 
                     </button>
                     <button class="icone2 equipement" type="button"><i class="fas fa-hiking"></i></button>
@@ -236,12 +241,14 @@
                     <button class="icone2 food" type="button"><i class="fas fa-hamburger"></i></button>
 
                 </div>
-
             </div>
 
-        </div>
+            <!-- FEATURETTE 2 FIN -->
 
+        </div>
     </container>
+
+    <!-- FEATURETTE 3 PANORAMIQUE -->
 
     <div class="pano">
 
@@ -252,6 +259,8 @@
             <section>
                 <p class="espace"></p>
             </section>
+
+            
 
             <container class="d-flex justify-content-center">
                 <img src="{{featurettes3}}" class="img-fluid img-thumbnail shadow">
@@ -271,10 +280,14 @@
         </div>
     </div>
 
+    <!-- FEATURETTE 3 PANORAMIQUE FIN -->
+
 
     <container class="example-wrapper">
 
         <div class="row">
+
+            <!-- FEATURETTE 4 -->
 
             <div class="col-12 col-md-6">
 
@@ -299,6 +312,11 @@
 
             </div>
 
+            <!-- FEATURETTE 4 FIN -->
+
+
+            <!-- FEATURETTE 5 -->
+
             <div class="col-12 col-md-6">
 
                 <h2>{{titlef5}}</h2>
@@ -321,9 +339,13 @@
                 </div>
             </div>
 
+            <!-- FEATURETTE 5 FIN -->
+
         </div>
 
     </container>
+
+    <!-- FEATURETTE 6 PANORAMIQUE -->
 
     <div class="pano">
 
@@ -356,9 +378,13 @@
 
     </div>
 
+    <!-- FEATURETTE 6 PANORAMIQUE FIN -->
+
     <container class="example-wrapper">
 
         <div class="row">
+
+            <!-- FEATURETTE 7 -->
 
             <div class="col-12 col-md-6">
 
@@ -383,6 +409,11 @@
 
             </div>
 
+            <!-- FEATURETTE 7 FIN -->
+
+
+            <!-- FEATURETTE 8 -->
+
             <div class="col-12 col-md-6">
 
                 <h2>{{titlef8}}</h2>
@@ -406,9 +437,13 @@
 
             </div>
 
+            <!-- FEATURETTE 8 FIN -->
+
         </div>
 
     </container>
+
+    <!-- FEATURETTE 9 PANORAMIQUE -->
 
     <div class="pano">
 
@@ -441,9 +476,14 @@
 
     </div>
 
+    <!-- FEATURETTE 9 PANORAMIQUE FIN -->
+
+
+
+
+
 
     <!--JAVASCRIPT-->
-
 <script>
 
     $(".button1").click(function () {
@@ -531,7 +571,6 @@
 
 
     //API METEO
-
 
 const CLEFAPI = '6c768a12332784de4954dddb19d855d9';
 let resultatsAPI;
@@ -641,11 +680,9 @@ jourActuel = jourActuel.charAt(0).toUpperCase() + jourActuel.slice(1);
 let tabJoursEnOrdre = joursSemaine.slice(joursSemaine.indexOf(jourActuel)).concat(joursSemaine.slice(0, joursSemaine.indexOf(jourActuel)));
 // console.log(tabJoursEnOrdre);
 
-
 //API METEO FIN
 
 </script>
-
 <!--JAVASCRIPT FIN-->
 
 
@@ -654,10 +691,7 @@ let tabJoursEnOrdre = joursSemaine.slice(joursSemaine.indexOf(jourActuel)).conca
 
 <style>
 
-
     /*MEDIA QUERIES*/
-
-
     @media screen and (min-width: 320px) and (max-width: 374px) {
 
 
