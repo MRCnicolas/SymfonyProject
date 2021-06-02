@@ -123,7 +123,8 @@
                 <div class="menu2">
                     <input class="button2" type="button"><i class="fas fa-info"></i></input>
                     <button class="social2 carte" type="button"><i class="fas fa-map-marked-alt"></i></button>
-                    <button class="social2 meteo" id="meteo2" type="button" long="55.221042" lat="-21.07802"><i class="fas fa-cloud-sun"></i>
+                    <button class="social2 meteo" id="meteo2" type="button" long="55.221645" lat="-21.077855"><i class="fas fa-cloud-sun"></i>
+
                         <!--Boite meteo-->
 
                       <div class="boitemeteo2">
@@ -229,16 +230,7 @@
         <div class="menu3">
             <input class="button3" type="button"><i class="fas fa-info"></i></input>
             <button class="social3 carte" type="button"><i class="fas fa-map-marked-alt"></i></button>
-            <button class="social3 meteo" type="button"><i class="fas fa-cloud-sun"></i>
-                <div class="meteo3">
-                      <div class="box-container img-fluid img-thumbnail shadow">
-                          <div id="city" class="box"></div>
-                          <div id="temp" class="box"></div>
-                          <div id="humidity" class="box"></div>
-                          <div id="wind" class="box"></div>
-                      </div>
-                </div>
-               </button>
+            <button class="social3 meteo" type="button"><i class="fas fa-cloud-sun"></i></button>
             <button class="social3 equipement" type="button"><i class="fas fa-hiking"></i></button>
             <button class="social3 accès" type="button" ><i class="fas fa-wheelchair"></i></button>
             <button class="social3 food" type="button"><i class="fas fa-hamburger"></i></button>
@@ -371,8 +363,6 @@
 
     
 
-    <script type="module" src="scripts/main.js"></script>
-
 <script>
 
     $(".button1").click(function () {
@@ -383,12 +373,6 @@
         $(".social1.accès").toggleClass("clicked");
     })
 
-    $(".social1.meteo").click(function () {
-        $(".boitemeteo1").toggleClass("clickedmeteo");
-        
-    })
-
-
     $(".button2").click(function () {
         $(".social2.meteo").toggleClass("clicked");
         $(".social2.equipement").toggleClass("clicked");
@@ -397,22 +381,12 @@
         $(".social2.accès").toggleClass("clicked");
     })
 
-    $(".social2.meteo").click(function () {
-        $(".boitemeteo2").toggleClass("clickedmeteo");
-        
-    })
-
     $(".button3").click(function () {
         $(".social3.meteo").toggleClass("clicked");
         $(".social3.equipement").toggleClass("clicked");
         $(".social3.carte").toggleClass("clicked");
         $(".social3.food").toggleClass("clicked");
         $(".social3.accès").toggleClass("clicked");
-    })
-
-    $(".social3.meteo").click(function () {
-        $(".meteo3").toggleClass("clickedmeteopano");
-        
     })
 
     $(".button4").click(function () {
@@ -463,31 +437,142 @@
         $(".social9.accès").toggleClass("clicked");
     })
 
-    
+    $(".social1.meteo").click(function () {
+        $(".boitemeteo1").toggleClass("clickedmeteo");
+        
+    })
+
+    $(".social2.meteo").click(function () {
+        $(".boitemeteo2").toggleClass("clickedmeteo");
+        
+    })
+
+
+
+    //API METEO
+
+
+
+// console.log("DEPUIS MAIN JS:" + tabJoursEnOrdre);
+
+
+const CLEFAPI = '6c768a12332784de4954dddb19d855d9';
+let resultatsAPI;
+
+const temps = document.querySelector('.temps');
+const temperature = document.querySelector('.temperature');
+const localisation = document.querySelector('.localisation');
+const heure = document.querySelectorAll('.heure-nom-prevision');
+const tempPourH = document.querySelectorAll('.heure-prevision-valeur');
+const joursDiv = document.querySelectorAll('.jour-prevision-nom');
+const tempJoursDiv = document.querySelectorAll('.jour-prevision-temp');
+const imgIcone = document.querySelector('.logo-meteo');
+const chargementContainer = document.querySelector('.overlay-icone-chargement');
+
+$("#meteo1").on("click",((e) =>{ 
 
     
+    var el = $(e.currentTarget);
+    var lat =  el.attr("lat");
+    var long=  el.attr("long");
+
+    console.log(long,lat);
+
+    AppelAPI(long,lat);
+    
+}));
+
+$("#meteo2").on("click",((e) =>{ 
 
     
+    var el = $(e.currentTarget);
+    var lat =  el.attr("lat");
+    var long=  el.attr("long");
+
+    console.log(long,lat);
+
+    AppelAPI(long,lat);
     
+}));
 
-    /*API javascript boite meteo panoramique*/
+function AppelAPI(long, lat) {
 
-    const APIKEY = '6c768a12332784de4954dddb19d855d9';
-
-    let url = `https://api.openweathermap.org/data/2.5/weather?q=Cilaos&appid=${APIKEY}&units=metric&lang=fr`;
-
-    fetch(url)
-     .then( (response) =>
-      response.json().then((data) => {
+    fetch(`https://api.openweathermap.org/data/2.5/onecall?lat=${lat}&lon=${long}&exclude=minutely&units=metric&lang=fr&appid=${CLEFAPI}`)
+    .then((reponse) => {
+        return reponse.json();
+    })
+    .then((data) => {
         console.log(data);
-        document.querySelector('#city').innerHTML = data.name;
-        document.querySelector('#temp').innerHTML = "<i class='fas fa-thermometer-quarter'></i>" + data.main.temp + '°';
-        document.querySelector('#humidity').innerHTML = "<i class='fas fa-tint'></i>" + data.main.humidity + '%';
-        document.querySelector('#wind').innerHTML = "<i class='fas fa-wind'></i>" + data.wind.speed + 'km/h';
-      })
-    );
 
-    /*API javascript boite meteo panoramique FIN*/
+        resultatsAPI = data;
+
+        temps.innerText = resultatsAPI.current.weather[0].description;
+        temperature.innerText = `${Math.trunc(resultatsAPI.current.temp)}°`
+        localisation.innerText = resultatsAPI.timezone;
+
+
+        // les heures, par tranche de trois, avec leur temperature.
+
+        let heureActuelle = new Date().getHours();
+
+        for(let i = 0; i < heure.length; i++) {
+
+            let heureIncr = heureActuelle + i * 3;
+
+            if(heureIncr > 24) {
+                heure[i].innerText = `${heureIncr - 24} h`;
+            } else if(heureIncr === 24) {
+                heure[i].innerText = "00 h"
+            } else {
+                heure[i].innerText = `${heureIncr} h`;
+            }
+
+        }
+
+        // temp pour 3h
+        for(let j = 0; j < tempPourH.length; j++) {
+            tempPourH[j].innerText = `${Math.trunc(resultatsAPI.hourly[j * 3].temp)}°`
+        }
+
+
+        // trois premieres lettres des jours 
+
+        for(let k = 0; k < tabJoursEnOrdre.length; k++) {
+            joursDiv[k].innerText = tabJoursEnOrdre[k].slice(0,3);
+        }
+
+
+        // Temps par jour
+        for(let m = 0; m < 7; m++){
+            tempJoursDiv[m].innerText = `${Math.trunc(resultatsAPI.daily[m + 1].temp.day)}°`
+        }
+
+        // Icone dynamique 
+         if(heureActuelle >= 6 && heureActuelle < 21) {
+             imgIcone.src = `ressources/jour/${resultatsAPI.current.weather[0].icon}.svg`
+         } else  {
+            imgIcone.src = `ressources/nuit/${resultatsAPI.current.weather[0].icon}.svg`
+         }
+
+
+         chargementContainer.classList.add('disparition');
+
+    })
+
+}
+
+const joursSemaine = ['Lundi', 'Mardi', 'Mercredi', 'Jeudi', 'Vendredi', 'Samedi', 'Dimanche'];
+
+
+let ajd = new Date();
+let options = {weekday: 'long'};
+let jourActuel = ajd.toLocaleDateString('fr-FR', options);
+// console.log(jourActuel, ajd);
+
+jourActuel = jourActuel.charAt(0).toUpperCase() + jourActuel.slice(1);
+
+let tabJoursEnOrdre = joursSemaine.slice(joursSemaine.indexOf(jourActuel)).concat(joursSemaine.slice(0, joursSemaine.indexOf(jourActuel)));
+// console.log(tabJoursEnOrdre);
 
 </script>
 
@@ -628,58 +713,6 @@
 
     /*API boite meteo FIN*/
 
-
-
-    /*API boite meteo panoramique*/
-
-    .box-container {
-        width: 240px;
-        height: 72px;
-        display: flex;
-        flex-direction: row;
-        margin-top: 36px;
-        background-color: rgba(255, 255, 255, 0.24);
-    }
-
-    .box {
-        width: 60px;
-        height: 60px;
-        display: flex;
-        flex-direction: row;
-        justify-content: center;
-        align-items: center;
-        font-size: 14px;
-        color: white;
-        box-shadow: 0 .5rem 1rem rgba(0,0,0,.15)!important;
-        
-    }
-
-    #city {
-        background-color: rgba(41, 127, 185, 0.205);
-    }
-
-    #temp {
-        background-color: rgba(43, 78, 101, 0.199);
-    }
-
-    #humidity {
-        background-color: rgba(52, 152, 219, 0.178);
-    }
-
-    #wind {
-        background-color: rgba(143, 146, 154, 0.226);
-    }
-
-    .meteo3 {
-        opacity: 0;
-    }
-    /*API boite meteo panoramique FIN*/
-
-
-
-    
-
-    
 
     /*MEDIA QUERIES*/
 
