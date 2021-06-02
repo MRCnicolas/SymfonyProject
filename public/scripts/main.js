@@ -17,13 +17,16 @@ const chargementContainer = document.querySelector('.overlay-icone-chargement');
 
 
 
-$('#meteo1').on("click", ()=>{ 
-    let long = $(this).data("long"); 
-    let lat= $(this).data("lat");
-    console.log(long,lat);
+$("#meteo1").on("click",((e) =>{ 
+    var el = $(e.currentTarget); 
+    var lat =  el.attr("lat"); 
+    var long=  el.attr("long");
     
     AppelAPI(long,lat);
-})
+    console.log(data);
+}));
+
+
 
 function AppelAPI(long, lat) {
 

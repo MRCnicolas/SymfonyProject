@@ -20,7 +20,7 @@
                 <div class="menu1">
                     <input class="button1" type="button"><i class="fas fa-info"></i></input>
                     <button class="social1 carte" type="button"><i class="fas fa-map-marked-alt"></i></button>
-                    <button class="social1 meteo" id="meteo1" type="button" long="55.7167" lat="-21.2333"><i class="fas fa-cloud-sun"></i>
+                    <button class="social1 meteo" id="meteo1" type="button" long="55.684429" lat="-21.225193"><i class="fas fa-cloud-sun"></i>
                         
                       <!--Boite meteo-->
 
@@ -123,7 +123,7 @@
                 <div class="menu2">
                     <input class="button2" type="button"><i class="fas fa-info"></i></input>
                     <button class="social2 carte" type="button"><i class="fas fa-map-marked-alt"></i></button>
-                    <button class="social2 meteo" type="button"><i class="fas fa-cloud-sun"></i>
+                    <button class="social2 meteo" id="meteo2" type="button" long="55.221042" lat="-21.07802"><i class="fas fa-cloud-sun"></i>
                         <!--Boite meteo-->
 
                       <div class="boitemeteo2">
@@ -376,12 +376,18 @@
 <script>
 
     $(".button1").click(function () {
+        $(".social1.carte").toggleClass("clicked");
         $(".social1.meteo").toggleClass("clicked");
         $(".social1.equipement").toggleClass("clicked");
-        $(".social1.carte").toggleClass("clicked");
         $(".social1.food").toggleClass("clicked");
         $(".social1.accès").toggleClass("clicked");
     })
+
+    $(".social1.meteo").click(function () {
+        $(".boitemeteo1").toggleClass("clickedmeteo");
+        
+    })
+
 
     $(".button2").click(function () {
         $(".social2.meteo").toggleClass("clicked");
@@ -391,12 +397,22 @@
         $(".social2.accès").toggleClass("clicked");
     })
 
+    $(".social2.meteo").click(function () {
+        $(".boitemeteo2").toggleClass("clickedmeteo");
+        
+    })
+
     $(".button3").click(function () {
         $(".social3.meteo").toggleClass("clicked");
         $(".social3.equipement").toggleClass("clicked");
         $(".social3.carte").toggleClass("clicked");
         $(".social3.food").toggleClass("clicked");
         $(".social3.accès").toggleClass("clicked");
+    })
+
+    $(".social3.meteo").click(function () {
+        $(".meteo3").toggleClass("clickedmeteopano");
+        
     })
 
     $(".button4").click(function () {
@@ -447,25 +463,12 @@
         $(".social9.accès").toggleClass("clicked");
     })
 
-    $(".social1.meteo").click(function () {
-        $(".boitemeteo1").toggleClass("clickedmeteo");
-        
-    })
+    
 
-    $(".social2.meteo").click(function () {
-        $(".boitemeteo2").toggleClass("clickedmeteo");
-        
-    })
+    
 
-    $(".social3.meteo").click(function () {
-        $(".meteo3").toggleClass("clickedmeteopano");
-        
-    })
-
-    $(".social4.meteo").click(function () {
-        $(".boitemeteo4").toggleClass("clickedmeteo");
-        
-    })
+    
+    
 
     /*API javascript boite meteo panoramique*/
 
