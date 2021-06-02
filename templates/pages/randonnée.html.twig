@@ -486,6 +486,8 @@
     <!--JAVASCRIPT-->
 <script>
 
+    // BOUTON FEATURETTE
+
     $(".button1").click(function () {
         $(".icone1.carte").toggleClass("clicked");
         $(".icone1.meteo").toggleClass("clicked");
@@ -567,6 +569,8 @@
         $(".boitemeteo2").toggleClass("clickedmeteo");
         
     })
+
+    // BOUTON FEATURETTE FIN
 
 
 
@@ -680,10 +684,10 @@ jourActuel = jourActuel.charAt(0).toUpperCase() + jourActuel.slice(1);
 let tabJoursEnOrdre = joursSemaine.slice(joursSemaine.indexOf(jourActuel)).concat(joursSemaine.slice(0, joursSemaine.indexOf(jourActuel)));
 // console.log(tabJoursEnOrdre);
 
-//API METEO FIN
+// API METEO FIN
 
 </script>
-<!--JAVASCRIPT FIN-->
+<!-- JAVASCRIPT FIN -->
 
 
 
@@ -695,7 +699,7 @@ let tabJoursEnOrdre = joursSemaine.slice(joursSemaine.indexOf(jourActuel)).conca
     @media screen and (min-width: 320px) and (max-width: 374px) {
 
 
-    /*API boite meteo*/
+    /* API BOITE METEO */
 
     .boitemeteo1,.boitemeteo2 {
         
@@ -711,7 +715,7 @@ let tabJoursEnOrdre = joursSemaine.slice(joursSemaine.indexOf(jourActuel)).conca
         opacity: 0;
         position: relative;
         width: 264px;
-        
+    
     }
     
     .bloc-logo-info {
@@ -719,8 +723,8 @@ let tabJoursEnOrdre = joursSemaine.slice(joursSemaine.indexOf(jourActuel)).conca
         display: flex;
         grid-area: 1 / 1 / 2 / -1;
         justify-content: center;
-        
     }
+
     .bloc-logo {
         align-items: center;
         display: flex;
@@ -728,14 +732,17 @@ let tabJoursEnOrdre = joursSemaine.slice(joursSemaine.indexOf(jourActuel)).conca
         height: auto;
         width: 50%;
     }
+
     .bloc-logo img {
         margin-top: -10px;
         width: 90%;
         height: auto;
     }
+
     .bloc-info {
         width: 60%;
     }
+
     .bloc-info .temps {
         display: flex;
         flex-direction: row;
@@ -743,9 +750,11 @@ let tabJoursEnOrdre = joursSemaine.slice(joursSemaine.indexOf(jourActuel)).conca
         font-size: 12px;
         margin: 0px!important;
     }
+
     .bloc-info .temps::first-letter {
         text-transform: capitalize;
     }
+
     .bloc-info .temperature {
         display: flex;
         flex-direction: row;
@@ -754,6 +763,7 @@ let tabJoursEnOrdre = joursSemaine.slice(joursSemaine.indexOf(jourActuel)).conca
         font-size: 25px;
         margin: 0px!important;
     }
+
     .bloc-info .localisation {
         display: flex;
         flex-direction: row;
@@ -766,9 +776,11 @@ let tabJoursEnOrdre = joursSemaine.slice(joursSemaine.indexOf(jourActuel)).conca
     .heure-bloc-prevision {
         grid-area: 2 / 1 / 3 / -1;
     }
+
     .jour-prevision-bloc {
         grid-area: 3 / 1 / 5 / -1;
     }
+
     .jour-prevision-bloc, .heure-bloc-prevision {
         display: grid;
         grid-template: 35px / repeat(7, 1fr);
@@ -792,7 +804,7 @@ let tabJoursEnOrdre = joursSemaine.slice(joursSemaine.indexOf(jourActuel)).conca
         margin: 0px!important;
     }
     
-    /* Animation chargement */
+    /* ANIMATION CHARGEMENT */
     
     .overlay-icone-chargement {
         position: absolute;
@@ -802,6 +814,7 @@ let tabJoursEnOrdre = joursSemaine.slice(joursSemaine.indexOf(jourActuel)).conca
         transition: opacity 1.1s ease-out;
         z-index: 1000;
     }
+
     .overlay-icone-chargement img {
         width: 40px;
         position: absolute;
@@ -809,11 +822,12 @@ let tabJoursEnOrdre = joursSemaine.slice(joursSemaine.indexOf(jourActuel)).conca
         left: 50%;
         transform: translate(-50%, -50%);
     }
+
     .disparition {
         opacity: 0;
     }
 
-    /* Bouton Close */
+    /* BOUTON CLOSE */
 
     .closemeteo {
         font-size: 15px;
@@ -828,11 +842,7 @@ let tabJoursEnOrdre = joursSemaine.slice(joursSemaine.indexOf(jourActuel)).conca
         color: #f1f1f1;
     }
 
-    /*API boite meteo FIN*/
-
-
-
-
+    /* API BOITE METEO FIN */
 
     
     h1 {
