@@ -69,7 +69,7 @@ class BdController extends AbstractController
             'featurettes2' => "images/pagerandonnées/featurettes/plagedelhermitage/hermitage.png",
             'titlef3' => 'Cirque de cilaos',
             'featurettes3' => "images/pagerandonnées/featurettes/cirquecilaos/cilaospano.jpg",
-            'titlef4' => 'Puit des anglais',
+            'titlef4' => 'Puits des anglais',
             'featurettes4' => "images/pagerandonnées/featurettes/puitdesanglais/puit.jpg",
             'titlef5' => 'Trou de fer',
             'featurettes5' => "images/pagerandonnées/featurettes/troudefer/trou-de-fer.jpg",
