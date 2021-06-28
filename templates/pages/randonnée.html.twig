@@ -251,9 +251,9 @@
                         </div>
 
                         <div class="bloc-info pano">
-                            <p class="temps"></p>
-                            <p class="temperature"></p>
-                            <p class="localisation"></p>
+                            <p class="temps pano"></p>
+                            <p class="temperature pano"></p>
+                            <p class="localisation pano"></p>
                         </div>
 
                         <a href="#menuclose" class="closemeteo pano">&times;</a>
@@ -1227,7 +1227,7 @@ let tabJoursEnOrdre = joursSemaine.slice(joursSemaine.indexOf(jourActuel)).conca
         display: grid;
         grid-template: 70px 30px 30px / repeat(7, 37px);
         height: 72px;
-        margin-top: 695px;
+        margin-top: 765px;
         margin-bottom: 800px;
         margin-left: -75px;
         opacity: 0;
@@ -1235,23 +1235,23 @@ let tabJoursEnOrdre = joursSemaine.slice(joursSemaine.indexOf(jourActuel)).conca
         width: 264px;
     }
 
-    .bloc-logo-info .pano {
+    .bloc-logo-info.pano {
         align-items: center;
         display: flex;
         grid-area: 1 / 1 / 2 / -1;
         justify-content: center;
     }
 
-    .bloc-logo .pano {
+    .bloc-logo.pano {
         align-items: center;
         display: flex;
         flex-direction: column;
         height: auto;
-        width: 50%;
+        width: 20%;
     }
 
-    .bloc-logo img .pano {
-        margin-top: -10px;
+    .bloc-logo img.pano {
+        margin-top: -35px;
         width: 90%;
         height: auto;
     }
@@ -1260,7 +1260,7 @@ let tabJoursEnOrdre = joursSemaine.slice(joursSemaine.indexOf(jourActuel)).conca
         width: 60%;
     }
 
-    .bloc-info .temps .pano {
+    .bloc-info.temps .pano {
         display: flex;
         flex-direction: row;
         justify-content: center;
@@ -1268,20 +1268,20 @@ let tabJoursEnOrdre = joursSemaine.slice(joursSemaine.indexOf(jourActuel)).conca
         margin: 0px!important;
     }
 
-    .bloc-info .pano .temps::first-letter {
+    .bloc-info .pano.temps::first-letter {
         text-transform: capitalize;
     }
 
-    .bloc-info .pano .temperature {
+    .bloc-info .pano.temperature {
         display: flex;
         flex-direction: row;
         justify-content: center;
         height: 28px;
-        font-size: 25px;
+        font-size: 20px;
         margin: 0px!important;
     }
 
-    .bloc-info .pano .localisation {
+    .bloc-info .pano.localisation {
         display: flex;
         flex-direction: row;
         justify-content: center;
@@ -1322,7 +1322,7 @@ let tabJoursEnOrdre = joursSemaine.slice(joursSemaine.indexOf(jourActuel)).conca
     }
     
     /* ANIMATION CHARGEMENT */
-    .overlay-icone-chargement .pano {
+    .overlay-icone-chargement.pano {
         position: absolute;
         width: 40%;
         height: 52%;
@@ -1331,7 +1331,7 @@ let tabJoursEnOrdre = joursSemaine.slice(joursSemaine.indexOf(jourActuel)).conca
         z-index: 1000;
     }
 
-    .overlay-icone-chargement img .pano {
+    .overlay-icone-chargement img.pano {
         width: 40px;
         position: absolute;
         top: 50%;
@@ -1339,13 +1339,13 @@ let tabJoursEnOrdre = joursSemaine.slice(joursSemaine.indexOf(jourActuel)).conca
         transform: translate(-50%, -50%);
     }
 
-    .disparition .pano {
+    .disparition.pano {
         opacity: 0;
     }
     /* ANIMATION CHARGEMENT FIN */
 
     /* BOUTON BOITE METEO CLOSE */
-    .closemeteo .pano {
+    .closemeteo.pano {
         font-size: 15px;
         margin-right: 10px;
         text-decoration: none;
