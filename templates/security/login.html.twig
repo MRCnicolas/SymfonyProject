@@ -18,6 +18,7 @@
     <div class="mb-3">
         You are logged in as {{ app.user.username }}, <a href="{{ path('app_logout') }}">Logout</a>
     </div>
+
     {% endif %}
     <label for="inputEmail">Adresse email</label>
     <input type="email" value="{{ last_username }}" name="email" id="inputEmail" class="form-control" required autofocus>

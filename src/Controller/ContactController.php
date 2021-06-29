@@ -44,15 +44,15 @@ class ContactController extends AbstractController
             ->text($contactFormData['message']);
 
             $mailer->send($email);
-            $this->addFlash('success', 'Votre message a été envoyé');
+            $this->addFlash('notice', 'Votre message a été envoyé avec succès !');
 
             return $this->redirectToRoute('contact');
         }
 
         return $this->render('contact/index.html.twig', [
             'headers' => $headers,
-            'contact_form' => $form->createView(),
             'title' => 'Contactez-nous',
+            'contact_form' => $form->createView(),
             'image1' => "images/pagecontact/maison1.jpg",
         ]);
     }

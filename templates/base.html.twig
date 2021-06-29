@@ -230,8 +230,9 @@
 </body>
 
 <div class="container">
-    {% include 'flash_messages.html.twig' %}
+    
     {% block body %}{% endblock %}
+    {% include 'flash_messages.html.twig' %}
 </div>
 
 <div class="float-right faa-bounce animated" style="width: 80px;">
@@ -240,10 +241,6 @@
 
 <footer>
 
-    
-        
-            
-                
                     <div class="d-flex justify-content-center" id="réseaux">
                         <a href="https://fr-fr.facebook.com/"><img
                                 src="{{ asset('images/pagebase/footer/iconesréseaux/facebook.svg') }}"
@@ -259,7 +256,6 @@
                                 class="iconesréseaux faa-spin faa-reverse animated-hover" /></a>
                     </div>
                 
-
                 
                     <div class="d-flex justify-content-center">
                         <p id="p-footer">
@@ -270,10 +266,6 @@
                             - <a href="{{ path('app_home') }}" id="a-footer">Retour à la page d'accueil</a>
                         </p>
                     </div>
-                
-            
-        
-    
 
 </footer>
 

@@ -10,7 +10,13 @@
 <h1>{{ title }}</h1>
 
 
+{% for message in app.flashes('notice') %}
+    <div class="alert alert-success">{{ message }}</div>
+{% endfor %}
+
+
 <div class="row justify-content-center">
+    
     <div class="col-lg-6">
 
         <div class="text-left">
@@ -161,6 +167,7 @@
 
         #chevron {
             margin-top: 100px;
+            margin-bottom: 20px;
         }
     }
 
