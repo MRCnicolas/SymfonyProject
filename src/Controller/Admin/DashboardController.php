@@ -32,7 +32,7 @@ class DashboardController extends AbstractDashboardController
        $this->orderRepository = $orderRepository;
     }
     /**
-     * @Route("/admin", name="admin")
+     * @Route("/admin_193ar150", name="admin")
      */
     public function index(): Response
     {
