@@ -191,7 +191,7 @@
                                         aria-haspopup="true" aria-expanded="false">{{ app.user.firstname }}</a>
 
                                     <div class="dropdown-menu" style="left: -60px" id="dropmenucompte">
-                                        {% if 'ROLE_ADMIN' in app.user.roles %}
+                                        {% if 'ROLE_SUPER_ADMIN' in app.user.roles %}
                                         <a class="dropdown-item" href="{{ path('account') }}">Mon Compte</a>
                                         <div class="dropdown-divider"></div>
                                         <a class="dropdown-item" href="/admin_193ar150">Tableau de bord</a>

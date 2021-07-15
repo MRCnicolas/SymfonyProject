@@ -22,6 +22,7 @@ class DashboardController extends AbstractDashboardController
 {
     
     protected $userRepository;
+    protected $orderRepository;
 
     public function __construct(
         UserRepository $userRepository,
